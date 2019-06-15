@@ -1,5 +1,5 @@
 {
-  "name": "dd101_g4",
+  "name": "new",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/bebecat/dd101_g4/issues"
   },
-  "homepage": "https://github.com/bebecat/dd101_g4#readme"
+  "homepage": "https://github.com/bebecat/dd101_g4#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
+  }
 }
