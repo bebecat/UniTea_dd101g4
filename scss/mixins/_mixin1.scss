@@ -1,0 +1,68 @@
+
+@mixin title_modules($list...) {
+  @each $title, $fontSize, $color, $fontFamily in $list {
+    #{$title} {
+      font-size: $fontSize;
+      color: $color;
+      font-family: $fontFamily;
+      text-align:center;
+      letter-spacing:2px;
+      @content;
+    }
+  }
+}
+@mixin txt_modules($list...) {
+  @each $title, $fontSize, $color, $fontFamily in $list {
+    #{$title} {
+      font-size: $fontSize;
+      color: $color;
+      font-family: $fontFamily;
+      text-align:center;
+      letter-spacing:1.5px;
+      @content;
+    }
+  }
+}
+@mixin card-color($classname, $width, $height, $bgc, $margin, $border: null) {
+  #{$classname} {
+    background-color: $bgc;
+    width: $width;
+    height: $height;
+    margin: $margin;
+    border: $border;
+    @content;
+  }
+}
+
+@mixin grid($num) {
+  @for $i from 1 through $num {
+    .col-md-#{$i} {
+      width: ($i/$num) * 100%;
+      @content;
+    }
+  }
+}
+
+@mixin box-sizing($border-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+@mixin rwd($breakpoint) {
+  @if $breakpoint==mobile {
+    @media all and (max-width: $mb) {
+      @content;
+    }
+  } @else if $breakpoint==medium {
+    @media all and (min-width: $md) {
+      @content;
+    }
+  } @else if $breakpoint==desktop {
+    @media all and (min-width: $dsk) {
+      @content;
+    }
+  }
+}
+
+//客製頁的茶色變化
