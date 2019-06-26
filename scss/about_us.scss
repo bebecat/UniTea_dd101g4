@@ -1,0 +1,80 @@
+
+@import "basic/var1.scss";
+@import "mixins/mixin1.scss";
+@import "page/moblie.scss";
+@include title-modules(
+h1 rgba(0,0,0,1) 12px 'font_title',
+h2 rgba(0,0,0,.8) 48px 'font_title',
+h3 rgba(0,0,0,.6) 36px font_title,
+h4 rgba(0,0,0,.4) 28px font_title,
+h5 rgba(0,0,0,.3) 20px font_title,
+p rgba(0,0,0,.3) 16px font_2,
+);
+//font_title
+*{
+	margin : 0;
+	padding : 0;
+	list-style : none;
+	//outline : 1px solid rgba(33,33,33,.5);
+}
+.clear_fix{
+	clear:both;
+}
+.fp_index_wrapper{
+	width:100%;
+	background-color:#ECEED0;
+	.idea_introduction{
+		width:1200px;
+		margin:auto;
+		background-color:#F7F8F8;
+		.txt{
+			width:60%;
+			padding:5px 0px;
+			margin:auto;
+			background-color: transparent;
+			h2{
+				width:500px;
+				height:60px;
+				line-height:60px;
+				margin: 5px auto 20px;
+				background-color:#F7E9C3;
+			}
+			p{
+				padding:5px 5px;
+				margin:auto;
+			}
+			.first_txt_sec{
+				width:90%;
+			}
+			.second_txt_sec{
+				width:70%;
+			}
+			.third_txt_sec{
+				width:85%;
+			}
+		}
+		
+	}
+	.team_introduction{
+		width:1200px;
+		margin:auto;
+		background-color:#F7F8F8;
+		.txt{
+			width:60%;
+			padding:5px 0px;
+			margin:auto;
+			background-color: transparent;
+			h2{
+				width:500px;
+				height:60px;
+				line-height:60px;
+				margin: 5px auto 20px;
+				background-color:#F7E9C3;
+			
+			}
+		}
+	}
+
+
+
+}

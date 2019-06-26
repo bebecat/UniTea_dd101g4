@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "font_p";
+  src: url("../scss/font/03SmartFont-P.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_title";
+  src: url("../scss/font/HanaMinA.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_nav";
+  src: url("../scss/font/font_1_kokumr_1.00_rls.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_2";
+  src: url("../scss/font/imagine YOKOHAMA.otf") format("truetype"); }
+
+@font-face {
+  font-family: "font_cart";
+  src: url("../scss/font/SoukouMincho.ttf") format("truetype"); }
+
+h1 {
+  font-size: black;
+  color: 12px;
+  font-family: "font_title";
+  text-align: center;
+  letter-spacing: 2px; }
+
+h2 {
+  font-size: rgba(0, 0, 0, 0.8);
+  color: 48px;
+  font-family: "font_title";
+  text-align: center;
+  letter-spacing: 2px; }
+
+h3 {
+  font-size: rgba(0, 0, 0, 0.6);
+  color: 36px;
+  font-family: font_title;
+  text-align: center;
+  letter-spacing: 2px; }
+
+h4 {
+  font-size: rgba(0, 0, 0, 0.4);
+  color: 28px;
+  font-family: font_title;
+  text-align: center;
+  letter-spacing: 2px; }
+
+h5 {
+  font-size: rgba(0, 0, 0, 0.3);
+  color: 20px;
+  font-family: font_title;
+  text-align: center;
+  letter-spacing: 2px; }
+
+p {
+  font-size: rgba(0, 0, 0, 0.3);
+  color: 16px;
+  font-family: font_p;
+  text-align: center;
+  letter-spacing: 2px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.clear_fix {
+  clear: both; }
+
+header {
+  width: 100%;
+  padding: 20px 0px;
+  background-color: #f9f4e4; }
+  header nav {
+    box-sizing: border-box;
+    max-width: 1200px;
+    padding: 10px 5px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #edeae1; }
+    header nav .pages_trans {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      align-items: center; }
+      header nav .pages_trans .tida_size {
+        width: 150px; }
+      header nav .pages_trans .general_size {
+        width: 120px; }
+      header nav .pages_trans .pages_btn {
+        height: 70px;
+        padding: 0px 20px;
+        font-family: font_nav;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        position: relative; }
+        header nav .pages_trans .pages_btn h1 {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          align-items: center;
+          display: inline-block;
+          position: absolute;
+          top: -200%; }
+        header nav .pages_trans .pages_btn img {
+          width: 58.888888px;
+          height: 70px; }
+        header nav .pages_trans .pages_btn .tab_name {
+          color: #5f8538;
+          font-size: 13px; }
+        header nav .pages_trans .pages_btn .tab_btn {
+          color: #522d1d;
+          font-size: 18px;
+          text-decoration: none; }
+      header nav .pages_trans .member_status {
+        width: 250px;
+        height: 70px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-item: center; }
+        header nav .pages_trans .member_status .member_btn {
+          width: 200px;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center; }
+          header nav .pages_trans .member_status .member_btn .member_pages {
+            padding: 17px 0px 0px;
+            height: 70px;
+            box-sizing: border-box; }
+            header nav .pages_trans .member_status .member_btn .member_pages .member_pic {
+              display: inline-block;
+              width: 40px;
+              height: 36px; }
+          header nav .pages_trans .member_status .member_btn .member_data {
+            width: 80px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-item: center; }
+            header nav .pages_trans .member_status .member_btn .member_data .member_name {
+              padding: 0px 5px;
+              font-family: font_nav;
+              font-size: 13px;
+              text-align: center;
+              color: #522d1d; }
+            header nav .pages_trans .member_status .member_btn .member_data .member_points {
+              padding: 0px 5px;
+              font-family: font_nav;
+              font-size: 13px;
+              text-align: center;
+              color: #5f8538; }
+        header nav .pages_trans .member_status .cart_btn {
+          width: 60px;
+          padding: 17px 0px 0px;
+          height: 70px;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-item: center;
+          position: relative; }
+          header nav .pages_trans .member_status .cart_btn .cart_num {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #512c1d;
+            opacity: 0.5;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color: #edeae1;
+            position: absolute;
+            transform: translateX(10px); }
+          header nav .pages_trans .member_status .cart_btn .cart_pic {
+            width: 40px;
+            height: 36px;
+            vertical-align: middle;
+            position: absolute;
+            z-index: 1; }
+
+footer {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #9bb09f; }
+  footer .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-item: center;
+    box-sizing: border-box;
+    max-width: 1200px;
+    padding: 10px 25px;
+    margin: auto;
+    position: relative; }
+    footer .container .contact_list {
+      width: 50%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-item: flex-start; }
+      footer .container .contact_list li {
+        padding: 5px;
+        color: #522d1d;
+        font-size: 13px;
+        font-family: font_nav; }
+    footer .container .social_list {
+      width: 25%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-item: flex-end;
+      position: relative;
+      tranform: translateX(100%); }
+      footer .container .social_list li {
+        padding: 5px;
+        color: #522d1d;
+        font-size: 13px;
+        font-family: font_nav; }
+        footer .container .social_list li .socialicon_pic {
+          width: 20px;
+          height: 20px; }
