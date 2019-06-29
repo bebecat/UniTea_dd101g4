@@ -48,7 +48,7 @@ $value: fontP, itemP, productsP, iteamP;
 //   }
 // }
 
-@include card-color(".box", 500px, 400px, pink, 10px, 3px solid deeppink);
+// @include card-color(".box", 500px, 400px, pink, 10px, 3px solid deeppink);
 
 //4.隔線系統
 // @mixin grid($num) {
@@ -117,9 +117,140 @@ $value: fontP, itemP, productsP, iteamP;
 }
 
 
-//votes
-.vote_container{
+// header
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  // outline: 1px solid #f00;
+}
+
+.index_wrapper{
   width: 100%;
-  max-width: 1200px;
-  margin:auto;
+  height: 800px;
+}
+
+// cloud animation
+.cloud{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  // background-color: #f9f9e6;
+
+  .cloudF{
+    width: 3500px;
+    height: 3450px;
+    border-radius: 50%;
+    background-color: #7db9de;
+    position: absolute;
+    opacity: .5;
+    left: -600px;
+    top:  -3390px;
+    animation: cloudF 25s infinite linear;
+
+    @keyframes cloudF {
+      form{ transform: rotate(0deg); }
+      to{ transform: rotate(360deg); }
+    }
+
+    &::before{
+      content: '';
+      width: 3500px;
+      height: 3450px;
+      border-radius: 50%;
+      background-color: #3a8fb7;
+      opacity: .5;
+      position: absolute;
+      left: 0;
+      top:  0;
+      // outline: 2px solid #f00;
+      animation: cloudF 27s infinite linear;
+    }
+  }
+  .cloudB{
+    width: 3500px;
+    height: 3450px;
+    border-radius: 50%;
+    background-color: #ddf;
+    position: absolute;
+    // opacity: .8;
+    left: -1350px;
+    top:  -3390px;
+    animation: cloudB 25s infinite linear;
+
+    @keyframes cloudB {
+      form{ transform: rotate(0deg); }
+      to{ transform: rotate(360deg); }
+    }
+
+    &::before{
+      content: '';
+      width: 3500px;
+      height: 3450px;
+      border-radius: 50%;
+      background-color: #fdf;
+      // opacity: 1;
+      position: absolute;
+      right: 0;
+      top:  0;
+      // outline: 2px solid #f00;
+      animation: cloudB 27s infinite linear;
+    }
+  }
+}
+
+// navbar
+.container{
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // background-color: #ccc;
+
+  .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+    .box{
+      width: 700px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      // outline: 1px solid #f00;
+      a{
+        color: #222;
+      }
+      .logo{
+        width: 50px;
+        height: 90px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .content_icon{
+      width: 150px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .user_pic, .store_pic{
+        width: 35px;
+        height: 35px;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 }
