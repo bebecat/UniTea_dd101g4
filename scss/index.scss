@@ -3,6 +3,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    outline: 1px solid #f00;
 }
 
 // Type 
@@ -10,15 +11,86 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column nowrap;
     width: 100%;
-    outline: 1px solid #f00;
+    // outline: 1px solid #f00;
     background: url('/scss/img/background-grid.png');
     background-size: cover;
 
     .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: column nowrap;
         width: 1200px;
         height: 100vh;
-        outline: 1px solid #f00;
+
+        //screen01 
+        .content_txt{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            .box_txt{
+                display: flex;
+                justify-content: center;
+                width: 400px;
+                .item_txt{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    .txt{
+                        width: 100%;
+                        margin: 5px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .content_object{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+            .box_object{
+                display: flex;
+                justify-content: center;
+                width: 700px;
+                position: absolute;
+                top: -150px;
+                .item_object{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    .object{
+                        width: 200px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .object_tweezers{
+                        width: 310px;
+                    }
+                }
+            }
+            .box_picnic{
+                width: 700px;
+                .item_picnic{
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    .picnic{
+                        width: 100%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
