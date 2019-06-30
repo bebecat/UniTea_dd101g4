@@ -3,7 +3,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    outline: 1px solid #f00;
+    // outline: 1px solid #f00;
 }
 
 // Type 
@@ -16,6 +16,7 @@
     // outline: 1px solid #f00;
     background: url('/scss/img/background-grid.png');
     background-size: cover;
+    overflow: hidden;
 
     .container{
         display: flex;
@@ -23,13 +24,14 @@
         align-items: center;
         flex-flow: column nowrap;
         width: 1200px;
-        height: 100vh;
+        height: 850px;
 
         //screen01 
         .content_txt{
             display: flex;
             justify-content: center;
             width: 100%;
+            position: relative;
             .box_txt{
                 display: flex;
                 justify-content: center;
@@ -47,6 +49,43 @@
                         }
                     }
                 }
+            }
+
+            //cloudMove
+            .cloudMove{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: .8;
+                .cloudA{
+                    position: absolute;
+                    top: 0;
+                    right: 0px;
+                    animation: cloudRunA 60s infinite alternate ease-out;
+                }
+                @keyframes cloudRunA {
+                    0%{
+                        transform: translate(600px)
+                    }
+                    100%{
+                        transform: translate(-1600px)
+                    }
+                }
+                .cloudB{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    animation: cloudRunB 60s infinite alternate ease-out;
+                }
+                @keyframes cloudRunB {
+                    0%{
+                        transform: translate(-600px)
+                    }
+                    100%{
+                        transform: translate(1600px)
+                    }
+                }
+
             }
         }
         .content_object{
