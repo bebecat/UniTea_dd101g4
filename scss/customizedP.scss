@@ -1,0 +1,107 @@
+header {
+    height: 70px;
+    width: 100%;
+    background-color: cornflowerblue 0.5;
+}
+footer {
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url(/scss/img/Customization/pseudo_footer.png);
+    height: 70px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    // outline: 1px solid #f00;
+}
+.cust_wrapper {
+    background: url(/scss/img/body_bg.png) repeat left top;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    position: relative;
+    .cust_box {
+        background-image: url(/scss/img/Customization/PennantHanging.png);
+        background-repeat: repeat-x;
+        width: 100%;
+    }
+    .cust_title {
+        text-align: center;
+        padding-top: 40px;
+    }
+    .container {
+        max-width: 1200px;
+        height: calc(100vh - 70px);
+        margin: auto;
+        position: relative;
+    }
+    .cust_area {
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        padding: 50px 20px 0px;
+    }
+    .picnic_basket {
+        height: calc(100vh - 70px);
+        width: 100%;
+    }
+    .cust_choose_area {
+        background-image: url(/scss/img/Customization/woodBoard.png);
+        background-repeat: no-repeat;
+        width: 370px;
+        height: 0;
+        margin-left: auto;
+        padding-bottom: 450px;
+        margin-top: 50px;
+        position: relative;
+        z-index: 2;
+        > h2 {
+            text-align: center;
+            color: white;
+            margin-top: 10px;
+        }
+    }
+    .balloon_squirrel {
+        position: absolute;
+        z-index: 1;
+        right: 0px;
+        top: 50px;
+    }
+    .picnic_basket {
+        width: 850px;
+        height: 600px;
+        // background-color: aquamarine;
+    }
+    .step_flow {
+        display: flex;
+        // justify-content: space-around;
+    }
+    #step_circle {
+        width: 550px;
+        height: 550px;
+        background-image: url(/scss/img/Customization/step_circle.png);
+        background-repeat: no-repeat;
+        display: flex;
+        flex-flow: column;
+    }
+    .step {
+        width: 200px;
+        height: 140px;
+        box-sizing: border-box;
+        border: 1px solid blue;
+        background-color: transparent;
+        margin-left: auto;
+    }
+    .step1,
+    .step4 {
+        margin-right: -150px;
+    }
+    .step2,
+    .step3 {
+        margin-right: -220px;
+    }
+}
