@@ -56,7 +56,7 @@ h5 {
 p {
   font-size: rgba(0, 0, 0, 0.3);
   color: 16px;
-  font-family: font_p;
+  font-family: font_2;
   text-align: center;
   letter-spacing: 2px; }
 
@@ -70,6 +70,7 @@ p {
 
 header {
   width: 100%;
+  position: fixed;
   padding: 20px 0px;
   background-color: #f9f4e4; }
   header nav {

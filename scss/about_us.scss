@@ -15,65 +15,201 @@ p rgba(0,0,0,.3) 16px font_2,
 	margin : 0;
 	padding : 0;
 	list-style : none;
-	//outline : 1px solid rgba(33,33,33,.5);
+	outline : 1px solid rgba(33,33,33,.5);
 }
 .clear_fix{
 	clear:both;
 }
-.fp_index_wrapper{
-	width:100%;
-	background-color:#ECEED0;
-	.idea_introduction{
-		width:1200px;
-		margin:auto;
-		background-color:#F7F8F8;
-		.txt{
-			width:60%;
-			padding:5px 0px;
+.header_fulsec{
+	width:0;
+	height: 130px;
+}
+.fp_aboutus_wrapper{
+width:100%;
+//background-color:#ECEED0;
+position:relative;
+.bg_settin{
+	width:100vw;
+	height:100vh;
+	max-height:960px;
+	position:fixed;
+	z-index:-1;
+	.glass_bg{
+		@include glassBG();
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		right:0;
+		left:0;
+		bottom:0;
+		z-index:-1;
+		.animation_item{
+			width:100%;
+			max-width:1200px;
+			height:100%;
 			margin:auto;
-			background-color: transparent;
-			h2{
-				width:500px;
-				height:60px;
-				line-height:60px;
-				margin: 5px auto 20px;
-				background-color:#F7E9C3;
-			}
-			p{
-				padding:5px 5px;
-				margin:auto;
-			}
-			.first_txt_sec{
-				width:90%;
-			}
-			.second_txt_sec{
+			.cloud{
 				width:70%;
+				height:20%;
+				margin:auto;
+				padding:9% 0 0;
+				box-sizing:border-box;
+				position:relative;
+				.cloud_item{
+					width:150px;
+					height:50px;
+					position:relative;
+				}
+				#go_left_cloud{
+					animation: cloudmoveleft 13s 0 infinite linear alternate;
+					top:10%;
+					left:25%;
+
+				}
+				#go_right_cloud{
+					animation: cloudmoveright 11s 0 infinite linear alternate;
+					top:25%;
+					left:45%;
+				}
+				@keyframes cloudmoveleft{
+					from {transform:translateX(0)} 
+					to{transform:translateX(50%)}
+				}
+				@keyframes cloudmoveright{
+					from {transform:translateX(0)} 
+					to{transform:translateX(-65%)}
+				}
 			}
-			.third_txt_sec{
-				width:85%;
+			.tree{
+				width:70%;
+				height:25%;
+				margin:auto;
+				padding:100px 0 0;
+				box-sizing:border-box;
+				position:relative;
+				.tree_item{
+					width:110px;
+					height:144px;
+					position:relative;
+				}
+				#swag_right_tree{
+					transform-origin: 55px 150px;
+					animation: treeswagright 8s 0 infinite linear alternate;
+					top:25%;
+					left:11%;
+				}
+				#swag_left_tree{
+					transform-origin: 55px 150px;
+					animation: treeswagleft 8s 0 infinite linear alternate;
+					top:45%;
+					left:50%;
+				}
+				@keyframes treeswagright{
+					from {transform:rotate(3deg)} 
+					to{transform:rotate(16deg)}
+				}
+				@keyframes treeswagleft{
+					from {transform:rotate(-3deg)} 
+					to{transform:rotate(-16deg)}
+				}
 			}
 		}
-		
 	}
-	.team_introduction{
-		width:1200px;
+	.paper_bg{
+		width:100%;
+		height:100%;
+		background-image: url('../scss/img/paperBG.png');
+	}
+}
+.idea_introduction{
+	width:100%;
+	height:960px;
+	position:relative;
+	z-index:1;
+	.container{
+		width:100%;
+		max-width:1200px;
 		margin:auto;
-		background-color:#F7F8F8;
 		.txt{
-			width:60%;
+			width:70%;
 			padding:5px 0px;
 			margin:auto;
-			background-color: transparent;
 			h2{
 				width:500px;
 				height:60px;
 				line-height:60px;
 				margin: 5px auto 20px;
 				background-color:#F7E9C3;
-			
+				position:relative;
+				#littlebird{
+					width:35px;
+					height:12.5px;
+					position:absolute;
+					top:0;
+					left:0;
+					right:0;
+					margin:auto;
+					transform-orgin:40px 15px;
+					transform:translateX(177%) translateY(50%) rotate(10deg);
+					animation:littlebirdswagleft 3s 0 infinite ease-in alternate;
+				}
+				@keyframes littlebirdswagleft{
+					from{
+					transform:translateX(177%) translateY(45%) rotate(-2deg);}
+					to{
+					transform:translateX(177%) translateY(55%) rotate(10deg);}
+				}
 			}
+			.idea_txtin{
+				background-color: rgba(255,255,255,.2);
+				p{
+					padding:5px 7px;
+					margin:auto;
+				}
+				.first_txt_sec{
+					width:85%;
+				}
+				.second_txt_sec{
+					width:75%;
+				}
+				.third_txt_sec{
+					width:80%;
+				}
+				.basket_settin{
+					display: block;
+					width:203px;
+					height:197px;
+					margin:auto;
+				}
+			}
+			
 		}
 	}
+	
+	
+}
+.webstory_introduction{
+	width:1200px;
+	margin:auto;
+	background-color:#F7F8F8;
+	.txt{
+		width:70%;
+		padding:5px 0px;
+		margin:auto;
+		background-color: transparent;
+		h2{
+			width:500px;
+			height:60px;
+			line-height:60px;
+			margin: 5px auto 20px;
+			background-color:#F7E9C3;
+		
+		}
+
+
+	}
+}
 
 
 
