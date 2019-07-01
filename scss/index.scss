@@ -1,3 +1,5 @@
+@import "./basic/var1";
+
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +17,7 @@
     flex-flow: column nowrap;
     width: 100%;
     // outline: 1px solid #f00;
-    background: url('/scss/img/background-grid.png');
+    // background: url('/scss/img/background-grid.png');
     background-size: 100%;
     overflow: hidden;
 
@@ -135,7 +137,7 @@
                 }
             }
         }
-        //secreen02
+        //screen02
         .content_wood{
             display: flex;
             justify-content: center;
@@ -148,14 +150,14 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 350px;
+                width: 33%;
                 position: relative;
                 z-index: 2;
                 img{
                     width:100%;
                 }
                 .item_h3{
-                    width: 200px;
+                    width: 70%;
                     position: absolute;
                     font-weight: 400;
                     font-size: 25px;
@@ -352,7 +354,7 @@
                 }
             }
         }
-        //secreen03
+        //screen03
         .content_vote{
             display: flex;
             justify-content: center;
@@ -515,7 +517,7 @@
                 }
             }
         }
-        //secreen04
+        //screen04
         .content_hotproducts{
             display: flex;
             justify-content: center;
@@ -534,9 +536,17 @@
                         width: 100%;
                         display: flex;
                         justify-content: center;
+                        align-items: center;
                         position: relative;
                         img{
                             width: 100%;
+                        }
+                        .hotproducts_img{
+                            width: 50%;
+                            position: absolute;
+                            img{
+                                width: 100%;
+                            }
                         }
                         .hotproducts_board{
                             position: absolute;
@@ -594,6 +604,87 @@
                     width: 20%;
                     img{
                         width: 100%;
+                    }
+                }
+            }
+        }
+        //screen05
+        .content_game{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .box_game{
+                width: 100%;
+                .item_game{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    .vine_boxes{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 80%;
+                        position: relative;
+                        background: url('/scss/img/Screen05/Screen05moutain.png') no-repeat;
+                        background-size: 50%;
+                        background-position: center;
+                        .boxes_shake{
+                            width: 20%;
+                            transition: 2s;
+                            transform-origin: top;
+                            animation: boxesRun 6s linear infinite alternate;
+                            img{
+                                width: 100%;
+                            }
+                            @keyframes boxesRun {
+                                0%{
+                                    transform: rotate(30deg)
+                                }
+                                100%{
+                                    transform: rotate(-30deg)
+                                }
+                            }
+                        }
+                        .bee_shake{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .beeA, .beeB{
+                                width: 15%;
+                                position: absolute;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            .beeA{
+                                top: 25%;
+                                left: 0;
+                                animation: beeShakeA .9s linear infinite alternate;
+                            }
+                            @keyframes beeShakeA {
+                                0%{
+                                    transform: translateY(0px) translateX(0px)
+                                }
+                                100%{
+                                    transform: translateY(5px) translateX(3px)
+                                }
+                            }
+                            .beeB{
+                                top: 50%;
+                                right: 0;
+                                animation: beeShakeB 1.2s linear infinite alternate;
+                            }
+                            @keyframes beeShakeB {
+                                0%{
+                                    transform: translateY(0px) translateX(0px)
+                                }
+                                100%{
+                                    transform: translateY(5px) translateX(3px)
+                                }
+                            }
+                        }
                     }
                 }
             }
