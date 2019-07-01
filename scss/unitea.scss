@@ -18,12 +18,12 @@
 // }
 
 @include title-modules(
-h1 rgba(0,0,0,1) 12px 'font_title',
-h2 rgba(0,0,0,.8) 48px 'font_title',
-h3 rgba(0,0,0,.6) 36px font_title,
-h4 rgba(0,0,0,.4) 28px font_title,
-h5 rgba(0,0,0,.3) 20px font_title,
-p rgba(0,0,0,.3) 16px font_p,
+  h1 rgba(0, 0, 0, 1) 12px "font_title",
+  h2 rgba(0, 0, 0, 0.8) 48px "font_title",
+  h3 rgba(0, 0, 0, 0.6) 36px font_title,
+  h4 rgba(0, 0, 0, 0.4) 28px font_title,
+  h5 rgba(0, 0, 0, 0.3) 20px font_title,
+  p rgba(0, 0, 0, 0.3) 16px font_p
 );
 
 //2.bg-image(使用在不同版面或rwd)
@@ -116,9 +116,8 @@ $value: fontP, itemP, productsP, iteamP;
   }
 }
 
-
 // header
-*{
+* {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -126,13 +125,13 @@ $value: fontP, itemP, productsP, iteamP;
   // outline: 1px solid #f00;
 }
 
-.index_wrapper{
+.index_wrapper {
   width: 100%;
   height: 800px;
 }
 
 // cloud animation
-.cloud{
+.cloud {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -141,37 +140,41 @@ $value: fontP, itemP, productsP, iteamP;
   overflow: hidden;
   // background-color: #f9f9e6;
 
-  .cloudF{
+  .cloudF {
     width: 3500px;
     height: 3450px;
     border-radius: 50%;
     background-color: #7db9de;
     position: absolute;
-    opacity: .5;
+    opacity: 0.5;
     left: -600px;
-    top:  -3390px;
+    top: -3390px;
     animation: cloudF 25s infinite linear;
 
     @keyframes cloudF {
-      form{ transform: rotate(0deg); }
-      to{ transform: rotate(360deg); }
+      form {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
 
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       width: 3500px;
       height: 3450px;
       border-radius: 50%;
       background-color: #3a8fb7;
-      opacity: .5;
+      opacity: 0.5;
       position: absolute;
       left: 0;
-      top:  0;
+      top: 0;
       // outline: 2px solid #f00;
       animation: cloudF 27s infinite linear;
     }
   }
-  .cloudB{
+  .cloudB {
     width: 3500px;
     height: 3450px;
     border-radius: 50%;
@@ -179,16 +182,20 @@ $value: fontP, itemP, productsP, iteamP;
     position: absolute;
     // opacity: .8;
     left: -1350px;
-    top:  -3390px;
+    top: -3390px;
     animation: cloudB 25s infinite linear;
 
     @keyframes cloudB {
-      form{ transform: rotate(0deg); }
-      to{ transform: rotate(360deg); }
+      form {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
 
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       width: 3500px;
       height: 3450px;
       border-radius: 50%;
@@ -196,7 +203,7 @@ $value: fontP, itemP, productsP, iteamP;
       // opacity: 1;
       position: absolute;
       right: 0;
-      top:  0;
+      top: 0;
       // outline: 2px solid #f00;
       animation: cloudB 27s infinite linear;
     }
@@ -204,7 +211,7 @@ $value: fontP, itemP, productsP, iteamP;
 }
 
 // navbar
-.container{
+.container {
   width: 100%;
   height: 100px;
   position: fixed;
@@ -212,42 +219,43 @@ $value: fontP, itemP, productsP, iteamP;
   left: 0;
   // background-color: #ccc;
 
-  .content{
+  .content {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    
-    .box{
+
+    .box {
       width: 700px;
       display: flex;
       justify-content: space-around;
       align-items: center;
       // outline: 1px solid #f00;
-      a{
+      a {
         color: #222;
       }
-      .logo{
+      .logo {
         width: 50px;
         height: 90px;
-        img{
+        img {
           width: 100%;
           height: 100%;
         }
       }
     }
-    .content_icon{
+    .content_icon {
       width: 150px;
       display: flex;
       justify-content: space-around;
       align-items: center;
 
-      .user_pic, .store_pic{
+      .user_pic,
+      .store_pic {
         width: 35px;
         height: 35px;
       }
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
