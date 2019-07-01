@@ -15,7 +15,7 @@
             <div class="cloudB"></div>
             <div class="cloudR"></div>
         </div>
-        <nav class="header_container">
+        <nav id="navbar" class="header_container">
             <div class="content">
                 <ul class="box">
                     <a href="#"><li>我是選單</li></a>
@@ -61,16 +61,16 @@
                     </div>
                 </div>
             </div>
-            <div class="content_object">
+            <div id="parallaxMove" class="content_object">
                 <div class="box_object">
                     <div class="item_object">
-                        <div class="object object_grassA">
+                        <div id="grassMoveA" class="object object_grassA">
                             <img src="/scss/img/Screen01/Screen01grassA.png" alt="">
                         </div>
-                        <div class="object object_tweezers">
+                        <div id="tweezersMove" class="object object_tweezers">
                             <img src="/scss/img/Screen01/Screen01picnicbasket.png" alt="">
                         </div>
-                        <div class="object object_grassB">
+                        <div id="grassMoveB" class="object object_grassB">
                             <img src="/scss/img/Screen01/Screen01grassB.png" alt="">
                         </div>
                     </div>
@@ -340,6 +340,9 @@
 
     <div class="machine">
         <img src="/scss/img/animal.png" alt="">
+        <div class="machine_txt">
+            <p></p>
+        </div>
     </div>
 
     <footer>
@@ -355,5 +358,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="headerAndFooter.js"></script>
+    <script src="indexScreen01.js"></script>
 </body>
 </html>

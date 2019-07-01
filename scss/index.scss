@@ -6,7 +6,7 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    outline: 1px solid #f00;
+    // outline: 1px solid #f00;
 }
 
 // Type 
@@ -17,7 +17,7 @@
     flex-flow: column nowrap;
     width: 100%;
     // outline: 1px solid #f00;
-    // background: url('/scss/img/background-grid.png');
+    background: url('/scss/img/background-grid.png');
     background-size: 100%;
     overflow: hidden;
 
@@ -53,6 +53,29 @@
                         z-index: 2;
                         img{
                             width: 100%;
+                        }
+                    }
+                    // txtMove animation
+                    .txt_picB{
+                        transform-origin: top left;
+                        transition: 2s ease-out;
+                        animation: txtMove 5s linear infinite alternate;
+                        @keyframes txtMove {
+                            0%{
+                                transform: rotate(0deg)
+                            }
+                            2%{
+                                transform: rotate(7deg)
+                            }
+                            4%{
+                                transform: rotate(3deg)
+                            }
+                            8%{
+                                transform: rotate(7deg)
+                            }
+                            100%{
+                                transform: rotate(7deg)
+                            }
                         }
                     }
                 }
@@ -117,8 +140,10 @@
                             width: 100%;
                         }
                     }
+                    // object_tweezers: z-index: 1;
                     .object_tweezers{
-                        width: 310px;
+                        width: 25%;
+                        z-index: 1;
                     }
                 }
             }
@@ -208,7 +233,7 @@
                             width: 60px;
                             height: 60px;
                             border-radius: 50%;
-                            border: 1px solid #4173B8;
+                            border: 2px dashed #4173B8;
                             background-color: #A7CFEE;
                             text-align: center;   
                             p{
@@ -391,10 +416,28 @@
                         // transition: 2s ease-out;
                         // animation: voteAir 10s linear infinite;
                         .vote_img{
-                            width: 120px;
-                            height: 120px;
+                            width: 45%;
+                            transition: 2s;
+                            animation: voteBoxesShake 5s linear infinite alternate;
                             img{
                                 width: 100%;
+                            }
+                            @keyframes voteBoxesShake {
+                                0%{
+                                    transform: rotate(0deg)
+                                }
+                                25%{
+                                    transform: rotate(-11deg)
+                                }
+                                50%{
+                                    transform: rotate(11deg)
+                                }
+                                75%{
+                                    transform: rotate(-11deg)
+                                }
+                                100%{
+                                    transform: rotate(0deg)
+                                }
                             }
                         }
                         .vote_txt{
@@ -576,8 +619,26 @@
                 padding: 20px 0 0 0;
                 .item_hotproductsgrassA{
                     width: 20%;
+                    animation: grassShake 6s infinite;
                     img{
                         width: 100%;
+                    }
+                    @keyframes grassShake {
+                        0%{
+                            transform: translate(0px)
+                        }
+                        2%{
+                            transform: translate(2px)
+                        }
+                        4%{
+                            transform: translate(-4px)
+                        }
+                        8%{
+                            transform: translate(4px)
+                        }
+                        100%{
+                            transform: translate(0px)
+                        }
                     }
                 }
                 .item_hotproductsbtn{
@@ -602,6 +663,7 @@
                 }
                 .item_hotproductsgrassB{
                     width: 20%;
+                    animation: grassShake 6s infinite;
                     img{
                         width: 100%;
                     }
