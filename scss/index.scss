@@ -3,6 +3,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
     outline: 1px solid #f00;
 }
 
@@ -15,7 +16,7 @@
     width: 100%;
     // outline: 1px solid #f00;
     background: url('/scss/img/background-grid.png');
-    background-size: cover;
+    background-size: 100%;
     overflow: hidden;
 
     .container{
@@ -100,7 +101,7 @@
             .box_object{
                 display: flex;
                 justify-content: center;
-                width: 700px;
+                width: 100%;
                 position: absolute;
                 top: -150px;
                 .item_object{
@@ -153,11 +154,12 @@
                 img{
                     width:100%;
                 }
-                .item_p{
+                .item_h3{
                     width: 200px;
                     position: absolute;
                     font-weight: 400;
-                    font-size: 30px;
+                    font-size: 25px;
+                    color: #502311;
                 }
             }
             // makeboxes:z-index: 2;
@@ -264,7 +266,7 @@
                             .exterior_changebox{
                                 display: flex;
                                 justify-content: center;
-                                width: 120px;
+                                width: 45%;
                                 padding: 10px;
                                 img{
                                     width: 100%;
@@ -394,7 +396,7 @@
                             }
                         }
                         .vote_txt{
-                            width: 80px;
+                            width: 100%;
                             margin: 10px;
                             padding: 5px 10px 5px 10px;
                             .ranking{
@@ -441,6 +443,35 @@
                     }
                 }
             }
+            // btn:z-index: 2;
+            .box_votebtn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 5px 0 5px 0;
+                .item_govotebtn{
+                    width: 120px;
+                    height: 60px;
+                    border-radius: 45px;
+                    background-color: #aaa;
+                    cursor: pointer;
+                    z-index: 2;
+                    .btn_govote{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 120px;
+                        height: 55px;
+                        border-radius: 45px;
+                        background-color: #F7E9C3;
+                        p{
+                            color: #502311;
+                        }
+                    }
+                }
+            }
+            //leafMove
             .leafMove{
                 width: 100%;
                 .leafA, .leafB{
@@ -480,6 +511,89 @@
                     }
                     100%{
                         transform: translate(1900px)
+                    }
+                }
+            }
+        }
+        //secreen04
+        .content_hotproducts{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            width: 100%;
+            .box_hotproducts{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                padding: 20px;
+                .item_hotproducts{
+                    width: 25%;
+                    .hotproducts_boxes{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        img{
+                            width: 100%;
+                        }
+                        .hotproducts_board{
+                            position: absolute;
+                            bottom: -20px;
+                            width: 55%;
+                            img{
+                                width: 100%;
+                            }
+                            .hotproducts_txt{
+                                width: 100%;
+                                position: absolute;
+                                bottom: 20px;
+                                h3{
+                                    color: #502311;
+                                    font-size: 28px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .box_hotproductsgrass{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                padding: 20px 0 0 0;
+                .item_hotproductsgrassA{
+                    width: 20%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .item_hotproductsbtn{
+                    width: 120px;
+                    height: 60px;
+                    border-radius: 45px;
+                    background-color: #aaa;
+                    cursor: pointer;
+                    z-index: 2;
+                    .btn_hotproducts{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 120px;
+                        height: 55px;
+                        border-radius: 45px;
+                        background-color: #F7E9C3;
+                        p{
+                            color: #502311;
+                        }
+                    }
+                }
+                .item_hotproductsgrassB{
+                    width: 20%;
+                    img{
+                        width: 100%;
                     }
                 }
             }
