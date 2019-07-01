@@ -1,8 +1,10 @@
+@import "./basic/var1";
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
+  font-family: font_p;
 }
 
 .pdP_hero_wrapper {
@@ -84,6 +86,7 @@
   width: 8.4em;
   white-space: nowrap;
   font-weight: bold;
+  font-family: Verdana, Geneva, sans-serif;
   border-right: 0.05em solid;
   animation: typing 3s 0s steps(8), caret 1s steps(1) 7 forwards;
   background-color: #fff;
@@ -115,7 +118,7 @@
   font-size: 14px;
   color: #522411;
   position: absolute;
-  bottom: 15%;
+  bottom: 22%;
   left: 0;
   right: 0;
 }
@@ -183,7 +186,7 @@
 .pdP_pdlist_wrapper {
   background-image: url("../scss/pdImg/bg/pd_bg02.png");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .pd_list_container {
   max-width: 1200px;
@@ -231,11 +234,11 @@
 //card
 .pdP_pdlist_wrapper .pd_card_content {
   position: relative;
-  width: 20%;
-  margin: 130px 5% 0;
+  width: 25%;
+  margin: 130px 3% 0;
 }
 .pdP_pdlist_wrapper .card_content {
-  width: 100%;
+  width: 90%;
   background-color: #fdefcf;
   border-radius: 10px;
   border: 5px solid #a6937c;
@@ -281,6 +284,9 @@
 .card_content .pic {
   text-align: center;
 }
+.pd_card_content .txt {
+  line-height: 1.5;
+}
 .pd_list_container .card_content .title {
   text-align: center;
   font-size: 18px;
@@ -325,13 +331,12 @@
 }
 
 .card_content .add_to_cart {
-  background-color: #fff;
-  width: 80px;
-  height: 30px;
+  background-color: pink;
+  padding: 10px 20px;
   outline: 0;
   border-radius: 40px / 15px;
   border: none;
-  box-shadow: 0 3px #d95b44;
+  box-shadow: 0 5px #d95b44;
   margin-left: auto;
 }
 .card_content .add_to_cart:active {
@@ -355,7 +360,7 @@
   color: #522411;
 }
 .pdP_pdlist_wrapper .see_more {
-  margin: 20px auto;
+  margin: 5% auto 10%;
   padding: 5px 10px;
   border: 3px solid #a6937c;
   text-align: center;
@@ -400,7 +405,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20% 10%;
+  padding: 20% 0;
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
@@ -447,8 +452,9 @@
 
 //bottonGoToCus
 .pd_Customize_container .go_to_cus {
-  background-image: url(../scss/pdImg/pd/button.png);
+  background-color: #d8d8d8;
   padding: 10px;
+  border-radius: 40px / 15px;
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
@@ -457,9 +463,15 @@
   position: absolute;
   right: 20%;
   bottom: 15%;
+  border: none;
+  box-shadow: 0 5px #444;
+}
+.pd_Customize_container .go_to_cus:active {
+  box-shadow: 0 1px #444;
+  transform: translateY(4px);
 }
 .pd_Customize_container .go_to_cus a {
-  color: #555;
+  color: #333;
   font-size: 12px;
   padding: 20px 10px;
 }
@@ -473,7 +485,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  animation: pdshake 2s ease 3;
+  animation: cusShake 2s ease 3;
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 12px;
@@ -482,10 +494,30 @@
   position: absolute;
   left: 40%;
   top: 65%;
-  animation: pdshake 2s ease 3;
+  animation: cusShake 2s ease 3;
   transform: translate(-40%, -65%);
   text-align: center;
   font-size: 12px;
+}
+@keyframes cusShake {
+  0%,
+  100% {
+    transform: scale(1) rotate(0) translate(-50%, -50%);
+  }
+  10%,
+  30% {
+    transform: scale(0.9) rotate(3deg) translate(-50%, -50%);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: scale(1.1) rotate(-3deg) translate(-50%, -50%);
+  }
+  50%,
+  70% {
+    transform: scale(1.1) rotate(3deg) translate(-50%, -50%);
+  }
 }
 
 .pd_Customize_box .pic_dl img {
@@ -501,4 +533,16 @@
   position: absolute;
   bottom: 8%;
   left: 5%;
+}
+
+// 機器人
+.pdP_hero_wrapper .chat_box {
+  position: fixed;
+  width: 10%;
+  right: 3%;
+  bottom: 3%;
+  z-index: 100;
+}
+.pdP_hero_wrapper .chat_box img {
+  width: 100%;
 }

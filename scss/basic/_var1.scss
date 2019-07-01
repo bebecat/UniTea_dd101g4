@@ -1,24 +1,23 @@
 @font-face {
-	font-family: "font_p";
-	src: url("../sass/font/03SmartFont-P.ttf")  format("truetype"),;
+  font-family: "font_p";
+  src: url("../scss/font/03SmartFont-P.ttf") format("truetype");
 }
 @font-face {
-	font-family: "font_title";
-	src: url("../sass/font/HanaMinA.ttf")  format("truetype");
+  font-family: "font_title";
+  src: url("../scss/font/HanaMinA.ttf") format("truetype");
 }
 @font-face {
-	font-family: "font_nav";
-	src: url("../sass/font/font_1_kokumr_1.00_rls.ttf")  format("truetype");
+  font-family: "font_nav";
+  src: url("../scss/font/font_1_kokumr_1.00_rls.ttf") format("truetype");
 }
 @font-face {
-	font-family: "font_2";
-	src: url("../sass/font/imagine YOKOHAMA.otf")  format("truetype");
+  font-family: "font_2";
+  src: url("../scss/font/imagine YOKOHAMA.otf") format("truetype");
 }
 @font-face {
-	font-family: "font_cart";
-	src: url("../sass/font/SoukouMincho.ttf")  format("truetype");
+  font-family: "font_cart";
+  src: url("../scss/font/SoukouMincho.ttf") format("truetype");
 }
-
 
 $mb: 767px;
 $md: 996px;
