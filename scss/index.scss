@@ -675,6 +675,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-flow: column nowrap;
             width: 100%;
             .box_game{
                 width: 100%;
@@ -750,6 +751,34 @@
                     }
                 }
             }
+            // btn:z-index: 2;
+            .box_gamebtn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 5px 0 5px 0;
+                .item_gamebtn{
+                    width: 120px;
+                    height: 60px;
+                    border-radius: 45px;
+                    background-color: #aaa;
+                    cursor: pointer;
+                    z-index: 2;
+                    .btn_gotoplay{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 120px;
+                        height: 55px;
+                        border-radius: 45px;
+                        background-color: #F7E9C3;
+                        p{
+                            color: #502311;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -757,14 +786,41 @@
 // Machine
 .machine{
     cursor: pointer;
-    width: 180px;
-    height: 180px;
+    width: 15%;
     position: fixed;
     bottom: 0;
     right: 0;
     z-index: 8;
-    img{
+    .machine_check{
         width: 100%;
-        height: 100%;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .machine_dialog{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            position: absolute;
+            top: -40%;
+            animation: dialogMove 2s linear infinite alternate;
+            @keyframes dialogMove {
+                0%{ transform: translateY(0px) }
+                100%{ transform: translateY(10px) }
+            }
+            img{
+                width: 100%;
+            }
+            .machine_txt{
+                width: 100%;
+                position: absolute;
+                p{
+                    font-size: 110%;
+                    width: 100%;
+                }
+            }
+        }
     }
 }
