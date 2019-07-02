@@ -141,7 +141,7 @@ $value: fontP, itemP, productsP, iteamP;
     height: 100px;
     position: relative;
     overflow: hidden;
-    background: url('/scss/img/background-grid.png');
+    background: url('/scss/img/GengImg/background-grid.png');
     background-size: cover;
   // background-color: #f9f9e6;
 
@@ -255,7 +255,7 @@ $value: fontP, itemP, productsP, iteamP;
     height: 100%;
     
         .box{
-        width: 700px;
+        width: 60%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -281,7 +281,7 @@ $value: fontP, itemP, productsP, iteamP;
             }
         }
         .content_icon{
-            width: 150px;
+            width: 10%;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -308,8 +308,8 @@ $value: fontP, itemP, productsP, iteamP;
     width: 100%;
     height: 220px;
     background-image: 
-    url(/scss/img/footerIamge.png),
-    url(/scss/img/background-grid.png);
+    url(/scss/img/GengImg/footerIamge.png),
+    url(/scss/img/GengImg/background-grid.png);
     background-size: cover;
 
     .content{
