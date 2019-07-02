@@ -1,3 +1,15 @@
+@mixin glassBG(){
+  background-image:url('../scss/img/auimg/glassBG.png');
+  background-repeat: norepeat;
+  background-attachment:fixed;
+  background-origin: content-box;
+  background-position:center;
+  background-size: 100% 100%;
+  filter:opacity(70%);
+  @content;
+}
+
+
 
 @mixin title_modules($list...) {
   @each $title, $fontSize, $color, $fontFamily in $list {

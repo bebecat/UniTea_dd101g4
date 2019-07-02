@@ -1,7 +1,105 @@
-
+// @import "base/resret1.scss";
 @import "basic/var1.scss";
 @import "mixins/mixin1.scss";
+// @import "layout/footer1.scss";
+// @import "layout/header1.scss";
+// @import "layout/sidebar1.scss";
 @import "page/moblie.scss";
+
+//1. title字體顏色字型
+// @mixin title_modules($list...) {
+//   @each $title, $fontSize, $color, $fontFamily in $list {
+//     #{$title} {
+//       font-size: $fontSize;
+//       color: $color;
+//       font-family: $fontFamily;
+//     }
+//   }
+// }
+
+@include title-modules(
+h1 rgba(0,0,0,1) 12px 'font_title',
+h2 rgba(0,0,0,.8) 48px 'font_title',
+h3 rgba(0,0,0,.6) 36px font_title,
+h4 rgba(0,0,0,.4) 28px font_title,
+h5 rgba(0,0,0,.3) 20px font_title,
+p rgba(0,0,0,.3) 16px font_p,
+);
+
+//2.bg-image(使用在不同版面或rwd)
+$value: fontP, itemP, productsP, iteamP;
+
+@each $img in $value {
+    .#{$img}-bg {
+    background-image: url("./img/#{$img}.jpg");
+    width: 300px;
+    }
+}
+
+//3.使用在卡片
+// @mixin card-color($classname, $width, $height, $bgc, $margin, $border: null) {
+//   #{$classname} {
+//     background-color: $bgc;
+//     width: $width;
+//     height: $height;
+//     margin: $margin;
+//     border: $border;
+//     @content;
+//   }
+// }
+
+// @include card-color(".box", 500px, 400px, pink, 10px, 3px solid deeppink);
+
+//4.隔線系統
+// @mixin grid($num) {
+//   @for $i from 1 through $num {
+//     .col-md-#{$i} {
+//       width: ($i/$num) * 100%;
+//     }
+//   }
+// }
+
+@include grid(12);
+
+//5.前綴字
+// @mixin box-sizing($border-model) {
+//   -webkit-box-sizing: $box-model;
+//   -moz-box-sizing: $box-model;
+//   box-sizing: $box-model;
+// }
+// .boxSizing {
+//   @include box-sizing(border-box);
+// }
+
+//6擴充物件
+.txt {
+    font-size: 20px;
+    color: green;
+    padding: 10px;
+}
+//可以用@extend.txt
+
+//7.RWD
+
+// $mb: 767px;
+// $md: 996px;
+// $dsk: 997px;
+// @mixin rwd($breakpoint) {
+//   @if $breakpoint==mobile {
+//     @media all and (max-width: $mb) {
+//       @content;
+//     }
+//   } @else if $breakpoint==medium {
+//     @media all and (min-width: $md) {
+//       @content;
+//     }
+//   } @else if $breakpoint==desktop {
+//     @media all and (min-width: $dsk) {
+//       @content;
+//     }
+//   }
+// }
+
 @include rwd(mobile) {
     body {
     font-size: 16px;
@@ -43,13 +141,15 @@
     height: 100px;
     position: relative;
     overflow: hidden;
+    background: url('/scss/img/GengImg/background-grid.png');
+    background-size: cover;
   // background-color: #f9f9e6;
 
 .cloudF{
     width: 3500px;
     height: 3450px;
     border-radius: 50%;
-    background-color: #ffc;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
     position: absolute;
     // opacity: .5;
     left: -600px;
@@ -66,7 +166,7 @@
         width: 3500px;
         height: 3450px;
         border-radius: 50%;
-        background-color: #ffd;
+        background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
         // opacity: .5;
         position: absolute;
         left: 0;
@@ -79,7 +179,7 @@
     width: 3500px;
     height: 3450px;
     border-radius: 50%;
-    background-color: #ffc;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
     position: absolute;
     // opacity: .8;
     left: -1350px;
@@ -96,7 +196,7 @@
         width: 3500px;
         height: 3450px;
         border-radius: 50%;
-        background-color: #ffd;
+        background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
         // opacity: 1;
         position: absolute;
         right: 0;
@@ -109,7 +209,7 @@
     width: 3500px;
     height: 3450px;
     border-radius: 50%;
-    background-color: #ffc;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
     position: absolute;
     // opacity: .5;
     left: 0px;
@@ -126,7 +226,7 @@
         width: 3500px;
         height: 3450px;
         border-radius: 50%;
-        background-color: #ffd;
+        background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
         // opacity: .5;
         position: absolute;
         left: 0;
@@ -144,6 +244,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 99;
     // background-color: #ccc;
 
     .content{
@@ -154,7 +255,7 @@
     height: 100%;
     
         .box{
-        width: 700px;
+        width: 60%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -163,6 +264,8 @@
             color: #222;
             }
             .logo{
+                position: relative;
+
                 cursor: pointer;
                 width: 50px;
                 // height: 90px;
@@ -170,10 +273,15 @@
                 width: 100%;
                 // height: 100%;
                 }
+                h1{
+                    position: absolute;
+                    top: 0;
+                    display: none;
+                }
             }
         }
         .content_icon{
-            width: 150px;
+            width: 10%;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -199,8 +307,10 @@
     align-items: center;
     width: 100%;
     height: 220px;
-    background: url('/scss/img/footerIamge.png') no-repeat;
-    background-size: 100%;
+    background-image: 
+    url(/scss/img/GengImg/footerIamge.png),
+    url(/scss/img/GengImg/background-grid.png);
+    background-size: cover;
 
     .content{
         display: flex;
@@ -229,7 +339,7 @@
                 p{
                     font-size: 21px;
                     line-height: 1.5;
-                    background-color: #f2c4BB;
+                    // background-color: #f2c4BB;
                     color: #522411;
                 }
             }
