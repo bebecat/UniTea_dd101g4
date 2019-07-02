@@ -141,7 +141,7 @@ $value: fontP, itemP, productsP, iteamP;
     height: 100px;
     position: relative;
     overflow: hidden;
-    background: url('/scss/img/GengImg/background-grid.png');
+    background-image: url('../scss/img/GengImg/background-grid.png');
     background-size: cover;
   // background-color: #f9f9e6;
 
@@ -308,8 +308,8 @@ $value: fontP, itemP, productsP, iteamP;
     width: 100%;
     height: 220px;
     background-image: 
-    url(/scss/img/GengImg/footerIamge.png),
-    url(/scss/img/GengImg/background-grid.png);
+    url('../scss/img/GengImg/footerIamge.png'),
+    url('../scss/img/GengImg/background-grid.png');
     background-size: cover;
 
     .content{

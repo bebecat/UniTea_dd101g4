@@ -17,7 +17,7 @@
     flex-flow: column nowrap;
     width: 100%;
     // outline: 1px solid #f00;
-    background: url('/scss/img/GengImg/background-grid.png');
+    background: url(../scss/img/GengImg/background-grid.png);
     background-size: 100%;
     overflow: hidden;
 
@@ -207,7 +207,7 @@
                 .item_boxes{
                     border-radius: 50%;
                     position: relative;
-                    background: url('/scss/img/GengImg/Screen02/Screen02tree.png') no-repeat;
+                    background: url('../scss/img/GengImg/Screen02/Screen02tree.png') no-repeat;
                     background-size: 85%;
                     background-position: center;
                     // border: 1px solid #000;
@@ -484,7 +484,7 @@
                 }
                 .crown{
                     align-items: flex-start;
-                    background: url('/scss/img/GengImg/Screen02/Screen02tree.png') no-repeat;
+                    background: url('../scss/img/GengImg/Screen02/Screen02tree.png') no-repeat;
                     background-size: 100%;
                     background-position: bottom;
                     .no1{
