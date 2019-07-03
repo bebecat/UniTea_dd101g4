@@ -1,39 +1,17 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "font_p";
-  src: url("../scss/font/03SmartFont-P.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "font_title";
-  src: url("../scss/font/HanaMinA.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "font_nav";
-  src: url("../scss/font/font_1_kokumr_1.00_rls.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "font_2";
-  src: url("../scss/font/imagine YOKOHAMA.otf") format("truetype"); }
-
-@font-face {
-  font-family: "font_cart";
-  src: url("../scss/font/SoukouMincho.ttf") format("truetype"); }
-
 * {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-decoration: none;
-  font-family: font_p; }
+  text-decoration: none; }
 
 .pdP_hero_wrapper {
   background-image: url("../scss/pdImg/bg/pd_bg01-1.png");
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
   background-attachment: fixed; }
 
 .pdP_hero_wrapper .sun {
@@ -57,10 +35,11 @@
 
 .pdP_hero_wrapper .sun img,
 .cloud img {
-  width: 80%; }
+  width: 100%; }
 
 .pdP_hero_wrapper .cloud {
-  width: 60%;
+  width: 40%;
+  top: 12%;
   position: absolute;
   animation: cloudMove 50s infinite alternate-reverse;
   transform: translateX(-100px);
@@ -114,8 +93,7 @@
   color: #555;
   position: absolute;
   bottom: 30%;
-  left: 0;
-  right: 0; }
+  left: 45%; }
 
 .recommend_txt span {
   font-size: 4px; }
@@ -125,8 +103,7 @@
   color: #522411;
   position: absolute;
   bottom: 22%;
-  left: 0;
-  right: 0; }
+  left: 44%; }
 
 .pdP_recommend_card {
   width: 100%;
@@ -225,9 +202,12 @@
   border-radius: 10px;
   box-sizing: border-box; }
 
+@media screen and (min-width: 768px) {
+  .pdP_pdlist_wrapper .pd_card_content {
+    width: 25%; } }
+
 .pdP_pdlist_wrapper .pd_card_content {
   position: relative;
-  width: 25%;
   margin: 130px 3% 0; }
 
 .pdP_pdlist_wrapper .card_content {
@@ -355,10 +335,14 @@
   width: 10%;
   background-color: #fff; }
 
+@media screen and (max-width: 767px) {
+  .pdP_pdlist_wrapper .see_more {
+    width: 20%; } }
+
 .pd_Customize_container {
   background-image: url("../scss/pdImg/bg/pd_bg_03.png");
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   padding-top: 30px;
   height: 100vh;
   background-repeat: no-repeat;
@@ -373,7 +357,7 @@
 .pd_footer_box {
   background-image: url("../scss/img/footerIamge.png");
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   padding: 3% 0;
   background-repeat: no-repeat; }
 
@@ -387,7 +371,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20% 0;
+  padding: 10%;
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
@@ -413,7 +397,8 @@
   width: 10%;
   right: 0;
   top: -20%;
-  z-index: 3; }
+  z-index: 3;
+  overflow: hidden; }
 
 .pd_Customize_container .fly_animal img {
   width: 100%; }
@@ -463,7 +448,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  animation: cusShake 2s ease 3;
+  animation: cusShake 2s ease infinite;
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 12px; }
@@ -472,7 +457,7 @@
   position: absolute;
   left: 40%;
   top: 65%;
-  animation: cusShake 2s ease 3;
+  animation: cusShake 2s ease infinite;
   transform: translate(-40%, -65%);
   text-align: center;
   font-size: 12px; }
@@ -515,3 +500,9 @@
 
 .pdP_hero_wrapper .chat_box img {
   width: 100%; }
+
+@media screen and (max-width: 767px) {
+  .col_1 {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; } }
