@@ -172,11 +172,9 @@
 .icon img {
   width: 100%; }
 
-.icon .member {
-  margin-right: 10px;
-  padding: 0 5px; }
-
+.icon .member,
 .icon .cart {
+  margin: 5px;
   padding: 0 5px; }
 
 @media screen and (min-width: 768px) {
@@ -408,7 +406,6 @@ footer ul {
   font-family: hanyi; }
 
 footer .copy {
-  width: 100%;
   background-color: #e69966;
   font-size: 12px;
   color: #666;
