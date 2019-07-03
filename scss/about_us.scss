@@ -16,14 +16,14 @@ p rgba(0,0,0,.3) 16px font_2,
 	padding : 0;
 	list-style : none;
 	text-decoration:none;
-	//outline : 1px solid rgba(33,33,33,.5);
+	outline : 1px solid rgba(33,33,33,.5);
 }
 .clear_fix{
 	clear:both;
 }
 .header_fulsec{
 	width:0;
-	height: 130px;
+	height:130px;
 }
 .fp_aboutus_wrapper{
 width:100%;
@@ -251,7 +251,7 @@ position:relative;
 			width:500px;
 			height:89px;
 			line-height:89px;
-			margin: 5px auto 20px;
+			margin: 55px auto 20px;
 			//background-color:#F7E9C3;
 			position:relative;
 			.title_bg{
@@ -277,7 +277,7 @@ position:relative;
 				width:100px;
 				height:100px;
 				position:absolute;
-				bottom:-82px;
+				bottom:-52px;
 				right:0px;
 				transform-origin:-1px 15px;
 				animation: squirrelwithbullonflow 2.5s 0s infinite ease alternate;
@@ -294,13 +294,20 @@ position:relative;
 		.first_step_customize{
 			width:100%;
 			height:500px;
-			padding:200px 0 0;
+			padding:20px 0 0;
 			position:absolute;
 			box-sizing:border-box;
+			.txt{
+				width:500px;
+				margin:auto;
+			}
 			.step_list{
 				width:470px;
 				padding:10px 0 0;
-				position:relative;
+				position:absolute;
+				bottom:130px;
+				left:0;
+				right:0;
 				margin:auto;
 				.step_line{
 					display:block;
@@ -374,6 +381,10 @@ position:relative;
 				position:relative;
 				margin:auto;
 				text-align:center;
+				.txt{
+					width:500px;
+					margin:auto;
+				}
 				.customize_basket{
 					width:200px;
 					height:194px;
@@ -407,6 +418,10 @@ position:relative;
 				position:relative;
 				margin:auto;
 				text-align:center;
+				.txt{
+					width:500px;
+					margin:auto;
+				}
 				.customize_basket{
 					width:200px;
 					height:194px;
@@ -473,6 +488,10 @@ position:relative;
 				position:relative;
 				margin:auto;
 				text-align:center;
+				.txt{
+					width:500px;
+					margin:auto;
+				}
 				.picnicbg_settin{
 					width:500px;
 					height:262px;
@@ -650,16 +669,24 @@ position:relative;
 		overflow:hidden;
 		z-index:-1;
 		.mountain_settin{
-			width:2748.5px;
+			width:2905px;
 			height:362px;
 			position:absolute;
 			bottom:0;
-			animation: mountainmove 120s 0 infinite linear alternate both;
 		}
-		@keyframes mountainmove{
+		.turn1{
+			animation: mountainmove1 150s 0 infinite linear both;
+		}
+		.turn2{
+			animation: mountainmove2 150s 0 infinite linear both;
+		}
+		@keyframes mountainmove1{
 			0%{transform:translateX(0)}
-			50%{transform:translateX(-1000px)}
-			100%{transform:translateX(-1400px)}
+			100%{transform:translateX(-2748.5px)}
+		}
+		@keyframes mountainmove2{
+			0%{transform:translateX(2748.5px)}
+			100%{transform:translateX(0)}
 		}
 		.paper_bg{
 			width:100%;
@@ -694,7 +721,11 @@ position:relative;
 			}
 		}
 		.context{
-
+			width:2400px;
+			display:flex;
+			flex-flow:row nowrap;
+			justify-content: center;
+			align-item:center;
 			.member{
 				width:400px;
 				margin:auto;
@@ -709,7 +740,6 @@ position:relative;
 					padding:5px 0;
 					p{
 						padding:10px 15px 0;
-
 					}
 				}
 				.to_personweb{
@@ -731,6 +761,35 @@ position:relative;
 				}
 			}
 		}
+	}
+}
+
+footer{
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:1;
+	.footer_bg_settin{
+		position:relative;
+		.footer_bg_glass{
+			width:100%;
+			//height:175px;
+			position:absolute;
+			bottom:0;
+			left:0;
+			right:0;
+		}
+	}
+	.txt{
+		width:300px;
+		position:absolute;
+		bottom:0;
+		left:0;
+		right:0;
+		margin:auto;
+		padding:0 0 15px;
 	}
 }
 }
