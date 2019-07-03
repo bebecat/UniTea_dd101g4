@@ -22,6 +22,305 @@
     background-size: 100%;
     overflow: hidden;
 
+
+    //screen01
+    .container_allview{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+        width: 100%;
+        max-width: 1994px;
+        height: 100vh;
+        position: relative;
+
+        .cotent_allviewgrassA{
+            display: flex;
+            justify-content: center;
+            width: 15%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            .box_allviewgrassA{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                .item_allviewgrassA{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-flow: column nowrap;
+                    width: 100%;
+                    .allviewgrass_darkgrassA{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-flow: column nowrap;
+                        width: 100%;
+                        position: relative;
+                        animation: darkgrassAshake 5s linear infinite alternate;
+                        img{
+                            width: 100%;
+                        }
+                        @keyframes darkgrassAshake {
+                            0%{ transform: rotate(0deg) }
+                            100%{ transform: rotate(1deg) }
+                        }
+                        .allviewgrass_lightgrassA1, .allviewgrass_lightgrassA2, .allviewgrass_verylightgrassA{
+                            position: absolute;
+                            width: 95%;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .allviewgrass_lightgrassA1{
+                            top: 50%;
+                            left: -30%;
+                            animation: lightgrassA1shake 2s linear infinite alternate;
+                            @keyframes lightgrassA1shake {
+                                0%{ transform: translate(0px, 0px) }
+                                100%{ transform: translate(5px, 10px) }
+                            }
+                        }
+                        .allviewgrass_lightgrassA2{
+                            top: 280%;
+                            left: -30%;
+                            animation: lightgrassA2shake 3s linear infinite alternate;
+                            @keyframes lightgrassA2shake {
+                                0%{ transform: translate(0px, 0px) }
+                                100%{ transform: translate(5px, 10px) }
+                            }
+                        }
+                        .allviewgrass_verylightgrassA{
+                            top: 180%;
+                            left: -30%;
+                            animation: verylightgrassAshake 4s linear infinite alternate;
+                            @keyframes verylightgrassAshake {
+                                0%{ transform: translate(0px, 0px) }
+                                100%{ transform: translate(5px, -10px) }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content_main{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-flow: column nowrap;
+            height: 100vh;
+            .content_txt{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                position: relative;
+
+                //txt: z-index:2;
+                .box_txt{
+                    display: flex;
+                    justify-content: center;
+                    width: 30%;
+                    margin: 10px;
+                    .item_txt{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        .txt{
+                            width: 100%;
+                            margin: 5px;
+                            z-index: 2;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        // txtMove animation
+                        .txt_picB{
+                            transform-origin: top left;
+                            transition: 2s ease-out;
+                            animation: txtMove 5s linear infinite alternate;
+                            @keyframes txtMove {
+                                0%{
+                                    transform: rotate(0deg)
+                                }
+                                2%{
+                                    transform: rotate(7deg)
+                                }
+                                4%{
+                                    transform: rotate(3deg)
+                                }
+                                8%{
+                                    transform: rotate(7deg)
+                                }
+                                100%{
+                                    transform: rotate(7deg)
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //cloudMove
+                // .cloudMove{
+                //     display: flex;
+                //     justify-content: center;
+                //     align-items: center;
+                //     opacity: .8;
+                //     .cloudA{
+                //         position: absolute;
+                //         top: 0;
+                //         right: 0px;
+                //         animation: cloudRunA 60s infinite alternate ease-out;
+                //     }
+                //     @keyframes cloudRunA {
+                //         0%{
+                //             transform: translate(600px)
+                //         }
+                //         100%{
+                //             transform: translate(-1600px)
+                //         }
+                //     }
+                //     .cloudB{
+                //         position: absolute;
+                //         top: 0;
+                //         left: 0;
+                //         animation: cloudRunB 60s infinite alternate ease-out;
+                //     }
+                //     @keyframes cloudRunB {
+                //         0%{
+                //             transform: translate(-600px)
+                //         }
+                //         100%{
+                //             transform: translate(1600px)
+                //         }
+                //     }
+
+                // }
+            }
+            .content_object{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                .box_picnic{
+                    width: 50%;
+                    .item_picnic{
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        .picnic{
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+                            position: relative;
+                            img{
+                                width: 100%;
+                            }
+                            .box_object{
+                                display: flex;
+                                justify-content: center;
+                                width: 100%;
+                                position: absolute;
+                                top: -22%;
+                                .item_object{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                    .object{
+                                        width: 25%;
+                                        img{
+                                            width: 100%;
+                                        }
+                                    }
+                                    // object_tweezers: z-index: 1;
+                                    .object_tweezers{
+                                        width: 35%;
+                                        z-index: 1;
+                                        img{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .cotent_allviewgrassB{
+            display: flex;
+            justify-content: center;
+            width: 15%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            .box_allviewgrassB{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                .item_allviewgrassB{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-flow: column nowrap;
+                    width: 100%;
+                    .allviewgrass_darkgrassB{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-flow: column nowrap;
+                        width: 100%;
+                        position: relative;
+                        animation: darkgrassAshake 5s linear infinite alternate;
+                        img{
+                            width: 100%;
+                        }
+                        @keyframes darkgrassAshake {
+                            0%{ transform: rotate(0deg) }
+                            100%{ transform: rotate(1deg) }
+                        }
+                        .allviewgrass_lightgrassB1, .allviewgrass_lightgrassB2, .allviewgrass_verylightgrassB{
+                            position: absolute;
+                            width: 95%;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .allviewgrass_lightgrassB1{
+                            top: 40%;
+                            right: -30%;
+                            animation: lightgrassB1shake 2s linear infinite alternate;
+                            @keyframes lightgrassB1shake {
+                                0%{ transform: translate(0px, 0px) }
+                                100%{ transform: translate(-5px, -10px) }
+                            }
+                        }
+                        .allviewgrass_lightgrassB2{
+                            top: 500%;
+                            right: -30%;
+                            animation: lightgrassB2shake 3s linear infinite alternate;
+                            @keyframes lightgrassB2shake {
+                                0%{ transform: translate(0px, 0px) }
+                                100%{ transform: translate(5px, 10px) }
+                            }
+                        }
+                        .allviewgrass_verylightgrassB{
+                            top: 300%;
+                            right: -30%;
+                            animation: verylightgrassBshake 4s linear infinite alternate;
+                            @keyframes verylightgrassBshake {
+                                0%{ transform: translate(0px, 0px) }
+                                100%{ transform: translate(5px, -10px) }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .container{
         display: flex;
         justify-content: space-around;
@@ -31,138 +330,6 @@
         max-width: 1200px;
         height: 850px;
 
-        //screen01 
-        .content_txt{
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            position: relative;
-
-            //txt: z-index:2;
-            .box_txt{
-                display: flex;
-                justify-content: center;
-                width: 400px;
-                .item_txt{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-                    .txt{
-                        width: 100%;
-                        margin: 5px;
-                        z-index: 2;
-                        img{
-                            width: 100%;
-                        }
-                    }
-                    // txtMove animation
-                    .txt_picB{
-                        transform-origin: top left;
-                        transition: 2s ease-out;
-                        animation: txtMove 5s linear infinite alternate;
-                        @keyframes txtMove {
-                            0%{
-                                transform: rotate(0deg)
-                            }
-                            2%{
-                                transform: rotate(7deg)
-                            }
-                            4%{
-                                transform: rotate(3deg)
-                            }
-                            8%{
-                                transform: rotate(7deg)
-                            }
-                            100%{
-                                transform: rotate(7deg)
-                            }
-                        }
-                    }
-                }
-            }
-
-            //cloudMove
-            .cloudMove{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                opacity: .8;
-                .cloudA{
-                    position: absolute;
-                    top: 0;
-                    right: 0px;
-                    animation: cloudRunA 60s infinite alternate ease-out;
-                }
-                @keyframes cloudRunA {
-                    0%{
-                        transform: translate(600px)
-                    }
-                    100%{
-                        transform: translate(-1600px)
-                    }
-                }
-                .cloudB{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    animation: cloudRunB 60s infinite alternate ease-out;
-                }
-                @keyframes cloudRunB {
-                    0%{
-                        transform: translate(-600px)
-                    }
-                    100%{
-                        transform: translate(1600px)
-                    }
-                }
-
-            }
-        }
-        .content_object{
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            position: relative;
-            .box_object{
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                position: absolute;
-                top: -150px;
-                .item_object{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-                    .object{
-                        width: 200px;
-                        img{
-                            width: 100%;
-                        }
-                    }
-                    // object_tweezers: z-index: 1;
-                    .object_tweezers{
-                        width: 25%;
-                        z-index: 1;
-                    }
-                }
-            }
-            .box_picnic{
-                width: 700px;
-                .item_picnic{
-                    display: flex;
-                    justify-content: center;
-                    width: 100%;
-                    .picnic{
-                        width: 100%;
-                        img{
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
         //screen02
         .content_wood{
             display: flex;
@@ -413,7 +580,7 @@
                 .item_vote{
                     display: flex;
                     justify-content: space-around;
-                    align-items: center;
+                    align-items: flex-end;
                     width: 100%;
                     height: 100%;
 
@@ -484,10 +651,7 @@
                     }
                 }
                 .crown{
-                    align-items: flex-start;
-                    background: url('../scss/img/GengImg/Screen02/Screen02tree.png') no-repeat;
-                    background-size: 100%;
-                    background-position: bottom;
+                    align-items: center;
                     .no1{
                         display: flex;
                         justify-content: center;
@@ -499,6 +663,207 @@
                             height: 60px;
                             img{
                                 width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .box_votepic{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                .item_votepic{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    .votepic_land{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        position: relative;
+                        img{
+                            width: 100%;
+                        }
+                        .votepic_landtree{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            position: absolute;
+                            top: 0;
+                            .votepic_e04A{
+                                position: absolute;
+                                top: 1%;
+                                left: 40%;
+                                width: 2%;
+                                transform-origin: bottom;
+                                animation: e04A 3s linear infinite alternate;
+                                @keyframes e04A {
+                                    0%{ transform: rotate(0deg) }
+                                    100%{ transform: rotate(2deg) }
+                                }
+                                img{
+                                    width: 100%;
+                                }
+                                .votepic_treeA{
+                                    position: absolute;
+                                    top: -20%;
+                                    left: -50%;
+                                    width: 250%;
+                                    animation: votetreeA 3s linear infinite alternate;
+                                    @keyframes votetreeA {
+                                        0%{ transform: translateX(0px) }
+                                        100%{ transform: translateX(5px) }
+                                    }
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .votepic_e04B{
+                                position: absolute;
+                                top: 1%;
+                                width: 2%;
+                                transform-origin: bottom;
+                                animation: e04B 3s linear infinite alternate;
+                                @keyframes e04B {
+                                    0%{ transform: rotate(0deg) }
+                                    100%{ transform: rotate(-2deg) }
+                                }
+                                img{
+                                    width: 100%;
+                                }
+                                .votepic_treeB{
+                                    position: absolute;
+                                    top: -20%;
+                                    left: -50%;
+                                    width: 250%;
+                                    animation: votetreeB 3s linear infinite alternate;
+                                    @keyframes votetreeB {
+                                        0%{ transform: translateX(0px) }
+                                        100%{ transform: translateX(-5px) }
+                                    }
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .votepic_e04C{
+                                position: absolute;
+                                top: 1%;
+                                left: 55%;
+                                width: 2%;
+                                transform-origin: bottom;
+                                animation: e04C 3s linear infinite alternate;
+                                @keyframes e04C {
+                                    0%{ transform: rotate(0deg) }
+                                    100%{ transform: rotate(2deg) }
+                                }
+                                img{
+                                    width: 100%;
+                                }
+                                .votepic_treeC{
+                                    position: absolute;
+                                    top: -20%;
+                                    left: -50%;
+                                    width: 250%;
+                                    animation: votetreeC 2s linear infinite alternate;
+                                    @keyframes votetreeC {
+                                        0%{ transform: translateX(0px) }
+                                        100%{ transform: translateX(3px) }
+                                    }
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .votepic_e04D{
+                                position: absolute;
+                                top: 1%;
+                                left: 60%;
+                                width: 2%;
+                                transform-origin: bottom;
+                                animation: e04D 4s linear infinite alternate;
+                                @keyframes e04D {
+                                    0%{ transform: rotate(0deg) }
+                                    100%{ transform: rotate(3deg) }
+                                }
+                                img{
+                                    width: 100%;
+                                }
+                                .votepic_treeD{
+                                    position: absolute;
+                                    top: -20%;
+                                    left: -50%;
+                                    width: 250%;
+                                    animation: votetreeD 4s linear infinite alternate;
+                                    @keyframes votetreeD {
+                                        0%{ transform: translateX(0px) }
+                                        100%{ transform: translateX(-5px) }
+                                    }
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .votepic_gAbig{
+                                position: absolute;
+                                top: 5%;
+                                left: 30%;
+                                width: 7%;
+                                animation: gAbig 2s linear infinite alternate;
+                                @keyframes gAbig {
+                                    0%{ transform: rotate(0deg) }
+                                    100%{ transform: rotate(5deg) }
+                                }
+                                img{
+                                    width: 100%;
+                                }
+                                .votepic_gAsm{
+                                    position: absolute;
+                                    top: 30%;
+                                    left: 20%;
+                                    width: 70%;
+                                    animation: gAsm 2s linear infinite alternate;
+                                    @keyframes gAsm {
+                                        0%{ transform: rotate(5deg) }
+                                        100%{ transform: rotate(0deg) }
+                                    }
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .votepic_gBbig{
+                                position: absolute;
+                                top: 2%;
+                                left: 70%;
+                                width: 7%;
+                                animation: gBbig 2s linear infinite alternate;
+                                @keyframes gBbig {
+                                    0%{ transform: rotate(5deg) }
+                                    100%{ transform: rotate(10deg) }
+                                }
+                                img{
+                                    width: 100%;
+                                }
+                                .votepic_gBsm{
+                                    position: absolute;
+                                    top: 30%;
+                                    left: 20%;
+                                    width: 70%;
+                                    animation: gAsm 2s linear infinite alternate;
+                                    @keyframes gBsm {
+                                        0%{ transform: rotate(10deg) }
+                                        100%{ transform: rotate(5deg) }
+                                    }
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
                             }
                         }
                     }
