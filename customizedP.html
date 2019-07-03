@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/customizedP.css" />
+        <link rel="stylesheet" href="css/customize/headerFooter.css" />
+        <title>客製野餐籃</title>
+    </head>
+    <body>
+        <div class="cust_wrapper">
+                  <header>
+        <input type="checkbox" id="menu_ct" />
+        <div class="header_container" id="header_container">
+          <div class="header_cloud">
+            <div class="cloudF"></div>
+            <div class="cloudB"></div>
+            <div class="cloudR"></div>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="customizedP.html">客製野餐籃</a></li>
+              <li><a href="contest.html">美籃子</a></li>
+              <li><a href="">野餐活動</a></li>
+              <li>
+                <a href="index.html"
+                  ><img class="logo" src="scss/img/rwd-logo.png" alt="logo"
+                /></a>
+              </li>
+              <li><a href="pdList.html">野餐周邊</a></li>
+              <li><a href="aboutus.html">故事籃</a></li>
+              <li><a href="game/game.html">小遊戲</a></li>
+            </ul>
+            <div class="content_icon">
+              <a href="index.html"
+                ><img class="logo" src="scss/img/rwd-logo.png" alt="logo"
+              /></a>
+              <div class="user_pic">
+                <img src="scss/img/UserIcon.png" alt="user_icon" />
+              </div>
+              <div class="store_pic">
+                <img src="scss/img/StoreCar.png" alt="cart_icon" />
+              </div>
+              <label class="hb" for="menu_ct">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+              </label>
+            </div>
+          </nav>
+        </div>
+      </header>
+           <!--  <header>
+                <input type="checkbox" id="menu_ct" />
+                <div class="header_container" id="header_container">
+                    <div class="header_cloud">
+                        <div class="cloudF"></div>
+                        <div class="cloudB"></div>
+                        <div class="cloudR"></div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">客製野餐籃</a></li>
+                            <li><a href="#">選美排行</a></li>
+                            <li><a href="#">野餐活動</a></li>
+                            <li>
+                                <a href="index.html"
+                                    ><img class="logo" src="scss/img/Customization/rwd-logo.png" alt="logo"
+                                /></a>
+                            </li>
+                            <li><a href="#">商品買買</a></li>
+                            <li><a href="#">關於我們</a></li>
+                            <li><a href="#">小遊戲</a></li>
+                        </ul>
+                        <div class="content_icon">
+                            <a href="index.html"><img class="logo" src="scss/img/rwd-logo.png" alt="logo"/></a>
+                            <div class="user_pic">
+                                <img src="scss/img/Customization/UserIcon.png" alt="user_icon" />
+                            </div>
+                            <div class="store_pic">
+                                <img src="scss/img/Customization/StoreCar.png" alt="cart_icon" />
+                            </div>
+                            <label class="hb" for="menu_ct">
+                                <span class="bar bar1"></span>
+                                <span class="bar bar2"></span>
+                                <span class="bar bar3"></span>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+            </header> -->
+            <div class="cust_box">
+                <div class="container">
+                    <div class="cust_title">
+                        <img src="scss/img/Customization/custTitle.png" alt="客製頁標題" />
+                    </div>
+                    <div class="cust_area">
+                        <div class="picnic_basket">
+                            <div class="picnic_basket_make">
+                                <form class="check_basket_name">
+                                    <input type="text" name="basketName" id="basketName" maxlength="12" />
+                                    <button type="button">確認命名</button>
+                                </form>
+                                <img
+                                    src="scss/img/Customization/basket01.png"
+                                    alt="野餐籃款式照片"
+                                    class="basketImgList"
+                                />
+                                <img
+                                    src="scss/img/Customization/basket02.png"
+                                    alt="野餐籃款式照片"
+                                    class="basketImgList"
+                                />
+                                <img
+                                    src="scss/img/Customization/basket03.png"
+                                    alt="野餐籃款式照片"
+                                    class="basketImgList"
+                                />
+                                <img
+                                    src="scss/img/Customization/basket04.png"
+                                    alt="野餐籃款式照片"
+                                    class="basketImgList"
+                                />
+                                <p>NTS:<span>200</span>元</p>
+                            </div>
+                            <div class="step_flow">
+                                <div id="step_circle">
+                                    <button
+                                        type="button"
+                                        class="step step1"
+                                        id="custStep1"
+                                        onmouseout="chooseStep(0)"
+                                        onmouseover="baseStep(0)"
+                                        onclick="showChooseArea(0)"
+                                    >
+                                        <img
+                                            src="scss/img/Customization/custStepButtonGray01.png"
+                                            alt="步驟1"
+                                            class="stepNumber"
+                                        />
+                                        <p>選擇野餐籃</p>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="step step2"
+                                        id="custStep2"
+                                        onmouseout="chooseStep(1)"
+                                        onmouseover="baseStep(1)"
+                                        onclick="showChooseArea(1)"
+                                    >
+                                        <img
+                                            src="scss/img/Customization/custStepButtonGray02.png"
+                                            alt="步驟2"
+                                            class="stepNumber"
+                                        />
+                                        <p>野餐籃配色</p>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="step step3"
+                                        id="custStep3"
+                                        onmouseout="chooseStep(2)"
+                                        onmouseover="baseStep(2)"
+                                        onclick="showChooseArea(2)"
+                                    >
+                                        <img
+                                            src="scss/img/Customization/custStepButtonGray03.png"
+                                            alt="步驟3"
+                                            class="stepNumber"
+                                        />
+                                        <p>裝飾野餐籃</p>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="step step4"
+                                        id="custStep4"
+                                        onmouseout="chooseStep(3)"
+                                        onmouseover="baseStep(3)"
+                                        onclick="showChooseArea(3)"
+                                    >
+                                        <img
+                                            src="scss/img/Customization/custStepButtonGray04.png"
+                                            alt="步驟4"
+                                            class="stepNumber"
+                                        />
+                                        <p>客製完成</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="balloon_squirrel">
+                            <img src="scss/img/Customization/balloon_squirrel.png" alt="氣球松鼠" />
+                        </div>
+
+                        <!-- 野餐籃選擇 -->
+                        <div class="cust_choose_area">
+                            <h2>Step1 選擇野餐籃</h2>
+                            <div class="choose_basket">
+                                <div class="basket_items">
+                                    <div class="basket_items_img">
+                                        <img
+                                            src="scss/img/Customization/basket01.png"
+                                            alt="野餐籃1"
+                                            onclick="changeBasketImg(0)"
+                                        />
+                                    </div>
+                                    <h5>野餐籃200元</h5>
+                                </div>
+                                <div class="basket_items">
+                                    <div class="basket_items_img">
+                                        <img
+                                            src="scss/img/Customization/basket02.png"
+                                            alt="野餐籃2"
+                                            onclick="changeBasketImg(1)"
+                                        />
+                                    </div>
+                                    <h5>野餐籃200元</h5>
+                                </div>
+                                <div class="basket_items">
+                                    <div class="basket_items_img">
+                                        <img
+                                            src="scss/img/Customization/basket03.png"
+                                            alt="野餐籃3"
+                                            onclick="changeBasketImg(2)"
+                                        />
+                                    </div>
+                                    <h5>野餐籃200元</h5>
+                                </div>
+                                <div class="basket_items">
+                                    <div class="basket_items_img">
+                                        <img
+                                            src="scss/img/Customization/basket04.png"
+                                            alt="野餐籃4"
+                                            onclick="changeBasketImg(3)"
+                                        />
+                                    </div>
+                                    <h5>野餐籃200元</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 野餐籃選擇 -->
+
+                        <!-- 野餐籃顏色選擇 -->
+                        <div class="cust_choose_area">
+                            <h2>Step2 野餐籃配色</h2>
+                            <div class="basket_color_area">
+                                <div class="basket_color_box">
+                                    <div class="basket_color_items color_blue"></div>
+                                    <!-- <p>藍</p> -->
+                                </div>
+                                <div class="basket_color_box">
+                                    <div class="basket_color_items color_green"></div>
+                                    <!-- <p>綠</p> -->
+                                </div>
+                                <div class="basket_color_box">
+                                    <div class="basket_color_items color_purple"></div>
+                                    <!-- <p>紫</p> -->
+                                </div>
+                                <div class="basket_color_box">
+                                    <div class="basket_color_items color_yellow"></div>
+                                    <!-- <p>粉色</p> -->
+                                </div>
+                                <div class="basket_color_box">
+                                    <div class="basket_color_items color_orange"></div>
+                                    <!-- <p>粉色</p> -->
+                                </div>
+                                <div class="basket_color_box">
+                                    <div class="basket_color_items color_pink"></div>
+                                    <!-- <p>粉色</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 野餐籃顏色選擇 -->
+
+                        <!-- 野餐籃裝飾選擇 -->
+                        <div class="cust_choose_area">
+                            <h2>Step3 野餐籃裝飾</h2>
+                            <div class="basket_decoration_class">
+                                <ul>
+                                    <li class="decoration_class" onclick="changeDecorationStyle(1)">蝴蝶結</li>
+                                    <li class="decoration_class" onclick="changeDecorationStyle(0)">緞帶</li>
+                                </ul>
+                                <div class="basket_decoration_area">
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/ribbon2.png" alt="緞帶1" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/ribbon4.png" alt="緞帶2" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/ribbon5.png" alt="緞帶3" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/ribbon6.png" alt="緞帶4" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/ribbon8.png" alt="緞帶5" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/ribbon11.png" alt="緞帶6" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/ribbon13.png" alt="緞帶7" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/ribbon14.png" alt="緞帶8" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/ribbon10.png" alt="緞帶9" />
+                                    </div>
+                                </div>
+                                <div class="basket_decoration_area">
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/Bow1.png" alt="蝴蝶結1" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/Bow2.png" alt="蝴蝶結2" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/Bow3.png" alt="蝴蝶結3" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/Bow4.png" alt="蝴蝶結4" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/Bow5.png" alt="蝴蝶結5" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/Bow6.png" alt="蝴蝶結6" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/Bow7.png" alt="蝴蝶結7" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/Bow8.png" alt="蝴蝶結8" />
+                                    </div>
+                                    <div class="basket_decoration_items">
+                                        <img src="scss/img/Customization/Bow9.png" alt="蝴蝶結9" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 野餐籃裝飾選擇 -->
+                        <!-- 客製完成確認 -->
+
+                        <div class="cust_choose_area">
+                            <h2>Step4 客製完成</h2>
+                            <div class="cust_finish">
+                                <div class="cust_choose_info">
+                                    <div class="cust_choose_1">
+                                        <div class="cust_choose_1_content">
+                                            <img src="scss/img/Customization/basket04.png" alt="野餐籃" />
+                                        </div>
+                                        <h4>野餐籃外型</h4>
+                                    </div>
+                                    <div class="cust_choose_2">
+                                        <div class="cust_choose_2_content"></div>
+                                        <h4>野餐籃顏色</h4>
+                                    </div>
+                                    <div class="cust_choose_3">
+                                        <div class="cust_choose_3_content">
+                                            <img src="scss/img/Customization/ribbon10.png" alt="緞帶9" />
+                                        </div>
+                                        <h4>外觀裝飾</h4>
+                                    </div>
+                                    <div class="cust_choose_3">
+                                        <div class="cust_choose_3_content">
+                                            <img src="scss/img/Customization/Bow1.png" alt="緞帶9" />
+                                        </div>
+                                        <h4>外觀裝飾</h4>
+                                    </div>
+                                </div>
+                                <a href="cus_finish.html" class="cust_finish_btn">
+                                    確認並加入購物車
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 客製完成確認 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer_container">
+                <div class="box">
+                    <div class="item_txt">
+                        <p>電話:02-2665-1234</p>
+                        <p>Email:unitea.com</p>
+                        <p>地址:新北市板橋區-野餐路4號</p>
+                        <p>&copy;copyright</p>
+                    </div>
+                    <img src="scss/img/Customization/footerIamge.png" alt="footer_bg" />
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            var basketImgNumber = 1;
+            showBasketImg(basketImgNumber);
+            chooseStep(basketImgNumber);
+
+            function changeBasketImg(n) {
+                showBasketImg((basketImgNumber = n));
+            }
+
+            function showBasketImg(n) {
+                var basketImgList = document.getElementsByClassName("basketImgList");
+                var basketImgColor = document.getElementsByClassName("basket_items_img");
+                for (var i = 0; i < basketImgList.length; i++) {
+                    basketImgList[i].style.display = "none";
+                    basketImgColor[i].style.border = "5px solid #6d3812";
+                    basketImgColor[basketImgNumber].style.border = "5px solid #f3971e";
+                    basketImgList[basketImgNumber].style.display = "block";
+                }
+            }
+
+            function baseStep(n) {
+                var stepFlowBtn = document.getElementsByClassName("step");
+                var stepNumber = document.getElementsByClassName("stepNumber");
+                stepNumber[n].src = "scss/img/Customization/custStepButtonYellow0" + (n + 1) + ".png";
+            }
+
+            function chooseStep(n) {
+                var stepFlowBtn = document.getElementsByClassName("step");
+                var stepNumber = document.getElementsByClassName("stepNumber");
+                for (var j = 0; j < stepNumber.length; j++) {
+                    stepNumber[j].src = "scss/img/Customization/custStepButton0" + (j + 1) + ".png";
+                }
+            }
+        </script>
+        <script>
+            var defaultClass = 1;
+            showDecorationStyle(defaultClass);
+
+            function changeDecorationStyle(n) {
+                showDecorationStyle((defaultClass = n));
+            }
+
+            function showDecorationStyle(n) {
+                var decorationClass = document.getElementsByClassName("decoration_class");
+                var basketDecorationArea = document.getElementsByClassName("basket_decoration_area");
+                for (var k = 0; k < decorationClass.length; k++) {
+                    basketDecorationArea[k].style.display = "none";
+                    basketDecorationArea[defaultClass].style.display = "flex";
+                    if (defaultClass == 1) {
+                        decorationClass[1].style.borderBottom = "5px solid #6a381b";
+                        decorationClass[1].style.borderLeft = "5px solid #6a381b";
+                        decorationClass[1].style.backgroundColor = "#6a381b";
+                        decorationClass[0].style.borderBottom = "none";
+                        decorationClass[0].style.borderRight = "none";
+                        decorationClass[0].style.backgroundColor = "#c38042";
+                    } else {
+                        decorationClass[0].style.borderBottom = "5px solid #6a381b";
+                        decorationClass[0].style.borderRight = "5px solid #6a381b";
+                        decorationClass[0].style.backgroundColor = "#6a381b";
+                        decorationClass[1].style.borderBottom = "none";
+                        decorationClass[1].style.borderLeft = "none";
+                        decorationClass[1].style.backgroundColor = "#c38042";
+                    }
+                }
+            }
+        </script>
+        <script>
+            var defaultArea = 0;
+            showChooseArea(defaultArea);
+
+            function changeChooseArea(n) {
+                showChooseArea((defaultArea = n));
+            }
+
+            function showChooseArea(n) {
+                var chooseArea = document.getElementsByClassName("cust_choose_area");
+                var stepFlowBtn = document.getElementsByClassName("step");
+                var stepCircle = document.getElementById("step_circle");
+                var custStep1 = document.getElementById("custStep1");
+                var custStep2 = document.getElementById("custStep2");
+                var custStep3 = document.getElementById("custStep3");
+                var custStep4 = document.getElementById("custStep4");
+                for (var i = 0; i < chooseArea.length; i++) {
+                    chooseArea[i].style.display = "none";
+                    // stepCircle.style.transform = "rotate(" + (n + 1) * 40 + "deg)";
+                    // stepFlowBtn.style.transform = "rotate(" + "-" + (n + 1) * 40 + "deg)";
+                    if (n == 0) {
+                        custStep1.style.transform = "rotate(" + "-30" + "deg)";
+                        custStep2.style.transform = "rotate(" + "-30" + "deg)";
+                        custStep3.style.transform = "rotate(" + "-30" + "deg)";
+                        custStep4.style.transform = "rotate(" + "-30" + "deg)";
+                        stepCircle.style.transform = "rotate(" + 30 + "deg)";
+                    } else if (n == 1) {
+                        custStep1.style.transform = "rotate(" + "-10" + "deg)";
+                        custStep2.style.transform = "rotate(" + "-10" + "deg)";
+                        custStep3.style.transform = "rotate(" + "-10" + "deg)";
+                        custStep4.style.transform = "rotate(" + "-10" + "deg)";
+                        stepCircle.style.transform = "rotate(" + 10 + "deg)";
+                    } else if (n == 2) {
+                        custStep1.style.transform = "rotate(" + "8" + "deg)";
+                        custStep2.style.transform = "rotate(" + "8" + "deg)";
+                        custStep3.style.transform = "rotate(" + "8" + "deg)";
+                        custStep4.style.transform = "rotate(" + "8" + "deg)";
+                        stepCircle.style.transform = "rotate(" + -8 + "deg)";
+                    } else {
+                        custStep1.style.transform = "rotate(" + "30" + "deg)";
+                        custStep2.style.transform = "rotate(" + "30" + "deg)";
+                        custStep3.style.transform = "rotate(" + "30" + "deg)";
+                        custStep4.style.transform = "rotate(" + "30" + "deg)";
+                        stepCircle.style.transform = "rotate(" + -30 + "deg)";
+                    }
+
+                    if (i == n) {
+                        chooseArea[i].style.display = "block";
+                    } else {
+                        chooseArea[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "font_p";
+  src: url("../scss/font/03SmartFont-P.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_title";
+  src: url("../scss/font/HanaMinA.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_nav";
+  src: url("../scss/font/font_1_kokumr_1.00_rls.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_2";
+  src: url("../scss/font/imagine YOKOHAMA.otf") format("truetype"); }
+
+@font-face {
+  font-family: "font_cart";
+  src: url("../scss/font/SoukouMincho.ttf") format("truetype"); }
+
+h1 {
+  font-size: black;
+  color: 12px;
+  font-family: "font_title";
+  text-align: center;
+  letter-spacing: 2px; }
+
+h2 {
+  font-size: rgba(0, 0, 0, 0.8);
+  color: 48px;
+  font-family: "font_title";
+  text-align: center;
+  letter-spacing: 2px; }
+
+h3 {
+  font-size: rgba(0, 0, 0, 0.6);
+  color: 36px;
+  font-family: font_title;
+  text-align: center;
+  letter-spacing: 2px; }
+
+h4 {
+  font-size: rgba(0, 0, 0, 0.4);
+  color: 28px;
+  font-family: font_title;
+  text-align: center;
+  letter-spacing: 2px; }
+
+h5 {
+  font-size: rgba(0, 0, 0, 0.3);
+  color: 20px;
+  font-family: font_title;
+  text-align: center;
+  letter-spacing: 2px; }
+
+p {
+  font-size: rgba(0, 0, 0, 0.3);
+  color: 16px;
+  font-family: font_p;
+  text-align: center;
+  letter-spacing: 2px; }
+
+.fontP-bg {
+  background-image: url("./img/fontP.jpg");
+  width: 300px; }
+
+.itemP-bg {
+  background-image: url("./img/itemP.jpg");
+  width: 300px; }
+
+.productsP-bg {
+  background-image: url("./img/productsP.jpg");
+  width: 300px; }
+
+.iteamP-bg {
+  background-image: url("./img/iteamP.jpg");
+  width: 300px; }
+
+header {
+  position: fixed;
+  width: 100%; }
+  header .header_cloud {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    background: url("/scss/img/GengImg/background-grid.png");
+    background-size: cover; }
+    header .header_cloud .cloudF {
+      width: 3500px;
+      height: 3450px;
+      border-radius: 50%;
+      background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+      position: absolute;
+      left: -600px;
+      top: -3390px;
+      animation: cloudF 25s infinite linear; }
+      header .header_cloud .cloudF::before {
+        content: '';
+        width: 3500px;
+        height: 3450px;
+        border-radius: 50%;
+        background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation: cloudF 27s infinite linear; }
+
+@keyframes cloudF {
+  form {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+    header .header_cloud .cloudB {
+      width: 3500px;
+      height: 3450px;
+      border-radius: 50%;
+      background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+      position: absolute;
+      left: -1350px;
+      top: -3390px;
+      animation: cloudB 25s infinite linear; }
+      header .header_cloud .cloudB::before {
+        content: '';
+        width: 3500px;
+        height: 3450px;
+        border-radius: 50%;
+        background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+        position: absolute;
+        right: 0;
+        top: 0;
+        animation: cloudB 27s infinite linear; }
+
+@keyframes cloudB {
+  form {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+    header .header_cloud .cloudR {
+      width: 3500px;
+      height: 3450px;
+      border-radius: 50%;
+      background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+      position: absolute;
+      left: 0px;
+      top: -3390px;
+      animation: cloudR 25s infinite linear; }
+      header .header_cloud .cloudR::before {
+        content: '';
+        width: 3500px;
+        height: 3450px;
+        border-radius: 50%;
+        background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation: cloudR 27s infinite linear; }
+
+@keyframes cloudR {
+  form {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+  header .header_container {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99; }
+    header .header_container .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%; }
+      header .header_container .content .box {
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        header .header_container .content .box a {
+          color: #222; }
+        header .header_container .content .box .logo {
+          position: relative;
+          cursor: pointer;
+          width: 50px; }
+          header .header_container .content .box .logo img {
+            width: 100%; }
+          header .header_container .content .box .logo h1 {
+            position: absolute;
+            top: 0;
+            display: none; }
+      header .header_container .content .content_icon {
+        width: 10%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        header .header_container .content .content_icon .user_pic, header .header_container .content .content_icon .store_pic {
+          cursor: pointer;
+          width: 35px;
+          height: 35px; }
+        header .header_container .content .content_icon img {
+          width: 100%;
+          height: 100%; }
+
+.footer_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 220px;
+  background-image: url(/scss/img/GengImg/footerIamge.png), url(/scss/img/GengImg/background-grid.png);
+  background-size: cover; }
+  .footer_container .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px; }
+    .footer_container .content .box {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      height: 100%; }
+      .footer_container .content .box .item_txt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        width: 350px;
+        height: 200px; }
+        .footer_container .content .box .item_txt p {
+          font-size: 21px;
+          line-height: 1.5;
+          color: #522411; }

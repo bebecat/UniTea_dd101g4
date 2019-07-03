@@ -15,6 +15,10 @@ p rgba(0,0,0,.3) 16px font_2,
 	margin : 0;
 	padding : 0;
 	list-style : none;
+<<<<<<< HEAD
+=======
+	text-decoration:none;
+>>>>>>> 1c141afa8b1b63e0de19bda5c2686a0fad4ce3b7
 	outline : 1px solid rgba(33,33,33,.5);
 }
 .clear_fix{
@@ -22,7 +26,11 @@ p rgba(0,0,0,.3) 16px font_2,
 }
 .header_fulsec{
 	width:0;
+<<<<<<< HEAD
 	height: 130px;
+=======
+	height:130px;
+>>>>>>> 1c141afa8b1b63e0de19bda5c2686a0fad4ce3b7
 }
 .fp_aboutus_wrapper{
 width:100%;
@@ -124,7 +132,11 @@ position:relative;
 	.paper_bg{
 		width:100%;
 		height:100%;
+<<<<<<< HEAD
 		background-image: url('../scss/img/paperBG.png');
+=======
+		background-image:url('../scss/img/auimg/paperBG.png');
+>>>>>>> 1c141afa8b1b63e0de19bda5c2686a0fad4ce3b7
 	}
 }
 .idea_introduction{
@@ -250,7 +262,11 @@ position:relative;
 			width:500px;
 			height:89px;
 			line-height:89px;
+<<<<<<< HEAD
 			margin: 5px auto 20px;
+=======
+			margin: 55px auto 20px;
+>>>>>>> 1c141afa8b1b63e0de19bda5c2686a0fad4ce3b7
 			//background-color:#F7E9C3;
 			position:relative;
 			.title_bg{
@@ -276,7 +292,11 @@ position:relative;
 				width:100px;
 				height:100px;
 				position:absolute;
+<<<<<<< HEAD
 				bottom:-82px;
+=======
+				bottom:-52px;
+>>>>>>> 1c141afa8b1b63e0de19bda5c2686a0fad4ce3b7
 				right:0px;
 				transform-origin:-1px 15px;
 				animation: squirrelwithbullonflow 2.5s 0s infinite ease alternate;
@@ -293,6 +313,7 @@ position:relative;
 		.first_step_customize{
 			width:100%;
 			height:500px;
+<<<<<<< HEAD
 			padding:200px 0 0;
 			position:absolute;
 			box-sizing:border-box;
@@ -300,6 +321,22 @@ position:relative;
 				width:470px;
 				padding:10px 0 0;
 				position:relative;
+=======
+			padding:20px 0 0;
+			position:absolute;
+			box-sizing:border-box;
+			.txt{
+				width:500px;
+				margin:auto;
+			}
+			.step_list{
+				width:470px;
+				padding:10px 0 0;
+				position:absolute;
+				bottom:130px;
+				left:0;
+				right:0;
+>>>>>>> 1c141afa8b1b63e0de19bda5c2686a0fad4ce3b7
 				margin:auto;
 				.step_line{
 					display:block;
@@ -349,6 +386,7 @@ position:relative;
 					position:absolute;
 					right:0;
 				}
+<<<<<<< HEAD
 			}
 			.basket_settin{
 				display:block;
@@ -360,6 +398,19 @@ position:relative;
 				left:0;
 				right:0;
 			}
+=======
+			}
+			.basket_settin{
+				display:block;
+				width:203px;
+				height:197px;
+				margin:auto;
+				position:absolute;
+				bottom:50px;
+				left:0;
+				right:0;
+			}
+>>>>>>> 1c141afa8b1b63e0de19bda5c2686a0fad4ce3b7
 		}
 		.second_step_customize{
 			width:100%;
@@ -373,6 +424,13 @@ position:relative;
 				position:relative;
 				margin:auto;
 				text-align:center;
+<<<<<<< HEAD
+=======
+				.txt{
+					width:500px;
+					margin:auto;
+				}
+>>>>>>> 1c141afa8b1b63e0de19bda5c2686a0fad4ce3b7
 				.customize_basket{
 					width:200px;
 					height:194px;
@@ -391,6 +449,7 @@ position:relative;
 						line-height:35px;
 					}
 				}
+<<<<<<< HEAD
 			}
 		}
 		.third_step_customize{
@@ -668,6 +727,301 @@ position:relative;
 			top:0;
 		}
 	}
+=======
+			}
+		}
+		.third_step_customize{
+			width:100%;
+			height:500px;
+			padding:1500px 0 0;
+			position:absolute;
+			box-sizing:border-box;
+			.context{
+				width:670px;
+				height:300px;
+				padding:10px 0 0;
+				position:relative;
+				margin:auto;
+				text-align:center;
+				.txt{
+					width:500px;
+					margin:auto;
+				}
+				.customize_basket{
+					width:200px;
+					height:194px;
+				}
+				.third_step_basket{
+					display:inline-block;
+					vertical-align:middle;
+				}
+				.tableware_settin{
+					display:inline-block;
+					width:256px;
+					height:256px;
+					text-align:center;
+					vertical-align:middle;
+					position:relative;
+					.chopping_board{
+						width:256px;
+						height:256px;
+						animation:step3choppingboardflow 3s 0 infinite linear alternate;
+					}
+					.fork_settin{
+						width:160px;
+						height:160px;
+						position:absolute;
+						top:-20px;
+						right:50px;
+						transform-origin: 160px 0;
+						animation:step3forkflow 3s 0 infinite linear alternate;
+					}
+					.spoon_settin{
+						width:160px;
+						height:160px;
+						position:absolute;
+						top:10px;
+						right:-20px;
+						transform-origin: 0px 160px;
+						animation:step3spoonflow 3s 0 infinite linear alternate;
+					}
+					@keyframes step3forkflow{
+						from{ transform: rotate(0deg) scale(1)}
+						to{ transform: rotate(13deg) scale(1.05)}
+					}
+					@keyframes step3spoonflow{
+						from{ transform: rotate(12deg) scale(1.02)}
+						to{ transform: rotate(25deg) scale(1.06)}
+					}
+					@keyframes step3choppingboardflow{
+						from{ transform: skew(0deg) scale(1)}
+						to{ transform: skew(5deg) scale(1.06)}
+					}
+				}
+			}
+		}
+		.goto_activity{
+			width:100%;
+			height:500px;
+			padding:2100px 0 0;
+			position:absolute;
+			box-sizing:border-box;
+			.activity_settin{
+				width:670px;
+				height:300px;
+				padding:20px 0 0;
+				position:relative;
+				margin:auto;
+				text-align:center;
+				.txt{
+					width:500px;
+					margin:auto;
+				}
+				.picnicbg_settin{
+					width:500px;
+					height:262px;
+					position:absolute;
+					bottom:0px;
+					left:0;
+					right:0;
+					margin:auto;
+					.mat_settin{
+						width:500px;
+						height:262px;
+					}
+				}
+				.picnicfood_settin{
+					width:500px;
+					height:262px;
+					position:absolute;
+					bottom:0px;
+					left:0;
+					right:0;
+					margin:auto;
+					.food{
+						width:200px;
+						height:194px;
+						position:absolute;
+						left:0;
+						right:0;
+						margin:auto;
+						.breads_settin{
+							//display:inline-block;
+							position:absolute;
+						}
+						.bread_a{
+							width:100px;
+							height:132px;
+							top:-10px;
+							left:20px;
+							transform-origin:100px 150px;
+							animation:breadaflow 4s 0 infinite linear alternate;
+						}
+						.bread_b{
+							width:120px;
+							height:108px;
+							top:0px;
+							left:-20px;
+							transform-origin:160px 150px;
+							animation:breadbflow 3s 0 infinite linear alternate;
+						}
+						.bread_c{
+							width:150px;
+							height:60px;
+							top:35px;
+							left:-50px;
+							transform-origin:220px 155px;
+							animation:breadcflow 4s 0 infinite linear alternate;
+						}
+						.fruit_settin{
+							width:150px;
+							height:136px;
+							top:30px;
+							left:40px;
+							position:absolute;
+							animation:fruitflow 4s 0 infinite linear alternate;
+						}
+						@keyframes breadaflow{
+							from{transform:rotate(0deg)}
+							from{transform:rotate(5deg)}
+						}
+						@keyframes breadbflow{
+							from{transform:rotate(0deg)}
+							from{transform:rotate(-2deg)}
+						}
+						@keyframes breadcflow{
+							from{transform:rotate(3deg)}
+							from{transform:rotate(-2deg)}
+						}
+						@keyframes fruitflow{
+							from{transform:rotate(5deg)}
+							from{transform:rotate(-5deg)}
+						}
+					}
+					.basket_settin{
+						.customize_basket{
+							width:200px;
+							height:194px;
+						}
+						//.goto_activity_step_basket{
+
+						//}
+						.goto_activity_step_basket_front{
+							position:absolute;
+							left:0;
+							right:0;
+							margin:auto;
+						}
+					}
+					.tableware_settin{
+						top:50px;
+						right:0;
+						position:absolute;
+						.chopping_board{
+							width:256px;
+							height:256px;
+							animation:step3choppingboardflow 3s 0 infinite linear alternate;
+						}
+						.food{
+							width:270px;
+							bottom:0;
+							position:absolute;
+							.cookies_a{
+								display:inline-block;
+								width:80px;
+								height:68px;
+								animation:cookiesaflow 3s 0 infinite linear alternate;
+							}
+							.cookies_b{
+								display:inline-block;
+								width:80px;
+								height:68px;
+								animation:cookiesbflow 3s 0 infinite linear alternate;
+							}
+							@keyframes cookiesaflow{
+								from{ transform: translateX(-10px) translateY(5px) skew(-1deg) scale(1)}
+								to{ transform: translateX(-10px) translateY(5px) skew(2deg) scale(1.06)}
+							}
+							@keyframes cookiesbflow{
+								from{ transform: translateY(15px) skew(-2deg) scale(1)}
+								to{ transform: translateY(15px) skew(4deg) scale(1.06)}
+							}
+						}
+						.fork_settin{
+							width:160px;
+							height:160px;
+							position:absolute;
+							top:-30px;
+							right:-30px;
+							transform-orgin: 160px 0;
+							animation:step3forkflow 3s 0 infinite linear alternate;
+						}
+						.spoon_settin{
+							width:160px;
+							height:160px;
+							position:absolute;
+							top:10px;
+							right:-70px;
+							transform-orgin: 0px 160px;
+							animation:step3spoonflow 3s 0 infinite linear alternate;
+						}
+						@keyframes step3forkflow{
+							from{ transform: rotate(0deg) scale(1)}
+							to{ transform: rotate(5deg) scale(1.05)}
+						}
+						@keyframes step3spoonflow{
+							from{ transform: rotate(12deg) scale(1.02)}
+							to{ transform: rotate(20deg) scale(1.06)}
+						}
+						@keyframes step3choppingboardflow{
+							from{ transform: skew(0deg) scale(1)}
+							to{ transform: skew(5deg) scale(1.06)}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.teamstory__introduction{
+	width:100%;
+	position:relative;
+	z-index:1;
+	.teamstorybg_settin{
+		width:100%;
+		height:724px;
+		position:absolute;
+		overflow:hidden;
+		z-index:-1;
+		.mountain_settin{
+			width:2905px;
+			height:362px;
+			position:absolute;
+			bottom:0;
+		}
+		.turn1{
+			animation: mountainmove1 150s 0 infinite linear both;
+		}
+		.turn2{
+			animation: mountainmove2 150s 0 infinite linear both;
+		}
+		@keyframes mountainmove1{
+			0%{transform:translateX(0)}
+			100%{transform:translateX(-2748.5px)}
+		}
+		@keyframes mountainmove2{
+			0%{transform:translateX(2748.5px)}
+			100%{transform:translateX(0)}
+		}
+		.paper_bg{
+			width:100%;
+			height:100%;
+			background-image:url('../scss/img/auimg/paperBG.png');
+			position:absolute;
+			top:0;
+		}
+	}
+>>>>>>> 1c141afa8b1b63e0de19bda5c2686a0fad4ce3b7
 	.container{
 		width:100%;
 		height:724px;
@@ -690,6 +1044,7 @@ position:relative;
 				right:0;
 				margin:auto;
 				z-index:-1;
+<<<<<<< HEAD
 			}
 		}
 		.context{
@@ -748,5 +1103,80 @@ footer .copy {
   font-size: 12px;
   color: #666;
   padding: 0;
+=======
+			}
+		}
+		.context{
+			width:2400px;
+			display:flex;
+			flex-flow:row nowrap;
+			justify-content: center;
+			align-item:center;
+			.member{
+				width:400px;
+				margin:auto;
+				padding:15px 0 0;
+				.portrait{
+					display:block;
+					width:200px;
+					height:200px;
+					margin:auto;
+				}
+				.txt{
+					padding:5px 0;
+					p{
+						padding:10px 15px 0;
+					}
+				}
+				.to_personweb{
+					width:300px;
+					height:100px;
+					line-height:80px;
+					margin:auto;
+					position:relative;
+					.person_web_button{
+						width:174px;
+						height:97px;
+						position:absolute;
+						top:0;
+						left:0;
+						right:0;
+						margin:auto;
+						z-index:-1;
+					}
+				}
+			}
+		}
+	}
+}
+
+footer{
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:1;
+	.footer_bg_settin{
+		position:relative;
+		.footer_bg_glass{
+			width:100%;
+			//height:175px;
+			position:absolute;
+			bottom:0;
+			left:0;
+			right:0;
+		}
+	}
+	.txt{
+		width:300px;
+		position:absolute;
+		bottom:0;
+		left:0;
+		right:0;
+		margin:auto;
+		padding:0 0 15px;
+	}
+>>>>>>> 1c141afa8b1b63e0de19bda5c2686a0fad4ce3b7
 }
 }
