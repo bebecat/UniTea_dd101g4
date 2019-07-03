@@ -9,6 +9,7 @@
     // outline: 1px solid #f00;
 }
 
+@media screen and (min-width:768px){
 // Type 
 .index_wrapper{
     display: flex;
@@ -828,11 +829,128 @@
     right: 0;
     z-index: 8;
     .machine_check{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
         width: 100%;
-        position: relative;
-        img{
-            width: 100%;
-            height: 100%;
+        .machine_body{
+            width: 60%;
+            position: relative;
+            z-index: 8;
+            img{
+                width: 100%;
+            }
+            // all z-index:-5;
+            .machine_handR, .machine_handL, .machine_earsR, .machine_earsL, .machine_tail{
+                width: 100%;
+                position: absolute;
+                z-index: -5;
+                img{
+                    width: 100%;
+                }
+            }
+            //z-index:-1
+            .machine_handR{
+                width: 35%;
+                top: 35%;
+                right: -25%;
+                z-index: -1;
+                transform-origin: left;
+                transform: rotate(80deg);
+                animation: handShakeR 3s linear infinite alternate;
+                @keyframes handShakeR {
+                    0%{
+                        transform: rotate(80deg)
+                    }
+                    100%{
+                        transform: rotate(75deg)
+                    }
+                }
+            }
+            .machine_handL{
+                width: 35%;
+                top: 35%;
+                left: 0;
+                z-index: -1;
+                transform-origin: right;
+                animation: handShakeL 1s linear infinite alternate;
+                @keyframes handShakeL {
+                    0%{
+                        transform: rotateY(-20deg)
+                    }
+                    100%{
+                        transform: rotate(-15deg)
+                    }
+                }
+            }
+            .machine_earsL{
+                width: 20%;
+                top: 5%;
+                left: 25%;
+                z-index: -1;
+                transform-origin: bottom right;
+                animation: earsShakeL 5s linear infinite;
+                @keyframes earsShakeL {
+                    0%{
+                        transform: rotate(0deg)
+                    }
+                    2%{
+                        transform: rotate(5deg)
+                    }
+                    4%{
+                        transform: rotate(0deg)
+                    }
+                    8%{
+                        transform: rotate(3deg)
+                    }
+                    100%{
+                        transform: rotate(0deg)
+                    }
+                }
+            }
+            .machine_earsR{
+                width: 20%;
+                top: 8%;
+                right: 8%;
+                z-index: -1;
+                transform-origin: bottom right;
+                animation: earsShakeR 5s linear infinite;
+                @keyframes earsShakeR {
+                    0%{
+                        transform: rotate(0deg)
+                    }
+                    2%{
+                        transform: rotate(-7deg)
+                    }
+                    4%{
+                        transform: rotate(0deg)
+                    }
+                    8%{
+                        transform: rotate(-5deg)
+                    }
+                    100%{
+                        transform: rotate(0deg)
+                    }
+                }
+            }
+            .machine_tail{
+                top: 0;
+                right: -60%;
+                transform-origin: bottom;
+                animation: tailShake 5s linear infinite;
+                @keyframes tailShake {
+                    0%{
+                        transform: rotate(0deg)
+                    }
+                    25%{
+                        transform: rotate(10deg)
+                    }
+                    100%{
+                        transform: rotate(0deg)
+                    }
+                }
+            }
         }
         .machine_dialog{
             display: flex;
@@ -859,4 +977,6 @@
             }
         }
     }
+}
+
 }
