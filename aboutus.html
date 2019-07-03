@@ -3,126 +3,61 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="./css/headerAndFooterFixToAboutus.css">
-    <!-- <link rel="stylesheet" href="css/HeaderAndFooter.css"> -->
-    <!-- <link rel="stylesheet" href="./css/headerP.css" /> -->
-	<!-- <link rel="stylesheet" href="./css/header.css"> -->
 	<link rel="stylesheet" href="./css/about_us.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/h_f_becca.js"></script>
 	<title>picnicfun_aboutus</title>
 </head>
 <body>
 <!-- <div class="header_fulsec"></div> -->
 <div class="fp_aboutus_wrapper">
-<!-- 	<header>
-		<nav>
-			<ul class="pages_trans">
-				<li class="pages_btn tida_size">
-					<span class="tab_name">只屬於你</span>
-					<a href="#" class="tab_btn">客製魚兒味</a>
-				</li>
-				<li class="pages_btn tida_size">
-					<span class="tab_name">官方商品</span>
-					<a href="#"  class="tab_btn">茶包魚市</a>
-				</li>
-				<li class="pages_btn general_size">
-					<h1>unitea</h1>
-					<img src="scss/img/auimg/logo.png" alt="logo">
-				</li>
-				<li class="pages_btn general_size">
-					<span class="tab_name">選美評價</span>
-					<a href="#"  class="tab_btn">投你的魚</a>
-				</li>
-				<li class="pages_btn general_size">
-					<span class="tab_name">聽故事</span>
-					<a href="#" class="tab_btn">關於茶魚你</a>
-				</li>
-				<li class="member_status">
-					<div class="member_btn">
-						<a href="#" class="member_pages">
-							<img class="member_pic" src="scss/img/auimg/member.png" alt="member">
-						</a>
-						<div class="member_data">
-							<span class="member_points">點數</span>
-							<span class="member_name">會員名字</span>	
-						</div>
-						
-					</div>
-					<div class="cart_btn">
-						<span class="cart_num">0</span>
-						<img class="cart_pic"src="scss/img/auimg/cart.png" alt="cart">
-					</div>
-				</li>
-			</ul>
-		</nav>
-	</header> -->
-<!-- <header>
-	<input type="checkbox" id="menu_ct" />
-	<div class="header_container" id="header_container">
-	  <div class="header_cloud">
-	    <div class="cloudF"></div>
-	    <div class="cloudB"></div>
-	    <div class="cloudR"></div>
-	  </div>
-	  <nav>
-	    <ul>
-	      <li><a href="#">客製野餐籃</a></li>
-	      <li><a href="#">選美排行</a></li>
-	      <li><a href="#">野餐活動</a></li>
-	      <li>
-	        <a href="index.html"
-	          ><img class="logo" src="scss/img/rwd-logo.png" alt="logo"
-	        /></a>
-	      </li>
-	      <li><a href="#">商品買買</a></li>
-	      <li><a href="#">關於我們</a></li>
-	      <li><a href="#">小遊戲</a></li>
-	    </ul>
-	    <div class="content_icon">
-	      <a href="index.html"
-	        ><img class="logo" src="scss/img/rwd-logo.png" alt="logo"
-	      /></a>
-	      <div class="user_pic">
-	        <img src="scss/img/UserIcon.png" alt="user_icon" />
-	      </div>
-	      <div class="store_pic">
-	        <img src="scss/img/StoreCar.png" alt="cart_icon" />
-	      </div>
-	      <label class="hb" for="menu_ct">
-	        <span class="bar bar1"></span>
-	        <span class="bar bar2"></span>
-	        <span class="bar bar3"></span>
-	      </label>
-	    </div>
-	  </nav>
-	</div>
-</header> -->
 <header>
-    <div class="header_cloud">
-        <div class="cloudF"></div>
-        <div class="cloudB"></div>
-        <div class="cloudR"></div>
-    </div>
-    <nav id="navbar" class="header_container">
-        <div id="navbar_ct" class="content">
-            <ul class="box">
-                <a href="customizedP.html"><li>客製野餐籃</li></a>
-                <a href="contest.html"><li>美籃子</li></a>
-                <a href="#"><li>野餐活動</li></a>
-                <a href="index.html" class="logo">
-                    <img src="scss/img/GengImg/picniclogo.png" alt="">
-                    <h1>趣野餐</h1>
-                </a>
-                <a href="pdList.html"><li>野餐周邊</li></a>
-                <a href="aboutus.html"><li>故事籃</li></a>
-                <a href="game/game.html"><li>小遊戲</li></a>
-            </ul>
-            <div class="content_icon">
-                <div class="user_pic"><img src="scss/img/GengImg/UserIcon.png" alt=""></div>
-                <div class="store_pic"><img src="scss/img/GengImg/StoreCar.png" alt=""></div>
-            </div>
-        </div>
-    </nav>
+	<nav class="navbar_container">
+		<input type="checkbox" id="menuBg" />
+		<div class="header_cloud">
+			<div class="cloudF"></div>
+			<div class="cloudB"></div>
+			<div class="cloudR"></div>
+		</div>
+		<div class="hb_box">
+			<div class="logo"></div>
+			<label class="hb" for="menuBg">
+				<div class="bar bar1"></div>
+				<div class="bar bar2"></div>
+				<div class="bar bar3"></div>
+			</label>
+		</div>
+		<div class="nav_wrapper">
+			<ul class="nav_content">
+				<a href="customizedP.html"><li class="cus">客製野餐籃</li></a>
+				<a href="contest.html"><li>美籃票選</li></a>
+				<a href="pdList.html"><li >野餐周邊</li></a>
+				<a href="index.html">
+					<li class="logo">
+						<h1>趣野餐</h1>
+					</li>
+				</a>
+				<a href="activity.html"><li>野餐活動</li></a>
+				<a href="aboutus.html"><li class="here">籃子故事</li></a>
+				<a href="game/game.html"><li>賺折扣卷</li></a>
+				<li class="icon">
+					<a href="member.html">
+						<div class="member">
+						<img src="./scss/h_f_img/member.png" alt="member" />
+						</div>
+					</a>
+					<a href="cart.html">
+						<div class="cart">
+						<img src="./scss/h_f_img/cart.png" alt="cart" />
+						</div>
+					</a>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+	</nav>	
 </header>
+
 	<section class="bg_settin">
 		<div class="glass_bg">
 			<div class="animation_item">
@@ -178,7 +113,6 @@
 			<section class="first_step_customize">
 				<div class="txt">
 					<p>來到我們的網站，首先最重要的功能就是可以客製屬於你的獨一無二的野餐籃！依照指示跟著步驟選擇籃子外型、顏色、裝飾，最後幫籃子取個創意無限的名字，就完成啦！</p>
-					<!-- <p>為了環保，我們提供客製野餐籃的服務喔！</p> -->
 				</div>
 				<div class="step_list">
 					<img class="step_line" src="./scss/img/auimg/step_line.png" alt="步驟線">
@@ -351,6 +285,7 @@
 			</div>
 		</div>
 	</section>
+
 <footer>
 	<div class="footer_bg_settin">
 		<img class="footer_bg_glass" src="./scss/img/auimg/footer_glass.png" alt="底部草叢">
@@ -362,6 +297,7 @@
 		<p>&copy;copyright</p>
 	</div>
 </footer>
+
 </div>
 </body>
 </html>	
