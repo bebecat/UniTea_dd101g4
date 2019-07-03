@@ -83,7 +83,7 @@ p {
     position: fixed;
     z-index: -1; }
     .fp_aboutus_wrapper .bg_settin .glass_bg {
-      background-image: url("../scss/img/glassBG.png");
+      background-image: url("../scss/img/auimg/glassBG.png");
       background-repeat: norepeat;
       background-attachment: fixed;
       background-origin: content-box;
