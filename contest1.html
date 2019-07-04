@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>美籃票選</title>
+    <link rel="stylesheet" href="css/contest1.css">
+    <link rel="stylesheet" href="css/h_f_becca.css">
+    <script src="dis/TweenMax.min.js"></script>
+    <script src="dis/ScrollMagic.min.js"></script>
+    <script src="dis/debug.addIndicators.min.js"></script>
+    <script src="dis/animation.gsap.min.js"></script>
+    <script src="dis/h_f_becca.js"></script>
+    <script src="dis/jquery-3.4.0.min.js"></script>
+</head>
+
+<body>
+    <div class="contest_wrapper">
+        <nav class="navbar_container">
+            <input type="checkbox" id="menuBg" />
+            <div class="header_cloud">
+                <div class="cloudF"></div>
+                <div class="cloudB"></div>
+                <div class="cloudR"></div>
+            </div>
+            <div class="hb_box">
+                <div class="logo"></div>
+                <label class="hb" for="menuBg">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                </label>
+            </div>
+            <div class="nav_wrapper">
+                <ul class="nav_content">
+                    <a href="#">
+                        <li class="cus">客製野餐籃</li>
+                    </a>
+                    <a href="#">
+                        <li>美籃票選</li>
+                    </a>
+                    <a href="pdList.html">
+                        <li class="here">野餐周邊</li>
+                    </a>
+                    <a href="#">
+                        <li class="logo">
+                            <h1>趣野餐</h1>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>野餐活動</li>
+                    </a>
+                    <a href="#">
+                        <li>籃子故事</li>
+                    </a>
+                    <a href="#">
+                        <li>賺折扣卷</li>
+                    </a>
+                    <li class="icon">
+                        <a href="#">
+                            <div class="member">
+                                <img src="scss/img/member.png" alt="member" /></div>
+                        </a>
+                        <a href="#">
+                            <div class="cart">
+                                <img src="scss/img/cart.png" alt="cart" /></div>
+                        </a>
+                    </li>
+
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </nav>
+        <section class="rank_container_blue">
+            <div class="clouds">
+                <img src="scss/img/contest/cloud.png" alt="cloud">
+                <img src="scss/img/contest/cloud.png" alt="cloud">
+                <img src="scss/img/contest/cloud.png" alt="cloud">
+            </div>
+            <div class="rank_wrap">
+                <div class="stage_wrap">
+                    <div class="flag">
+                        <img src="scss/img/contest/stage_flag_l.png" alt="flag">
+                        <img src="scss/img/contest/stage_flag_r.png" alt="flag">
+                    </div>
+                    <div class="stage">
+                        <img src="scss/img/contest/stage.png" alt="stage">
+                    </div>
+                </div>
+                <div class="content">
+                    <div id="month">
+                        <h3>
+                            六月排行
+                        </h3>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="scss/img/contest/basket.png" alt="product">
+                        </div>
+                        <div class="txt">
+                            <p>我只帶一瓶酒</p>
+                            <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                            <span>123票</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="scss/img/contest/basket.png" alt="product">
+                        </div>
+                        <div class="txt">
+                            <p>我只帶一瓶酒</p>
+                            <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                            <span>123票</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="scss/img/contest/basket.png" alt="product">
+                        </div>
+                        <div class="txt">
+                            <p>我只帶一瓶酒</p>
+                            <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                            <span>123票</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="attend_container">
+            <div class="green">
+                <div class="squr">
+                    <img src="scss/img/contest/body.png" alt="squirrel">
+                    <img src="scss/img/contest/tail.png" alt="squirrel">
+                    <img src="scss/img/contest/wood.png" alt="wood">
+                </div>
+                <div class="time01 tree_d">
+                    <img src="scss/img/contest/stree.png" alt="tree">
+                </div>
+                <div class="sign_wrap">
+                    <div class="rule">
+                        <div class="time03 sign">
+                            <div class="txt">
+                                <p>參賽立即享有100點數</p>
+                                <p>此外</p>
+                                <p>冠軍獎勵1000點數</p>
+                                <p>亞軍獎勵800點數</p>
+                                <p>季軍獎勵500點數</p>
+                            </div>
+                        </div>
+                        <div class="time01 squr_s">
+                            <img src="scss/img/contest/squr.png" alt="squirrel">
+                            <!-- <img src="scss/img/contest/rleg.png" alt="leg">
+                            <img src="scss/img/contest/lleg.png" alt="leg"> -->
+                        </div>
+                    </div>
+                    <div id="keypoint"></div>
+                    <div class="btn_wrap">
+                        <a href="#">
+                            <p class="btn">前往參賽</p>
+                        </a>
+                    </div>
+                    <div class="time02 flower_wrap">
+                        <img src="scss/img/contest/person.png" alt="person">
+                        <img src="scss/img/contest/treeS.png" alt="stone">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="work_container">
+            <div id="voters">
+                <h3>
+                    激烈參賽中
+                </h3>
+            </div>
+            <div class="mat">
+                <div class="votes_wrap">
+                    <div class="filter">
+                        <select id="dropdown">
+                            <option value="new">最新</option>
+                            <option value="saab">Saab</option>
+                        </select>
+                    </div>
+                    <div class="votes_prods">
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment_box">
+                        <div class="mem">
+                            <div class="pic">
+                                <img src="" alt="">
+                            </div>
+                            <span class="name">
+                                小歐妖精
+                            </span>
+                        </div>
+                        <div class="comment">
+                            <input type="text" placeholder="請輸入留言">
+                            <button>送出</button>
+                        </div>
+
+                    </div>
+                    <div class="commet_box">
+
+                    </div>
+                    <div class="commet_box">
+
+                    </div>
+                    <div class="commet_box">
+
+                    </div>
+                    <div class="votes_prods">
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="votes_prods">
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="pic">
+                                <img src="scss/img/contest/basket.png" alt="product">
+                            </div>
+                            <div class="txt">
+                                <p>我只帶一瓶酒</p>
+                                <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                                <span>123票</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+                <footer class="footer_wrapper">
+                    <ul>
+                        <li>電話:02-2665-1234</li>
+                        <li>Email:picnic@picnic.com</li>
+                        <li>地址:新北市板橋區-野餐路4號</li>
+                    </ul>
+                    <div class="copy">Copyright©2019</div>
+                </footer>
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--包整層-->
+    </div>
+    <script src="js/scroll.js"></script>
+    <script>
+        $(".votes_prods").click(function () {
+            $(this).next().slideToggle();
+        });
+    </script>
+</body>
+
+</html>
