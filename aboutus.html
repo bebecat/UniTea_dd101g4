@@ -108,15 +108,14 @@
 		<img class="move_left_tree tree" src="./scss/img/auimg/tree4.png" alt="樹叢">
 		<img class="move_right_tree tree" src="./scss/img/auimg/tree3.png" alt="樹叢">
 	</section>
-	<section class="idea_introduction">
+	<section class="idea_introduction" id="idea">
 		<div class="header_fulsec"></div>
-			
 		<div class="container">
 			<div class="txt">
-				<h2>
+				<h2 class="load_show">
 					<img class="title_bg" src="./scss/img/auimg/title_bg.png" alt="木製標題">
 					關於野餐趣
-					<img id="littlebird" src="./scss/img/auimg/bird1.png" alt="鳥兒">
+					<img class="bird_show" id="littlebird" src="./scss/img/auimg/bird1.png" alt="鳥兒">
 				</h2>
 				<div class="idea_txtin">
 					<div class="txt_bg">
@@ -228,6 +227,7 @@
 	</section>
 	<section class="teamstory__introduction" id="teamstory">
 		<div class="teamstorybg_settin">
+			<img class="mountain_settin turn3" src="./scss/img/auimg/mountain1.png" alt="遠山">
 			<img class="mountain_settin turn2" src="./scss/img/auimg/mountain1.png" alt="遠山">
 			<img class="mountain_settin turn1" src="./scss/img/auimg/mountain1.png" alt="遠山">
 			<div class="paper_bg"></div>
@@ -264,7 +264,7 @@
 					<img class="portrait" src="./scss/img/auimg/man1.png" alt="宗偉">
 					<div class="txt">
 						<h3>堅強的宗偉妖精</h3>
-						<p>堅強的宗偉妖精經歷人生體重的大起大落後，現在即使團專不停翻案，依舊是大家丟工作的對象，而他也很負責任地擔起晚餐外帶的重任。</p>
+						<p>堅強的宗偉妖精經歷人生體重的大起大落後，現在即使團專不停翻案，依舊是幫大家擦屁股的對象，而他也很負責任地擔起晚餐外帶的重任。</p>
 					</div>
 					<p class="to_personweb">
 						<img class="person_web_button" src="./scss/img/auimg/web_button.png" alt="外連結按鈕">
@@ -321,19 +321,6 @@
 	</footer>
 </div>
 <script>
-	function grooveshake(){
-		//網頁loading完成後，大約一秒後執行
-		//var treeleft = document.getElementsByClassName("tree")[0];
-		//var treeright = document.getElementsByClassName("tree")[1];
-		//treeleft.
-		//適應不同瀏覽器問題
-
-		//loading後停一秒延遲，第一屏開始動畫		
-		//樹叢從中間分開到兩側，自己動，約一秒
-
-		//標題從中間的放大位置縮小到中間原本靜態位置，與樹叢同時動作，也是一秒
-
-	}
 	function autoscroll(){
 		//註冊container聆聽事件，準備當滑鼠下滑時會滑屏以及自動播放該屏動畫
 		//註冊每屏的動畫開始事件，離開該屏動畫便停止
@@ -347,11 +334,14 @@
 		//一次出現三個人頭，沿著山坡邊緣跑
 	}
 	function doFirst(){
-		//grooveshake第一屏入場動畫
-		//autoscroll第二屏動畫
-		document.getElementById("webstory").addEventListener("load",autoscroll,false);
-		//sushi第三屏動畫
-		document.getElementById("teamstory").addEventListener("load",sushi,false);
+		var idea = document.getElementById("idea");
+		var webstory = document.getElementById("webstory");
+		var teamstory = document.getElementById("teamstory");
+		idea.addEventListener("scroll",function(){
+			var current = 
+			current
+		},false);
+		teamstory.addEventListener("load",sushi,false);
 	};
 	window.addEventListener("load",doFirst,false);
 </script>

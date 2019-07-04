@@ -3,14 +3,32 @@
   src: url(../scss/font/HanyiSentyTang.ttf);
 }
 @import "basic/var1.scss";
-@import "mixins/mixin1.scss";
+@mixin title_modules($list...) {
+  @each $title, $fontSize, $color, $fontFamily in $list {
+    #{$title} {
+      font-size: $fontSize;
+      color: $color;
+      font-family: $fontFamily;
+      letter-spacing:2px;
+      @content;
+    }
+  }
+}
+@include title-modules(
+   h1 12px rgba(0,0,0,1) 'font_title',
+   h2 24px  rgba(0,0,0,.8) 'font_title',
+   h3 36px rgba(0,0,0,.6) 'hanyi',
+   h4 20px rgba(0,0,0,.4) 'font_title',
+   h5 18px rgba(0,0,0,.3) 'font_title',
+   p 16px rgba(0,0,0,.3) 'font_p',
+);
 //font_title
 *{
 	margin : 0;
 	padding : 0;
 	list-style : none;
 	text-decoration:none;
-	outline : 1px solid rgba(33,33,33,.5);
+	//outline : 1px solid rgba(33,33,33,.5);
 }
 .clear_fix{
 	clear:both;
@@ -513,11 +531,21 @@
 		}
 		.move_left_tree{
 			left:0;
-			//tranform:tranlateX(-50%);
+			animation:movetreeleft 2s 0s 1 linear;
 		}
 		.move_right_tree{
 			right:0;
-			//tranform:tranlateX(-50%);
+			animation:movetreeright 2s 0s 1 linear;
+		}
+		@keyframes movetreeleft{
+			0%{transform:translateX(20px) scale(1.05);}
+			70%{transform:translateX(40px) scale(1.2);}
+			100%{transform:translateX(0) scale(1);}
+		}
+		@keyframes movetreeright{
+			0%{transform:translateX(-20px) scale(1.05);}
+			70%{transform:translateX(-40px) scale(1.2);}
+			100%{transform:translateX(0) scale(1);}
 		}
 	}
 	.idea_introduction{
@@ -539,6 +567,14 @@
 				width:70%;
 				padding:70px 0 0;
 				margin:auto;
+				.load_show{
+					animation:loadtitle 2s 0 1 ease-in alternate;
+				}
+				@keyframes loadtitle{
+					0%{transform:scale(1.5);}
+					60%{transform:scale(2);}
+					100%{transform:scale(1);}
+				}
 				h2{
 					width:500px;
 					height:89px;
@@ -548,8 +584,10 @@
 					position:relative;
 					text-align:center;
 					.title_bg{
-						width:359px;
-						height:89px;
+						width:71.8%;
+						//width:359px;
+						height:100%;
+						//height:89px;
 						position:absolute;
 						top:0;
 						left:0;
@@ -560,14 +598,13 @@
 					#littlebird{
 						width:35px;
 						height:12.5px;
-						position:absolute;
 						top:0;
 						left:0;
 						right:0;
 						margin:auto;
 						transform-orgin:40px 15px;
-						transform:translateX(177%) translateY(50%) rotate(10deg);
-						animation:littlebirdswagleft 3s 0 infinite ease-in alternate;
+						animation:littlebirdswagleft 3s 0 infinite ease-in alternate,loadtitl 3s 0 1 ease-in alternate;
+						position:absolute;top:0;
 					}
 					@keyframes littlebirdswagleft{
 						from{
@@ -579,7 +616,6 @@
 				.idea_txtin{
 					.txt_bg{
 						padding:15px 0 20px;
-						background-color: rgba(255,255,255,.5);
 						p{
 							padding:5px 7px;
 							margin:auto;
@@ -1020,11 +1056,10 @@
 		}
 	}
 	.teamstory__introduction{
-		width:100%;
+		width:100vw;
 		height:100vh;
 		max-height:960px;
 		position:relative;
-		z-index:1;
 		overflow:hidden;
 		.teamstorybg_settin{
 			width:100%;
@@ -1033,24 +1068,27 @@
 			overflow:hidden;
 			z-index:-1;
 			.mountain_settin{
-				width:2905px;
+				width:200vw;
 				height:362px;
 				position:absolute;
 				bottom:0;
 			}
 			.turn1{
-				animation: mountainmove1 150s 0 infinite linear both;
+				animation: mountainmove1 150s 0 1 linear both;
 			}
 			.turn2{
-				animation: mountainmove2 150s 0 infinite linear both;
+				animation: mountainmove2 300s 0 infinite linear both;
+			}
+			.turn3{
+				animation: mountainmove2 300s 200s infinite linear both;
 			}
 			@keyframes mountainmove1{
-				0%{transform:translateX(0)}
-				100%{transform:translateX(-2748.5px)}
+				0%{transform:translateX(-10vw)}
+				100%{transform:translateX(-220vw);}
 			}
 			@keyframes mountainmove2{
-				0%{transform:translateX(2748.5px)}
-				100%{transform:translateX(0)}
+				0%{transform:translateX(100vw)}
+				100%{transform:translateX(-210vw)}
 			}
 		}
 		.container{
