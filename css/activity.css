@@ -22,46 +22,80 @@
   font-family: "font_cart";
   src: url("../scss/font/SoukouMincho.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "hanyi";
+  src: url("../scss/font/HanyiSentyTang.ttf") format("truetype"); }
+
+h1 {
+  font-size: 12px;
+  color: black;
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h2 {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h3 {
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "hanyi";
+  letter-spacing: 2px; }
+
+h4 {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h5 {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+p {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "font_p";
+  letter-spacing: 2px; }
+
 h1 {
   font-size: black;
   color: 12px;
   font-family: "font_title";
-  text-align: center;
   letter-spacing: 2px; }
 
 h2 {
   font-size: rgba(0, 0, 0, 0.8);
   color: 48px;
   font-family: "font_title";
-  text-align: center;
   letter-spacing: 2px; }
 
 h3 {
   font-size: rgba(0, 0, 0, 0.6);
   color: 36px;
   font-family: font_title;
-  text-align: center;
   letter-spacing: 2px; }
 
 h4 {
   font-size: rgba(0, 0, 0, 0.4);
   color: 28px;
   font-family: font_title;
-  text-align: center;
   letter-spacing: 2px; }
 
 h5 {
   font-size: rgba(0, 0, 0, 0.3);
   color: 20px;
   font-family: font_title;
-  text-align: center;
   letter-spacing: 2px; }
 
 p {
   font-size: rgba(0, 0, 0, 0.3);
   color: 16px;
   font-family: font_2;
-  text-align: center;
   letter-spacing: 2px; }
 
 * {
@@ -447,7 +481,7 @@ p {
         right: 0; }
     .fp_activity_wrapper .bg_settin .glass_settin {
       width: 100%;
-      height: 940px;
+      height: 1040px;
       position: relative; }
       .fp_activity_wrapper .bg_settin .glass_settin .glass {
         width: 100%;
@@ -481,13 +515,35 @@ p {
           right: 0;
           bottom: 0; }
       .fp_activity_wrapper .bg_settin .glass_settin .glass2 {
+        height: 30%;
         bottom: 0; }
     .fp_activity_wrapper .bg_settin .paper_settin {
       width: 100%;
       height: 100%;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       background: url("../scss/img/auimg/paperBG.png") repeat; }
+  .fp_activity_wrapper footer {
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    z-index: 2; }
+    .fp_activity_wrapper footer .footer_bg_settin {
+      position: relative; }
+      .fp_activity_wrapper footer .footer_bg_settin .footer_bg_glass {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0; }
+    .fp_activity_wrapper footer .txt {
+      width: 300px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      padding: 0 0 15px; }

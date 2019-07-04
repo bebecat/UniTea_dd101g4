@@ -22,53 +22,52 @@
   font-family: "font_cart";
   src: url("../scss/font/SoukouMincho.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "hanyi";
+  src: url("../scss/font/HanyiSentyTang.ttf") format("truetype"); }
+
 h1 {
-  font-size: black;
-  color: 12px;
+  font-size: 12px;
+  color: black;
   font-family: "font_title";
-  text-align: center;
   letter-spacing: 2px; }
 
 h2 {
-  font-size: rgba(0, 0, 0, 0.8);
-  color: 48px;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.8);
   font-family: "font_title";
-  text-align: center;
   letter-spacing: 2px; }
 
 h3 {
-  font-size: rgba(0, 0, 0, 0.6);
-  color: 36px;
-  font-family: font_title;
-  text-align: center;
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "hanyi";
   letter-spacing: 2px; }
 
 h4 {
-  font-size: rgba(0, 0, 0, 0.4);
-  color: 28px;
-  font-family: font_title;
-  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "font_title";
   letter-spacing: 2px; }
 
 h5 {
-  font-size: rgba(0, 0, 0, 0.3);
-  color: 20px;
-  font-family: font_title;
-  text-align: center;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "font_title";
   letter-spacing: 2px; }
 
 p {
-  font-size: rgba(0, 0, 0, 0.3);
-  color: 16px;
-  font-family: font_2;
-  text-align: center;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "font_p";
   letter-spacing: 2px; }
 
 * {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-decoration: none; }
+  text-decoration: none;
+  outline: 1px solid rgba(33, 33, 33, 0.5); }
 
 .clear_fix {
   clear: both; }
@@ -79,7 +78,7 @@ p {
   height: 130px; }
 
 .fp_aboutus_wrapper {
-  width: 100%;
+  width: 100vw;
   position: relative; }
   .fp_aboutus_wrapper header .navbar_container {
     width: 100%;
@@ -419,7 +418,7 @@ p {
       transform: translateX(0%); } }
   .fp_aboutus_wrapper .bg_settin {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     max-height: 960px;
     position: fixed;
     z-index: -1; }
@@ -519,12 +518,18 @@ p {
       background-image: url("../scss/img/paperBG.png");
       background-image: url("../scss/img/auimg/paperBG.png"); }
   .fp_aboutus_wrapper .idea_introduction {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     max-height: 960px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     z-index: 1;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #faa; }
     .fp_aboutus_wrapper .idea_introduction .begin_animation {
       width: 100%;
       height: 100%;
@@ -532,8 +537,8 @@ p {
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
-      margin: auto; }
+      margin: auto;
+      background-color: #fa0; }
       .fp_aboutus_wrapper .idea_introduction .begin_animation .move_left_tree {
         width: 100%;
         height: 100%;
@@ -567,7 +572,8 @@ p {
           height: 89px;
           line-height: 89px;
           margin: 5px auto 20px;
-          position: relative; }
+          position: relative;
+          text-align: center; }
           .fp_aboutus_wrapper .idea_introduction .container .txt h2 .title_bg {
             width: 359px;
             height: 89px;
@@ -625,8 +631,8 @@ p {
         width: 500px;
         height: 89px;
         line-height: 89px;
-        margin: 5px auto 20px;
         margin: 55px auto 20px;
+        text-align: center;
         position: relative; }
         .fp_aboutus_wrapper .webstory_introduction .container h2 .title_bg {
           width: 359px;
@@ -672,156 +678,140 @@ p {
         padding: 200px 0 0;
         position: absolute;
         box-sizing: border-box; }
+        .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .txt {
+          width: 500px;
+          margin: auto; }
         .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list {
           width: 470px;
           padding: 10px 0 0;
-          position: relative;
-          padding: 20px 0 0;
           position: absolute;
-          box-sizing: border-box; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .txt {
-            width: 500px;
+          bottom: 130px;
+          left: 0;
+          right: 0;
+          margin: auto; }
+          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_line {
+            display: block;
+            width: 320px;
             margin: auto; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_list {
-            width: 470px;
-            padding: 10px 0 0;
-            position: absolute;
-            bottom: 130px;
-            left: 0;
-            right: 0;
-            margin: auto; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_list .step_line {
-              display: block;
-              width: 320px;
-              margin: auto; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_list .step_item {
+          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_item {
+            width: 60px;
+            height: 60px;
+            position: relative; }
+            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_item .step_bg {
+              width: 60px;
+              height: 60px; }
+            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_item .step_num {
               width: 60px;
               height: 60px;
-              position: relative; }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_list .step_item .step_bg {
-                width: 60px;
-                height: 60px; }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_list .step_item .step_num {
-                width: 60px;
-                height: 60px;
-                line-height: 60px;
-                font-size: 24px;
-                font-family: font_title;
-                text-align: center;
-                color: rgba(0, 0, 0, 0.5);
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_list .step_1 {
+              line-height: 60px;
+              font-size: 24px;
+              font-family: font_title;
+              text-align: center;
+              color: rgba(0, 0, 0, 0.5);
               position: absolute;
-              right: 0; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_list .step_2 {
-              position: absolute;
-              right: 0; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_list .step_3 {
-              position: absolute;
-              right: 0; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_list .step_4 {
-              position: absolute;
-              right: 0; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_list .step_5 {
-              position: absolute;
-              right: 0; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .basket_settin {
-            display: block;
-            width: 203px;
-            height: 197px;
-            margin: auto;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0; }
+          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_1 {
             position: absolute;
-            bottom: 50px;
-            left: 0;
             right: 0; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .basket_settin {
-            display: block;
-            width: 203px;
-            height: 197px;
-            margin: auto;
+          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_2 {
             position: absolute;
-            bottom: 50px;
-            left: 0;
             right: 0; }
-        .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .second_step_customize {
-          width: 100%;
-          height: 500px;
-          padding: 900px 0 0;
+          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_3 {
+            position: absolute;
+            right: 0; }
+          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_4 {
+            position: absolute;
+            right: 0; }
+          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_5 {
+            position: absolute;
+            right: 0; }
+        .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .basket_settin {
+          display: block;
+          width: 203px;
+          height: 197px;
+          margin: auto;
           position: absolute;
-          box-sizing: border-box; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .second_step_customize .context {
-            width: 470px;
-            padding: 10px 0 0;
-            position: relative;
-            margin: auto;
+          bottom: 50px;
+          left: 0;
+          right: 0; }
+      .fp_aboutus_wrapper .webstory_introduction .container .second_step_customize {
+        width: 100%;
+        height: 500px;
+        padding: 900px 0 0;
+        position: absolute;
+        box-sizing: border-box; }
+        .fp_aboutus_wrapper .webstory_introduction .container .second_step_customize .context {
+          width: 470px;
+          padding: 10px 0 0;
+          position: relative;
+          margin: auto;
+          text-align: center; }
+          .fp_aboutus_wrapper .webstory_introduction .container .second_step_customize .context .txt {
+            width: 500px;
+            margin: auto; }
+          .fp_aboutus_wrapper .webstory_introduction .container .second_step_customize .context .customize_basket {
+            width: 200px;
+            height: 194px; }
+          .fp_aboutus_wrapper .webstory_introduction .container .second_step_customize .context .like_information {
             text-align: center; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .second_step_customize .context .txt {
-              width: 500px;
-              margin: auto; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .second_step_customize .context .customize_basket {
-              width: 200px;
-              height: 194px; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .second_step_customize .context .like_information {
-              text-align: center; }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .second_step_customize .context .like_information .like_img {
-                width: 44px;
-                height: 35px;
-                vertical-align: middle; }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .second_step_customize .context .like_information .like_num {
-                display: inline-block;
-                width: 70px;
-                height: 35px;
-                line-height: 35px; }
-        .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .third_step_customize {
-          width: 100%;
-          height: 500px;
-          padding: 1500px 0 0;
-          position: absolute;
-          box-sizing: border-box; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .third_step_customize .context {
-            width: 670px;
-            height: 300px;
-            padding: 10px 0 0;
-            position: relative;
-            margin: auto;
-            text-align: center; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .third_step_customize .context .customize_basket {
-              width: 200px;
-              height: 194px; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .third_step_customize .context .third_step_basket {
-              display: inline-block;
+            .fp_aboutus_wrapper .webstory_introduction .container .second_step_customize .context .like_information .like_img {
+              width: 44px;
+              height: 35px;
               vertical-align: middle; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .third_step_customize .context .tableware_settin {
+            .fp_aboutus_wrapper .webstory_introduction .container .second_step_customize .context .like_information .like_num {
               display: inline-block;
+              width: 70px;
+              height: 35px;
+              line-height: 35px; }
+      .fp_aboutus_wrapper .webstory_introduction .container .third_step_customize {
+        width: 100%;
+        height: 500px;
+        padding: 1500px 0 0;
+        position: absolute;
+        box-sizing: border-box; }
+        .fp_aboutus_wrapper .webstory_introduction .container .third_step_customize .context {
+          width: 670px;
+          height: 300px;
+          padding: 10px 0 0;
+          position: relative;
+          margin: auto;
+          text-align: center; }
+          .fp_aboutus_wrapper .webstory_introduction .container .third_step_customize .context .customize_basket {
+            width: 200px;
+            height: 194px; }
+          .fp_aboutus_wrapper .webstory_introduction .container .third_step_customize .context .third_step_basket {
+            display: inline-block;
+            vertical-align: middle; }
+          .fp_aboutus_wrapper .webstory_introduction .container .third_step_customize .context .tableware_settin {
+            display: inline-block;
+            width: 256px;
+            height: 256px;
+            text-align: center;
+            vertical-align: middle;
+            position: relative; }
+            .fp_aboutus_wrapper .webstory_introduction .container .third_step_customize .context .tableware_settin .chopping_board {
               width: 256px;
               height: 256px;
-              text-align: center;
-              vertical-align: middle;
-              position: relative; }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .third_step_customize .context .tableware_settin .chopping_board {
-                width: 256px;
-                height: 256px;
-                animation: step3choppingboardflow 3s 0 infinite linear alternate; }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .third_step_customize .context .tableware_settin .fork_settin {
-                width: 160px;
-                height: 160px;
-                position: absolute;
-                top: -20px;
-                right: 50px;
-                transform-origin: 160px 0;
-                animation: step3forkflow 3s 0 infinite linear alternate; }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .third_step_customize .context .tableware_settin .spoon_settin {
-                width: 160px;
-                height: 160px;
-                position: absolute;
-                top: 10px;
-                right: -20px;
-                transform-origin: 0px 160px;
-                animation: step3spoonflow 3s 0 infinite linear alternate; }
+              animation: step3choppingboardflow 3s 0 infinite linear alternate; }
+            .fp_aboutus_wrapper .webstory_introduction .container .third_step_customize .context .tableware_settin .fork_settin {
+              width: 160px;
+              height: 160px;
+              position: absolute;
+              top: -20px;
+              right: 50px;
+              transform-origin: 160px 0;
+              animation: step3forkflow 3s 0 infinite linear alternate; }
+            .fp_aboutus_wrapper .webstory_introduction .container .third_step_customize .context .tableware_settin .spoon_settin {
+              width: 160px;
+              height: 160px;
+              position: absolute;
+              top: 10px;
+              right: -20px;
+              transform-origin: 0px 160px;
+              animation: step3spoonflow 3s 0 infinite linear alternate; }
 
 @keyframes step3forkflow {
   from {
@@ -840,75 +830,75 @@ p {
     transform: skew(0deg) scale(1); }
   to {
     transform: skew(5deg) scale(1.06); } }
-        .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity {
-          width: 100%;
-          height: 500px;
-          padding: 2100px 0 0;
-          position: absolute;
-          box-sizing: border-box; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin {
-            width: 670px;
-            height: 300px;
-            padding: 20px 0 0;
-            position: relative;
-            margin: auto;
-            text-align: center; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicbg_settin {
+      .fp_aboutus_wrapper .webstory_introduction .container .goto_activity {
+        width: 100%;
+        height: 500px;
+        padding: 2100px 0 0;
+        position: absolute;
+        box-sizing: border-box; }
+        .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin {
+          width: 670px;
+          height: 300px;
+          padding: 20px 0 0;
+          position: relative;
+          margin: auto;
+          text-align: center; }
+          .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicbg_settin {
+            width: 500px;
+            height: 262px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            margin: auto; }
+            .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicbg_settin .mat_settin {
               width: 500px;
-              height: 262px;
+              height: 262px; }
+          .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin {
+            width: 500px;
+            height: 262px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            margin: auto; }
+            .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food {
+              width: 200px;
+              height: 194px;
               position: absolute;
-              bottom: 0px;
               left: 0;
               right: 0;
               margin: auto; }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicbg_settin .mat_settin {
-                width: 500px;
-                height: 262px; }
-            .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin {
-              width: 500px;
-              height: 262px;
-              position: absolute;
-              bottom: 0px;
-              left: 0;
-              right: 0;
-              margin: auto; }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .food {
-                width: 200px;
-                height: 194px;
+              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food .breads_settin {
+                position: absolute; }
+              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food .bread_a {
+                width: 100px;
+                height: 132px;
+                top: -10px;
+                left: 20px;
+                transform-origin: 100px 150px;
+                animation: breadaflow 4s 0 infinite linear alternate; }
+              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food .bread_b {
+                width: 120px;
+                height: 108px;
+                top: 0px;
+                left: -20px;
+                transform-origin: 160px 150px;
+                animation: breadbflow 3s 0 infinite linear alternate; }
+              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food .bread_c {
+                width: 150px;
+                height: 60px;
+                top: 35px;
+                left: -50px;
+                transform-origin: 220px 155px;
+                animation: breadcflow 4s 0 infinite linear alternate; }
+              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food .fruit_settin {
+                width: 150px;
+                height: 136px;
+                top: 30px;
+                left: 40px;
                 position: absolute;
-                left: 0;
-                right: 0;
-                margin: auto; }
-                .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .food .breads_settin {
-                  position: absolute; }
-                .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .food .bread_a {
-                  width: 100px;
-                  height: 132px;
-                  top: -10px;
-                  left: 20px;
-                  transform-origin: 100px 150px;
-                  animation: breadaflow 4s 0 infinite linear alternate; }
-                .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .food .bread_b {
-                  width: 120px;
-                  height: 108px;
-                  top: 0px;
-                  left: -20px;
-                  transform-origin: 160px 150px;
-                  animation: breadbflow 3s 0 infinite linear alternate; }
-                .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .food .bread_c {
-                  width: 150px;
-                  height: 60px;
-                  top: 35px;
-                  left: -50px;
-                  transform-origin: 220px 155px;
-                  animation: breadcflow 4s 0 infinite linear alternate; }
-                .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .food .fruit_settin {
-                  width: 150px;
-                  height: 136px;
-                  top: 30px;
-                  left: 40px;
-                  position: absolute;
-                  animation: fruitflow 4s 0 infinite linear alternate; }
+                animation: fruitflow 4s 0 infinite linear alternate; }
 
 @keyframes breadaflow {
   from {
@@ -933,36 +923,36 @@ p {
     transform: rotate(5deg); }
   from {
     transform: rotate(-5deg); } }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .basket_settin .customize_basket {
-                width: 200px;
-                height: 194px; }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .basket_settin .goto_activity_step_basket_front {
-                position: absolute;
-                left: 0;
-                right: 0;
-                margin: auto; }
-              .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .tableware_settin {
-                top: 50px;
-                right: 0;
+            .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .basket_settin .customize_basket {
+              width: 200px;
+              height: 194px; }
+            .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .basket_settin .goto_activity_step_basket_front {
+              position: absolute;
+              left: 0;
+              right: 0;
+              margin: auto; }
+            .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin {
+              top: 50px;
+              right: 0;
+              position: absolute; }
+              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .chopping_board {
+                width: 256px;
+                height: 256px;
+                animation: step3choppingboardflow 3s 0 infinite linear alternate; }
+              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food {
+                width: 270px;
+                bottom: 0;
                 position: absolute; }
-                .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .tableware_settin .chopping_board {
-                  width: 256px;
-                  height: 256px;
-                  animation: step3choppingboardflow 3s 0 infinite linear alternate; }
-                .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food {
-                  width: 270px;
-                  bottom: 0;
-                  position: absolute; }
-                  .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food .cookies_a {
-                    display: inline-block;
-                    width: 80px;
-                    height: 68px;
-                    animation: cookiesaflow 3s 0 infinite linear alternate; }
-                  .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food .cookies_b {
-                    display: inline-block;
-                    width: 80px;
-                    height: 68px;
-                    animation: cookiesbflow 3s 0 infinite linear alternate; }
+                .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food .cookies_a {
+                  display: inline-block;
+                  width: 80px;
+                  height: 68px;
+                  animation: cookiesaflow 3s 0 infinite linear alternate; }
+                .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food .cookies_b {
+                  display: inline-block;
+                  width: 80px;
+                  height: 68px;
+                  animation: cookiesbflow 3s 0 infinite linear alternate; }
 
 @keyframes cookiesaflow {
   from {
@@ -975,22 +965,22 @@ p {
     transform: translateY(15px) skew(-2deg) scale(1); }
   to {
     transform: translateY(15px) skew(4deg) scale(1.06); } }
-                .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .tableware_settin .fork_settin {
-                  width: 160px;
-                  height: 160px;
-                  position: absolute;
-                  top: -30px;
-                  right: -30px;
-                  transform-orgin: 160px 0;
-                  animation: step3forkflow 3s 0 infinite linear alternate; }
-                .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .goto_activity .activity_settin .picnicfood_settin .tableware_settin .spoon_settin {
-                  width: 160px;
-                  height: 160px;
-                  position: absolute;
-                  top: 10px;
-                  right: -70px;
-                  transform-orgin: 0px 160px;
-                  animation: step3spoonflow 3s 0 infinite linear alternate; }
+              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .fork_settin {
+                width: 160px;
+                height: 160px;
+                position: absolute;
+                top: -30px;
+                right: -30px;
+                transform-orgin: 160px 0;
+                animation: step3forkflow 3s 0 infinite linear alternate; }
+              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .spoon_settin {
+                width: 160px;
+                height: 160px;
+                position: absolute;
+                top: 10px;
+                right: -70px;
+                transform-orgin: 0px 160px;
+                animation: step3spoonflow 3s 0 infinite linear alternate; }
 
 @keyframes step3forkflow {
   from {
@@ -1009,25 +999,25 @@ p {
     transform: skew(0deg) scale(1); }
   to {
     transform: skew(5deg) scale(1.06); } }
-    .fp_aboutus_wrapper .webstory_introduction .teamstory__introduction {
+  .fp_aboutus_wrapper .teamstory__introduction {
+    width: 100%;
+    position: relative;
+    z-index: 1; }
+    .fp_aboutus_wrapper .teamstory__introduction .teamstorybg_settin {
       width: 100%;
-      position: relative;
-      z-index: 1; }
-      .fp_aboutus_wrapper .webstory_introduction .teamstory__introduction .teamstorybg_settin {
-        width: 100%;
-        height: 724px;
+      height: 724px;
+      position: absolute;
+      overflow: hidden;
+      z-index: -1; }
+      .fp_aboutus_wrapper .teamstory__introduction .teamstorybg_settin .mountain_settin {
+        width: 2905px;
+        height: 362px;
         position: absolute;
-        overflow: hidden;
-        z-index: -1; }
-        .fp_aboutus_wrapper .webstory_introduction .teamstory__introduction .teamstorybg_settin .mountain_settin {
-          width: 2905px;
-          height: 362px;
-          position: absolute;
-          bottom: 0; }
-        .fp_aboutus_wrapper .webstory_introduction .teamstory__introduction .teamstorybg_settin .turn1 {
-          animation: mountainmove1 150s 0 infinite linear both; }
-        .fp_aboutus_wrapper .webstory_introduction .teamstory__introduction .teamstorybg_settin .turn2 {
-          animation: mountainmove2 150s 0 infinite linear both; }
+        bottom: 0; }
+      .fp_aboutus_wrapper .teamstory__introduction .teamstorybg_settin .turn1 {
+        animation: mountainmove1 150s 0 infinite linear both; }
+      .fp_aboutus_wrapper .teamstory__introduction .teamstorybg_settin .turn2 {
+        animation: mountainmove2 150s 0 infinite linear both; }
 
 @keyframes mountainmove1 {
   0% {
@@ -1040,69 +1030,12 @@ p {
     transform: translateX(2748.5px); }
   100% {
     transform: translateX(0); } }
-        .fp_aboutus_wrapper .webstory_introduction .teamstory__introduction .teamstorybg_settin .paper_bg {
-          width: 100%;
-          height: 100%;
-          background-image: url("../scss/img/auimg/paperBG.png");
-          position: absolute;
-          top: 0; }
-    .fp_aboutus_wrapper .webstory_introduction footer {
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 1; }
-      .fp_aboutus_wrapper .webstory_introduction footer .footer_bg_settin {
-        position: relative; }
-        .fp_aboutus_wrapper .webstory_introduction footer .footer_bg_settin .footer_bg_glass {
-          width: 100%;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-<<<<<<< HEAD
-          right: 0; }
-      .fp_aboutus_wrapper .webstory_introduction footer .txt {
-        width: 300px;
-=======
-          right: 0;
-          margin: auto;
-          z-index: -1; }
-      .fp_aboutus_wrapper .teamstory__introduction .container .context {
-        width: 1200px;
-        overflow: hidden;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-item: center; }
-        .fp_aboutus_wrapper .teamstory__introduction .container .context .member {
-          width: 400px;
-          margin: auto;
-          padding: 15px 0 0; }
-          .fp_aboutus_wrapper .teamstory__introduction .container .context .member .portrait {
-            display: block;
-            width: 200px;
-            height: 200px;
-            margin: auto; }
-          .fp_aboutus_wrapper .teamstory__introduction .container .context .member .txt {
-            padding: 5px 0; }
-            .fp_aboutus_wrapper .teamstory__introduction .container .context .member .txt p {
-              padding: 10px 15px 0; }
-          .fp_aboutus_wrapper .teamstory__introduction .container .context .member .to_personweb {
-            width: 300px;
-            height: 100px;
-            line-height: 80px;
-            margin: auto;
-            position: relative; }
-            .fp_aboutus_wrapper .teamstory__introduction .container .context .member .to_personweb .person_web_button {
-              width: 174px;
-              height: 97px;
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              margin: auto;
-              z-index: -1; }
+      .fp_aboutus_wrapper .teamstory__introduction .teamstorybg_settin .paper_bg {
+        width: 100%;
+        height: 100%;
+        background-image: url("../scss/img/auimg/paperBG.png");
+        position: absolute;
+        top: 0; }
   .fp_aboutus_wrapper footer {
     width: 100%;
     position: absolute;
@@ -1114,10 +1047,15 @@ p {
       position: relative; }
       .fp_aboutus_wrapper footer .footer_bg_settin .footer_bg_glass {
         width: 100%;
->>>>>>> 0f4c8112decaf107ccc2260f09ecae7e4d059b1d
         position: absolute;
         bottom: 0;
         left: 0;
-        right: 0;
-        margin: auto;
-        padding: 0 0 15px; }
+        right: 0; }
+    .fp_aboutus_wrapper footer .txt {
+      width: 300px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      padding: 0 0 15px; }

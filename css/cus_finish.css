@@ -18,6 +18,10 @@
   font-family: "font_cart";
   src: url("../scss/font/SoukouMincho.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "hanyi";
+  src: url("../scss/font/HanyiSentyTang.ttf") format("truetype"); }
+
 * {
   padding: 0;
   margin: 0;
