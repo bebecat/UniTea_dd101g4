@@ -85,7 +85,7 @@ header{
 				display:flex;
 				flex-flow:row nowrap;
 				justify-content:center;
-				align-item:center;
+				align-items:center;
 				.member_btn{
 					width:200px;
 					display:flex;
@@ -106,7 +106,7 @@ header{
 						display:flex;
 						flex-flow:column nowrap;
 						justify-content:center;
-						align-item:center;
+						align-items:center;
 						.member_name{
 							padding: 0px 5px;
 							font-family : font_nav;
@@ -131,7 +131,7 @@ header{
 					box-sizing:border-box;
 					display:flex;
 					justify-content:center;
-					align-item:center;
+					align-items:center;
 					position:relative;
 					.cart_num{
 						width:20px;
@@ -167,7 +167,7 @@ footer{
 		display:flex;
 		flex-flow:row nowrap;
 		justify-content:center;
-		align-item:center;
+		align-items:center;
 		box-sizing:border-box;
 		max-width:1200px;
 		padding:10px 25px;
@@ -178,7 +178,7 @@ footer{
 			display:flex;
 			flex-flow:column nowrap;
 			justify-content:center;
-			align-item:flex-start;
+			align-items:flex-start;
 			li{
 				padding:5px;
 				color:#522d1d;
@@ -192,9 +192,9 @@ footer{
 			display:flex;
 			flex-flow:column nowrap;
 			justify-content:center;
-			align-item:flex-end;
+			align-items:flex-end;
 			position:relative;
-			tranform: translateX(100%);
+			transform: translateX(100%);
 			li{
 				padding:5px;
 				color:#522d1d;
