@@ -486,52 +486,40 @@
 			background-image:url('../scss/img/auimg/paperBG.png');
 		}
 	}
+	.begin_animation{
+		width:100vw;
+		height:100vh;
+		max-height:960px;
+		position:relative;
+		margin:auto;
+		.tree{
+			width:80vw;
+			height:100%;
+			position:absolute;
+			top:0;
+			bottom:0;
+			margin:auto;
+		}
+		.move_left_tree{
+			left:0;
+			//tranform:tranlateX(-50%);
+		}
+		.move_right_tree{
+			right:0;
+			//tranform:tranlateX(-50%);
+		}
+	}
 	.idea_introduction{
 		width:100vw;
 		height:100%;
 		max-height:960px;
 		position:absolute;
-		top:0;
+		top:100px;
 		left:0;
 		right:0;
-		bottom:0;
 		margin:auto;
 		z-index:1;
 		overflow:hidden;
-			background-color:#faa;
-		.begin_animation{
-			width:100%;
-			height:100%;
-			position:absolute;
-			top:0;
-			left:0;
-			right:0;
-			//bottom:0;
-			margin:auto;
-			background-color:#fa0;
-			.move_left_tree{
-				width:100%;
-				height:100%;
-				position:absolute;
-				top:0;
-				right:0;
-				left:0;
-				bottom:0;
-				margin:auto;
-				tranform:tranlateX(-50%);
-			}
-			.move_right_tree{
-				width:100%;
-				height:100%;
-				position:absolute;
-				top:0;
-				right:0;
-				left:0;
-				bottom:0;
-				margin:auto;
-				tranform:tranlateX(-50%);
-			}
-		}
 		.container{
 			width:100%;
 			max-width:1200px;
@@ -610,6 +598,7 @@
 		position:relative;
 		z-index:1;
 		overflow:hidden;
+		background-color:#faa;
 		.container{
 			width:100%;
 			height:2800px;
@@ -1019,11 +1008,13 @@
 	}
 	.teamstory__introduction{
 		width:100%;
+		height:100vh;
+		max-height:960px;
 		position:relative;
 		z-index:1;
 		.teamstorybg_settin{
 			width:100%;
-			height:724px;
+			height:100%;
 			position:absolute;
 			overflow:hidden;
 			z-index:-1;
@@ -1055,9 +1046,81 @@
 				top:0;
 			}
 		}
+		.container{
+			width:100%;
+			max-width:1200px;
+			height:724px;
+			margin:auto;
+			padding:40px 0 0;
+			position:relative;
+			h2{
+				width:500px;
+				height:89px;
+				line-height:89px;
+				margin:auto;
+				//background-color:#F7E9C3;
+				position:relative;
+				text-align:center;
+				.title_bg{
+					width:359px;
+					height:89px;
+					position:absolute;
+					top:0;
+					left:0;
+					right:0;
+					margin:auto;
+					z-index:-1;
+				}
+			}
+			.context{
+				//width:2400px;
+				width:1200px;
+				padding:40px 0 0;
+				overflow:hidden;
+				display:flex;
+				flex-flow:row nowrap;
+				justify-content: center;
+				align-item:center;
+				text-align:center;
+				.member{
+					width:400px;
+					margin:auto;
+					padding:15px 0 0;
+					.portrait{
+						display:block;
+						width:200px;
+						height:200px;
+						margin:auto;
+					}
+					.txt{
+						padding:5px 0;
+						p{
+							padding:10px 15px 0;
+						}
+					}
+					.to_personweb{
+						width:300px;
+						height:100px;
+						line-height:80px;
+						margin:auto;
+						position:relative;
+						.person_web_button{
+							width:174px;
+							height:97px;
+							position:absolute;
+							top:0;
+							left:0;
+							right:0;
+							margin:auto;
+							z-index:-1;
+						}
+					}
+				}
+			}
+		}
 	}
 	footer{
-		width:100%;
+		width:100vw;
 		position:absolute;
 		bottom:0;
 		left:0;
@@ -1066,12 +1129,18 @@
 		.footer_bg_settin{
 			position:relative;
 			.footer_bg_glass{
-				width:100%;
+				width:50%;
 				//height:175px;
 				position:absolute;
 				bottom:0;
+			}
+			.glass1{
 				left:0;
+
+			}
+			.glass2{
 				right:0;
+			
 			}
 		}
 		.txt{
@@ -1084,6 +1153,4 @@
 			padding:0 0 15px;
 		}
 	}
-
-
 }
