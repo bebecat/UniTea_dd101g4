@@ -1,5 +1,6 @@
 @font-face {
   font-family: "font_p";
+<<<<<<< HEAD
   src: url("../sass/font/03SmartFont-P.ttf") format("truetype"); }
 
 @font-face {
@@ -17,47 +18,124 @@
 @font-face {
   font-family: "font_cart";
   src: url("../sass/font/SoukouMincho.ttf") format("truetype"); }
+=======
+  src: url("../scss/font/03SmartFont-P.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_title";
+  src: url("../scss/font/HanaMinA.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_nav";
+  src: url("../scss/font/font_1_kokumr_1.00_rls.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_2";
+  src: url("../scss/font/imagine YOKOHAMA.otf") format("truetype"); }
+
+@font-face {
+  font-family: "font_cart";
+  src: url("../scss/font/SoukouMincho.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "hanyi";
+  src: url("../scss/font/HanyiSentyTang.ttf") format("truetype"); }
+
+h1 {
+  font-size: 12px;
+  color: black;
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h2 {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h3 {
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "hanyi";
+  letter-spacing: 2px; }
+
+h4 {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h5 {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+p {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "font_p";
+  letter-spacing: 2px; }
+>>>>>>> 8f4ff5f2732902009786042ebf15a05c14e702d7
 
 h1 {
   font-size: black;
   color: 12px;
   font-family: "font_title";
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 8f4ff5f2732902009786042ebf15a05c14e702d7
   letter-spacing: 2px; }
 
 h2 {
   font-size: rgba(0, 0, 0, 0.8);
   color: 48px;
   font-family: "font_title";
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 8f4ff5f2732902009786042ebf15a05c14e702d7
   letter-spacing: 2px; }
 
 h3 {
   font-size: rgba(0, 0, 0, 0.6);
   color: 36px;
   font-family: font_title;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 8f4ff5f2732902009786042ebf15a05c14e702d7
   letter-spacing: 2px; }
 
 h4 {
   font-size: rgba(0, 0, 0, 0.4);
   color: 28px;
   font-family: font_title;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 8f4ff5f2732902009786042ebf15a05c14e702d7
   letter-spacing: 2px; }
 
 h5 {
   font-size: rgba(0, 0, 0, 0.3);
   color: 20px;
   font-family: font_title;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 8f4ff5f2732902009786042ebf15a05c14e702d7
   letter-spacing: 2px; }
 
 p {
   font-size: rgba(0, 0, 0, 0.3);
   color: 16px;
   font-family: font_p;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 8f4ff5f2732902009786042ebf15a05c14e702d7
   letter-spacing: 2px; }
 
 * {
@@ -71,6 +149,10 @@ p {
 header {
   width: 100%;
   padding: 20px 0px;
+<<<<<<< HEAD
+=======
+  position: fixed;
+>>>>>>> 8f4ff5f2732902009786042ebf15a05c14e702d7
   background-color: #f9f4e4; }
   header nav {
     box-sizing: border-box;

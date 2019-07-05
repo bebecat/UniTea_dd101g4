@@ -1,0 +1,374 @@
+header {
+    height: 70px;
+    width: 100%;
+    background-color: cornflowerblue 0.5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: font_p;
+}
+
+body {
+    background: url(../scss/img/Customization/body_bg.png) repeat left top;
+}
+
+@font-face {
+    font-family: "font_p";
+    src: url("..scss/font/03SmartFont-P.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "font_title";
+    src: url("../sass/font/HanaMinA.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "font_nav";
+    src: url("../sass/font/font_1_kokumr_1.00_rls.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "font_2";
+    src: url("../sass/font/imagine YOKOHAMA.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "font_cart";
+    src: url("../sass/font/SoukouMincho.ttf") format("truetype");
+}
+
+.cust_wrapper {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.cust_wrapper .cust_box {
+    background-image: url(../scss/img/Customization/PennantHanging.png);
+    background-repeat: repeat-x;
+    width: 100%;
+}
+.cust_wrapper .cust_title {
+    text-align: center;
+    padding-top: 40px;
+}
+.cust_wrapper .container {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+.cust_wrapper .cust_area {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    padding: 50px 20px 0px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.cust_wrapper .picnic_basket {
+    height: calc(100vh - 70px);
+    width: 100%;
+    position: relative;
+}
+.cust_wrapper .picnic_basket .picnic_basket_make {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    height: 530px;
+    text-align: center;
+    padding-left: 70px;
+    padding-top: 20px;
+}
+.cust_wrapper .picnic_basket .picnic_basket_make img {
+    width: 400px;
+}
+.cust_wrapper .picnic_basket .picnic_basket_make .check_basket_name {
+    font-size: 0px;
+    background-color: #a26839;
+    padding: 5px 0px;
+    display: inline-block;
+    width: 210px;
+    border-radius: 5px;
+    margin: 15px auto;
+}
+.cust_wrapper .picnic_basket .picnic_basket_make .check_basket_name #basketName {
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+}
+.cust_wrapper .picnic_basket .picnic_basket_make .check_basket_name button {
+    height: 30px;
+    border: none;
+    padding: 0px 10px;
+    background-color: #a26839;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.cust_wrapper .picnic_basket .picnic_basket_make p {
+    font-size: 24px;
+}
+.cust_wrapper .cust_choose_area {
+    background-image: url(../scss/img/Customization/woodBoard1.png);
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 0;
+    margin-left: auto;
+    padding-bottom: 485px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+.cust_wrapper .cust_choose_area > h2 {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+.cust_wrapper .choose_basket {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.cust_wrapper .choose_basket .basket_items {
+    cursor: pointer;
+    margin: 5px;
+}
+.cust_wrapper .choose_basket .basket_items h5 {
+    font-size: 18px;
+    text-align: center;
+}
+.cust_wrapper .basket_items_img {
+    width: 125px;
+    height: 125px;
+    margin: 5px;
+    background-color: white;
+    box-sizing: border-box;
+    border: 5px solid #6d3812;
+    border-radius: 5px;
+}
+.cust_wrapper .basket_items_img img {
+    width: 100%;
+}
+.cust_wrapper .basket_color_area {
+    margin: 25px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.cust_wrapper .basket_color_area .basket_color_box {
+    text-align: center;
+}
+.cust_wrapper .basket_color_area .basket_color_box p {
+    font-size: 16px;
+    color: white;
+}
+.cust_wrapper .basket_color_area .basket_color_items {
+    width: 100px;
+    height: 100px;
+    margin: 5px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: aqua;
+    border-radius: 50%;
+    border: 5px solid #6d3812;
+    cursor: pointer;
+}
+.cust_wrapper .basket_color_area .color_blue {
+    background-color: #3ab1cf;
+}
+.cust_wrapper .basket_color_area .color_green {
+    background-color: #6bb147;
+}
+.cust_wrapper .basket_color_area .color_purple {
+    background-color: #a8497a;
+}
+.cust_wrapper .basket_color_area .color_yellow {
+    background-color: #ecc533;
+}
+.cust_wrapper .basket_color_area .color_orange {
+    background-color: #e26d4b;
+}
+.cust_wrapper .basket_color_area .color_pink {
+    background-color: #db4f65;
+}
+.cust_wrapper .basket_decoration_class {
+    margin: 30px 30px;
+    border: 5px solid #6a381b;
+    box-sizing: border-box;
+    background-color: #c38042;
+    border-radius: 10px;
+    width: 288px;
+}
+.cust_wrapper .basket_decoration_class ul {
+    display: flex;
+    text-align: center;
+}
+.cust_wrapper .basket_decoration_class li {
+    padding: 5px;
+    display: inline-block;
+    font-size: 20px;
+    background-color: #c38042;
+    width: 100%;
+    cursor: pointer;
+    font-family: font_p;
+}
+.cust_wrapper .basket_decoration_class li:nth-child(1):hover {
+    background-color: #c38042;
+}
+.cust_wrapper .basket_decoration_class li:nth-child(2):hover {
+    background-color: #c38042;
+}
+.cust_wrapper .basket_decoration_area {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    box-sizing: border-box;
+}
+.cust_wrapper .basket_decoration_area .basket_decoration_items {
+    width: 86.5px;
+    height: 86.5px;
+    margin: 15px 3px 3px 3px;
+    background-color: white;
+    box-sizing: border-box;
+    border: 5px solid #6d3812;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cust_wrapper .basket_decoration_area .basket_decoration_items img {
+    width: 100%;
+}
+.cust_wrapper .cust_finish {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cust_wrapper .cust_choose_info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 300px;
+}
+.cust_wrapper .cust_finish_btn {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 45%;
+    box-shadow: 0 8px #999;
+    display: block;
+    width: 200px;
+    margin-top: 20px;
+}
+.cust_wrapper .cust_finish_btn:hover {
+    background-color: #3e8e41;
+}
+.cust_wrapper .cust_finish_btn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 4px #666;
+    transform: translateY(4px);
+}
+.cust_wrapper .cust_choose_1_content {
+    width: 100px;
+    margin: 5px;
+    background-color: white;
+    box-sizing: border-box;
+    border: 5px solid #6d3812;
+    border-radius: 5px;
+}
+.cust_wrapper .cust_choose_1_content img {
+    width: 100%;
+}
+.cust_wrapper .cust_choose_2_content {
+    width: 110px;
+    height: 110px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: aqua;
+    border-radius: 50%;
+    border: 5px solid #6d3812;
+    cursor: pointer;
+}
+.cust_wrapper .cust_choose_3_content {
+    width: 100px;
+    margin: 5px;
+    background-color: white;
+    box-sizing: border-box;
+    border: 5px solid #6d3812;
+    border-radius: 5px;
+}
+.cust_wrapper .cust_choose_3_content img {
+    width: 100%;
+}
+.cust_wrapper .basket_items:hover .basket_items_img {
+    color: #f3971e;
+}
+.cust_wrapper .balloon_squirrel {
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: 80px;
+}
+.cust_wrapper .picnic_basket {
+    width: 850px;
+    height: 600px;
+}
+.cust_wrapper .step_flow {
+    display: flex;
+}
+.cust_wrapper #step_circle {
+    width: 550px;
+    height: 550px;
+    background-image: url(../scss/img/Customization/step_circle.png);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    transition: 1.5s;
+}
+.cust_wrapper #custStep1,
+.cust_wrapper #custStep2,
+.cust_wrapper #custStep3,
+.cust_wrapper #custStep4 {
+    transition: 1.5s;
+}
+.cust_wrapper .step {
+    width: 240px;
+    height: 80px;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+    display: flex;
+    border: 5px solid transparent;
+    cursor: pointer;
+}
+.cust_wrapper .step img {
+    height: 100%;
+}
+.cust_wrapper .step p {
+    font-size: 20px;
+    line-height: 2.9em;
+    font-weight: 800;
+    padding-left: 24px;
+}
+.cust_wrapper button:hover {
+    border: 5px solid #e26d4b;
+    border-radius: 10px;
+}
+.cust_wrapper .step1,
+.cust_wrapper .step4 {
+    margin-right: -170px;
+}
+.cust_wrapper .step2,
+.cust_wrapper .step3 {
+    margin-right: -240px;
+}
