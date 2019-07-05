@@ -12,7 +12,7 @@ var tl = new TimelineMax({
 });
 
 tl.to('.time01', 1,{
-    x:700
+    x:'110%'
 });
 
 var tr = new TimelineMax({
@@ -20,7 +20,7 @@ var tr = new TimelineMax({
  //    onComplete: alerts,
  });
 tr.to('.time02', 1,{
-    x:-780});
+    x:'-100%'});
 
 // tl.to('.time_01',2,{
 //     x:-1000

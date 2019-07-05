@@ -65,7 +65,7 @@
       @content;
     }
   } @else if $breakpoint==medium {
-    @media all and (min-width: $md) {
+    @media all and (max-width: $md) {
       @content;
     }
   } @else if $breakpoint==desktop {

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>美籃票選</title>
+    <title>野餐趣 | 美籃票選</title>
+    <link rel="shortcut icon" href="scss/img/h_f_img/rwd-logo.png">
     <link rel="stylesheet" href="css/contest1.css">
     <link rel="stylesheet" href="css/h_f_becca.css">
     <script src="dis/TweenMax.min.js"></script>
@@ -35,40 +36,39 @@
             </div>
             <div class="nav_wrapper">
                 <ul class="nav_content">
-                    <a href="#">
+                    <a href="customizedP.html">
                         <li class="cus">客製野餐籃</li>
                     </a>
-                    <a href="#">
-                        <li>美籃票選</li>
+                    <a href="contest.html">
+                        <li class="here">美籃票選</li>
                     </a>
                     <a href="pdList.html">
-                        <li class="here">野餐周邊</li>
+                        <li>野餐周邊</li>
                     </a>
-                    <a href="#">
+                    <a href="index.html">
                         <li class="logo">
                             <h1>趣野餐</h1>
                         </li>
                     </a>
-                    <a href="#">
+                    <a href="activity.html">
                         <li>野餐活動</li>
                     </a>
-                    <a href="#">
+                    <a href="aboutus.html">
                         <li>籃子故事</li>
                     </a>
-                    <a href="#">
-                        <li>賺折扣卷</li>
+                    <a href="game.html">
+                        <li>賺折扣券</li>
                     </a>
                     <li class="icon">
-                        <a href="#">
+                        <a href="memeber.html">
                             <div class="member">
                                 <img src="scss/img/member.png" alt="member" /></div>
                         </a>
-                        <a href="#">
+                        <a href="cart.html">
                             <div class="cart">
                                 <img src="scss/img/cart.png" alt="cart" /></div>
                         </a>
                     </li>
-
                     <div class="clear"></div>
                 </ul>
             </div>
@@ -226,29 +226,33 @@
                             </div>
                         </div>
                     </div>
-                    <div class="comment_box">
+                    <div class="comment_leave">
                         <div class="mem">
                             <div class="pic">
-                                <img src="" alt="">
+                                <img id="msg_pic" src="scss/img/twitter.png" alt="member">
                             </div>
-                            <span class="name">
+                            <span id="msg_name" class="name">
+                                小歐妖精
+                            </span>
+                        </div>
+                        <div class="msg">
+                            <p id="msg">assfdsfds</p>
+                            <button>檢舉</button>
+                        </div>
+                    </div>
+                    <div class="comment_box">
+                        <div id="mem" class="mem">
+                            <div class="pic">
+                                <img id="mem_pic" src="scss/img/twitter.png" alt="member">
+                            </div>
+                            <span id="mem_name" class="name">
                                 小歐妖精
                             </span>
                         </div>
                         <div class="comment">
-                            <input type="text" placeholder="請輸入留言">
-                            <button>送出</button>
+                            <input id="comment" type="text" placeholder="請輸入留言">
+                            <button id="send">送出</button>
                         </div>
-
-                    </div>
-                    <div class="commet_box">
-
-                    </div>
-                    <div class="commet_box">
-
-                    </div>
-                    <div class="commet_box">
-
                     </div>
                     <div class="votes_prods">
                         <div class="box">
@@ -370,9 +374,70 @@
     <script src="js/scroll.js"></script>
     <script>
         $(".votes_prods").click(function () {
-            $(this).next().slideToggle();
+            $(this).next().next().slideToggle();
         });
     </script>
+
+<div class="comment_leave" style="display:none;">
+        <div class="mem">
+            <div class="pic">
+                <img id="msg_pic" src="scss/img/twitter.png" alt="member">
+            </div>
+            <span id="msg_name" class="name">
+                小歐妖精
+            </span>
+        </div>
+        <div class="msg">
+            <p id="msg">assfdsfds</p>
+            <button>檢舉</button>
+        </div>
+    </div>
+    <div class="comment_box">
+        <div id="mem" class="mem">
+            <div class="pic">
+                <img id="mem_pic" src="scss/img/twitter.png" alt="member">
+            </div>
+            <span id="mem_name" class="name">
+                小歐妖精
+            </span>
+        </div>
+        <div class="comment">
+            <input id="comment" type="text" placeholder="請輸入留言">
+            <button id="send">送出</button>
+        </div>
+    </div>
+
+    <script>
+    /*送出*/
+    var mem_pic = document.getElementById("mem_pic");
+    var mem_name = document.getElementById("mem_name");
+    var comment = document.getElementById("comment");
+    var send = document.getElementById("send");
+    var template = document.querySelector(".comment_leave");
+    var comment = document.getElementsByClassName("comment_box");
+    /*接收*/
+    var msg_pic = document.getElementById("msg_pic");
+    var msg_name = document.getElementById("msg_name");
+    var msg = document.getElementById("msg");
+    /*按下*/
+
+    window.addEventListener("load", function(){
+        send.onclick = function(){
+            console.log("send");
+            new_msg = template.cloneNode(true);
+            new_msg.style.display = "";
+            template.insertBefore(new_msg,comment);
+        }
+})
+
+
+
+
+
+    </script>
+
+
+
 </body>
 
 </html>
