@@ -3,6 +3,12 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+  overflow-x: hidden;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  -webkit-appearance: none;
 }
 
 .pdP_hero_wrapper {
@@ -384,37 +390,17 @@
   background-image: url("../scss/pdImg/bg/pd_bg_03.png");
   background-size: cover;
   width: 100%;
-  padding-top: 30px;
-  height: 100vh;
+  // padding-top: 30px;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-// footer
-.pd_Customize_container {
-  position: relative;
-}
-.pd_footer_box {
-  position: relative;
-}
-.pd_footer_box {
-  background-image: url("../scss/img/footerIamge.png");
-  background-size: cover;
-  width: 100%;
-  padding: 3% 0;
-  background-repeat: no-repeat;
-}
-.pd_footer_box .txt {
-  margin: auto;
-  // padding: 30px;
-  font-size: 10px;
-  color: #666666;
-  font-weight: normal;
-}
 .pd_Customize_container .pd_Customize_box {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  // flex-flow: ;
   padding: 10%;
   width: 100%;
   max-width: 1200px;
@@ -453,12 +439,6 @@
   bottom: 55%;
   left: 15%;
   box-sizing: border-box;
-}
-.pd_Customize_box .middle .txt-2 {
-  font-size: 12px;
-  position: absolute;
-  bottom: 40%;
-  right: 20%;
 }
 
 //bottonGoToCus
@@ -563,5 +543,14 @@
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+  }
+}
+.pd_Customize_container footer {
+  position: relative;
+  bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .pd_Customize_box .middle .txt {
+    font-size: 10px;
   }
 }

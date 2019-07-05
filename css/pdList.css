@@ -3,7 +3,13 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  text-decoration: none; }
+  text-decoration: none;
+  overflow-x: hidden; }
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  -webkit-appearance: none; }
 
 .pdP_hero_wrapper {
   background-image: url("../scss/pdImg/bg/pd_bg01-1.png");
@@ -343,29 +349,9 @@
   background-image: url("../scss/pdImg/bg/pd_bg_03.png");
   background-size: cover;
   width: 100%;
-  padding-top: 30px;
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center; }
-
-.pd_Customize_container {
-  position: relative; }
-
-.pd_footer_box {
-  position: relative; }
-
-.pd_footer_box {
-  background-image: url("../scss/img/footerIamge.png");
-  background-size: cover;
-  width: 100%;
-  padding: 3% 0;
-  background-repeat: no-repeat; }
-
-.pd_footer_box .txt {
-  margin: auto;
-  font-size: 10px;
-  color: #666666;
-  font-weight: normal; }
 
 .pd_Customize_container .pd_Customize_box {
   display: flex;
@@ -409,12 +395,6 @@
   bottom: 55%;
   left: 15%;
   box-sizing: border-box; }
-
-.pd_Customize_box .middle .txt-2 {
-  font-size: 12px;
-  position: absolute;
-  bottom: 40%;
-  right: 20%; }
 
 .pd_Customize_container .go_to_cus {
   background-color: #d8d8d8;
@@ -506,3 +486,11 @@
     width: 100%;
     padding: 10px;
     box-sizing: border-box; } }
+
+.pd_Customize_container footer {
+  position: relative;
+  bottom: 0; }
+
+@media screen and (max-width: 767px) {
+  .pd_Customize_box .middle .txt {
+    font-size: 10px; } }

@@ -4,5 +4,6 @@ $(document).ready(function() {
   $(window).on("scroll", function() {
     $(".navbar_container").toggleClass("hide", $(window).scrollTop() > zero);
     zero = $(window).scrollTop();
+    $(".navbar_container").css({ transition: " 1s ease-in-out" });
   });
 });
