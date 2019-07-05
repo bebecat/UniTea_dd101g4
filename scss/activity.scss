@@ -10,7 +10,7 @@
 	padding : 0;
 	list-style : none;
 	text-decoration:none;
-	//outline : 1px solid rgba(33,33,33,.5);
+	outline : 1px solid rgba(33,33,33,.5);
 }
 .clear_fix{
 	clear:both;
@@ -388,16 +388,16 @@
 		}
 	}
 	.bg_settin{
-		width:100%;
-		height:180vh;
+		width:100vw;
+		height:200vh;
 		//max-height:960px;
 		background-color: #EAEBCE;
 		//filter:opacity(80%);
 		.sky_settin{
-			width:100vw;
-			height:50vh;
+			width:100%;
+			height:30%;
 			position:relative;
-			transform:translateY(15vh);
+			transform:translateY(150px);
 			.cloud_right{
 				position:absolute;
 				right:0;
@@ -414,18 +414,17 @@
 			}
 			@keyframes cloudmoveright{
 				from{transform:translateY(-30px) scale(1)}
-				to{transform:translateY(50px) scale(1.09)}
+				to{transform:translateY(50px) scale(1.19)}
 			}
 			@keyframes cloudmoveleft{
 				from{transform:translateY(-30px) scale(1)}
-				to{transform:translateY(50px) scale(1.09)}
+				to{transform:translateY(50px) scale(1.29)}
 			}
 		}
 		.river_settin{
 			width:100%;
-			height:122vh;
-			position:absolute;
-			top:950px;
+			height:70%;
+			position:relative;
 			background-color:#4A9CD6;
 			.river{
 				//width:1960px;
@@ -444,27 +443,27 @@
 		}
 		.glass_settin{
 			width:100%;
-			height:100vh;
-			position:relative;
+			height:45%;
+			position:absolute;
+			top:33%;
 			.glass{
-				width:100vw;
+				width:100%;
 				position:absolute;
 				right:0;
 				left:0;
 			}
 			.glass1{
-				height:50vh;
-				top:10vh;
+				height:45%;
+				top:30%;
 				animation:glass1move 4s 0s infinite ease-in alternate both;
 			}
-
 			@keyframes glass1move{
 				from{transform:translateY(-30px) scale(1)}
 				to{transform:translateY(30px) scale(1.09)}
 			}
 			.cliff_settin{
-				width:100vw;
-				height:50vh;
+				width:100%;
+				height:80%;
 				position:absolute;
 				top:-300px;
 				.cliff{
@@ -500,21 +499,26 @@
 					animation:cliff3move 4.1s 0s infinite ease-in alternate both;
 				}
 				@keyframes cliff1move{
-				from{transform:translateY(-30px) scale(1)}
-				to{transform:translateY(20px) scale(1.05)}
+					from{transform:translateY(-30px) scale(1)}
+					to{transform:translateY(20px) scale(1.05)}
 				}
 				@keyframes cliff2move{
-				from{transform:translateY(-30px) scale(1)}
-				to{transform:translateY(10px) scale(1.05)}
+					from{transform:translateY(-30px) scale(1)}
+					to{transform:translateY(10px) scale(1.05)}
 				}
 				@keyframes cliff3move{
-				from{transform:translateY(-30px) scale(1)}
-				to{transform:translateY(22px) scale(1.05)}
+					from{transform:translateY(-30px) scale(1)}
+					to{transform:translateY(22px) scale(1.05)}
 				}
 			}
 			.glass2{
-				height:50vh;
-				top:40vh;
+				height:50%;
+				top:65%;
+				animation:glass2move 5s .5s infinite ease-in alternate both;
+			}
+			@keyframes glass2move{
+				from{transform:translateY(-20px) scale(1)}
+				to{transform:translateY(30px) scale(1.09)}
 			}
 		}
 		.paper_settin{
@@ -528,10 +532,119 @@
 			background:url('../scss/img/auimg/paperBG.png') repeat;
 		}
 	}
-
+	.ac_container{
+		width:100%;
+		max-width:1200px;
+		margin:auto;
+		text-align:center;
+		position:absolute;
+		top:0;
+		right:0;
+		left:0;
+		margin:auto;
+		padding:8%;
+		h3{
+			width:500px;
+			height:89px;
+			margin: 5px auto 6%;
+			//background-color:#F7E9C3;
+			position:relative;
+			text-align:center;
+			.title_bg{
+				width:71.8%;
+				//width:359px;
+				height:100%;
+				//height:89px;
+				position:absolute;
+				top:0;
+				left:0;
+				right:0;
+				margin:auto;
+				//z-index:-1;
+			}
+			.word{
+				display:block;
+				width:100%;
+				height:100%;
+				line-height:89px;
+				position:relative;
+				z-index:1;
+			}
+		}
+		.ac_sign{
+			width:1100px;
+			margin:auto;
+			position:relative;
+			.ac_sign_img{
+				width:100%;
+				//height:53.552239%;
+				position:absolute;
+				top:25px;
+				left:0;
+				right:0;
+			}
+			.ac_card{
+				width:100%;
+				margin:auto;
+				padding:20px 0 0;
+				position:relative;
+				z-index:1;
+				.ac_img{
+					//width:480px;
+					//height:640px;
+					width:240px;
+					height:320px;
+					position:absolute;
+					top:140px;
+					left:80px;
+					transform:rotate(-4deg);
+				}
+				h2{
+					width:50%;
+					height:40px;
+					line-height:60px;
+					padding:10px 0;
+					position:absolute;
+					top:120px;
+					right:105px;
+					transform:rotate(-3deg);
+				}
+				.txt{
+					width:50%;
+					padding:10px 5px 0;
+					position:absolute;
+					top:220px;
+					right:90px;
+					transform:rotate(-3deg);
+					p{
+						padding:5px 0;
+					}
+				}
+			}
+			animation:acsignmove 4s 0 infinite ease-in alternate both;
+		}
+		@keyframes acsignmove{
+			from{transform:translateY(-30px) scale(1)}
+			to{transform:translateY(10px) scale(1.02)}
+		}
+	}
+	.ac_infor{
+		.infor_bg{
+			width:100%;
+			max-width:1200px;
+			margin:auto;
+			text-align:center;
+			position:absolute;
+			top:0;
+			right:0;
+			left:0;
+			margin:auto;
+			padding:8%;
+		}
+	}
 	footer{
 		width:100vw;
-		position:absolute;
+		position:relative;
 		bottom:0;
 		left:0;
 		right:0;
@@ -547,11 +660,9 @@
 			}
 			.glass1{
 				left:0;
-
 			}
 			.glass2{
 				right:0;
-			
 			}
 		}
 		.txt{
