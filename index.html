@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/h_f_becca.css">
     <link rel="stylesheet" href="css/HeaderAndFooter.css">
-    <title>趣野餐</title>
+    <link rel="stylesheet" href="js/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/machine.css">
+    <link rel="SHORTCUT ICON" href="./scss/h_f_img/rwd-logo.png"/>
+    <title>趣野餐｜ 野餐周邊</title>
 </head>
 <body>
     <header>
@@ -57,7 +61,7 @@
     
     <div class="index_wrapper">
         <section class="container_allview">
-            <div class="cotent_allviewgrassA">
+            <!-- <div class="cotent_allviewgrassA">
                 <div class="box_allviewgrassA">
                     <div class="item_allviewgrassA">
                         <div class="allviewgrass_darkgrassA">
@@ -74,11 +78,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="content_main">
                 <div class="content_txt">
                     <div class="box_txt">
-                        <div class="item_txt">
+                        <div id="itemtxt" class="item_txt">
                             <div class="txt txt_picA">
                                 <img src="scss/img/GengImg/Screen01/Screen01title-1.png" alt="">
                             </div>
@@ -117,12 +121,37 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="box_smobject">
+                                    <div class="item_smobject">
+                                        <div id="smobjectA" class="smobject_sandwich">
+                                            <img src="scss/img/GengImg/Screen01/sandwich.png" alt="">
+                                        </div>
+                                        <div class="smobject_apple">
+                                            <img src="scss/img/GengImg/Screen01/apple.png" alt="">
+                                        </div>
+                                        <div id="smobjectB" class="smobject_knife">
+                                            <img src="scss/img/GengImg/Screen01/knife.png" alt="">
+                                        </div>
+                                        <div class="smobject_vase">
+                                            <img src="scss/img/GengImg/Screen01/vase.png" alt="">
+                                        </div>
+                                        <div class="smobject_cross">
+                                            <img src="scss/img/GengImg/Screen01/cross.png" alt="">
+                                        </div>
+                                        <div id="smobjectC" class="smobject_jamA">
+                                            <img src="scss/img/GengImg/Screen01/jamA.png" alt="">
+                                        </div>
+                                        <div id="smobjectD"  class="smobject_jamB">
+                                            <img src="scss/img/GengImg/Screen01/jamB.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="cotent_allviewgrassB">
+            <!-- <div class="cotent_allviewgrassB">
                 <div class="box_allviewgrassB">
                     <div class="item_allviewgrassB">
                         <div class="allviewgrass_darkgrassB">
@@ -139,330 +168,523 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
-        <section class="container">
-            <div class="content_wood">
-                <div class="box_wood">
-                    <img src="scss/img/GengImg/titleboard.png" alt="">
-                    <div class="item_h3">
-                        <h3>客製籃子外型</h3>
-                    </div>
-                </div>
-                <div class="box_makeboxes">
-                    <div class="item_boxes">
-                        <div class="boxes">
-                            <img src="scss/img/GengImg/Screen02/Screen02basket.png" alt="">
-                        </div>
-                        <div class="shaped">
-                            <div class="stepA">
-                                <p>1</p>
-                                <div class="step_txtA">
-                                    <p>選擇</p>
-                                </div>
-                            </div>
-                            <div class="stepB">
-                                <p>2</p>
-                                <div class="step_txtB">
-                                    <p>配色</p>
-                                </div>
-                            </div>
-                            <div class="stepC">
-                                <p>3</p>
-                                <div class="step_txtC">
-                                    <p>裝飾</p>
-                                </div>
-                            </div>
-                            <div class="stepD">
-                                <p>4</p>
-                                <div class="step_txtD">
-                                    <p>取名字</p>
-                                </div>
-                            </div>
-                            <div class="stepE">
-                                <p>5</p>
-                                <div class="step_txtE">
-                                    <p>加價購</p>
-                                </div>
-                            </div>
+        <div class="container_inBackground">
+            <section class="container_boxes">
+                <div class="content_wood">
+                    <div class="box_wood">
+                        <img src="scss/img/GengImg/titleboard.png" alt="">
+                        <div class="item_h3">
+                            <h3>客製籃子外型</h3>
                         </div>
                     </div>
-                    <div class="item_exterior">
-                        <div class="exterior_card">
-                            <img src="scss/img/GengImg/Screen02/Screen02-2board.png" alt="">
-                            <div class="exterior_boxes">
-                                <div class="exterior_changebox">
-                                    <img src="scss/img/GengImg/Screen02/Screen02-1basket.png" alt="">
+                    <div class="box_makeboxes">
+                        <div class="item_boxes">
+                            <div class="boxes">
+                                <img src="scss/img/GengImg/Screen02/Screen02basket.png" alt="">
+                            </div>
+                            <div class="shaped">
+                                <div class="stepA">
+                                    <p>1</p>
+                                    <div class="step_txtA">
+                                        <p>選擇</p>
+                                    </div>
                                 </div>
-                                <div class="exterior_changebox">
-                                    <img src="scss/img/GengImg/Screen02/Screen02-2basket.png" alt="">
+                                <div class="stepB">
+                                    <p>2</p>
+                                    <div class="step_txtB">
+                                        <p>配色</p>
+                                    </div>
                                 </div>
-                                <div class="exterior_changebox">
-                                    <img src="scss/img/GengImg/Screen02/Screen02-3basket.png" alt="">
+                                <div class="stepC">
+                                    <p>3</p>
+                                    <div class="step_txtC">
+                                        <p>裝飾</p>
+                                    </div>
                                 </div>
-                                <div class="exterior_changebox">
-                                    <img src="scss/img/GengImg/Screen02/Screen02-4basket.png" alt="">
+                                <div class="stepD">
+                                    <p>4</p>
+                                    <div class="step_txtD">
+                                        <p>取名字</p>
+                                    </div>
+                                </div>
+                                <div class="stepE">
+                                    <p>5</p>
+                                    <div class="step_txtE">
+                                        <p>加價購</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="box_btn">
-                    <div class="item_gomakebtn">
-                        <div class="btn_gomake">
-                            <a href="customizedP.html"><p>前往客製</p></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="birdsMove">
-                    <div class="birdsA">
-                        <img src="scss/img/GengImg/Screen02/Screen02-bird.png" alt="">
-                    </div>
-                    <div class="birdsB">
-                        <img src="scss/img/GengImg/Screen02/Screen02-bird.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container">
-            <div class="content_wood">
-                <div class="box_wood">
-                    <img src="scss/img/GengImg/titleboard.png" alt="">
-                    <div class="item_h3">
-                        <h3>選美投票</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="content_vote">
-                <div class="box_vote">
-                    <div class="item_vote">
-                        <div class="vote_pic">
-                            <div class="vote_img">
-                                <img src="scss/img/GengImg/Screen03/Screen03-2basket.png" alt="">
-                            </div>
-                            <div class="vote_txt">
-                                <div class="ranking">
-                                    <p><span>No.</span>2</p>
-                                </div>
-                                <div class="math">
-                                    <div class="heart">
-                                        <img src="scss/img/GengImg/Screen03/heart.png" alt="">
+                        <div class="item_exterior">
+                            <div class="exterior_card">
+                                <img src="scss/img/GengImg/Screen02/Screen02-2board.png" alt="">
+                                <div class="exterior_boxes">
+                                    <div class="exterior_changebox">
+                                        <img src="scss/img/GengImg/Screen02/Screen02-1basket.png" alt="">
                                     </div>
-                                    <p><span>65</span>票</p>
+                                    <div class="exterior_changebox">
+                                        <img src="scss/img/GengImg/Screen02/Screen02-2basket.png" alt="">
+                                    </div>
+                                    <div class="exterior_changebox">
+                                        <img src="scss/img/GengImg/Screen02/Screen02-3basket.png" alt="">
+                                    </div>
+                                    <div class="exterior_changebox">
+                                        <img src="scss/img/GengImg/Screen02/Screen02-4basket.png" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="crown item_vote">
-                        <div class="no1 vote_pic">
-                            <div class="vote_img">
-                                <img src="scss/img/GengImg/Screen03/Screen03-1basket.png" alt="">
-                            </div>
-                            <div class="crown_pic">
-                                <img src="scss/img/GengImg/Screen03/Screen03crown.png" alt="">
-                            </div>
-                            <div class="vote_txt">
-                                <div class="ranking">
-                                    <p><span>No.</span>1</p>
-                                </div>
-                                <div class="math">
-                                    <div class="heart">
-                                        <img src="scss/img/GengImg/Screen03/heart.png" alt="">
+                        <div class="item_mobileexterior">
+                            <div class="mobileexterior_card">
+                                <div class="mobileexterior_boxes">
+                                    <div class="moblieexterior_changebox">
+                                        <img src="scss/img/GengImg/Screen02/Screen02-1basket.png" alt="">
                                     </div>
-                                    <p><span>85</span>票</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item_vote">
-                        <div class="vote_pic">
-                            <div class="vote_img">
-                                <img src="scss/img/GengImg/Screen03/Screen03-3basket.png" alt="">
-                            </div>
-                            <div class="vote_txt">
-                                <div class="ranking">
-                                    <p><span>No.</span>3</p>
-                                </div>
-                                <div class="math">
-                                    <div class="heart">
-                                        <img src="scss/img/GengImg/Screen03/heart.png" alt="">
+                                    <div class="moblieexterior_changebox">
+                                        <img src="scss/img/GengImg/Screen02/Screen02-2basket.png" alt="">
                                     </div>
-                                    <p><span>50</span>票</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box_votepic">
-                    <div class="item_votepic">
-                        <div class="votepic_land">
-                            <img src="scss/img/GengImg/Screen03/Screen03land.png" alt="">
-                            <div class="votepic_landtree">
-                                <div class="votepic_e04A">
-                                    <img src="scss/img/GengImg/Screen03/Screen03Newe04A.png" alt="">
-                                    <div class="votepic_treeA">
-                                        <img src="scss/img/GengImg/Screen03/Screen03NewtreeA.png" alt="">
+                                    <div class="moblieexterior_changebox">
+                                        <img src="scss/img/GengImg/Screen02/Screen02-3basket.png" alt="">
                                     </div>
-                                </div>
-                                <div class="votepic_e04B">
-                                    <img src="scss/img/GengImg/Screen03/Screen03Newe04B.png" alt="">
-                                    <div class="votepic_treeB">
-                                        <img src="scss/img/GengImg/Screen03/Screen03NewtreeB.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="votepic_e04C">
-                                    <img src="scss/img/GengImg/Screen03/Screen03Newe04B.png" alt="">
-                                    <div class="votepic_treeC">
-                                        <img src="scss/img/GengImg/Screen03/Screen03NewtreeB.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="votepic_e04D">
-                                    <img src="scss/img/GengImg/Screen03/Screen03Newe04A.png" alt="">
-                                    <div class="votepic_treeD">
-                                        <img src="scss/img/GengImg/Screen03/Screen03NewtreeA.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="votepic_gAbig">
-                                    <img src="scss/img/GengImg/Screen03/Screen03newbiggrassA.png" alt="">
-                                    <div class="votepic_gAsm">
-                                        <img src="scss/img/GengImg/Screen03/Screen03newsmallgrassA.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="votepic_gBbig">
-                                    <img src="scss/img/GengImg/Screen03/Screen03newbiggrassA.png" alt="">
-                                    <div class="votepic_gBsm">
-                                        <img src="scss/img/GengImg/Screen03/Screen03newsmallgrassA.png" alt="">
+                                    <div class="moblieexterior_changebox">
+                                        <img src="scss/img/GengImg/Screen02/Screen02-4basket.png" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="box_votebtn">
-                    <div class="item_govotebtn">
-                        <div class="btn_govote">
-                            <a href="contest.html"><p>前往投票</p></a>
+                    <div class="box_btn">
+                        <div class="item_gomakebtn">
+                            <div class="btn_gomake">
+                                <a href="customizedP.html"><p>前往客製</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="birdsMove">
+                        <div class="birdsA">
+                            <img src="scss/img/GengImg/Screen02/Screen02-bird.png" alt="">
+                        </div>
+                        <div class="birdsB">
+                            <img src="scss/img/GengImg/Screen02/Screen02-bird.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="leafMove">
-                    <div class="leafA">
-                        <img src="scss/img/GengImg/Screen03/Screen03-1maple.png" alt="">
-                    </div>
-                    <div class="leafB">
-                        <img src="scss/img/GengImg/Screen03/Screen03maple.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container">
-            <div class="content_wood">
-                <div class="box_wood">
-                    <img src="scss/img/GengImg/titleboard.png" alt="">
-                    <div class="item_h3">
-                        <h3>熱賣商品</h3>
+            </section>
+            <section class="container_vote">
+                <div class="content_wood">
+                    <div class="box_wood">
+                        <img src="scss/img/GengImg/titleboard.png" alt="">
+                        <div class="item_h3">
+                            <h3>選美投票</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="content_hotproducts">
-                <div class="box_hotproducts">
-                    <div class="item_hotproducts">
-                        <div class="hotproducts_boxes">
-                            <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
-                            <div class="hotproducts_img">
-                                <img src="scss/img/GengImg/Screen04/pd2-2.png" alt="">
+                <div class="content_vote">
+                    <div class="box_vote">
+                        <div class="item_vote">
+                            <div class="vote_pic">
+                                <div class="vote_img">
+                                    <img src="scss/img/GengImg/Screen03/Screen03-2basket.png" alt="">
+                                </div>
+                                <div class="vote_txt">
+                                    <div class="ranking">
+                                        <p><span>No.</span>2</p>
+                                    </div>
+                                    <div class="math">
+                                        <div class="heart">
+                                            <img src="scss/img/GengImg/Screen03/heart.png" alt="">
+                                        </div>
+                                        <p><span>65</span>票</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="hotproducts_board">
-                                <img src="scss/img/GengImg/Screen04/Screen04-1board.png" alt="">
-                                <div class="hotproducts_txt">
-                                    <h3>熱賣商品</h3>
+                        </div>
+                        <div class="crown item_vote">
+                            <div class="no1 vote_pic">
+                                <div class="vote_img">
+                                    <img src="scss/img/GengImg/Screen03/Screen03-1basket.png" alt="">
+                                </div>
+                                <div class="crown_pic">
+                                    <img src="scss/img/GengImg/Screen03/Screen03crown.png" alt="">
+                                </div>
+                                <div class="vote_txt">
+                                    <div class="ranking">
+                                        <p><span>No.</span>1</p>
+                                    </div>
+                                    <div class="math">
+                                        <div class="heart">
+                                            <img src="scss/img/GengImg/Screen03/heart.png" alt="">
+                                        </div>
+                                        <p><span>85</span>票</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_vote">
+                            <div class="vote_pic">
+                                <div class="vote_img">
+                                    <img src="scss/img/GengImg/Screen03/Screen03-3basket.png" alt="">
+                                </div>
+                                <div class="vote_txt">
+                                    <div class="ranking">
+                                        <p><span>No.</span>3</p>
+                                    </div>
+                                    <div class="math">
+                                        <div class="heart">
+                                            <img src="scss/img/GengImg/Screen03/heart.png" alt="">
+                                        </div>
+                                        <p><span>50</span>票</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item_hotproducts">
-                        <div class="hotproducts_boxes">
-                            <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
-                            <div class="hotproducts_img">
-                                <img src="scss/img/GengImg/Screen04/cook3-1-trans.png" alt="">
-                            </div>
-                            <div class="hotproducts_board">
-                                <img src="scss/img/GengImg/Screen04/Screen04-1board.png" alt="">
-                                <div class="hotproducts_txt">
-                                    <h3>熱賣商品</h3>
+                    <div class="box_votepic">
+                        <div class="item_votepic">
+                            <div class="votepic_land">
+                                <img src="scss/img/GengImg/Screen03/Screen03land.png" alt="">
+                                <div class="votepic_landtree">
+                                    <div class="votepic_e04A">
+                                        <img src="scss/img/GengImg/Screen03/Screen03Newe04A.png" alt="">
+                                        <div class="votepic_treeA">
+                                            <img src="scss/img/GengImg/Screen03/Screen03NewtreeA.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="votepic_e04B">
+                                        <img src="scss/img/GengImg/Screen03/Screen03Newe04B.png" alt="">
+                                        <div class="votepic_treeB">
+                                            <img src="scss/img/GengImg/Screen03/Screen03NewtreeB.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="votepic_e04C">
+                                        <img src="scss/img/GengImg/Screen03/Screen03Newe04B.png" alt="">
+                                        <div class="votepic_treeC">
+                                            <img src="scss/img/GengImg/Screen03/Screen03NewtreeB.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="votepic_e04D">
+                                        <img src="scss/img/GengImg/Screen03/Screen03Newe04A.png" alt="">
+                                        <div class="votepic_treeD">
+                                            <img src="scss/img/GengImg/Screen03/Screen03NewtreeA.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="votepic_gAbig">
+                                        <img src="scss/img/GengImg/Screen03/Screen03newbiggrassA.png" alt="">
+                                        <div class="votepic_gAsm">
+                                            <img src="scss/img/GengImg/Screen03/Screen03newsmallgrassA.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="votepic_gBbig">
+                                        <img src="scss/img/GengImg/Screen03/Screen03newbiggrassA.png" alt="">
+                                        <div class="votepic_gBsm">
+                                            <img src="scss/img/GengImg/Screen03/Screen03newsmallgrassA.png" alt="">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item_hotproducts">
-                        <div class="hotproducts_boxes">
-                            <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
-                            <div class="hotproducts_img">
-                                <img src="scss/img/GengImg/Screen04/pd3-1.png" alt="">
+                    <div class="box_votebtn">
+                        <div class="item_govotebtn">
+                            <div class="btn_govote">
+                                <a href="contest.html"><p>前往投票</p></a>
                             </div>
-                            <div class="hotproducts_board">
-                                <img src="scss/img/GengImg/Screen04/Screen04-1board.png" alt="">
-                                <div class="hotproducts_txt">
-                                    <h3>熱賣商品</h3>
+                        </div>
+                    </div>
+                    <div class="leafMove">
+                        <div class="leafA">
+                            <img src="scss/img/GengImg/Screen03/Screen03-1maple.png" alt="">
+                        </div>
+                        <div class="leafB">
+                            <img src="scss/img/GengImg/Screen03/Screen03maple.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content_mobilevote">
+                    <div class="box_mobilevote">
+                        <div class="crown item_mobilevote">
+                            <div class="no1 mobilevote_pic">
+                                <img src="scss/img/GengImg/Screen03/Screen03circle.png" alt="">
+                                <div class="mobilevote_img">
+                                    <img src="scss/img/GengImg/Screen03/Screen03-1basket.png" alt="">
+                                </div>
+                                <div class="crown_pic">
+                                    <img src="scss/img/GengImg/Screen03/Screen03crown.png" alt="">
+                                </div>
+                                <div class="mobilevote_txt">
+                                    <div class="mobilevote_ranking">
+                                        <p><span>No.</span>2</p>
+                                    </div>
+                                    <div class="mobilemath">
+                                        <div class="mobileheart">
+                                            <img src="scss/img/GengImg/Screen03/heart.png" alt="">
+                                        </div>
+                                        <p><span>65</span>票</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_mobilevote">
+                            <div class="mobilevote_picA">
+                                <img src="scss/img/GengImg/Screen03/Screen03circle.png" alt="">
+                                <div class="mobilevote_imgA">
+                                    <img src="scss/img/GengImg/Screen03/Screen03-2basket.png" alt="">
+                                </div>
+                                <div class="mobilevote_txt">
+                                    <div class="mobilevote_ranking">
+                                        <p><span>No.</span>2</p>
+                                    </div>
+                                    <div class="mobilemath">
+                                        <div class="mobileheart">
+                                            <img src="scss/img/GengImg/Screen03/heart.png" alt="">
+                                        </div>
+                                        <p><span>65</span>票</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobilevote_picB">
+                                <img src="scss/img/GengImg/Screen03/Screen03circle.png" alt="">
+                                <div class="mobilevote_imgB">
+                                    <img src="scss/img/GengImg/Screen03/Screen03-3basket.png" alt="">
+                                </div>
+                                <div class="mobilevote_txt">
+                                    <div class="mobilevote_ranking">
+                                        <p><span>No.</span>2</p>
+                                    </div>
+                                    <div class="mobilemath">
+                                        <div class="mobileheart">
+                                            <img src="scss/img/GengImg/Screen03/heart.png" alt="">
+                                        </div>
+                                        <p><span>65</span>票</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="box_hotproductsgrass">
-                    <div class="item_hotproductsgrassA">
-                        <img src="scss/img/GengImg/Screen04/Screen04tree.png" alt="">
-                    </div>
-                    <div class="item_hotproductsbtn">
-                        <div class="btn_hotproducts">
-                            <a href="pdList.html"><p>前往選購</p></a>
-                        </div>
-                    </div>
-                    <div class="item_hotproductsgrassB">
-                        <img src="scss/img/GengImg/Screen04/Screen04-1tree.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container">
-            <div class="content_wood">
-                <div class="box_wood">
-                    <img src="scss/img/GengImg/titleboard.png" alt="">
-                    <div class="item_h3">
-                        <h3>小遊戲</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="content_game">
-                <div class="box_game">
-                    <div class="item_game">
-                        <div class="vine_boxes">
-                            <div class="boxes_shake">
-                                <img src="scss/img/GengImg/Screen05/Screen05-picnicmat.png" alt="">
-                            </div>
-                            <div class="bee_shake">
-                                <div class="beeA">
-                                    <img src="scss/img/GengImg/Screen05/Screen05-bee.png" alt="">
+                    <div class="box_votepic">
+                        <div class="item_votepic">
+                            <div class="votepic_land">
+                                <img src="scss/img/GengImg/Screen03/Screen03land.png" alt="">
+                                <div class="votepic_landtree">
+                                    <div class="votepic_e04A">
+                                        <img src="scss/img/GengImg/Screen03/Screen03Newe04A.png" alt="">
+                                        <div class="votepic_treeA">
+                                            <img src="scss/img/GengImg/Screen03/Screen03NewtreeA.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="votepic_e04B">
+                                        <img src="scss/img/GengImg/Screen03/Screen03Newe04B.png" alt="">
+                                        <div class="votepic_treeB">
+                                            <img src="scss/img/GengImg/Screen03/Screen03NewtreeB.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="votepic_e04C">
+                                        <img src="scss/img/GengImg/Screen03/Screen03Newe04B.png" alt="">
+                                        <div class="votepic_treeC">
+                                            <img src="scss/img/GengImg/Screen03/Screen03NewtreeB.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="votepic_e04D">
+                                        <img src="scss/img/GengImg/Screen03/Screen03Newe04A.png" alt="">
+                                        <div class="votepic_treeD">
+                                            <img src="scss/img/GengImg/Screen03/Screen03NewtreeA.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="votepic_gAbig">
+                                        <img src="scss/img/GengImg/Screen03/Screen03newbiggrassA.png" alt="">
+                                        <div class="votepic_gAsm">
+                                            <img src="scss/img/GengImg/Screen03/Screen03newsmallgrassA.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="votepic_gBbig">
+                                        <img src="scss/img/GengImg/Screen03/Screen03newbiggrassA.png" alt="">
+                                        <div class="votepic_gBsm">
+                                            <img src="scss/img/GengImg/Screen03/Screen03newsmallgrassA.png" alt="">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="beeB">
-                                    <img src="scss/img/GengImg/Screen05/Screen05-1bee.png" alt="">
-                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_votebtn">
+                        <div class="item_govotebtn">
+                            <div class="btn_govote">
+                                <a href="contest.html"><p>前往投票</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="box_gamebtn">
-                    <div class="item_gamebtn">
-                        <div class="btn_gotoplay">
-                            <a href="game.html"><p>前往遊戲</p></a>
+            </section>
+            <section class="container_store">
+                <div class="content_wood">
+                    <div class="box_wood">
+                        <img src="scss/img/GengImg/titleboard.png" alt="">
+                        <div class="item_h3">
+                            <h3>熱賣商品</h3>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div class="content_hotproducts">
+                    <div class="box_hotproducts">
+                        <div class="item_hotproducts">
+                            <div class="hotproducts_boxes">
+                                <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
+                                <div class="hotproducts_img">
+                                    <img src="scss/img/GengImg/Screen04/pd2-2.png" alt="">
+                                </div>
+                                <div class="hotproducts_board">
+                                    <img src="scss/img/GengImg/Screen04/Screen04-1board.png" alt="">
+                                    <div class="hotproducts_txt">
+                                        <h3>熱賣商品</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_hotproducts">
+                            <div class="hotproducts_boxes">
+                                <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
+                                <div class="hotproducts_img">
+                                    <img src="scss/img/GengImg/Screen04/cook3-1-trans.png" alt="">
+                                </div>
+                                <div class="hotproducts_board">
+                                    <img src="scss/img/GengImg/Screen04/Screen04-1board.png" alt="">
+                                    <div class="hotproducts_txt">
+                                        <h3>熱賣商品</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_hotproducts">
+                            <div class="hotproducts_boxes">
+                                <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
+                                <div class="hotproducts_img">
+                                    <img src="scss/img/GengImg/Screen04/pd3-1.png" alt="">
+                                </div>
+                                <div class="hotproducts_board">
+                                    <img src="scss/img/GengImg/Screen04/Screen04-1board.png" alt="">
+                                    <div class="hotproducts_txt">
+                                        <h3>熱賣商品</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_hotproductsgrass">
+                        <div class="item_hotproductsgrassA">
+                            <img src="scss/img/GengImg/Screen04/Screen04tree.png" alt="">
+                        </div>
+                        <div class="item_hotproductsbtn">
+                            <div class="btn_hotproducts">
+                                <a href="pdList.html"><p>前往選購</p></a>
+                            </div>
+                        </div>
+                        <div class="item_hotproductsgrassB">
+                            <img src="scss/img/GengImg/Screen04/Screen04-1tree.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content_mobilehotproducts">
+                    <div class="owl-carousel box_mobilehotproducts">
+                        <div class="item_mobilehotproducts">
+                            <div class="mobilehotproducts_boxes">
+                                <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
+                                <div class="mobilehotproducts_img">
+                                    <img src="scss/img/GengImg/Screen04/pd2-2.png" alt="">
+                                </div>
+                                <div class="mobilehotproducts_board">
+                                    <img src="scss/img/GengImg/Screen04/Screen04-1board.png" alt="">
+                                    <div class="mobilehotproducts_txt">
+                                        <h3>熱賣商品</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_mobilehotproducts">
+                            <div class="mobilehotproducts_boxes">
+                                <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
+                                <div class="mobilehotproducts_img">
+                                    <img src="scss/img/GengImg/Screen04/cook3-1-trans.png" alt="">
+                                </div>
+                                <div class="mobilehotproducts_board">
+                                    <img src="scss/img/GengImg/Screen04/Screen04-1board.png" alt="">
+                                    <div class="mobilehotproducts_txt">
+                                        <h3>熱賣商品</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_mobilehotproducts">
+                            <div class="mobilehotproducts_boxes">
+                                <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
+                                <div class="mobilehotproducts_img">
+                                    <img src="scss/img/GengImg/Screen04/pd3-1.png" alt="">
+                                </div>
+                                <div class="mobilehotproducts_board">
+                                    <img src="scss/img/GengImg/Screen04/Screen04-1board.png" alt="">
+                                    <div class="mobilehotproducts_txt">
+                                        <h3>熱賣商品</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_hotproductsgrass">
+                        <div class="item_hotproductsgrassA">
+                            <img src="scss/img/GengImg/Screen04/Screen04tree.png" alt="">
+                        </div>
+                        <div class="item_hotproductsbtn">
+                            <div class="btn_hotproducts">
+                                <a href="pdList.html"><p>前往選購</p></a>
+                            </div>
+                        </div>
+                        <div class="item_hotproductsgrassB">
+                            <img src="scss/img/GengImg/Screen04/Screen04-1tree.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container_game">
+                <div class="content_wood">
+                    <div class="box_wood">
+                        <img src="scss/img/GengImg/titleboard.png" alt="">
+                        <div class="item_h3">
+                            <h3>小遊戲</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_game">
+                    <div class="box_game">
+                        <div class="item_game">
+                            <div class="vine_boxes">
+                                <div class="boxes_shake">
+                                    <img src="scss/img/GengImg/Screen05/Screen05-picnicmat.png" alt="">
+                                </div>
+                                <div class="bee_shake">
+                                    <div class="beeA">
+                                        <img src="scss/img/GengImg/Screen05/Screen05-bee.png" alt="">
+                                    </div>
+                                    <div class="beeB">
+                                        <img src="scss/img/GengImg/Screen05/Screen05-1bee.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_gamebtn">
+                        <div class="item_gamebtn">
+                            <div class="btn_gotoplay">
+                                <a href="game.html"><p>前往遊戲</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 
-    <div class="machine">
+    <!-- <div class="machine">
         <div class="machine_check">
             <div class="machine_body">
                 <img src="scss/img/GengImg/animal/body.png" alt="">
@@ -489,6 +711,73 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="machine_wrapper">
+        <div class="machine">
+            <div class="machine_check">
+                <div class="machine_body">
+                <img src="scss/img/GengImg/animal/body.png" alt="" />
+                <div class="machine_handR">
+                    <img src="scss/img/GengImg/animal/rightHand.png" alt="" />
+                </div>
+                <div class="machine_handL">
+                    <img src="scss/img/GengImg/animal/leftHand.png" alt="" />
+                </div>
+                <div class="machine_earsR">
+                    <img src="scss/img/GengImg/animal/rightEars.png" alt="" />
+                </div>
+                <div class="machine_earsL">
+                    <img src="scss/img/GengImg/animal/leftEars.png" alt="" />
+                </div>
+                <div class="machine_tail">
+                    <img src="scss/img/GengImg/animal/tail.png" alt="" />
+                </div>
+                </div>
+                <div class="machine_dialog">
+                <!-- <img src="scss/img/mch_img/GengImg/dialog.png" alt="" /> -->
+        
+                <div class="machine_txt">
+                    <p>點我 <span>問我</span></p>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- 房子 -->
+            <div class="chatbot_wrapper">
+            <img src="./scss/img/GengImg/houseChat.png" alt="chathouse" />
+            <!-- 關起來 -->
+            <div class="cancel" id="close_btn">Ｘ</div>
+            <!-- 對話框框 -->
+            <div class="chatBot_container">
+                <div class="chatBot_content">
+                <p id="chatBot_content" class="chatBot_content_txt">
+                    HiHi! 去野餐 ! 野餐趣 ! 讓我們一起度過美好的野餐日吧 !
+                </p>
+                </div>
+            </div>
+        
+            <!-- 送出 -->
+            <div class="chatBot-text-Wrap">
+                <input
+                type="text"
+                class="chatBot-text"
+                id="chatBot-text"
+                placeholder="輸入你想問的"
+                name="userkey"
+                />
+                <!-- <div id="UserText"></div> -->
+                <button type="submit" id="chatBot-search" class="btn_send">送出</button>
+            </div>
+            <!-- 關鍵字 -->
+            <ul class="chatBot_keyword">
+                <li>價格</li>
+                <li>客製</li>
+                <li>遊戲</li>
+                <li>優惠</li>
+                <li>最新消息</li>
+            </ul>
+        </div>
     </div>
 
     <footer>
@@ -506,7 +795,28 @@
     </footer>
 
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/dist/owl.carousel.min.js"></script>
     <script src="js/h_f_becca.js"></script>
     <script src="js/indexScreen01.js"></script>
+    <script src="js/machine.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            center: true,
+            items:2,
+            loop:true,
+            margin:10,
+            responsive:{
+                600:{
+                    items:3
+                },
+                1024:{
+                    items:3
+                },
+                1200:{
+                    items:2
+                }
+            }
+        });
+    </script>
 </body>
 </html>
