@@ -127,7 +127,8 @@
   header{
     width: 100%;
     // height: 12vh;
-    background: url('/scss/img/GengImg/background-grid.png')
+    background: url(../scss/img/GengImg/BG/index0707picnic-headerbg.png);
+    background-size: cover;
   }
   .navbar_container.hide {
     transform: translateY(-150px);

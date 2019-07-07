@@ -34,8 +34,8 @@
         height: 100vh;
         margin-top: 150px;
         position: relative;
-        background: url(../scss/img/GengImg/Screen01/Screen01-BGBG.png);
-        background-size: contain;
+        background: url(../scss/img/GengImg/BG/index0707picnic-0101.png);
+        background-size: cover;
 
         // .cotent_allviewgrassA{
         //     display: flex;
@@ -394,8 +394,9 @@
             align-items: center;
             flex-flow: column nowrap;
             width: 100%;
-            max-width: 1200px;
-            margin: 0 0 10% 0;
+            background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
+            background-size: cover;
+            // max-width: 1200px;
             //screen02
             .content_wood{
                 display: flex;
@@ -403,6 +404,7 @@
                 align-items: center;
                 flex-flow: column nowrap;
                 position: relative;
+                max-width: 1200px;
                 width: 100%;
                 //wood:z-index: 2;
                 .box_wood{
@@ -559,6 +561,7 @@
                     align-items: center;
                     width: 100%;
                     padding: 5px 0 5px 0;
+                    margin: 0 0 5% 0;
                     .item_gomakebtn{
                         width: 120px;
                         height: 60px;
@@ -640,14 +643,16 @@
             align-items: center;
             flex-flow: column nowrap;
             width: 100%;
-            max-width: 1200px;
-            margin: 0 0 10% 0;
+            background: url(../scss/img/GengImg/BG/index0707picnic-0202.png) ;
+            background-size: cover;
+            // margin: 0 0 10% 0;
             .content_wood{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-flow: column nowrap;
                 position: relative;
+                max-width: 1200px;
                 width: 100%;
                 //wood:z-index: 2;
                 .box_wood{
@@ -676,6 +681,7 @@
                 align-items: center;
                 flex-flow: column nowrap;
                 position: relative;
+                max-width: 1200px;
                 width: 100%;
                 .box_vote{
                     display: flex;
@@ -982,6 +988,7 @@
                     align-items: center;
                     width: 100%;
                     padding: 5px 0 5px 0;
+                    margin: 0 0 5% 0;
                     .item_govotebtn{
                         width: 120px;
                         height: 60px;
@@ -1065,8 +1072,9 @@
             align-items: center;
             flex-flow: column nowrap;
             width: 100%;
-            max-width: 1200px;
-            margin: 0 0 10% 0;
+            background: url(../scss/img/GengImg/BG/index0707picnic-04.png);
+            background-size: cover;
+            // margin: 0 0 10% 0;
             .content_wood{
                 display: flex;
                 justify-content: center;
@@ -1074,6 +1082,7 @@
                 flex-flow: column nowrap;
                 position: relative;
                 width: 100%;
+                max-width: 1200px;
                 //wood:z-index: 2;
                 .box_wood{
                     display: flex;
@@ -1101,6 +1110,8 @@
                 align-items: center;
                 flex-flow: column nowrap;
                 width: 100%;
+                max-width: 1200px;
+                margin: 5%;
                 .box_hotproducts{
                     display: flex;
                     justify-content: space-around;
@@ -1221,15 +1232,17 @@
             justify-content: space-around;
             align-items: center;
             flex-flow: column nowrap;
+            background: url(../scss/img/GengImg/BG/index0707picnic-5.png);
+            background-size: cover;
             width: 100%;
-            max-width: 1200px;
-            margin: 0 0 10% 0;
+            // margin: 0 0 10% 0;
             .content_wood{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-flow: column nowrap;
                 position: relative;
+                max-width: 1200px;
                 width: 100%;
                 //wood:z-index: 2;
                 .box_wood{
@@ -1257,6 +1270,7 @@
                 justify-content: center;
                 align-items: center;
                 flex-flow: column nowrap;
+                max-width: 1200px;
                 width: 100%;
                 .box_game{
                     width: 100%;
