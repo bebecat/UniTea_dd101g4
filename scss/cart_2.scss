@@ -1,0 +1,351 @@
+* {
+  padding: 0;
+  margin: 0;
+  // outline: 1px red solid;
+}
+
+@import "basic/var1.scss";
+@import "mixins/mixin1.scss";
+
+input,
+button,
+textarea {
+  outline: none;
+  border: none;
+}
+textarea {
+  resize: none;
+}
+.cart_wrapper {
+  background-image: url(../scss/img/cart/cart_bottom_art.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+.cart_container {
+  width: 100%;
+  padding-top: 150px;
+  // background-image: url(../scss/img/cart/white-paper-texture-with-flecks.jpg);
+  background-size: 100%;
+  background-repeat: repeat;
+  margin: auto;
+  max-width: 1200px;
+}
+.cart_bottom {
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  //   background-image: url(../scss/img/cart/cart_bottom_art.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  .footer_wrapper {
+    bottom: 0%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+/*整體*/
+.cart_container {
+  width: 100%;
+}
+.cart_container .wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+/*左半邊結構*/
+.prods_content {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  @include rwd(mobile) {
+    width: 100%;
+    padding: 10%;
+    box-sizing: border-box;
+  }
+  .prods_buy {
+    width: 100%;
+    .title {
+      padding-bottom: 5%;
+      // font-size: 24px;
+      font-family: hanyi;
+      @include rwd(mobile) {
+        padding-left: 5%;
+        // padding-top: 35%;
+        box-sizing: border-box;
+      }
+    }
+    ul {
+      width: 100%;
+    }
+    li {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      border-bottom: 1px solid rgb(136, 136, 136);
+      div:first-child img {
+        width: 100%;
+      }
+      h2 {
+        @include rwd(mobile) {
+          font-size: 14px;
+        }
+      }
+      div {
+        width: 16.66666%;
+        align-self: center;
+        font-size: 14px;
+        font-family: font_p;
+      }
+      div:last-child {
+        width: 9%;
+      }
+      div:last-child img {
+        width: 35%;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+    li:first-child {
+      padding-bottom: 2%;
+    }
+  }
+  .inform {
+    width: 50%;
+    padding-top: 10%;
+    .know {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .know p {
+      width: 100%;
+      text-align: left;
+      @include rwd(mobile) {
+        padding-left: 3%;
+        box-sizing: border-box;
+        font-size: 12px;
+      }
+    }
+    .ship_way p {
+      @include rwd(mobile) {
+        width: 100%;
+        padding-left: 3%;
+        box-sizing: border-box;
+        font-size: 12px;
+      }
+    }
+  }
+  .total {
+    width: 50%;
+    // padding-top: 10%;
+    position: relative;
+    .total_wrap {
+      position: relative;
+      bottom: 0;
+      width: 70%;
+      margin: 12% auto;
+      padding: 6%;
+      box-sizing: border-box;
+      // background-color: #eee;
+      border: 3px solid #ccc;
+      // border-radius: 50px;
+      @include rwd(mobile) {
+        width: 100%;
+      }
+    }
+    ul {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      margin: 0 auto;
+      li {
+        width: 40%;
+        padding: 1% 2%;
+        font-size: 14px;
+        box-sizing: border-box;
+        text-align: center;
+        @include rwd(mobile) {
+          width: 50%;
+        }
+      }
+    }
+    ul:last-child li {
+      font-size: 24px;
+      @include rwd(mobile) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/*右半邊結構*/
+.mem_detail {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  //   align-items: center;
+  @include rwd(mobile) {
+    width: 100%;
+    flex-flow: row wrap;
+  }
+}
+//手機版的步驟//桌機版消失
+.cart_container {
+  .mem_detail_p_mobile {
+    display: none;
+    @include rwd(mobile) {
+      display: block;
+      align-items: center;
+      .steps {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .arrow {
+          width: 10%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.steps {
+  width: 20%;
+  box-sizing: border-box;
+  right: -1%;
+  z-index: -1;
+  display: flex;
+  align-items: flex-end;
+  //   margin: auto;
+  flex-flow: column wrap;
+  //   justify-content: flex-start;
+  text-align: center;
+  //   padding: 20px;
+  position: relative;
+  @include rwd(mobile) {
+    width: 100%;
+    right: 0;
+    align-items: flex-start;
+    flex-flow: row wrap;
+  }
+  figcaption {
+    position: relative;
+    // padding: 6%;
+    right: -2%;
+    top: 3px;
+    border: 3px solid burlywood;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    width: 80%;
+    // margin: 3%;
+    img {
+      width: 60%;
+    }
+    @include rwd(mobile) {
+      width: 20%;
+      right: 0;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      flex-flow: row wrap;
+    }
+  }
+  .pay_step {
+    border: 3px solid green;
+    // border-right: none;
+  }
+}
+.wrap {
+  figcaption {
+    /*******步驟推上去********/
+    @include rwd(mobile) {
+      display: none;
+    }
+  }
+}
+.mem_info {
+  vertical-align: middle;
+  width: 80%;
+  padding: 20px;
+  box-sizing: border-box;
+  // border: 3px solid salmon;
+  background-color: #ddd;
+  border-radius: 2%;
+  @include rwd(mobile) {
+    width: 80%;
+    // margin-top: -20%;
+  }
+  label {
+    margin: 5px;
+  }
+  .same_buyer {
+    margin: 10px;
+  }
+  li,
+  .picnic_coin {
+    padding: 10px;
+  }
+  span {
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .step3_txt {
+    width: 100%;
+    text-align: center;
+  }
+  .order_address,
+  .send_address,
+  .pay_method {
+    border-bottom: 2px solid #eee;
+    padding: 10px;
+  }
+  .discount_use {
+    padding: 10px;
+  }
+}
+.cart_bottom {
+  button {
+    padding: 10px 5px;
+    border-radius: 40%;
+    box-shadow: 1px 6px 1px burlywood;
+    font-size: 20px;
+    color: snow;
+    transform: translateY(0);
+  }
+  button:hover {
+    box-shadow: 1px 1px 1px burlywood;
+    transform: translateY(3px);
+  }
+  .next {
+    width: 20%;
+    background-color: #86a745;
+    @include rwd(mobile) {
+      width: 60%;
+    }
+  }
+  .conform {
+    width: 20%;
+    background-color: rgba(172, 89, 41, 0.9);
+  }
+}
+.picnic_coin {
+  span {
+    font-size: 14px;
+  }
+}

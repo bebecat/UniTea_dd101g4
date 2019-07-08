@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>趣野餐｜ 野餐周邊</title>
-    <link rel="SHORTCUT ICON" href="./scss/h_f_img/rwd-logo.png"/>
+    <link rel="SHORTCUT ICON" href="./scss/img/h_f_img/rwd-logo.png"/>
+    <link rel="stylesheet" href="./css/machine.css">
     <link rel="stylesheet" href="./css/h_f_becca.css" />
     <link rel="stylesheet" href="./css/pdList-1.css" />
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/h_f_becca.js"></script>
+    <script src="js/machine.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script> -->
     <script src="node_modules/gsap/src/minified/TweenMax.min.js"></script>
     <script src="node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
@@ -49,22 +51,88 @@
             <li class="icon">
               <a href="memeber.html"
                 ><div class="member">
-                  <img src="./scss/h_f_img/member.png" alt="member" /></div
+                  <img src="./scss/img/h_f_img/member.png" alt="member" /></div
               ></a>
               <a href="cart.html"
                 ><div class="cart">
-                  <img src="./scss/h_f_img/cart.png" alt="cart" /></div
+                  <img src="./scss/img/h_f_img/cart.png" alt="cart" /></div
               ></a>
             </li>
             <div class="clear"></div>
           </ul>
         </div>
       </nav>
+
+      <!-- 機器人 -->
+      <div class="machine">
+        <div class="machine_check">
+          <div class="machine_body">
+            <img src="scss/img/mch_img/GengImg/animal/body.png" alt="" />
+            <div class="machine_handR">
+              <img src="scss/img/mch_img/GengImg/animal/rightHand.png" alt="" />
+            </div>
+            <div class="machine_handL">
+              <img src="scss/img/mch_img/GengImg/animal/leftHand.png" alt="" />
+            </div>
+            <div class="machine_earsR">
+              <img src="scss/img/mch_img/GengImg/animal/rightEars.png" alt="" />
+            </div>
+            <div class="machine_earsL">
+              <img src="scss/img/mch_img/GengImg/animal/leftEars.png" alt="" />
+            </div>
+            <div class="machine_tail">
+              <img src="scss/img/mch_img/GengImg/animal/tail.png" alt="" />
+            </div>
+          </div>
+          <div class="machine_dialog">
+            <!-- <img src="scss/mch_img/GengImg/dialog.png" alt="" /> -->
+  
+            <div class="machine_txt">
+              <p>點我 <span>問我</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 房子 -->
+      <div class="chatbot_wrapper">
+        <!-- <img src="./scss/mch_img/GengImg/houseChat.png" alt="chathouse" /> -->
+        <!-- 關起來 -->
+        <div class="cancel" id="close_btn">Ｘ</div>
+        <!-- 對話框框 -->
+        <div class="chatBot_container">
+          <div class="chatBot_content">
+            <p id="chatBot_content" class="chatBot_content_txt">
+              HiHi! 去野餐 ! 野餐趣 ! 讓我們一起度過美好的野餐日吧 !
+            </p>
+          </div>
+        </div>
+  
+        <!-- 送出 -->
+        <div class="chatBot-text-Wrap">
+          <input
+            type="text"
+            class="chatBot-text"
+            id="chatBot-text"
+            placeholder="輸入你想問的"
+            name="userkey"
+          />
+          <!-- <div id="UserText"></div> -->
+          <button type="submit" id="chatBot-search" class="btn_send">送出</button>
+        </div>
+        <!-- 關鍵字 -->
+        <ul class="chatBot_keyword">
+          <li>價格</li>
+          <li>客製</li>
+          <li>遊戲</li>
+          <li>優惠</li>
+          <li>最新消息</li>
+        </ul>
+      </div>
       <!-- 內文開始 -->
       <section class="pdP_hero_container">
-        <div class="sun"><img src="./scss/pdImg/pd/sun.png" alt="sun" /></div>
+        <div class="sun"><img src="./scss/img/pdImg/pd/sun.png" alt="sun" /></div>
         <div class="cloud">
-          <img src="./scss/pdImg/pd/clioud01.png" alt="cloud" />
+          <img src="./scss/img/pdImg/pd/clioud01.png" alt="cloud" />
         </div>
 
         <div class="parallax_3d">
@@ -74,7 +142,7 @@
             </h3>
             <div class="pdP_recommend_card">
               <a href="#"
-                ><img src="./scss/pdImg/pd/pd_broad.png" alt="pd_recommend" />
+                ><img src="./scss/img/pdImg/pd/pd_broad.png" alt="pd_recommend" />
                 <h2>超好用粘板板</h2>
               </a>
             </div>
@@ -84,25 +152,27 @@
  
       <section class="pdP_pdlist_container">
         
-        <div class="butterfly_bg secen_02"><img src="./scss/pdImg/bg/butterfly_bg.png" alt=""></div>
+        <div class="butterfly_bg secen_02"><img src="./scss/img/pdImg/bg/butterfly_bg.png" alt="bg"></div>
         <ul class="filter">
           <li class="title">篩選:</li>
-          <a href="#"><li class="all_pd pd_location">全商品</li></a>
+          <a href="#"><li class="all_pd pd_location">
+              <img src="./scss/img/pdImg/pd/pd_filter_all.png" alt="mat" />全商品</li>
+            </a>
           <a href="#"
             ><li>
-              <img src="./scss/pdImg/pd/filter_mat.png" alt="" />
+              <img src="./scss/img/pdImg/pd/filter_mat.png" alt="mat" />
               <h2>野餐墊</h2>
             </li></a
           >
           <a href="#"
             ><li>
-              <img src="./scss/pdImg/pd/filter_spoon.png" alt="" />
+              <img src="./scss/img/pdImg/pd/filter_spoon.png" alt="fork" />
               <h2>餐具</h2>
             </li></a
           >
           <a href="#"
             ><li>
-              <img src="./scss/pdImg/pd/filter_box.png" alt="" />
+              <img src="./scss/img/pdImg/pd/filter_box.png" alt="box" />
               <h2>分裝配備</h2>
             </li></a
           >
@@ -110,19 +180,19 @@
 
         <div class="pd_card_container">
                     <!-- // -->
-                    <div class="pd_card_content col_1" id="pdCard">
+                    <div class="pd_card_content col_1 col_1_md" id="pdCard">
                         <div class="dicorateBox">
                           <div class="baby">
-                            <img src="./scss/pdImg/pd/card_baby.png" alt="" />
+                            <img src="./scss/img/pdImg/pd/card_baby.png" alt="baby" />
                           </div>
                           <div class="nuts">
-                            <img src="./scss/pdImg/pd/card_nuts.png" alt="" />
+                            <img src="./scss/img/pdImg/pd/card_nuts.png" alt="nuts" />
                           </div>
                         </div>
-                        <div class="card_content col_1">
+                        <div class="card_content col_1 col_1_md">
                           <h2 class="title">超好粘版版</h2>
                           <div class="pic">
-                            <img src="./scss/pdImg/pd/cook1-1-trans.png" alt="" />
+                            <img src="./scss/img/pdImg/pd/cook1-1-trans.png" alt="pd" />
                           </div>
                           <ul class="txt">
                             <li class="discrib">材質:楓木<br />尺寸:40x20cm</li>
@@ -148,19 +218,19 @@
                       </div>
                                 <!-- // -->
         
-          <div class="pd_card_content col_1" id="pdCard">
+          <div class="pd_card_content col_1 col_1_md" id="pdCard">
               <div class="dicorateBox">
                 <div class="baby">
-                  <img src="./scss/pdImg/pd/card_baby.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_baby.png" alt="baby" />
                 </div>
                 <div class="nuts">
-                  <img src="./scss/pdImg/pd/card_nuts.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_nuts.png" alt="nuts" />
                 </div>
               </div>
-              <div class="card_content col_1">
+              <div class="card_content col_1 col_1_md">
                 <h2 class="title">超好粘版版</h2>
                 <div class="pic">
-                  <img src="./scss/pdImg/pd/cook1-1-trans.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/cook1-1-trans.png" alt="pd" />
                 </div>
                 <ul class="txt">
                   <li class="discrib">材質:楓木<br />尺寸:40x20cm</li>
@@ -186,19 +256,19 @@
             </div>
             <div id="keypoint02"></div>
                       <!-- // -->
-          <div class="pd_card_content col_1" id="pdCard">
+          <div class="pd_card_content col_1 col_1_md" id="pdCard">
               <div class="dicorateBox">
                 <div class="baby">
-                  <img src="./scss/pdImg/pd/card_baby.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_baby.png" alt="baby" />
                 </div>
                 <div class="nuts">
-                  <img src="./scss/pdImg/pd/card_nuts.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_nuts.png" alt="nuts" />
                 </div>
               </div>
-              <div class="card_content col_1">
+              <div class="card_content col_1 col_1_md">
                 <h2 class="title">超好粘版版</h2>
                 <div class="pic">
-                  <img src="./scss/pdImg/pd/cook1-1-trans.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/cook1-1-trans.png" alt="pd" />
                 </div>
                 <ul class="txt">
                   <li class="discrib">材質:楓木<br />尺寸:40x20cm</li>
@@ -223,19 +293,19 @@
               </div>
             </div>
                       <!-- // -->
-          <div class="pd_card_content col_1" id="pdCard">
+          <div class="pd_card_content col_1 col_1_md" id="pdCard">
               <div class="dicorateBox">
                 <div class="baby">
-                  <img src="./scss/pdImg/pd/card_baby.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_baby.png" alt="baby" />
                 </div>
                 <div class="nuts">
-                  <img src="./scss/pdImg/pd/card_nuts.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_nuts.png" alt="nuts" />
                 </div>
               </div>
-              <div class="card_content col_1">
+              <div class="card_content col_1 col_1_md">
                 <h2 class="title">超好粘版版</h2>
                 <div class="pic">
-                  <img src="./scss/pdImg/pd/cook1-1-trans.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/cook1-1-trans.png" alt="pd" />
                 </div>
                 <ul class="txt">
                   <li class="discrib">材質:楓木<br />尺寸:40x20cm</li>
@@ -260,19 +330,19 @@
               </div>
             </div>
                       <!-- // -->
-          <div class="pd_card_content col_1" id="pdCard">
+          <div class="pd_card_content col_1 col_1_md" id="pdCard">
               <div class="dicorateBox">
                 <div class="baby">
-                  <img src="./scss/pdImg/pd/card_baby.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_baby.png" alt="baby" />
                 </div>
                 <div class="nuts">
-                  <img src="./scss/pdImg/pd/card_nuts.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_nuts.png" alt="nuts" />
                 </div>
               </div>
-              <div class="card_content col_1">
+              <div class="card_content col_1 col_1_md">
                 <h2 class="title">超好粘版版</h2>
                 <div class="pic">
-                  <img src="./scss/pdImg/pd/cook1-1-trans.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/cook1-1-trans.png" alt="pd" />
                 </div>
                 <ul class="txt">
                   <li class="discrib">材質:楓木<br />尺寸:40x20cm</li>
@@ -298,19 +368,19 @@
             </div>
 
                       <!-- // -->
-          <div class="pd_card_content col_1" id="pdCard">
+          <div class="pd_card_content col_1 col_1_md" id="pdCard">
               <div class="dicorateBox">
                 <div class="baby">
-                  <img src="./scss/pdImg/pd/card_baby.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_baby.png" alt="baby" />
                 </div>
                 <div class="nuts">
-                  <img src="./scss/pdImg/pd/card_nuts.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_nuts.png" alt="nuts" />
                 </div>
               </div>
-              <div class="card_content col_1">
+              <div class="card_content col_1 col_1_md">
                 <h2 class="title">超好粘版版</h2>
                 <div class="pic">
-                  <img src="./scss/pdImg/pd/cook1-1-trans.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/cook1-1-trans.png" alt="pd" />
                 </div>
                 <ul class="txt">
                   <li class="discrib">材質:楓木<br />尺寸:40x20cm</li>
@@ -335,19 +405,19 @@
               </div>
             </div>
                       <!-- // -->
-          <div class="pd_card_content col_1" id="pdCard">
+          <div class="pd_card_content col_1 col_1_md" id="pdCard">
               <div class="dicorateBox">
                 <div class="baby">
-                  <img src="./scss/pdImg/pd/card_baby.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_baby.png" alt="baby" />
                 </div>
                 <div class="nuts">
-                  <img src="./scss/pdImg/pd/card_nuts.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_nuts.png" alt="nuts" />
                 </div>
               </div>
-              <div class="card_content col_1">
+              <div class="card_content col_1 col_1_md">
                 <h2 class="title">超好粘版版</h2>
                 <div class="pic">
-                  <img src="./scss/pdImg/pd/cook1-1-trans.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/cook1-1-trans.png" alt="pd" />
                 </div>
                 <ul class="txt">
                   <li class="discrib">材質:楓木<br />尺寸:40x20cm</li>
@@ -372,19 +442,19 @@
               </div>
             </div>
                       <!-- // -->
-          <div class="pd_card_content col_1" id="pdCard">
+          <div class="pd_card_content col_1 col_1_md" id="pdCard">
               <div class="dicorateBox">
                 <div class="baby">
-                  <img src="./scss/pdImg/pd/card_baby.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_baby.png" alt="baby" />
                 </div>
                 <div class="nuts">
-                  <img src="./scss/pdImg/pd/card_nuts.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/card_nuts.png" alt="nuts" />
                 </div>
               </div>
-              <div class="card_content col_1">
+              <div class="card_content col_1 col_1_md">
                 <h2 class="title">超好粘版版</h2>
                 <div class="pic">
-                  <img src="./scss/pdImg/pd/cook1-1-trans.png" alt="" />
+                  <img src="./scss/img/pdImg/pd/cook1-1-trans.png" alt="pd" />
                 </div>
                 <ul class="txt">
                   <li class="discrib">材質:楓木<br />尺寸:40x20cm</li>
@@ -410,19 +480,19 @@
             </div>
             
           <!-- // -->
-          <div class="pd_card_content col_1" id="pdCard">
+          <div class="pd_card_content col_1 col_1_md" id="pdCard">
             <div class="dicorateBox">
               <div class="baby">
-                <img src="./scss/pdImg/pd/card_baby.png" alt="" />
+                <img src="./scss/img/pdImg/pd/card_baby.png" alt="baby" />
               </div>
               <div class="nuts">
-                <img src="./scss/pdImg/pd/card_nuts.png" alt="" />
+                <img src="./scss/img/pdImg/pd/card_nuts.png" alt="nuts" />
               </div>
             </div>
-            <div class="card_content col_1">
+            <div class="card_content col_1 col_1_md">
               <h2 class="title">超好粘版版</h2>
               <div class="pic">
-                <img src="./scss/pdImg/pd/cook1-1-trans.png" alt="" />
+                <img src="./scss/img/pdImg/pd/cook1-1-trans.png" alt="pd" />
               </div>
               <ul class="txt">
                 <li class="discrib">材質:楓木<br />尺寸:40x20cm</li>
@@ -432,7 +502,7 @@
                 <ul>
                   <li class="btn_qty_box" id="addQty">
                     <input class="qty_minus" type="button" value="-" />
-                    <input id="qty" class="qty" value="1" style="width:20px;height:10px;text-align: center">
+                    <span class="qty">1</span>
                     <input class="qty_plus" type="button" value="+" />
                   </li>
                   <li class="btn_submit_box">
@@ -460,31 +530,31 @@
           <!-- <div id="keypoint"></div> -->
         
           <div class="fly_animal secen_01" id="moveFly">
-            <img src="./scss/pdImg/pd/animal.png" alt="animal" />
+            <img src="./scss/img/pdImg/pd/animal.png" alt="animal" />
           </div>
           <div class="pd_Customize_box">
             <div class="left">
               <!-- <div class="bg">
-                    <img src="./scss/pdImg/pd/pd_ciecleL.png" alt="bg" />
+                    <img src="./scss/img/pdImg/pd/pd_ciecleL.png" alt="bg" />
                   </div> -->
               <div class="pic_dl">
-                <img src="./scss/pdImg/pd/pd_ribbon.png" alt="dr" />
+                <img src="./scss/img/pdImg/pd/pd_ribbon.png" alt="dr" />
               </div>
             </div>
             <div class="middle">
-              <img src="./scss/pdImg/pd/pd_circleM.png" alt="" />
+              <img src="./scss/img/pdImg/pd/pd_circleM.png" alt="bg" />
               <div class="txt">
                 凡購客製野餐籃，即可享商品優惠<br />
                 一起去野餐吧！
               </div>
               <div class="pd_cus_box">
-                <img src="./scss/pdImg/pd/pd_cus_basket.png" alt="cus" />
+                <img src="./scss/img/pdImg/pd/pd_cus_basket.png" alt="cus" />
                 <div class="decorate">
                   <div class="dr">
-                    <img src="./scss/pdImg/pd/pd_ribbon_1.png" alt="dr" />
+                    <img src="./scss/img/pdImg/pd/pd_ribbon_1.png" alt="dr" />
                   </div>
                   <div class="dl">
-                    <img src="./scss/pdImg/pd/pd_ribbon.png" alt="dl" />
+                    <img src="./scss/img/pdImg/pd/pd_ribbon.png" alt="dl" />
                   </div>
                 </div>
               </div>
@@ -494,10 +564,10 @@
             </div>
             <div class="right">
               <!-- <div class="bg">
-                    <img src="./scss/pdImg/pd/pd_circleR.png" alt="bg" />
+                    <img src="./scss/img/pdImg/pd/pd_circleR.png" alt="bg" />
                   </div> -->
               <div class="pic_dr">
-                <img src="./scss/pdImg/pd/pd_ribbon_1.png" alt="dl" />
+                <img src="./scss/img/pdImg/pd/pd_ribbon_1.png" alt="dl" />
               </div>
             </div>
           </div>
@@ -512,6 +582,7 @@
         </ul>
       </footer>
       <script src="./js/pdList-1.js"></script>
+    
     </div>
 
     <script>

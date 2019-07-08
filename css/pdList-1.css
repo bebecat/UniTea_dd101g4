@@ -64,8 +64,15 @@ p {
   list-style: none;
   text-decoration: none; }
 
+input {
+  -webkit-appearance: none;
+  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+  -moz-appearance: none;
+  /* FireFox */
+  appearance: none; }
+
 .pdP_wrapper {
-  background-image: url(../scss/pdImg/bg/pd_allbg.png); }
+  background-image: url(../scss/img/pdImg/bg/pd_allbg.png); }
 
 .pdP_hero_container {
   position: relative;
@@ -81,7 +88,7 @@ a {
 .pdP_hero_container .parallax_3d {
   height: 500px;
   margin: auto;
-  background-image: url(../scss/pdImg/bg/pd_bg01-3.png);
+  background-image: url(../scss/img/pdImg/bg/pd_bg01-3.png);
   overflow: hidden;
   perspective: 1000px;
   position: relative;
@@ -94,7 +101,7 @@ a {
   width: 100%;
   height: 160%;
   transform-origin: center;
-  background-image: url(../scss/pdImg/bg/pd_bg_tran_03.png);
+  background-image: url(../scss/img/pdImg/bg/pd_bg_tran_03.png);
   background-position-y: 80%;
   background-size: 100%;
   background-repeat: no-repeat; }
@@ -132,12 +139,13 @@ a {
   top: 18%;
   position: absolute;
   animation: cloudMove 40s infinite alternate-reverse;
-  transform: translateX(-100px);
+  transform: translateX(100px);
+  overflow: hidden;
   /* transition: 0.3s; */ }
 
 @keyframes cloudMove {
   0% {
-    transform: translate(1000px); } }
+    transform: translate(800px); } }
 
 @keyframes typing {
   from {
@@ -150,6 +158,13 @@ a {
     border-color: transparent; }
   100% {
     border-color: transparent; } }
+
+@media screen and (max-width: 767px) {
+  .pdP_hero_container .cloud {
+    width: 100%; }
+  @keyframes cloudMove {
+    0% {
+      transform: translate(700px); } } }
 
 .pdP_hero_container .recommend_title {
   overflow: hidden;
@@ -253,7 +268,7 @@ a {
   transform: translate(-50%);
   font-size: 20px;
   border-radius: 20px;
-  background-image: url(../scss/pdImg/pd/pd_discunt.png);
+  background-image: url(../scss/img/pdImg/pd/pd_discunt.png);
   background-repeat: no-repeat;
   width: 100%;
   background-size: 50%;
@@ -264,18 +279,17 @@ a {
   line-height: 1.5; }
 
 .pdP_pdlist_container {
-  background-image: url(../scss/pdImg/bg/pd_bg02.png);
+  background-image: url(../scss/img/pdImg/bg/pd_bg02.png);
   width: 100%;
   height: 100%;
   position: relative;
-  top: -320px; }
+  top: 0; }
   .pdP_pdlist_container .filter {
-    padding-top: 320px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
     font-family: serif; }
   .pdP_pdlist_container .filter li {
@@ -334,8 +348,10 @@ a {
 
 .pd_card_content {
   position: relative;
-  width: 25%;
-  margin: 130px 3% 0; }
+  width: 30%;
+  padding: 3%;
+  box-sizing: border-box;
+  margin: 130px 0 0; }
 
 .pd_card_content .card_content {
   z-index: 2;
@@ -351,17 +367,19 @@ a {
 .pd_card_content .baby {
   position: absolute;
   z-index: 0;
-  right: 0;
-  left: 10%;
-  top: 20px;
+  width: 80%;
+  right: 30%;
+  top: 10px;
   transform: translate(40%, 20%); }
 
 @media screen and (max-width: 767px) {
   .pd_card_content .baby {
+    width: 80%;
     top: -5%;
     left: 20%;
-    animation: moveLR 3s infinite;
-    transition: 0.5s; }
+    animation: moveLR 3s infinite alternate-reverse;
+    transition: 1s;
+    transform: rotate(0deg); }
   @keyframes moveLR {
     0% {
       transform: rotate(0deg); }
@@ -372,8 +390,8 @@ a {
 
 .pd_card_content .nuts {
   position: absolute;
-  left: -10%;
-  top: -50px;
+  left: 0%;
+  top: -10%;
   z-index: 1;
   transform: rotate(90deg) scale(0);
   transition: 0.4s; }
@@ -461,7 +479,7 @@ a {
   display: flex; }
 
 .pd_card_content:hover .baby {
-  transform: translate(20px, -60%);
+  transform: translate(40%, -50%);
   transition: 0.6s;
   z-index: 0; }
 
@@ -470,7 +488,7 @@ a {
   transform: rotate(360deg) scale(1); }
 
 .pd_cute_bg {
-  background-image: url(../scss/pdImg/bg/pd_bg_03.png);
+  background-image: url(../scss/img/pdImg/bg/pd_bg_03.png);
   width: 100%;
   height: 100px; }
 
@@ -508,7 +526,7 @@ a {
 
 .pd_Customize_box .pic_dl,
 .pd_Customize_box .pic_dr {
-  background-image: url(../scss/pdImg/pd/pd_circleR.png);
+  background-image: url(../scss/img/pdImg/pd/pd_circleR.png);
   background-size: 100%;
   height: 50%;
   background-repeat: no-repeat;
@@ -532,7 +550,7 @@ a {
 
 .pd_Customize_container .fly_animal {
   position: absolute;
-  top: -700px;
+  top: -50%;
   right: 0px; }
 
 .pd_Customize_container .middle .pd_cus_box {
@@ -606,7 +624,17 @@ a {
   box-shadow: 0 1px #444;
   transform: translateY(4px, -20%); }
 
+@media screen and (max-width: 1200px) {
+  .col_1_md {
+    width: 40%;
+    padding: 50px;
+    box-sizing: border-box; }
+  .butterfly_bg {
+    display: none; } }
+
 @media screen and (max-width: 767px) {
+  .butterfly_bg {
+    display: none; }
   .col_1 {
     width: 80%;
     padding: 50px;

@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  // outline: 1px red solid;
+}
+
+@import "basic/var1.scss";
+@import "mixins/mixin1.scss";
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+.cart_wrapper {
+  background-image: url(../scss/img/cart/cart_bottom_art.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+.cart_container {
+  width: 100%;
+  padding-top: 150px;
+  // background-image: url(../scss/img/cart/white-paper-texture-with-flecks.jpg);
+  background-size: 100%;
+  background-repeat: repeat;
+  margin: auto;
+  max-width: 1200px;
+}
+.cart_bottom {
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  //   background-image: url(../scss/img/cart/cart_bottom_art.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  .footer_wrapper {
+    bottom: 0%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+/*整體*/
+.cart_container {
+  width: 100%;
+}
+.cart_container .wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+/*左半邊結構*/
+.prods_content {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  .prods_buy {
+    width: 100%;
+    .title {
+      padding-bottom: 5%;
+      font-size: 24px;
+    }
+    ul {
+      width: 100%;
+    }
+    li {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      border-bottom: 1px solid rgb(136, 136, 136);
+      div {
+        width: 16.66666%;
+        align-self: center;
+      }
+      div:last-child img {
+        width: 20%;
+      }
+    }
+    li:first-child {
+      padding-bottom: 2%;
+    }
+  }
+  .inform {
+    width: 50%;
+    padding-top: 10%;
+    .know p {
+      text-align: left;
+    }
+  }
+  .total {
+    width: 50%;
+    // padding-top: 10%;
+    position: relative;
+
+    .total_wrap {
+      position: relative;
+      bottom: 0;
+      width: 70%;
+      margin: 12% auto;
+      padding: 6%;
+      // background-color: #eee;
+      border: 3px solid #ccc;
+      // border-radius: 50px;
+    }
+    ul {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      margin: 0 auto;
+      li {
+        width: 40%;
+        padding: 1% 2%;
+        font-size: 14px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+    }
+    ul:last-child li {
+      font-size: 24px;
+    }
+  }
+}
+
+/*右半邊結構*/
+.mem_detail {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.steps {
+  width: 80%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  // flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  figcaption {
+    border: 3px solid burlywood;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    width: 100%;
+    margin: 3%;
+    img {
+      width: 60%;
+    }
+  }
+  .pay_step {
+    border: 3px solid green;
+  }
+}
+.mem_info {
+  vertical-align: middle;
+  width: 80%;
+  padding: 20px;
+  box-sizing: border-box;
+  // border: 3px solid salmon;
+  background-color: #ddd;
+  border-radius: 2%;
+  label {
+    margin: 5px;
+  }
+  .same_buyer {
+    margin: 10px;
+  }
+  li,
+  .picnic_coin {
+    padding: 10px;
+  }
+  span {
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .step3_txt {
+    width: 100%;
+    text-align: center;
+  }
+  .order_address,
+  .send_address,
+  .pay_method {
+    border-bottom: 2px solid #eee;
+    padding: 10px;
+  }
+  .discount_use {
+    padding: 10px;
+  }
+}
+.cart_bottom {
+  button {
+    padding: 10px 5px;
+    border-radius: 40%;
+    box-shadow: 1px 6px 1px burlywood;
+    font-size: 20px;
+    color: snow;
+    transform: translateY(0);
+  }
+  button:hover {
+    box-shadow: 1px 1px 1px burlywood;
+    transform: translateY(3px);
+  }
+  .next {
+    width: 20%;
+    background-color: #86a745;
+  }
+  .conform {
+    width: 20%;
+    background-color: rgba(172, 89, 41, 0.9);
+  }
+}
+.picnic_coin {
+  span {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/cart_2.css" />
+    <link rel="stylesheet" href="css/h_f_becca.css" />
+    <title>趣野餐｜ 買起來</title>
+    <link rel="SHORTCUT ICON" href="./scss/img/h_f_img/rwd-logo.png" />
+  </head>
+
+  <body>
+    <div class="cart_wrapper">
+      <nav class="navbar_container">
+        <input type="checkbox" id="menuBg" />
+        <div class="header_cloud">
+          <div class="cloudF"></div>
+          <div class="cloudB"></div>
+          <div class="cloudR"></div>
+        </div>
+        <div class="hb_box">
+          <div class="logo"></div>
+          <label class="hb" for="menuBg">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+          </label>
+        </div>
+        <div class="nav_wrapper">
+          <ul class="nav_content">
+            <a href="customizedP.html">
+              <li class="cus">客製野餐籃</li>
+            </a>
+            <a href="contest.html">
+              <li>美籃票選</li>
+            </a>
+            <a href="pdList.html">
+              <li class="here">野餐周邊</li>
+            </a>
+            <a href="index.html">
+              <li class="logo">
+                <h1>趣野餐</h1>
+              </li>
+            </a>
+            <a href="activity.html">
+              <li>野餐活動</li>
+            </a>
+            <a href="aboutus.html">
+              <li>籃子故事</li>
+            </a>
+            <a href="game.html">
+              <li>賺折扣券</li>
+            </a>
+            <li class="icon">
+              <a href="memeber.html">
+                <div class="member">
+                  <img src="scss/img/h_f_img/member.png" alt="member" />
+                </div>
+              </a>
+              <a href="cart.html">
+                <div class="cart">
+                  <img src="scss/img/h_f_img/cart.png" alt="cart" />
+                </div>
+              </a>
+            </li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="cart_container">
+          <div class="mem_detail_p_mobile">
+              <div class="steps">
+                <figcaption class="step1_fillin ">
+                  <img src="./scss/img/cart/fill_b.png" alt="cart_step1" />
+                  <figure>STEP1<br />資料填寫</figure>
+                </figcaption>
+                <div class="arrow">
+                  <img src="./scss/img/cart/cart_arrow1.png" alt="arrow" />
+                </div>
+                <figcaption class="step2_comform pay_step">
+                  <img src="./scss/img/cart/check_b.png" alt="cart_step2" />
+                  <figure>STEP2<br />確認訂單</figure>
+                </figcaption>
+                <div class="arrow">
+                  <img src="./scss/img/cart/cart_arrow1.png" alt="arrow" />
+                </div>
+                <figcaption class="step3_complete">
+                  <img src="./scss/img/cart/finish_b.png" alt="cart_step3" />
+                  <figure>STEP3<br />購物完成</figure>
+                </figcaption>
+              </div>
+            </div>
+        <div class="wrap">
+          <div class="prods_content">
+            <div class="prods_buy">
+              <h3 class="title">購物小車車</h3>
+              <ul>
+                <li>
+                  
+                  <div>商品圖</div>
+                  <div>品項</div>
+                  <div>單價</div>
+                  <div>數量[人數]</div>
+                  <div>小計</div>
+                  <div>刪除</div>
+                </li>
+                <li>
+                  <div>
+                    <img src="scss/img/cart/check_b.png" alt="prod" />
+                  </div>
+                  <div>
+                    <h2>董董小籃</h2>
+                  </div>
+                  <div>
+                    <p>200元</p>
+                  </div>
+                  <div>
+                    <span>-</span>
+                    <span>1</span>
+                    <span>+</span>
+                  </div>
+                  <div>
+                    <p>200元</p>
+                  </div>
+                  <div>
+                    <img src="scss/img/cart/trash.png" alt="trash" />
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <img src="scss/img/cart/check_b.png" alt="prod" />
+                  </div>
+                  <div>
+                    <h2>董董小籃</h2>
+                  </div>
+                  <div>
+                    <p>200元</p>
+                  </div>
+                  <div>
+                    <span>-</span>
+                    <span>1</span>
+                    <span>+</span>
+                  </div>
+                  <div>
+                    <p>200元</p>
+                  </div>
+                  <div>
+                    <img src="scss/img/cart/trash.png" alt="trash" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="inform">
+              <div class="info">
+                <div class="know">
+                  <p>＊凡購買超過1000元可享免運折扣</p>
+                  <p>＊本公司只有貨到付款服務</p>
+                  <p>＊客製商品搭配官方商品95折</p>
+                </div>
+                <div class="ship_info">
+                  <div class="buyer">
+                    <p id="mem_name"></p>
+                    <p id="tel"></p>
+                    <p id="address"></p>
+                  </div>
+                  <div class="receiver">
+                    <p id="mem_name"></p>
+                    <p id="tel"></p>
+                    <p id="address"></p>
+                  </div>
+                  <div class="ship_way">
+                    <p>貨到付款</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="total">
+              <div class="total_wrap">
+                <ul>
+                  <li>商品金額</li>
+                  <li>$400</li>
+                </ul>
+                <ul>
+                  <li>組合折扣</li>
+                  <li>-38</li>
+                </ul>
+                <ul>
+                  <li>點數折扣</li>
+                  <li>0</li>
+                </ul>
+                <ul>
+                  <li>運費</li>
+                  <li>$30</li>
+                </ul>
+                <ul>
+                  <li>總金額</li>
+                  <li>$392</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- b-start增加//增加 -->
+          <div class="mem_detail">
+            <div class="steps">
+              <figcaption class="step1_fillin ">
+                <img src="./scss/img/cart/fill_b.png" alt="cart_step1" />
+                <figure>STEP1<br />資料填寫</figure>
+              </figcaption>
+              <!-- <div class="arrow">
+                <img src="./scss/img/cart/cart_arrow1.png" alt="arrow" />
+              </div> -->
+              <figcaption class="step2_comform pay_step">
+                <img src="./scss/img/cart/check_b.png" alt="cart_step2" />
+                <figure>STEP2<br />確認訂單</figure>
+              </figcaption>
+              <!-- <div class="arrow">
+                <img src="./scss/img/cart/cart_arrow1.png" alt="arrow" />
+              </div> -->
+              <figcaption class="step3_complete">
+                <img src="./scss/img/cart/finish_b.png" alt="cart_step3" />
+                <figure>STEP3<br />購物完成</figure>
+              </figcaption>
+            </div>
+
+            <div class="mem_info">
+              <!-- 第一步 -->
+
+              <!-- 第二步 -->
+              <form action="">
+                <ul class="order_address">
+                  <li><h3>訂購人</h3></li>
+                  <li>
+                    <label>姓名：</label>
+                    <input type="text" style="padding:5px" />
+                  </li>
+                  <li>
+                    <label>電話：</label>
+                    <input
+                      type="tel"
+                      placeholder="0912-123-456"
+                      style="padding:5px"
+                    />
+                  </li>
+                  <li>
+                    <label>地址：</label>
+                    <textarea name="" id="message" cols="30" rows="5"></textarea>
+                  </li>
+                </ul>
+                <ul class="send_address">
+                  <li><h3>收件人</h3></li>
+                  <li class="same_buyer">
+                    <input type="checkbox" id="same_buyer" />
+                    <labelfor="same_buyer">
+                      同訂購人
+                      </label>
+                  </li>
+                  <li>
+                    <label>姓名：</label>
+                    <input type="text" style="padding:5px" />
+                  </li>
+                  <li>
+                    <label>電話：</label>
+                    <input
+                      type="tel"
+                      placeholder="0912-123-456"
+                      style="padding:5px"
+                    />
+                  </li>
+                  <li>
+                      <label>地址：</label>
+                      <textarea name="" id="message" cols="30" rows="5"></textarea>
+                    </li>
+                </ul>
+              </form>
+              <div class="pay_method">
+                <h3>付款方式</h3>
+                <span>貨到付款</span>
+              </div>
+              <div class="discount_use">
+                <h3>使用點數折抵</h3>
+                <div class="picnic_coin">
+                  <input type="checkbox" id="same_buyer" />
+                  <input type="text" style="padding:5px" />
+                  <span>您剩餘ＸＸＸ點數</span>
+                </div>
+              </div>
+              <!-- 第三部 -->
+              <!-- <span class="step3_txt"
+                >請確認右側的訂單資訊，送出後將會成立訂單。</span
+              > -->
+            </div>
+          </div>
+        </div>
+        <div class="cart_bottom">
+          <!-- <button class="next">下一步</button> -->
+          <button class="next">下一步</button>
+          <!-- <button class="conform">確定購買</button> -->
+        </div>
+      </div>
+      <footer class="footer_wrapper">
+        <ul>
+          <li>電話:02-2665-1234</li>
+          <li>Email:picnic@picnic.com</li>
+          <li>地址:新北市板橋區-野餐路4號</li>
+          <li class="copy">Copyright©2019</li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

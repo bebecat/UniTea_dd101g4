@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/machine.css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/machine.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="machine">
+      <div class="machine_check">
+        <div class="machine_body">
+          <img src="scss/img/mch_img/GengImg/animal/body.png" alt="" />
+          <div class="machine_handR">
+            <img src="scss/img/mch_img/GengImg/animal/rightHand.png" alt="" />
+          </div>
+          <div class="machine_handL">
+            <img src="scss/img/mch_img/GengImg/animal/leftHand.png" alt="" />
+          </div>
+          <div class="machine_earsR">
+            <img src="scss/img/mch_img/GengImg/animal/rightEars.png" alt="" />
+          </div>
+          <div class="machine_earsL">
+            <img src="scss/img/mch_img/GengImg/animal/leftEars.png" alt="" />
+          </div>
+          <div class="machine_tail">
+            <img src="scss/img/mch_img/GengImg/animal/tail.png" alt="" />
+          </div>
+        </div>
+        <div class="machine_dialog">
+          <!-- <img src="scss/img/mch_img/GengImg/dialog.png" alt="" /> -->
+
+          <div class="machine_txt">
+            <p>點我 <span>問我</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 房子 -->
+    <div class="chatbot_wrapper">
+      <!-- <img src="./scss/img/mch_img/GengImg/houseChat.png" alt="chathouse" /> -->
+      <!-- 關起來 -->
+      <div class="cancel" id="close_btn">Ｘ</div>
+      <!-- 對話框框 -->
+      <div class="chatBot_container">
+        <div class="chatBot_content">
+          <p id="chatBot_content" class="chatBot_content_txt">
+            HiHi! 去野餐 ! 野餐趣 ! 讓我們一起度過美好的野餐日吧 !
+          </p>
+        </div>
+      </div>
+
+      <!-- 送出 -->
+      <div class="chatBot-text-Wrap">
+        <input
+          type="text"
+          class="chatBot-text"
+          id="chatBot-text"
+          placeholder="輸入你想問的"
+          name="userkey"
+        />
+        <!-- <div id="UserText"></div> -->
+        <button type="submit" id="chatBot-search" class="btn_send">送出</button>
+      </div>
+      <!-- 關鍵字 -->
+      <ul class="chatBot_keyword">
+        <li>價格</li>
+        <li>客製</li>
+        <li>遊戲</li>
+        <li>優惠</li>
+        <li>最新消息</li>
+      </ul>
+    </div>
+  </body>
+</html>

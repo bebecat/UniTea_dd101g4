@@ -75,12 +75,12 @@ tl.to(".fly_animal", 3, {
   y: 200
 })
   .to(".fly_animal", 8, {
-    x: -800,
-    y: 400
+    x: -1000,
+    y: 300
   })
   .to(".fly_animal", 10, {
-    x: -40,
-    y: 1200
+    x: "10%",
+    y: "500%"
   });
 
 var secen_01 = new ScrollMagic.Scene({
@@ -91,7 +91,7 @@ var secen_01 = new ScrollMagic.Scene({
   // offset: 200 //偏移量
 })
   .setTween(tl) //tween 動畫
-  .addIndicators() //觸發指標
+  //.addIndicators() //觸發指標
   .addTo(controller); //回到場景
 
 //butterfly
@@ -124,7 +124,7 @@ var secen_02 = new ScrollMagic.Scene({
   // offset: 200 //偏移量
 })
   .setTween(t2) //tween 動畫
-  .addIndicators() //觸發指標
+  //.addIndicators() //觸發指標
   .addTo(controller); //回到場景
 
 //裝飾
@@ -173,4 +173,92 @@ $(document).ready(function() {
       $(".qty_minus").attr("disabled", false);
     }
   });
+});
+
+
+//按鈕    
+function updateAmount(e) {
+  let amountObj, amount;
+  if (e.target.value == "-") {
+    amountObj = e.target.nextElementSibling;
+    amount = parseInt(amountObj.innerText);
+    amount = amount >= 1 ? amount - 1 : amount;
+  } else {
+    //+
+    amountObj = e.target.previousElementSibling;
+    amount = parseInt(amountObj.innerText) + 1;
+  }
+  amountObj.innerText = amount;
+}
+
+window.addEventListener("load", function() {
+  let decs = document.getElementsByClassName("qty_minus");
+  let incs = document.getElementsByClassName("qty_plus");
+  for (let i = 0; i < decs.length; i++) {
+    decs[i].onclick = updateAmount;
+    incs[i].onclick = updateAmount;
+  }
+});
+
+
+
+//飄去購物車
+const pdItem = $(".card_content .pic img");
+const cart = $(".cart");
+const pdBtns = $(".btn_submit_box");
+console.log(pdBtns);
+console.log(cart);
+console.log(pdItem);
+
+pdBtns.click(function(e) {
+  e.preventDefault();
+
+  const thisImg = $(this)
+    .parent()
+    .parent()
+    .parent()
+    .find("img");
+  console.log(thisImg);
+  const pdW = thisImg.width();
+  const pdH = thisImg.height();
+  const pdO = thisImg.offset();
+  const pdL = pdO.left;
+  const pdT = pdO.top - window.scrollY;
+  const pdSrc = thisImg.attr("src");
+  console.log("pdSrc");
+  const cartW = cart.width();
+  const cartH = cart.height();
+  const cartO = cart.offset();
+  const cartL = cartO.left;
+  const cartT = cartO.top - window.scrollY;
+
+  // 加一 element 在隨便一 parent，但 position 要設為 fixed
+  const itemAnima = `<div 
+        class="itemAnima"
+        style="
+            position: fixed; 
+            top: ${pdT}px; 
+            left: ${pdL}px; 
+            transition: 1s; 
+            opacity: 0.6;
+            width:10px;
+            height:10px;
+            border-radius:50%;
+            z-index:999;
+            background-color:brown";
+         >`;
+  $("nav").append(itemAnima);
+
+  setTimeout(function() {
+    $(".itemAnima").css({
+      // width: `${cartW}px`,
+      // height: `${cartH}px`,
+      top: `${cartT}px`,
+      left: `${cartL}px`
+    });
+  }, 100);
+  setTimeout(function() {
+    $(".itemAnima").remove();
+    alert("已成功加入購物車");
+  }, 1100);
 });
