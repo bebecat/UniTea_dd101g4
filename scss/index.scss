@@ -32,81 +32,12 @@
         width: 100%;
         max-width: 1994px;
         height: 100vh;
-        margin-top: 100px;
+        padding: 100px 0 0 0;
         position: relative;
-        background: url(../scss/img/GengImg/BG/index0707picnic-0101.png);
+        background: url(../scss/img/GengImg/BG/BG_1.png);
         background-size: cover;
+        background-position: center;
 
-        // .cotent_allviewgrassA{
-        //     display: flex;
-        //     justify-content: center;
-        //     width: 15%;
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     .box_allviewgrassA{
-        //         display: flex;
-        //         justify-content: center;
-        //         width: 100%;
-        //         .item_allviewgrassA{
-        //             display: flex;
-        //             justify-content: center;
-        //             align-items: center;
-        //             flex-flow: column nowrap;
-        //             width: 100%;
-        //             .allviewgrass_darkgrassA{
-        //                 display: flex;
-        //                 justify-content: center;
-        //                 align-items: center;
-        //                 flex-flow: column nowrap;
-        //                 width: 100%;
-        //                 position: relative;
-        //                 animation: darkgrassAshake 5s linear infinite alternate;
-        //                 img{
-        //                     width: 100%;
-        //                 }
-        //                 @keyframes darkgrassAshake {
-        //                     0%{ transform: rotate(0deg) }
-        //                     100%{ transform: rotate(1deg) }
-        //                 }
-        //                 .allviewgrass_lightgrassA1, .allviewgrass_lightgrassA2, .allviewgrass_verylightgrassA{
-        //                     position: absolute;
-        //                     width: 95%;
-        //                     img{
-        //                         width: 100%;
-        //                     }
-        //                 }
-        //                 .allviewgrass_lightgrassA1{
-        //                     top: 50%;
-        //                     left: -30%;
-        //                     animation: lightgrassA1shake 2s linear infinite alternate;
-        //                     @keyframes lightgrassA1shake {
-        //                         0%{ transform: translate(0px, 0px) }
-        //                         100%{ transform: translate(5px, 10px) }
-        //                     }
-        //                 }
-        //                 .allviewgrass_lightgrassA2{
-        //                     top: 280%;
-        //                     left: -30%;
-        //                     animation: lightgrassA2shake 3s linear infinite alternate;
-        //                     @keyframes lightgrassA2shake {
-        //                         0%{ transform: translate(0px, 0px) }
-        //                         100%{ transform: translate(5px, 10px) }
-        //                     }
-        //                 }
-        //                 .allviewgrass_verylightgrassA{
-        //                     top: 180%;
-        //                     left: -30%;
-        //                     animation: verylightgrassAshake 4s linear infinite alternate;
-        //                     @keyframes verylightgrassAshake {
-        //                         0%{ transform: translate(0px, 0px) }
-        //                         100%{ transform: translate(5px, -10px) }
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
         .content_main{
             width: 100%;
             display: flex;
@@ -115,13 +46,14 @@
             flex-flow: column nowrap;
             height: 100vh;
             position: relative;
+
             .content_txt{
                 display: flex;
                 justify-content: center;
                 width: 100%;
                 position: absolute;
                 top: -10%;
-                margin-top: 5%;
+                margin-top: 8%;
                 //txt: z-index:2;
                 .box_txt{
                     display: flex;
@@ -136,7 +68,7 @@
                         .txt{
                             width: 100%;
                             margin: 5px;
-                            z-index: 2;
+                            z-index: 5;
                             img{
                                 width: 100%;
                             }
@@ -168,41 +100,41 @@
                 }
 
                 // cloudMove
-                // .cloudMove{
-                //     display: flex;
-                //     justify-content: center;
-                //     align-items: center;
-                //     opacity: .8;
-                //     .cloudA{
-                //         position: absolute;
-                //         top: 0;
-                //         right: 0px;
-                //         animation: cloudRunA 60s infinite alternate ease-out;
-                //     }
-                //     @keyframes cloudRunA {
-                //         0%{
-                //             transform: translate(600px)
-                //         }
-                //         100%{
-                //             transform: translate(-1600px)
-                //         }
-                //     }
-                //     .cloudB{
-                //         position: absolute;
-                //         top: 0;
-                //         left: 0;
-                //         animation: cloudRunB 60s infinite alternate ease-out;
-                //     }
-                //     @keyframes cloudRunB {
-                //         0%{
-                //             transform: translate(-600px)
-                //         }
-                //         100%{
-                //             transform: translate(1600px)
-                //         }
-                //     }
+                .cloudMove{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: .8;
+                    .cloudA{
+                        position: absolute;
+                        top: 0;
+                        right: 0px;
+                        animation: cloudRunA 60s infinite alternate ease-out;
+                    }
+                    @keyframes cloudRunA {
+                        0%{
+                            transform: translate(600px)
+                        }
+                        100%{
+                            transform: translate(-1600px)
+                        }
+                    }
+                    .cloudB{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        animation: cloudRunB 60s infinite alternate ease-out;
+                    }
+                    @keyframes cloudRunB {
+                        0%{
+                            transform: translate(-600px)
+                        }
+                        100%{
+                            transform: translate(1600px)
+                        }
+                    }
 
-                // }
+                }
             }
             .content_object{
                 display: flex;
@@ -210,7 +142,7 @@
                 width: 100%;
                 margin-top: 20%;
                 .box_picnic{
-                    width: 50%;
+                    width: 45%;
                     .item_picnic{
                         display: flex;
                         justify-content: center;
@@ -228,7 +160,7 @@
                                 justify-content: center;
                                 width: 100%;
                                 position: absolute;
-                                top: -78%;
+                                top: -18%;
                                 .item_object{
                                     display: flex;
                                     justify-content: center;
@@ -240,10 +172,8 @@
                                             width: 100%;
                                         }
                                     }
-                                    // object_tweezers: z-index: 1;
                                     .object_tweezers{
                                         width: 35%;
-                                        z-index: 1;
                                         img{
                                             width: 100%;
                                         }
@@ -260,7 +190,7 @@
                                     justify-content: center;
                                     align-items: center;
                                     width: 100%;
-                                    .smobject_sandwich, .smobject_apple, .smobject_knife, .smobject_vase, .smobject_cross, .smobject_jamA, .smobject_jamB{
+                                    .smobject_sandwich, .smobject_apple, .smobject_knife, .smobject_vase, .smobject_cross, .smobject_jamA, .smobject_jamB, .smobject_tomato, .smobject_tota, .smobject_kettle, .smobject_jaba, .smobject_cake, .smobject_donut{
                                         width: 10%;
                                         position: absolute;
                                         img{
@@ -268,8 +198,8 @@
                                         }
                                     }
                                     .smobject_sandwich{
-                                        top: -60%;
-                                        left: -20%;
+                                        top: -50%;
+                                        left: 0%;
                                         @keyframes sandwichShake {
                                             0%{ transform: rotate( -10deg) }
                                             100%{ transform: rotate( 15deg) }
@@ -281,7 +211,7 @@
                                         animation: sandwichShake 3s linear infinite alternate;
                                     }
                                     .smobject_knife{
-                                        top: -80%;
+                                        top: -50%;
                                         right: -25%;
                                     }
                                     .smobject_vase{
@@ -290,16 +220,43 @@
                                         animation: sandwichShake 3s linear infinite alternate;
                                     }
                                     .smobject_cross{
-                                        bottom: 0;
+                                        bottom: 20%;
                                         right: -20%;
                                         animation: sandwichShake 3s linear infinite alternate;
                                     }
                                     .smobject_jamA{
-                                        bottom: 0;
+                                        bottom: 30%;
                                         left: -10%;
                                     }
                                     .smobject_jamB{
                                         right: 0;
+                                    }
+                                    .smobject_tomato{
+                                        left: 20%;
+                                        bottom: 30%;
+                                    }
+                                    .smobject_tota{
+                                        left: 25%;
+                                        bottom: 50%;
+                                    }
+                                    .smobject_kettle{
+                                        width: 15%;
+                                        right: 28%;
+                                        top: 30%;
+                                    }
+                                    .smobject_jaba{
+                                        width: 15%;
+                                        bottom: 20%;
+                                        right: 35%;
+                                    }
+                                    .smobject_cake{
+                                        width: 20%;
+                                        right: 45%;
+                                    }
+                                    .smobject_donut{
+                                        width: 15%;
+                                        bottom: 25%;
+                                        left: 40%;
                                     }
                                 }
                             }
@@ -308,76 +265,6 @@
                 }
             }
         }
-        // .cotent_allviewgrassB{
-        //     display: flex;
-        //     justify-content: center;
-        //     width: 15%;
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        //     .box_allviewgrassB{
-        //         display: flex;
-        //         justify-content: center;
-        //         width: 100%;
-        //         .item_allviewgrassB{
-        //             display: flex;
-        //             justify-content: center;
-        //             align-items: center;
-        //             flex-flow: column nowrap;
-        //             width: 100%;
-        //             .allviewgrass_darkgrassB{
-        //                 display: flex;
-        //                 justify-content: center;
-        //                 align-items: center;
-        //                 flex-flow: column nowrap;
-        //                 width: 100%;
-        //                 position: relative;
-        //                 animation: darkgrassAshake 5s linear infinite alternate;
-        //                 img{
-        //                     width: 100%;
-        //                 }
-        //                 @keyframes darkgrassAshake {
-        //                     0%{ transform: rotate(0deg) }
-        //                     100%{ transform: rotate(1deg) }
-        //                 }
-        //                 .allviewgrass_lightgrassB1, .allviewgrass_lightgrassB2, .allviewgrass_verylightgrassB{
-        //                     position: absolute;
-        //                     width: 95%;
-        //                     img{
-        //                         width: 100%;
-        //                     }
-        //                 }
-        //                 .allviewgrass_lightgrassB1{
-        //                     top: 40%;
-        //                     right: -30%;
-        //                     animation: lightgrassB1shake 2s linear infinite alternate;
-        //                     @keyframes lightgrassB1shake {
-        //                         0%{ transform: translate(0px, 0px) }
-        //                         100%{ transform: translate(-5px, -10px) }
-        //                     }
-        //                 }
-        //                 .allviewgrass_lightgrassB2{
-        //                     top: 500%;
-        //                     right: -30%;
-        //                     animation: lightgrassB2shake 3s linear infinite alternate;
-        //                     @keyframes lightgrassB2shake {
-        //                         0%{ transform: translate(0px, 0px) }
-        //                         100%{ transform: translate(5px, 10px) }
-        //                     }
-        //                 }
-        //                 .allviewgrass_verylightgrassB{
-        //                     top: 300%;
-        //                     right: -30%;
-        //                     animation: verylightgrassBshake 4s linear infinite alternate;
-        //                     @keyframes verylightgrassBshake {
-        //                         0%{ transform: translate(0px, 0px) }
-        //                         100%{ transform: translate(5px, -10px) }
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
     }
 
     .container_inBackground{
@@ -396,6 +283,7 @@
             width: 100%;
             background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
             background-size: cover;
+            background-position: center;
             // max-width: 1200px;
             //screen02
             .content_wood{
@@ -406,6 +294,7 @@
                 position: relative;
                 max-width: 1200px;
                 width: 100%;
+                // margin: 5% 0 0 0;
                 //wood:z-index: 2;
                 .box_wood{
                     display: flex;
@@ -645,6 +534,7 @@
             width: 100%;
             background: url(../scss/img/GengImg/BG/index0707picnic-0202.png) ;
             background-size: cover;
+            background-position: center;
             // margin: 0 0 10% 0;
             .content_wood{
                 display: flex;
@@ -1072,15 +962,18 @@
             align-items: center;
             flex-flow: column nowrap;
             width: 100%;
-            background: url(../scss/img/GengImg/BG/index0707picnic-04.png);
-            background-size: contain;
+            background: url(../scss/img/GengImg/background-grid.png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
             // margin: 0 0 10% 0;
             .content_wood{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-flow: column nowrap;
-                position: relative;
+                position: absolute;
+                top: 0;
                 width: 100%;
                 max-width: 1200px;
                 //wood:z-index: 2;
@@ -1104,122 +997,223 @@
                 }
             }
             //screen04
-            .content_hotproducts{
+            .content_storebg{
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                flex-flow: column nowrap;
+                // align-items: center;
+                flex-flow: row;
                 width: 100%;
-                max-width: 1200px;
-                margin: 5%;
-                .box_hotproducts{
+                position: relative;
+                overflow: hidden;
+                // max-width: 1200px;
+                .box_storebg{
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: center;
                     align-items: center;
                     width: 100%;
-                    padding: 20px;
-                    .item_hotproducts{
-                        width: 25%;
-                        .hotproducts_boxes{
-                            width: 100%;
+                    max-width: 1200px;
+                    position: relative;
+                    margin: 10%;
+                    .content_hotproducts{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-flow: column nowrap;
+                        max-width: 1200px;
+                        width: 100%;
+                        .box_hotproducts{
                             display: flex;
-                            justify-content: center;
+                            justify-content: space-around;
                             align-items: center;
-                            position: relative;
-                            img{
-                                width: 100%;
-                            }
-                            .hotproducts_img{
-                                width: 50%;
-                                position: absolute;
-                                img{
+                            width: 100%;
+                            padding: 20px;
+                            .item_hotproducts{
+                                width: 25%;
+                                .hotproducts_boxes{
                                     width: 100%;
-                                }
-                            }
-                            .hotproducts_board{
-                                position: absolute;
-                                bottom: -20px;
-                                width: 55%;
-                                img{
-                                    width: 100%;
-                                }
-                                .hotproducts_txt{
-                                    width: 100%;
-                                    position: absolute;
-                                    bottom: 20px;
-                                    h3{
-                                        color: #502311;
-                                        font-size: 28px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    position: relative;
+                                    img{
+                                        width: 100%;
                                     }
+                                    .hotproducts_img{
+                                        width: 50%;
+                                        position: absolute;
+                                        img{
+                                            width: 100%;
+                                        }
+                                    }
+                                    .hotproducts_board{
+                                        position: absolute;
+                                        bottom: -20px;
+                                        width: 55%;
+                                        img{
+                                            width: 100%;
+                                        }
+                                        .hotproducts_txt{
+                                            width: 100%;
+                                            position: absolute;
+                                            bottom: 20px;
+                                            h3{
+                                                color: #502311;
+                                                font-size: 28px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .box_hotproductsgrass{
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            width: 100%;
+                            padding: 20px 0 0 0;
+                            .item_hotproductsgrassA{
+                                width: 20%;
+                                animation: grassShake 6s infinite;
+                                img{
+                                    width: 100%;
+                                }
+                                @keyframes grassShake {
+                                    0%{
+                                        transform: translate(0px)
+                                    }
+                                    2%{
+                                        transform: translate(2px)
+                                    }
+                                    4%{
+                                        transform: translate(-4px)
+                                    }
+                                    8%{
+                                        transform: translate(4px)
+                                    }
+                                    100%{
+                                        transform: translate(0px)
+                                    }
+                                }
+                            }
+                            .item_hotproductsbtn{
+                                width: 120px;
+                                height: 60px;
+                                border-radius: 45px;
+                                background-color: #aaa;
+                                cursor: pointer;
+                                z-index: 2;
+                                .btn_hotproducts{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 120px;
+                                    height: 55px;
+                                    border-radius: 45px;
+                                    background-color: #F7E9C3;
+                                    transition: .5s;
+                                    &:hover{
+                                        background-color: #F777;
+                                        p{
+                                            color: #F7E9C3;
+                                        }
+                                    }
+                                    p{
+                                        color: #502311;
+                                    }
+                                }
+                            }
+                            .item_hotproductsgrassB{
+                                width: 20%;
+                                animation: grassShake 6s infinite;
+                                img{
+                                    width: 100%;
                                 }
                             }
                         }
                     }
                 }
-                .box_hotproductsgrass{
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    width: 100%;
-                    padding: 20px 0 0 0;
-                    .item_hotproductsgrassA{
-                        width: 20%;
-                        animation: grassShake 6s infinite;
-                        img{
-                            width: 100%;
-                        }
-                        @keyframes grassShake {
-                            0%{
-                                transform: translate(0px)
-                            }
-                            2%{
-                                transform: translate(2px)
-                            }
-                            4%{
-                                transform: translate(-4px)
-                            }
-                            8%{
-                                transform: translate(4px)
-                            }
-                            100%{
-                                transform: translate(0px)
-                            }
-                        }
+                .box_storebgA, .box_storebgB{
+                    width: 20%;
+                    position: absolute;
+                    animation: topGrassShake 3s linear infinite alternate;
+                    transform-origin: top;
+                    @keyframes topGrassShake {
+                        0%{ transform: translateY(0px) }
+                        100%{ transform: translateY(-10px) }
                     }
-                    .item_hotproductsbtn{
-                        width: 120px;
-                        height: 60px;
-                        border-radius: 45px;
-                        background-color: #aaa;
-                        cursor: pointer;
-                        z-index: 2;
-                        .btn_hotproducts{
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            width: 120px;
-                            height: 55px;
-                            border-radius: 45px;
-                            background-color: #F7E9C3;
-                            transition: .5s;
-                            &:hover{
-                                background-color: #F777;
-                                p{
-                                    color: #F7E9C3;
-                                }
-                            }
-                            p{
-                                color: #502311;
-                            }
-                        }
+                    img{
+                        width: 100%;
                     }
-                    .item_hotproductsgrassB{
-                        width: 20%;
-                        animation: grassShake 6s infinite;
+                    // left grass Move
+                    .storesmgrassA1, .storesmgrassA2, .storesmgrassB1, .storesmgrassB2{
+                        width: 70%;
+                        position: absolute;
+                        animation: leftsmGrassShake 3s linear infinite alternate;
+                        transform-origin: top left;
+                        @keyframes leftsmGrassShake {
+                            0%{ transform: rotate(0deg) }
+                            100%{ transform: rotate(5deg) }
+                        }
                         img{
                             width: 100%;
                         }
                     }
+                    .storebiggrassA1, .storebiggrassA2, .storebiggrassB1, .storebiggrassB2{
+                        width: 90%;
+                        position: absolute;
+                        animation: leftbigGrassShake 3s linear infinite alternate;
+                        transform-origin: top left;
+                        @keyframes leftbigGrassShake {
+                            0%{ transform: rotate(5deg) }
+                            100%{ transform: rotate(0deg) }
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .storesmgrassA1{
+                        top: 50%;
+                        left: -25%;
+                    }
+                    .storesmgrassA2{
+                        top: 220%;
+                        left: -25%;
+                    }
+                    .storebiggrassA1{
+                        top: 130%;
+                        left: -30%;
+                    }
+                    .storebiggrassA2{
+                        top: 300%;
+                        left: -30%;
+                    }
+
+                    // right grass Move
+                    .storesmgrassB1{
+                        top: 50%;
+                        right: -25%;
+                    }
+                    .storesmgrassB2{
+                        top: 220%;
+                        right: -25%;
+                    }
+                    .storebiggrassB1{
+                        top: 130%;
+                        right: -30%;
+                    }
+                    .storebiggrassB2{
+                        top: 300%;
+                        right: -30%;
+                    }
+                }
+                // top dark grass type 
+                .box_storebgA{
+                    top: 0;
+                    left: 0;
+                }
+                .box_storebgB{
+                    top: 0;
+                    right: 0;
                 }
             }
             // web display:none;
@@ -1232,151 +1226,170 @@
             justify-content: space-around;
             align-items: center;
             flex-flow: column nowrap;
-            background: url(../scss/img/GengImg/BG/index0707picnic-5.png);
-            background-size: cover;
             width: 100%;
-            // margin: 0 0 10% 0;
-            .content_wood{
+            .content_gamebg{
                 display: flex;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: center;
                 flex-flow: column nowrap;
                 position: relative;
-                max-width: 1200px;
                 width: 100%;
-                //wood:z-index: 2;
-                .box_wood{
+                height: 100vh;
+                img{
+                    width: 100%;
+                }
+                .game_picA, .game_picB{
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                // margin: 0 0 10% 0;
+                .content_wood{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 33%;
-                    position: relative;
-                    z-index: 2;
-                    img{
-                        width:100%;
-                    }
-                    .item_h3{
-                        width: 70%;
-                        position: absolute;
-                        font-weight: 400;
-                        font-size: 25px;
-                        color: #502311;
-                    }
-                }
-            }
-            //screen05
-            .content_game{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-flow: column nowrap;
-                max-width: 1200px;
-                width: 100%;
-                .box_game{
+                    flex-flow: column nowrap;
+                    position: absolute;
+                    top: 8%;
+                    max-width: 1200px;
                     width: 100%;
-                    .item_game{
+                    //wood:z-index: 2;
+                    .box_wood{
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        width: 33%;
+                        position: relative;
+                        z-index: 2;
+                        img{
+                            width:100%;
+                        }
+                        .item_h3{
+                            width: 70%;
+                            position: absolute;
+                            font-weight: 400;
+                            font-size: 25px;
+                            color: #502311;
+                        }
+                    }
+                }
+                //screen05
+                .content_game{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-flow: column nowrap;
+                    max-width: 1200px;
+                    width: 100%;
+                    position: absolute;
+                    top: 20%;
+                    .box_game{
                         width: 100%;
-                        .vine_boxes{
+                        .item_game{
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            width: 80%;
-                            position: relative;
-                            background: url('/scss/img/GengImg/Screen05/Screen05moutain.png') no-repeat;
-                            background-size: 50%;
-                            background-position: center;
-                            .boxes_shake{
-                                width: 20%;
-                                transition: 2s;
-                                transform-origin: top;
-                                animation: boxesRun 6s linear infinite alternate;
-                                img{
-                                    width: 100%;
-                                }
-                                @keyframes boxesRun {
-                                    0%{
-                                        transform: rotate(30deg)
-                                    }
-                                    100%{
-                                        transform: rotate(-30deg)
-                                    }
-                                }
-                            }
-                            .bee_shake{
+                            width: 100%;
+                            .vine_boxes{
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                .beeA, .beeB{
-                                    width: 15%;
-                                    position: absolute;
+                                width: 80%;
+                                position: relative;
+                                background: url('/scss/img/GengImg/Screen05/Screen05moutain.png') no-repeat;
+                                background-size: 50%;
+                                background-position: center;
+                                .boxes_shake{
+                                    width: 20%;
+                                    transition: 2s;
+                                    transform-origin: top;
+                                    animation: boxesRun 6s linear infinite alternate;
                                     img{
                                         width: 100%;
                                     }
-                                }
-                                .beeA{
-                                    top: 25%;
-                                    left: 0;
-                                    animation: beeShakeA .9s linear infinite alternate;
-                                }
-                                @keyframes beeShakeA {
-                                    0%{
-                                        transform: translateY(0px) translateX(0px)
-                                    }
-                                    100%{
-                                        transform: translateY(5px) translateX(3px)
+                                    @keyframes boxesRun {
+                                        0%{
+                                            transform: rotate(30deg)
+                                        }
+                                        100%{
+                                            transform: rotate(-30deg)
+                                        }
                                     }
                                 }
-                                .beeB{
-                                    top: 50%;
-                                    right: 0;
-                                    animation: beeShakeB 1.2s linear infinite alternate;
-                                }
-                                @keyframes beeShakeB {
-                                    0%{
-                                        transform: translateY(0px) translateX(0px)
+                                .bee_shake{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    .beeA, .beeB{
+                                        width: 15%;
+                                        position: absolute;
+                                        img{
+                                            width: 100%;
+                                        }
                                     }
-                                    100%{
-                                        transform: translateY(5px) translateX(3px)
+                                    .beeA{
+                                        top: 25%;
+                                        left: 0;
+                                        animation: beeShakeA .9s linear infinite alternate;
+                                    }
+                                    @keyframes beeShakeA {
+                                        0%{
+                                            transform: translateY(0px) translateX(0px)
+                                        }
+                                        100%{
+                                            transform: translateY(5px) translateX(3px)
+                                        }
+                                    }
+                                    .beeB{
+                                        top: 50%;
+                                        right: 0;
+                                        animation: beeShakeB 1.2s linear infinite alternate;
+                                    }
+                                    @keyframes beeShakeB {
+                                        0%{
+                                            transform: translateY(0px) translateX(0px)
+                                        }
+                                        100%{
+                                            transform: translateY(5px) translateX(3px)
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
-                // btn:z-index: 2;
-                .box_gamebtn{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-                    padding: 5px 0 5px 0;
-                    .item_gamebtn{
-                        width: 120px;
-                        height: 60px;
-                        border-radius: 45px;
-                        background-color: #aaa;
-                        cursor: pointer;
-                        z-index: 2;
-                        .btn_gotoplay{
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                    // btn:z-index: 2;
+                    .box_gamebtn{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        padding: 5px 0 5px 0;
+                        .item_gamebtn{
                             width: 120px;
-                            height: 55px;
+                            height: 60px;
                             border-radius: 45px;
-                            background-color: #F7E9C3;
-                            transition: .5s;
-                            &:hover{
-                                background-color: #F777;
-                                p{
-                                    color: #F7E9C3;
+                            background-color: #aaa;
+                            cursor: pointer;
+                            z-index: 2;
+                            .btn_gotoplay{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 120px;
+                                height: 55px;
+                                border-radius: 45px;
+                                background-color: #F7E9C3;
+                                transition: .5s;
+                                &:hover{
+                                    background-color: #F777;
+                                    p{
+                                        color: #F7E9C3;
+                                    }
                                 }
-                            }
-                            p{
-                                color: #502311;
+                                p{
+                                    color: #502311;
+                                }
                             }
                         }
                     }
@@ -1385,165 +1398,6 @@
         }
     }
 }
-
-// Machine
-// .machine{
-//     cursor: pointer;
-//     width: 15%;
-//     position: fixed;
-//     bottom: 0;
-//     right: 0;
-//     z-index: 8;
-//     .machine_check{
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         flex-flow: column nowrap;
-//         width: 100%;
-//         .machine_body{
-//             width: 60%;
-//             position: relative;
-//             z-index: 8;
-//             img{
-//                 width: 100%;
-//             }
-//             // all z-index:-5;
-//             .machine_handR, .machine_handL, .machine_earsR, .machine_earsL, .machine_tail{
-//                 width: 100%;
-//                 position: absolute;
-//                 z-index: -5;
-//                 img{
-//                     width: 100%;
-//                 }
-//             }
-//             //z-index:-1
-//             .machine_handR{
-//                 width: 35%;
-//                 top: 35%;
-//                 right: -25%;
-//                 z-index: -1;
-//                 transform-origin: left;
-//                 transform: rotate(80deg);
-//                 animation: handShakeR 3s linear infinite alternate;
-//                 @keyframes handShakeR {
-//                     0%{
-//                         transform: rotate(80deg)
-//                     }
-//                     100%{
-//                         transform: rotate(75deg)
-//                     }
-//                 }
-//             }
-//             .machine_handL{
-//                 width: 35%;
-//                 top: 35%;
-//                 left: 0;
-//                 z-index: -1;
-//                 transform-origin: right;
-//                 animation: handShakeL 1s linear infinite alternate;
-//                 @keyframes handShakeL {
-//                     0%{
-//                         transform: rotateY(-20deg)
-//                     }
-//                     100%{
-//                         transform: rotate(-15deg)
-//                     }
-//                 }
-//             }
-//             .machine_earsL{
-//                 width: 20%;
-//                 top: 5%;
-//                 left: 25%;
-//                 z-index: -1;
-//                 transform-origin: bottom right;
-//                 animation: earsShakeL 5s linear infinite;
-//                 @keyframes earsShakeL {
-//                     0%{
-//                         transform: rotate(0deg)
-//                     }
-//                     2%{
-//                         transform: rotate(5deg)
-//                     }
-//                     4%{
-//                         transform: rotate(0deg)
-//                     }
-//                     8%{
-//                         transform: rotate(3deg)
-//                     }
-//                     100%{
-//                         transform: rotate(0deg)
-//                     }
-//                 }
-//             }
-//             .machine_earsR{
-//                 width: 20%;
-//                 top: 8%;
-//                 right: 8%;
-//                 z-index: -1;
-//                 transform-origin: bottom right;
-//                 animation: earsShakeR 5s linear infinite;
-//                 @keyframes earsShakeR {
-//                     0%{
-//                         transform: rotate(0deg)
-//                     }
-//                     2%{
-//                         transform: rotate(-7deg)
-//                     }
-//                     4%{
-//                         transform: rotate(0deg)
-//                     }
-//                     8%{
-//                         transform: rotate(-5deg)
-//                     }
-//                     100%{
-//                         transform: rotate(0deg)
-//                     }
-//                 }
-//             }
-//             .machine_tail{
-//                 top: 0;
-//                 right: -60%;
-//                 transform-origin: bottom;
-//                 animation: tailShake 5s linear infinite;
-//                 @keyframes tailShake {
-//                     0%{
-//                         transform: rotate(0deg)
-//                     }
-//                     25%{
-//                         transform: rotate(10deg)
-//                     }
-//                     100%{
-//                         transform: rotate(0deg)
-//                     }
-//                 }
-//             }
-//         }
-//         .machine_dialog{
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-//             width: 80%;
-//             position: absolute;
-//             top: -40%;
-//             animation: dialogMove 2s linear infinite alternate;
-//             @keyframes dialogMove {
-//                 0%{ transform: translateY(0px) }
-//                 100%{ transform: translateY(10px) }
-//             }
-//             img{
-//                 width: 100%;
-//             }
-//             .machine_txt{
-//                 width: 100%;
-//                 position: absolute;
-//                 p{
-//                     font-size: 120%;
-//                     width: 100%;
-//                 }
-//             }
-//         }
-//     }
-// }
 
 }
 
@@ -1611,6 +1465,9 @@
                         }
                     }
                 }
+                .cloudMove{
+                    display: none;
+                }
             }
             .content_object{
                 display: flex;
@@ -1621,7 +1478,7 @@
                     width: 100%;
                     .item_picnic{
                         width: 100%;
-                        .picnic{
+                        .mobile_picnic{
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -1633,7 +1490,7 @@
                             .box_object{
                                 width: 40%;
                                 position: absolute;
-                                top: -100%;
+                                top: -50%;
                                 .item_object{
                                     width: 100%;
                                     .object_grassA{
@@ -1653,6 +1510,9 @@
                             .box_smobject{
                                 display: none;
                             }
+                        }
+                        .picnic{
+                            display: none;
                         }
                     }
                 }
@@ -2289,7 +2149,7 @@
                 }
             }
             // mobile display:none;
-            .content_hotproducts{
+            .content_storebg{
                 display: none;
             }
             .content_mobilehotproducts{
@@ -2327,12 +2187,15 @@
                                     width: 100%;
                                 }
                                 .mobilehotproducts_txt{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
                                     width: 100%;
                                     position: absolute;
                                     bottom: 20px;
                                     h3{
                                         color: #502311;
-                                        font-size: 150%;
+                                        font-size: 110%;
                                     }
                                 }
                             }
@@ -2441,6 +2304,9 @@
                 }
             }
             //screen05
+            .game_picA{
+                display: none;
+            }
             .content_game{
                 display: flex;
                 justify-content: center;
@@ -2526,7 +2392,7 @@
     }
 }
 
-.machine{
+.machine_wrapper{
     display: none;
 }
 
