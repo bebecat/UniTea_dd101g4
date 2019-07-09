@@ -147,6 +147,9 @@
                         display: flex;
                         justify-content: center;
                         width: 100%;
+                        .mobile_picnic{
+                            display: none;
+                        }
                         .picnic{
                             display: flex;
                             justify-content: center;
@@ -1418,8 +1421,9 @@
         display: flex;
         width: 100%;
         position: relative;
-        background: url(../scss/img/GengImg/Screen01/Screen01-BGBG.png);
-        background-size: contain;
+        background: url(../scss/img/GengImg/BG/BG_1.png) no-repeat;
+        background-size: cover;
+        background-position: center;
         .content_main{
             width: 100%;
             display: flex;
@@ -1523,13 +1527,14 @@
     //Moblie screen02, 03, 04, 05
     .container_inBackground{
         width: 100%;
-        background: url(../scss/img/GengImg/Screen01/Screen01-BGBG.png);
-        background-size: contain;
         .container_boxes{
             display: flex;
             justify-content: center;
             width: 100%;
-            margin: 0 0 10% 0;
+            padding: 0 0 10% 0;
+            background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
+            background-size: cover;
+            background-position: center;
              // mobile screen02
             .content_wood{
                 display: flex;
@@ -1671,7 +1676,10 @@
             align-items: center;
             flex-flow: column nowrap;
             width: 100%;
-            margin: 0 0 10% 0;
+            padding: 0 0 10% 0;
+            background: url(../scss/img/GengImg/BG/index0707picnic-0202.png) ;
+            background-size: cover;
+            background-position: center;
             .content_wood{
                 display: flex;
                 justify-content: center;
@@ -2124,7 +2132,11 @@
             align-items: center;
             flex-flow: column nowrap;
             width: 100%;
-            margin: 0 0 10% 0;
+            padding: 0 0 10% 0;
+            background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
             .content_wood{
                 display: flex;
                 justify-content: center;
@@ -2276,6 +2288,9 @@
             flex-flow: column nowrap;
             width: 100%;
             margin: 0 0 10% 0;
+            background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
+            background-size: cover;
+            background-position: center;
             .content_wood{
                 display: flex;
                 justify-content: center;
