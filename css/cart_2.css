@@ -86,7 +86,7 @@ textarea {
   max-width: 1200px; }
 
 .cart_bottom {
-  width: 50%;
+  width: 30px;
   position: relative;
   margin-left: auto;
   text-align: right;
@@ -326,14 +326,14 @@ textarea {
   transform: translateY(3px); }
 
 .cart_bottom .next {
-  width: 20%;
+  width: 30px;
   background-color: #86a745; }
   @media all and (max-width: 767px) {
     .cart_bottom .next {
       width: 60%; } }
 
 .cart_bottom .conform {
-  width: 20%;
+  width: 40px;
   background-color: rgba(172, 89, 41, 0.9); }
 
 .picnic_coin span {

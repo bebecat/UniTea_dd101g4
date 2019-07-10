@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -125,7 +126,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 80%;
+      width: 100%;
       position: absolute;
       top: -40%;
       animation: dialogMove 2s linear infinite alternate; }
@@ -143,15 +144,20 @@
         .machine .machine_check .machine_dialog .machine_txt p {
           font-size: 120%;
           width: 100%;
+          text-align: center;
           background-image: url(../scss/img/mch_img/GengImg/dialog.png);
           background-size: 100% 100%;
           padding: 10px;
           line-height: 2;
-          font-size: 18px;
-          text-align: center;
+          font-size: 16px;
           color: #502311; }
         .machine .machine_check .machine_dialog .machine_txt span {
-          color: #de8384; }
+          color: #de8384;
+          font-size: 16px; }
+
+@media screen and (max-width: 767px) {
+  .machine_txt span {
+    display: none; } }
 
 .chatbot_wrapper {
   display: flex;
@@ -178,21 +184,20 @@
     text-align: center;
     color: #7f461c;
     font-weight: bold;
-    top: 18.5%;
-    left: -28px;
+    top: 13%;
     opacity: 0;
     font-size: 20px;
     cursor: pointer; }
   .chatbot_wrapper .chatBot_container {
     position: absolute;
     background-color: #f4f2ee;
-    top: 20%;
+    top: 22%;
     height: 30%;
     width: 90%;
     margin: 0 5% 5%;
-    height: 180px;
+    height: 165px;
     border-radius: 5%;
-    padding: 3%;
+    padding: 5%;
     overflow: auto;
     box-sizing: border-box; }
     .chatbot_wrapper .chatBot_container .chatBot_content_txt {
@@ -234,4 +239,38 @@
     padding: 3px 6px;
     font-size: 12px;
     border-radius: 5px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    cursor: pointer; }
+
+#chabot_conversation_box .robot_text {
+  background-color: #fcefa5;
+  border-radius: 10px 10px 10px 0px;
+  color: #502311;
+  padding: 4px 6px;
+  display: inline-block;
+  margin: 3px 0;
+  position: relative;
+  font-size: 12px; }
+  #chabot_conversation_box .robot_text ::before {
+    content: "♥ "; }
+
+#chabot_conversation_box .user_txt {
+  text-align: right;
+  background-color: burlywood;
+  margin-left: auto;
+  border-radius: 10px 10px 0px 10px;
+  color: white;
+  position: relative;
+  padding: 4px 6px;
+  font-size: 12px;
+  display: inline-block; }
+
+.flex {
+  display: flex;
+  justify-content: flex-end; }
+
+.chatBot_container {
+  position: relative; }
+
+.clearFix {
+  clear: both; }

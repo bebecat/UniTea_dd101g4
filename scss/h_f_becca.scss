@@ -7,7 +7,7 @@
   margin: 0;
   list-style: none;
   text-decoration: none;
-  //   outline: 1px solid red;
+  outline: 1px solid red;
 }
 .clear {
   clear: both;
@@ -139,6 +139,21 @@
   bottom: 0;
   margin: auto;
 }
+@media screen and (max-width: 767px) {
+  .nav_wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    .icon {
+      margin: auto;
+      width: 50%;
+      justify-content: center;
+      .hi {
+        display: none;
+      }
+    }
+  }
+}
+
 .nav_content {
   width: 90%;
   margin-left: auto;
@@ -200,14 +215,30 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  width: 13%;
+  margin: 1% 0 0 auto;
+  line-height: 3.5;
+  box-sizing: border-box;
+  a {
+    width: 18%;
+    margin: 2%;
+  }
+  img {
+    vertical-align: middle;
+  }
+  .hi {
+    font-size: 10px;
+    width: 55%;
+    text-align: right;
+  }
 }
 .icon img {
   width: 100%;
 }
 .icon .member,
 .icon .cart {
-  margin: 5px;
-  padding: 0 5px;
+  // margin: 5px;
+  // padding: 0 5px;
 }
 
 //hb
@@ -409,12 +440,12 @@
     justify-content: center;
     align-items: center;
   }
-  .icon {
-    justify-content: space-around;
-    display: flex;
-    width: 30%;
-    align-items: center;
-  }
+  // .icon {
+  //   justify-content: space-around;
+  //   display: flex;
+  //   width: 30%;
+  //   align-items: center;
+  // }
   .nav_content {
     margin: auto;
   }
@@ -434,21 +465,21 @@
   .nav_content .cus {
     width: 100%;
   }
-  .nav_content .icon {
-    display: flex;
-    width: 100%;
-    flex-flow: row nowrap;
-    justify-content: center;
-  }
-  .icon .member,
-  .icon .cart {
-    margin-right: 0;
-    width: 40px;
-    padding: 15px 10px 0;
-  }
-  .icon .member img {
-    width: 100%;
-  }
+  // .nav_content .icon {
+  //   display: flex;
+  //   width: 100%;
+  //   flex-flow: row nowrap;
+  //   justify-content: center;
+  // }
+  // .icon .member,
+  // .icon .cart {
+  //   margin-right: 0;
+  //   width: 40px;
+  //   padding: 15px 10px 0;
+  // }
+  // .icon .member img {
+  //   width: 100%;
+  // }
   .nav_content .logo {
     display: none;
   }
