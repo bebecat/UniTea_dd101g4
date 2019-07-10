@@ -94,8 +94,11 @@ a {
     position: absolute;
     animation: cloudMove 40s infinite alternate-reverse;
     transform: translateX(100px);
-    overflow: hidden;
+
     /* transition: 0.3s; */
+  }
+  @media screen and (max-width: 1300px) {
+    overflow-x: hidden;
   }
 
   @keyframes cloudMove {
@@ -190,6 +193,7 @@ a {
 
   .pdP_recommend_card img {
     width: 100%;
+    animation: pdshake 2s 5s ease 4;
     display: block;
     margin: auto;
     filter: drop-shadow(3px 10px 3px rgba(51, 51, 51, 0.3));
@@ -198,26 +202,26 @@ a {
   @keyframes pdshake {
     0%,
     100% {
-      transform: scale(1) rotate(0) translate(-50%);
+      transform: scale(1) rotate(0);
     } /*0%,100%时保持图形的原大小且不旋转*/
     10%,
     30% {
-      transform: scale(0.9) rotate(3deg) translate(-50%);
+      transform: scale(0.9) rotate(3deg);
     } /*10%,30%时图形缩小成0.9倍，并且顺时针旋转3度*/
     20%,
     40%,
     60%,
     80% {
-      transform: scale(1.1) rotate(-3deg) translate(-50%);
+      transform: scale(1.1) rotate(-3deg);
     } /*20%,40%,60%,80%时图形扩大成1.1倍，并且逆时针旋转3度*/
     50%,
     70% {
-      transform: scale(1.1) rotate(3deg) translate(-50%);
+      transform: scale(1.1) rotate(3deg);
     } /*50%,70%时图形扩大成1.1倍，并且顺时针旋转3度*/
   }
   @media screen and (max-width: 1200px) {
     .pdP_recommend_card {
-      width: 70%;
+      width: 50%;
       img {
         width: 100%;
       }
@@ -255,7 +259,7 @@ a {
     width: 100%;
     background-size: 50%;
     background-position: 54% 50%;
-    animation: pdshake 2s 5s ease 4;
+    // animation: pdshake 2s 5s ease 4;
     padding: 10px 0 20px;
     color: snow;
     line-height: 1.5;
@@ -274,11 +278,17 @@ a {
     // padding-top: 320px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
     max-width: 900px;
     margin: auto;
     font-family: serif;
+    img {
+      width: 100%;
+    }
+    .all_pd img {
+      // width: 120%;
+    }
   }
   .filter li {
     transform: scale(1);
@@ -294,7 +304,7 @@ a {
   .pd_location {
     // background-color: #de8384;
     color: #de8384;
-    padding: 5px;
+    // padding: 5px;
     border-radius: 10px;
     font-weight: bold;
   }
@@ -603,7 +613,7 @@ a {
     position: absolute;
     width: 60%;
     left: 40%;
-    top: 50%;
+    top: 60%;
     transform: translate(-40%, -50%);
     display: flex;
     flex-flow: row nowrap;
@@ -673,7 +683,7 @@ a {
 }
 @media screen and (max-width: 1200px) {
   .col_1_md {
-    width: 40%;
+    width: 30%;
     padding: 50px;
     box-sizing: border-box;
   }
@@ -682,11 +692,8 @@ a {
   }
 }
 @media screen and (max-width: 767px) {
-  .butterfly_bg {
-    display: none;
-  }
   .col_1 {
-    width: 80%;
+    width: 65%;
     padding: 50px;
     box-sizing: border-box;
   }
@@ -719,6 +726,12 @@ a {
 .dl,
 .dr {
   opacity: 0;
+}
+@media screen and (max-width: 767px) {
+  .dl,
+  .dr {
+    opacity: 1;
+  }
 }
 .pic_dl,
 .pic_dr {

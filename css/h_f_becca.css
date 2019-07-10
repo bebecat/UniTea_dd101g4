@@ -6,8 +6,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  text-decoration: none;
-  outline: 1px solid red; }
+  text-decoration: none; }
 
 .clear {
   clear: both; }
@@ -159,11 +158,12 @@
 .nav_content li:last-child:hover {
   transform: scale(1.3) translateY(10px); }
 
-.nav_content .logo:hover {
-  transform: none; }
-
 .nav_content .here {
-  color: #de8384; }
+  color: #de8384;
+  background-position: 30% -1%;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-image: url(../scss/img/h_f_img/header-squirrel.png); }
 
 .nav_content .cus {
   width: 12.5%; }
@@ -184,7 +184,8 @@
   align-items: center;
   justify-content: flex-end;
   width: 13%;
-  margin: 1% 0 0 auto;
+  margin: 1% 1% 0 auto;
+  font-family: hanyi;
   line-height: 3.5;
   box-sizing: border-box; }
   .icon a {

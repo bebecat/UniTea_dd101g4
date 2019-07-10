@@ -1,12 +1,10 @@
-
 @mixin title_modules($list...) {
   @each $title, $fontSize, $color, $fontFamily in $list {
     #{$title} {
       font-size: $fontSize;
       color: $color;
       font-family: $fontFamily;
-      text-align:center;
-      letter-spacing:2px;
+      letter-spacing: 2px;
       @content;
     }
   }
@@ -17,8 +15,7 @@
       font-size: $fontSize;
       color: $color;
       font-family: $fontFamily;
-      text-align:center;
-      letter-spacing:1.5px;
+      letter-spacing: 1.5px;
       @content;
     }
   }
@@ -64,5 +61,3 @@
     }
   }
 }
-
-//客製頁的茶色變化

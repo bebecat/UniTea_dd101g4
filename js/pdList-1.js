@@ -80,7 +80,7 @@ tl.to(".fly_animal", 3, {
   })
   .to(".fly_animal", 10, {
     x: "10%",
-    y: "500%"
+    y: "480%"
   });
 
 var secen_01 = new ScrollMagic.Scene({
