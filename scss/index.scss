@@ -31,13 +31,12 @@
         flex-flow: row wrap;
         width: 100%;
         max-width: 1994px;
-        height: 100vh;
+        // height: 100vh;
         padding: 100px 0 0 0;
         position: relative;
-        background: url(../scss/img/GengImg/BG/BG_1.png);
+        background: url(../scss/img/GengImg/BG/BG-11.png);
         background-size: cover;
         background-position: center;
-
         .content_main{
             width: 100%;
             display: flex;
@@ -54,7 +53,6 @@
                 position: absolute;
                 top: -10%;
                 margin-top: 8%;
-                //txt: z-index:2;
                 .box_txt{
                     display: flex;
                     justify-content: center;
@@ -65,10 +63,11 @@
                         justify-content: center;
                         align-items: center;
                         width: 100%;
+                        z-index: 7;
                         .txt{
                             width: 100%;
                             margin: 5px;
-                            z-index: 5;
+                            z-index: 7;
                             img{
                                 width: 100%;
                             }
@@ -141,6 +140,7 @@
                 justify-content: center;
                 width: 100%;
                 margin-top: 20%;
+                z-index: 2;
                 .box_picnic{
                     width: 45%;
                     .item_picnic{
@@ -267,6 +267,62 @@
                     }
                 }
             }
+            .content_bgpic{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                position: absolute;
+                bottom: -1%;
+                left: 0;
+                .box_bgpic{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    width: 100%;
+                    .item_bgpic{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        position: absolute;
+                        top: -10%;
+                        left: 0;
+                        img{
+                            width: 101%;
+                        }
+                    }
+                    .cA{
+                        animation: cA 3s linear infinite alternate;
+                        @keyframes cA {
+                            0%{ transform: translateY(0px) scale(1.1) }
+                            100%{ transform: translateY(5px) scale(1.2) }
+                        }
+                    }
+                    .cB{
+                        animation: cB 2.5s linear infinite alternate;
+                        @keyframes cB {
+                            0%{ transform: translateY(0px) scale(1) }
+                            100%{ transform: translateY(5px) scale(1.1) }
+                        }
+                    }
+                    .cC{
+                        animation: cC 3.5s linear infinite alternate;
+                        @keyframes cC {
+                            0%{ transform: translateY(0px) scale(1) }
+                            100%{ transform: translateY(10px) scale(1.1) }
+                        }
+                    }
+                    .gA{
+                        width: 100%;
+                        z-index: 1;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -288,6 +344,7 @@
             background-size: cover;
             background-position: center;
             // max-width: 1200px;
+            // margin: 2% 0 0 0;
             //screen02
             .content_wood{
                 display: flex;
@@ -1230,6 +1287,7 @@
             align-items: center;
             flex-flow: column nowrap;
             width: 100%;
+            padding: 0 0 5% 0;
             .content_gamebg{
                 display: flex;
                 justify-content: space-around;
@@ -1521,6 +1579,9 @@
                     }
                 }
             }
+            .content_bgpic{
+                display: none;
+            }
         }
     }
 
@@ -1607,7 +1668,7 @@
                                 background-color: #A7CFEE;
                                 text-align: center;
                                 p{
-                                    font-size: 120%;
+                                    font-size: 110%;
                                 }
                             }
                         }
