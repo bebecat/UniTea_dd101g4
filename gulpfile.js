@@ -24,7 +24,7 @@ function browserSync(done) {
     browsersync.init({
         server: {
             baseDir: "./",
-            index: "activity.html"
+            index: "member.html"
         },
         port: 3000
     });
@@ -39,20 +39,20 @@ function browserSyncReload(done) {
 
 //watch files
 function watchfiles() {
-    watch(['./scss/*.scss' , './scss/**/*.scss'] , sass);
+    watch(['./scss/*.scss', './scss/**/*.scss'], sass);
     watch(['./', './**/*'], series(browserSyncReload))
 }
 
 
 // mini css
-function miniCss(){
+function miniCss() {
     return src('css/*.css')
-    .pipe(cleanCSS({compatibility: '*'}))
-    .pipe(dest('css/mini'));
+        .pipe(cleanCSS({ compatibility: '*' }))
+        .pipe(dest('css/mini'));
 }
 
 
-const watcher = series(sass, parallel( watchfiles , browserSync));
+const watcher = series(sass, parallel(watchfiles, browserSync));
 
 exports.mini = miniCss;
 exports.default = watcher;
