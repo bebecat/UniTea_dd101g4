@@ -1,6 +1,5 @@
 console.log("start");
-$(".parallax_3d")
-  .on("mousemove", function(e) {
+$(".parallax_3d").on("mousemove", function(e) {
     $this = $(this);
 
     // Get move position relative to the container
@@ -18,7 +17,7 @@ $(".parallax_3d")
     x = x / 30;
     y = y / 30;
 
-    // Move the image
+    // 動圖片
     $(this)
       .find(".parallax_3d_inner")
       .css(
@@ -34,19 +33,20 @@ $(".parallax_3d")
           "deg"
       );
 
-    // move text and keep it in the center
-    var x_txt = x * 2.5;
-    var y_txt = y * 2.5;
+    // //  keep it in the center
+    // var x_txt = x * 2.5;
+    // var y_txt = y * 2.5;
 
-    $(this)
-      .find(".parallax_3d_layer")
-      .css("transform", "translate3d(" + x_txt + "px," + y_txt + "px,0)");
-  })
-  .on("mouseleave", function() {
-    $(this)
-      .find(".parallax_3d_inner, .parallax_3d_layer")
-      .css("transform", "");
-  });
+  //   $(this)
+  //     .find(".parallax_3d_layer")
+  //     .css("transform", "translate3d(" + x_txt + "px," + y_txt + "px,0)");
+  // })
+  // .on("mouseleave", function() {
+  //   $(this)
+  //     .find(".parallax_3d_inner, .parallax_3d_layer")
+  //     .css("transform", "");
+  }
+  );
 
 //視差
 
@@ -63,6 +63,7 @@ $(".parallax_3d")
 //   concertBg.style.backgroundPositionY = offset * 0.09 + "px";
 //   console.log(concertBg.style.backgroundPositionY);
 // });
+
 
 var controller = new ScrollMagic.Controller();
 var tl = new TimelineMax({
@@ -103,8 +104,8 @@ var t2 = new TimelineMax({
 
 t2.to(".butterfly_bg", 10, {
   x: 0,
-  y: 700
-  })
+  y: 200
+  });
 
   //   .to(".butterfly_bg", 3, {
   //     x: 1900,
@@ -262,3 +263,51 @@ pdBtns.click(function(e) {
     alert("已成功加入購物車");
   }, 1100);
 });
+
+
+///設定session
+// var storage=sessionStorage;
+// function init(){
+//   if(storage["addItemToCart"]==null){
+//     storage["addItemToCart"]="";
+//   }
+
+// var list=document.querySelectorAll(".btn_submit_box");
+// console.log(list);
+// for (var i = 0; i < list.length; i++) {
+// list[i].addEventListener("click", function() {
+//   // var teddyInfo = document.querySelector('#'+this.id+' input').value;
+//   // var teddyInfo = document.querySelector(`#${this.id} input`).value;
+//   addItem(this.id); //key，value
+//   //   console.log(this.id);
+//   // 選到的那個東西的id
+// });
+
+// }
+// }
+// window.addEventListener("load",init);
+
+
+
+$(document).ready(function(){
+  $('.all_filter').click(function(e){
+    e.preventDefault();
+    $('.pd_card_content').css({display:"block"});
+  });
+  $('.mat_filter').click(function(e){
+    e.preventDefault();
+    $('.pd_card_content').css({display:"none"});
+    $('.mat').css({display:"block"});
+  });
+  $('.box_filter').click(function(e){
+    e.preventDefault();
+    $('.pd_card_content').css({display:"none"});
+    $('.box').css({display:"block"});
+  });
+  $('.fork_filter').click(function(e){
+    e.preventDefault();
+    $('.pd_card_content').css({display:"none"});
+    $('.fork').css({display:"block"});
+  });
+})
+

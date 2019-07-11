@@ -1,4 +1,6 @@
 console.log("start");
+
+//nav收起來
 var zero = 0;
 $(document).ready(function() {
   $(window).on("scroll", function() {
@@ -7,6 +9,8 @@ $(document).ready(function() {
     $(".navbar_container").css({ transition: " 1s ease-in-out" });
   });
 });
+
+//hover_icon
 
 function init() {
   var mem = document.getElementById("member_icon");
@@ -25,3 +29,17 @@ function init() {
   };
 }
 window.addEventListener("load", init);
+
+///cart_count
+// var storage = localStorage;
+// var cartCount = $("#cart_count");
+// var cartCircle = $("#cart_circle");
+
+// if (storage.getItem("add_to_cart")) {
+//   var stArray = storage.getItem("addItemList").split(",");
+//   var starrylength = stArray.length - 1;
+//   if (starrylength >= 1) {
+//     cartCircle.attr("style", "visibility:visible");
+//     cartCount.text(starrylength);
+//   }
+// }
