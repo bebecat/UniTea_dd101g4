@@ -4,7 +4,11 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/machine.css">
 	<link rel="stylesheet" href="./css/activity.css">
+    <link rel="stylesheet" href="./css/h_f_becca.css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/h_f_becca.js"></script>
 	<title>activity</title>
 </head>
 <body>
@@ -27,34 +31,110 @@
 			</div>
 			<div class="nav_wrapper">
 				<ul class="nav_content">
-					<a href="customizedP.html"><li class="cus">客製野餐籃</li></a>
-					<a href="contest.html"><li>美籃票選</li></a>
-					<a href="pdList.html"><li >野餐周邊</li></a>
+					<a href="customizedP.html">
+						<li class="cus">客製野餐籃</li>
+					</a>
+					<a href="contest.html">
+						<li>美籃票選</li>
+					</a>
+					<a href="pdList.html">
+						<li class="here">野餐周邊</li>
+					</a>
 					<a href="index.html">
 						<li class="logo">
 							<h1>趣野餐</h1>
 						</li>
 					</a>
-					<a href="activity.html"><li>野餐活動</li></a>
-					<a href="aboutus.html"><li class="here">籃子故事</li></a>
-					<a href="game/game.html"><li>賺折扣卷</li></a>
-					<li class="icon">
-						<a href="member.html">
-							<div class="member">
-							<img src="./scss/h_f_img/member.png" alt="member" />
-							</div>
-						</a>
-						<a href="cart.html">
-							<div class="cart">
-							<img src="./scss/h_f_img/cart.png" alt="cart" />
-							</div>
-						</a>
-					</li>
-					<div class="clear"></div>
+					<a href="activity.html">
+						<li>野餐活動</li>
+					</a>
+					<a href="aboutus.html">
+						<li>籃子故事</li>
+					</a>
+					<a href="game.html">
+						<li>賺折扣券</li>
+					</a>
 				</ul>
+				<ul class="icon">
+					<li class="hi">董董,你好</li>
+					<a href="memeber.html">
+						<li class="member">
+							<img id="member_icon" src="./scss/img/h_f_img/member.png" alt="member"/>
+						</li>
+					</a>
+					<a href="cart.html">
+						<li class="cart">
+							<img id="cart_icon" src="./scss/img/h_f_img/cart.png" alt="cart"/>
+						</li>
+					</a>
+				</ul>
+				<div class="clear"></div>
 			</div>
 		</nav>	
 	</header>
+	<div class="machine_settin">
+	   <div class="machine">
+	      <div class="machine_check">
+	        <div class="machine_body">
+	          <img src="scss/img/mch_img/GengImg/animal/body.png" alt="" />
+	          <div class="machine_handR">
+	            <img src="scss/img/mch_img/GengImg/animal/rightHand.png" alt="" />
+	          </div>
+	          <div class="machine_handL">
+	            <img src="scss/img/mch_img/GengImg/animal/leftHand.png" alt="" />
+	          </div>
+	          <div class="machine_earsR">
+	            <img src="scss/img/mch_img/GengImg/animal/rightEars.png" alt="" />
+	          </div>
+	          <div class="machine_earsL">
+	            <img src="scss/img/mch_img/GengImg/animal/leftEars.png" alt="" />
+	          </div>
+	          <div class="machine_tail">
+	            <img src="scss/img/mch_img/GengImg/animal/tail.png" alt="" />
+	          </div>
+	        </div>
+	        <div class="machine_dialog">
+	          <div class="machine_txt">
+	            <p>點我 <span>問我</span></p>
+	          </div>
+	        </div>
+	      </div>
+	   </div>
+	   <!-- 房子 -->
+	   <div class="chatbot_wrapper">
+	      <!-- <img src="./scss/img/mch_img/GengImg/houseChat.png" alt="chathouse" /> -->
+	      <!-- 關起來 -->
+	      <div class="cancel" id="close_btn">Ｘ</div>
+	      <!-- 對話框框 -->
+	      <div class="chatBot_container" id="robot_conversation-block">
+	        <div class="chatBot_content" id="chabot_conversation_box">
+	          <p id="chatBot_content" class="robot_text">
+	            ♥ 去野餐： HiHi 去野餐 ! 野餐趣 ! 有什麼想問我呢?
+	          </p>
+	        </div>
+	      </div>
+	      <!-- 送出 -->
+	      <div class="chatBot-text-Wrap">
+	        <input
+	          type="text"
+	          class="chatBot-text"
+	          id="user_message"
+	          placeholder="輸入你想問的"
+	          name="userkey"
+	        />
+	        <!-- <div id="UserText"></div> -->
+	        <button type="submit" id="user_btn_send" class="btn_send">送出</button>
+	      </div>
+	      <!-- 關鍵字 -->
+	      <ul class="chatBot_keyword">
+	        <li id="ask_price">價格</li>
+	        <li id="ask_cus">客製</li>
+	        <li id="ask_game">遊戲</li>
+	        <li id="ask_discount">優惠</li>
+	        <li id="ask_news">最新消息</li>
+	      </ul>
+	   </div>		
+	</div>
 	<section class="bg_settin">
 		<div class="sky_settin">
 			<img class="cloud_left" src="./scss/img/acimg/activity_cloud_left.png" alt="大雲朵">
@@ -84,20 +164,50 @@
 		</h3>
 		<div class="ac_sign">
 			<img class="ac_sign_img" src="./scss/img/acimg/sign1.png" alt="招牌">	
-			<div class="ac_card">
+			<div class="ac_card show">
 				<img class="ac_img" src="./scss/img/acimg/ac1.jpg" alt="親子野餐">
 				<h2>親子野餐日</h2>
 				<div class="txt">
 					<p>活動日期xxxxxx</p>
 					<p>活動地點yyyyyy</p>
-					<p>查看詳情</p>
+					<a href="#show_infor"><p>查看詳情</p></a>
+				</div>
+			</div>
+			<div class="ac_card">
+				<img class="ac_img" src="./scss/img/acimg/ac2.jpg" alt="寵物野餐">
+				<h2>毛孩子趣野餐</h2>
+				<div class="txt">
+					<p>活動日期xxxxxx</p>
+					<p>活動地點yyyyyy</p>
+					<a href="#show_infor"><p>查看詳情</p></a>
+				</div>
+			</div>
+			<div class="ac_card">
+				<img class="ac_img" src="./scss/img/acimg/ac3.jpg" alt="情人野餐">
+				<h2>浪漫野餐</h2>
+				<div class="txt">
+					<p>活動日期xxxxxx</p>
+					<p>活動地點yyyyyy</p>
+					<a href="#show_infor"><p>查看詳情</p></a>
+				</div>
+			</div>
+			<div class="ac_card">
+				<img class="ac_img" src="./scss/img/acimg/ac4.jpg" alt="好友野餐">
+				<h2>揪友野餐</h2>
+				<div class="txt">
+					<p>活動日期xxxxxx</p>
+					<p>活動地點yyyyyy</p>
+					<a href="#show_infor"><p>查看詳情</p></a>
 				</div>
 			</div>
 		</div>
 	</section>
-<!-- 	<section class="ac_infor">
+	<section class="ac_infor" id="show_infor">
 		<img src="./scss/img/acimg/column1.png" alt="活動專欄" class="infor_bg">
-	</section> -->
+		<div class="txt">
+			
+		</div>
+	</section>
 	<footer>
 		<div class="footer_bg_settin">
 			<img class="footer_bg_glass glass1" src="./scss/img/auimg/footer_glass.png" alt="底部草叢">
@@ -111,5 +221,22 @@
 		</div>
 	</footer>
 </div>	
+<script src="js/machine.js"></script>
+<script>
+	function smooth(){
+		var anchor = document.querySelector('a[href="#show_infor"]');
+		var target = document.getElementById('show_infor');
+		anchor.addEventListener('click', function (e) {
+		if (window.scrollTo) {
+			e.preventDefault()
+			window.scrollTo({'behavior': 'smooth', 'top': target.offsetTop})
+			}
+		});	
+	};
+	function doFirst(){
+		smooth();
+	}
+	window.onload = doFirst();
+</script>
 </body>
 </html>

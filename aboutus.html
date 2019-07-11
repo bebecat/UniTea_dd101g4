@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>picnicfun_index</title>
-	<link rel="stylesheet" href="./css/machine.css">
 	<link rel="stylesheet" href="./css/about_us.css">
+    <link rel="stylesheet" href="./css/h_f_becca.css" />
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/h_f_becca.js"></script>
 	<title>picnicfun_aboutus</title>
@@ -31,62 +31,110 @@
 			</div>
 			<div class="nav_wrapper">
 				<ul class="nav_content">
-					<a href="customizedP.html"><li class="cus">客製野餐籃</li></a>
-					<a href="contest.html"><li>美籃票選</li></a>
-					<a href="pdList.html"><li >野餐周邊</li></a>
+					<a href="customizedP.html">
+						<li class="cus">客製野餐籃</li>
+					</a>
+					<a href="contest.html">
+						<li>美籃票選</li>
+					</a>
+					<a href="pdList.html">
+						<li class="here">野餐周邊</li>
+					</a>
 					<a href="index.html">
 						<li class="logo">
 							<h1>趣野餐</h1>
 						</li>
 					</a>
-					<a href="activity.html"><li>野餐活動</li></a>
-					<a href="aboutus.html"><li class="here">籃子故事</li></a>
-					<a href="game/game.html"><li>賺折扣卷</li></a>
-					<li class="icon">
-						<a href="member.html">
-							<div class="member">
-							<img src="./scss/h_f_img/member.png" alt="member" />
-							</div>
-						</a>
-						<a href="cart.html">
-							<div class="cart">
-							<img src="./scss/h_f_img/cart.png" alt="cart" />
-							</div>
-						</a>
-					</li>
-					<div class="clear"></div>
+					<a href="activity.html">
+						<li>野餐活動</li>
+					</a>
+					<a href="aboutus.html">
+						<li>籃子故事</li>
+					</a>
+					<a href="game.html">
+						<li>賺折扣券</li>
+					</a>
 				</ul>
+				<ul class="icon">
+					<li class="hi">董董,你好</li>
+					<a href="memeber.html">
+						<li class="member">
+							<img id="member_icon" src="./scss/img/h_f_img/member.png" alt="member"/>
+						</li>
+					</a>
+					<a href="cart.html">
+						<li class="cart">
+							<img id="cart_icon" src="./scss/img/h_f_img/cart.png" alt="cart"/>
+						</li>
+					</a>
+				</ul>
+				<div class="clear"></div>
 			</div>
 		</nav>	
 	</header>
-    <div class="machine">
-        <div class="machine_check">
-            <div class="machine_body">
-                <img src="scss/img/GengImg/animal/body.png" alt="">
-                <div class="machine_handR">
-                    <img src="scss/img/GengImg/animal/rightHand.png" alt="">
-                </div>
-                <div class="machine_handL">
-                    <img src="scss/img/GengImg/animal/leftHand.png" alt="">
-                </div>
-                <div class="machine_earsR">
-                    <img src="scss/img/GengImg/animal/rightEars.png" alt="">
-                </div>
-                <div class="machine_earsL">
-                    <img src="scss/img/GengImg/animal/leftEars.png" alt="">
-                </div>
-                <div class="machine_tail">
-                    <img src="scss/img/GengImg/animal/tail.png" alt="">
-                </div>
-            </div>
-            <div class="machine_dialog">
-                <img src="scss/img/GengImg/dialog.png" alt="">
-                <div class="machine_txt">
-                    <p>我是客服機器人!</p>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="machine_settin">
+	   <div class="machine">
+	      <div class="machine_check">
+	        <div class="machine_body">
+	          <img src="scss/img/mch_img/GengImg/animal/body.png" alt="" />
+	          <div class="machine_handR">
+	            <img src="scss/img/mch_img/GengImg/animal/rightHand.png" alt="" />
+	          </div>
+	          <div class="machine_handL">
+	            <img src="scss/img/mch_img/GengImg/animal/leftHand.png" alt="" />
+	          </div>
+	          <div class="machine_earsR">
+	            <img src="scss/img/mch_img/GengImg/animal/rightEars.png" alt="" />
+	          </div>
+	          <div class="machine_earsL">
+	            <img src="scss/img/mch_img/GengImg/animal/leftEars.png" alt="" />
+	          </div>
+	          <div class="machine_tail">
+	            <img src="scss/img/mch_img/GengImg/animal/tail.png" alt="" />
+	          </div>
+	        </div>
+	        <div class="machine_dialog">
+	          <div class="machine_txt">
+	            <p>點我 <span>問我</span></p>
+	          </div>
+	        </div>
+	      </div>
+	   </div>
+	   <!-- 房子 -->
+	   <div class="chatbot_wrapper">
+	      <!-- <img src="./scss/img/mch_img/GengImg/houseChat.png" alt="chathouse" /> -->
+	      <!-- 關起來 -->
+	      <div class="cancel" id="close_btn">Ｘ</div>
+	      <!-- 對話框框 -->
+	      <div class="chatBot_container" id="robot_conversation-block">
+	        <div class="chatBot_content" id="chabot_conversation_box">
+	          <p id="chatBot_content" class="robot_text">
+	            ♥ 去野餐： HiHi 去野餐 ! 野餐趣 ! 有什麼想問我呢?
+	          </p>
+	        </div>
+	      </div>
+	      <!-- 送出 -->
+	      <div class="chatBot-text-Wrap">
+	        <input
+	          type="text"
+	          class="chatBot-text"
+	          id="user_message"
+	          placeholder="輸入你想問的"
+	          name="userkey"
+	        />
+	        <!-- <div id="UserText"></div> -->
+	        <button type="submit" id="user_btn_send" class="btn_send">送出</button>
+	      </div>
+	      <!-- 關鍵字 -->
+	      <ul class="chatBot_keyword">
+	        <li id="ask_price">價格</li>
+	        <li id="ask_cus">客製</li>
+	        <li id="ask_game">遊戲</li>
+	        <li id="ask_discount">優惠</li>
+	        <li id="ask_news">最新消息</li>
+	      </ul>
+	   </div>		
+	</div>
 	<section class="bg_settin">
 		<div class="glass_bg">
 			<img class="glass" src="./scss/img/auimg/glassBG.png" alt="草地">
@@ -131,98 +179,102 @@
 	<section class="webstory_introduction" id="webstory">
 		<div class="header_fulsec"></div>
 		<div class="container">
+			<div id="turnleft"></div>
+			<div id="turnright"></div>
 			<h2>野餐故事 
 				<img class="title_bg" src="./scss/img/auimg/title_bg.png" alt="木製標題">
 				<img id="bullon_setin" src="./scss/img/auimg/bullon1.png" alt="小氣球">
 				<img id="squirrel_withbullon_setin" src="./scss/img/auimg/squirrel_withbullon.png" alt="小松鼠">
 			</h2>
-			<section class="first_step_customize">
-				<div class="txt">
-					<p>來到我們的網站，首先最重要的功能就是可以客製屬於你的獨一無二的野餐籃！依照指示跟著步驟選擇籃子外型、顏色、裝飾，最後幫籃子取個創意無限的名字，就完成啦！</p>
-				</div>
-				<div class="step_list">
-					<img class="step_line" src="./scss/img/auimg/step_line.png" alt="步驟線">
-					<div class="step_item step_5">
-						<img class="step_bg" src="./scss/img/auimg/stepBG.png" alt="步驟圈">
-						<span class="step_num">5</span>
-					</div>
-					<div class="step_item step_4">
-						<img class="step_bg" src="./scss/img/auimg/stepBG.png" alt="步驟圈">
-						<span class="step_num">4</span>
-					</div>
-					<div class="step_item step_3">
-						<img class="step_bg" src="./scss/img/auimg/stepBG.png" alt="步驟圈">
-						<span class="step_num">3</span>
-					</div>
-					<div class="step_item step_2">
-						<img class="step_bg" src="./scss/img/auimg/stepBG.png" alt="步驟圈">
-						<span class="step_num">2</span>
-					</div>
-					<div class="step_item step_1">
-						<img class="step_bg" src="./scss/img/auimg/stepBG.png" alt="步驟圈">
-						<span class="step_num">1</span>
-					</div>
-				</div>
-				<img class="basket_settin" src="./scss/img/auimg/originalbasket.png" alt="最初的野餐籃造型">
-			</section>
-			<section class="second_step_customize">
-				<div class="context">
+			<div id="roulette">
+				<section class="first_step_customize">
 					<div class="txt">
-						<p>美美的籃子客製出來後，為他提供一個舞台發光發熱吧！</p>
+						<p>來到我們的網站，首先最重要的功能就是可以客製屬於你的獨一無二的野餐籃！依照指示跟著步驟選擇籃子外型、顏色、裝飾，最後幫籃子取個創意無限的名字，就完成啦！</p>
 					</div>
-					<img class="customize_basket" src="./scss/img/auimg/customize_basket.png" alt="客製籃子">
-					<div class="like_information">
-						<img class="like_img" src="./scss/img/auimg/likeit.png" alt="喜歡的按讚">
-						<span class="like_num">1234567</span>
-					</div>
-				</div>
-			</section>
-			<section class="third_step_customize">
-				<div class="context">
-					<div class="txt">
-						<p>除了籃子以外，往往也需要其他精緻的餐具和周邊商品啊！</p>
-					</div>
-					<img class="customize_basket third_step_basket" src="./scss/img/auimg/customize_basket.png" alt="客製籃子">
-					<div class="tableware_settin">
-						<img class="chopping_board third_step_board" src="./scss/img/auimg/chopping_board.png" alt="野餐板">
-						<img class="fork_settin" src="./scss/img/auimg/fork1.png" alt="野餐叉">
-						<img class="spoon_settin" src="./scss/img/auimg/spoon1.png" alt="野餐湯匙">
-					</div>
-				</div>
-			</section>
-			<section class="goto_activity">
-				<div class="activity_settin">
-					<div class="picnicbg_settin">
-						<img class="mat_settin" src="./scss/img/auimg/mat1.png" alt="野餐墊">
-					<div class="txt">
-						<p>有了美美的籃子和各種野餐用具，就只剩下參加野餐活動啦！</p>
-					</div>
-					<div class="picnicbg_settin">
-						<img class="mat_settin" src="./scss/img/auimg/mat1.png" alt="野餐墊">
-					</div>
-					<div class="picnicfood_settin">
-						<div class="food">
-							<img class="breads_settin bread_c" src="./scss/img/auimg/bread3.png" alt="麵包們">
-							<img class="breads_settin bread_b" src="./scss/img/auimg/bread2.png" alt="麵包們">
-							<img class="breads_settin bread_a" src="./scss/img/auimg/bread1.png" alt="麵包們">
-							<img class="fruit_settin"src="./scss/img/auimg/banana1.png" alt="香蕉">
+					<div class="step_list">
+						<img class="step_line" src="./scss/img/auimg/step_line.png" alt="步驟線">
+						<div class="step_item step_5">
+							<img class="step_bg" src="./scss/img/auimg/stepBG.png" alt="步驟圈">
+							<span class="step_num">5</span>
 						</div>
-						<div class="basket_settin">
-							<img class="customize_basket goto_activity_step_basket" src="./scss/img/auimg/customize_basket.png" alt="客製籃子">
-							<img class="customize_basket goto_activity_step_basket_front" src="./scss/img/auimg/basket2.png" alt="客製籃子">
+						<div class="step_item step_4">
+							<img class="step_bg" src="./scss/img/auimg/stepBG.png" alt="步驟圈">
+							<span class="step_num">4</span>
 						</div>
+						<div class="step_item step_3">
+							<img class="step_bg" src="./scss/img/auimg/stepBG.png" alt="步驟圈">
+							<span class="step_num">3</span>
+						</div>
+						<div class="step_item step_2">
+							<img class="step_bg" src="./scss/img/auimg/stepBG.png" alt="步驟圈">
+							<span class="step_num">2</span>
+						</div>
+						<div class="step_item step_1">
+							<img class="step_bg" src="./scss/img/auimg/stepBG.png" alt="步驟圈">
+							<span class="step_num">1</span>
+						</div>
+					</div>
+					<img class="basket_settin" src="./scss/img/auimg/originalbasket.png" alt="最初的野餐籃造型">
+				</section>
+				<section class="second_step_customize">
+					<div class="context">
+						<div class="txt">
+							<p>美美的籃子客製出來後，為他提供一個舞台發光發熱吧！在這裡有許多經過巧思設計的籃子，除了提著自己精心設計的籃子去參賽以外，不妨也來投投別人一票吧！如果幸運的得到前三名，還可以得到豐富的點數獎勵呢！沒有得到名次也不必灰心喔，參賽者都有小小的點數獎勵呢！</p>
+						</div>
+						<img class="customize_basket" src="./scss/img/auimg/customize_basket.png" alt="客製籃子">
+						<div class="like_information">
+							<img class="like_img" src="./scss/img/auimg/likeit.png" alt="喜歡的按讚">
+							<span class="like_num">1234567</span>
+						</div>
+					</div>
+				</section>
+				<section class="third_step_customize">
+					<div class="context">
+						<div class="txt">
+							<p>除了籃子以外，往往也需要其他精緻的餐具和周邊商品啊！在這裡可以購買許多實用好看的野餐用品喔，比如說木製叉匙、野餐盤、野餐墊、甚至是小小野餐籃！</p>
+						</div>
+						<img class="customize_basket third_step_basket" src="./scss/img/auimg/customize_basket.png" alt="客製籃子">
 						<div class="tableware_settin">
-							<img class="chopping_board goto_activity_step_board" src="./scss/img/auimg/chopping_board.png" alt="野餐板">
-							<div class="food">
-								<img class="cookies_b" src="./scss/img/auimg/cookies2.png" alt="好吃的餅乾">
-								<img class="cookies_a" src="./scss/img/auimg/cookies1.png" alt="好吃的餅乾">
-							</div>
-							<img class="fork_settin goto_activity_fork" src="./scss/img/auimg/fork1.png" alt="野餐叉">
-							<img class="spoon_settin goto_activity_fork" src="./scss/img/auimg/spoon1.png" alt="野餐湯匙">
+							<img class="chopping_board third_step_board" src="./scss/img/auimg/chopping_board.png" alt="野餐板">
+							<img class="fork_settin" src="./scss/img/auimg/fork1.png" alt="野餐叉">
+							<img class="spoon_settin" src="./scss/img/auimg/spoon1.png" alt="野餐湯匙">
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+				<section class="goto_activity">
+					<div class="activity_settin">
+						<div class="picnicbg_settin">
+							<img class="mat_settin" src="./scss/img/auimg/mat1.png" alt="野餐墊">
+						<div class="txt">
+							<p>有了美美的籃子和各種野餐用具，就只剩下參加野餐活動啦！那我們還在等什麼呢！趕快去報名野餐活動</p>
+						</div>
+						<div class="picnicbg_settin">
+							<img class="mat_settin" src="./scss/img/auimg/mat1.png" alt="野餐墊">
+						</div>
+						<div class="picnicfood_settin">
+							<div class="food">
+								<img class="breads_settin bread_c" src="./scss/img/auimg/bread3.png" alt="麵包們">
+								<img class="breads_settin bread_b" src="./scss/img/auimg/bread2.png" alt="麵包們">
+								<img class="breads_settin bread_a" src="./scss/img/auimg/bread1.png" alt="麵包們">
+								<img class="fruit_settin"src="./scss/img/auimg/banana1.png" alt="香蕉">
+							</div>
+							<div class="basket_settin">
+								<img class="customize_basket goto_activity_step_basket" src="./scss/img/auimg/customize_basket.png" alt="客製籃子">
+								<img class="customize_basket goto_activity_step_basket_front" src="./scss/img/auimg/basket2.png" alt="客製籃子">
+							</div>
+							<div class="tableware_settin">
+								<img class="chopping_board goto_activity_step_board" src="./scss/img/auimg/chopping_board.png" alt="野餐板">
+								<div class="food">
+									<img class="cookies_b" src="./scss/img/auimg/cookies2.png" alt="好吃的餅乾">
+									<img class="cookies_a" src="./scss/img/auimg/cookies1.png" alt="好吃的餅乾">
+								</div>
+								<img class="fork_settin goto_activity_fork" src="./scss/img/auimg/fork1.png" alt="野餐叉">
+								<img class="spoon_settin goto_activity_fork" src="./scss/img/auimg/spoon1.png" alt="野餐湯匙">
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 		</div>
 	</section>
 	<section class="teamstory__introduction" id="teamstory">
@@ -233,11 +285,13 @@
 			<div class="paper_bg"></div>
 		</div>
 		<div class="container">
+			<div id="right"></div>
+			<div id="left"></div>
 			<h2>
 				<img class="title_bg" src="./scss/img/auimg/title_bg.png" alt="木製標題">
 				團隊介紹
 			</h2>
-			<div class="context">
+			<div class="context" id="mebmove">
 				<div class="member member_kevin">
 					<img class="portrait" src="./scss/img/auimg/man1.png" alt="小k">
 					<div class="txt">
@@ -285,8 +339,8 @@
 				<div class="member member_becca">
 					<img class="portrait" src="./scss/img/auimg/man1.png" alt="貝卡">
 					<div class="txt">
-						<h3>機靈的貝卡妖精</h3>
-						<p>機靈的貝卡妖精只要發出"啊！"、"咦！"等驚嘆聲，就會有神奇的事情發生，有品味的她擅長想出新鮮的生活點子，雖然有時事情會朝向難以預測的方向發展。</p>
+						<h3>敏銳的貝卡妖精</h3>
+						<p>敏銳的貝卡妖精只要發出"啊！"、"咦！"等驚嘆聲，就會有神奇的事情發生，有品味的她擅長想出新鮮的生活點子，雖然有時事情會朝向難以預測的方向發展。</p>
 					</div>
 					<p class="to_personweb">
 						<img class="person_web_button" src="./scss/img/auimg/web_button.png" alt="外連結按鈕">
@@ -320,28 +374,47 @@
 		</div>
 	</footer>
 </div>
+<script src="js/machine.js"></script>
 <script>
-	function autoscroll(){
-		//註冊container聆聽事件，準備當滑鼠下滑時會滑屏以及自動播放該屏動畫
-		//註冊每屏的動畫開始事件，離開該屏動畫便停止
-		//下滑方式為當滑鼠偵測到5px便會自動捲動屏
+	var current = 0;
+	var curotate = 0;
+	function $id(id){
+		return document.getElementById(id);
+	};
+	function webstorymove(){
+		$id("roulette").style.transform = "rotate("+curotate+"deg)";
+		$id("turnright").onclick = function(){
+			curotate += 90;
+			$id("roulette").style.transform = "rotate("+curotate+"deg)";
+		};
+		$id("turnleft").onclick = function(){
+			curotate -= 90;
+			$id("roulette").style.transform = "rotate("+curotate+"deg)";
+		};
 	}
-	function sushi(){
-		//requestAnimationframes(){}
-		//迴轉壽司動畫
-		//團隊區註冊一個聆聽事件會自己跑member animation
-		//當滑鼠摸到團隊人員時，整個animation會靜止，並且該member會顯示自我介紹和網站連結
-		//一次出現三個人頭，沿著山坡邊緣跑
-	}
+	function teamove(){
+		$id("mebmove").style.transform = "translateX("+current+")";
+		$id("right").onclick = function(){
+			current -= 16.666666;
+			$id("mebmove").style.transform = "translateX("+current+"%)";
+		};
+		$id("left").onclick = function(){
+			current += 16.666666;
+			$id("mebmove").style.transform = "translateX("+current+"%)";
+		};
+		if(current == 0){
+			$id("left").style.visibility = "hidden";
+		}else if(current <= -83){
+			$id("right").style.visibility = "hidden";
+			
+		}else{
+			$id("right").style.visibility = "";
+			$id("left").style.visibility = "";
+		};
+	};
 	function doFirst(){
-		var idea = document.getElementById("idea");
-		var webstory = document.getElementById("webstory");
-		var teamstory = document.getElementById("teamstory");
-		idea.addEventListener("scroll",function(){
-			var current = 
-			current
-		},false);
-		teamstory.addEventListener("load",sushi,false);
+		webstorymove();
+		setInterval(teamove,500);
 	};
 	window.addEventListener("load",doFirst,false);
 </script>
