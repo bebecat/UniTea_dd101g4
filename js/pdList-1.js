@@ -50,7 +50,7 @@ $(".parallax_3d").on("mousemove", function(e) {
 
 //視差
 
-//       //防止手機動
+      //防止手機動
 //       var navbar=document.getElementById("header");
 // navbar.addEventListener('touchmove',function(e){e.preventDefault();
 // })
@@ -104,7 +104,7 @@ var t2 = new TimelineMax({
 
 t2.to(".butterfly_bg", 10, {
   x: 0,
-  y: 200
+  y: 250
   });
 
   //   .to(".butterfly_bg", 3, {
@@ -203,6 +203,68 @@ window.addEventListener("load", function() {
 
 
 
+//設定session及count
+function init(){
+  var storage=localStorage;
+  var storageItemList = storage.getItem("addItemToCart");
+  if(storage["addItemToCart"]==null){
+    storage["addItemToCart"]="";
+  }
+
+var list=document.querySelectorAll(".btn_submit_box");
+console.log(list);
+for (var i = 0; i < list.length; i++) {
+list[i].addEventListener("click", function() { 
+  var pdInfo=this.children[0].value;
+  console.log(this.id);
+  addItem(this.id,pdInfo); //key，value
+    // console.log(this.id);
+  // 選到的那個東西的id
+});
+
+}
+}
+function addItem(itemId,itemValue){
+  var storage = localStorage;
+  var cartCount = $('#cart_count'); //抓到nav購物車的小數字
+  var cartCircle = $("#cart_circle");
+  var storageItemList = storage.getItem("addItemList");
+
+  //loading時就先判斷購物車是否有東西
+  if (storage.getItem("addItemList")) { 
+    //如果addItemList裡面有東西
+      var stArray = storageItemList.split(',');
+      var starrylength = stArray.length - 1; 
+      //扣掉陣列最後一個空字串
+      //若購物車裡有商品，一開始就顯示商品數量
+      if (starrylength >= 1) {
+          cartCircle.attr("style", "visibility:visible"); //小數字顯現       
+          cartCount.text(starrylength);
+      }
+  }
+
+  if(storage[itemId]){
+      // showLoginAlert(loginAlert);
+      alert("商品已在購物車當中");
+  }else{
+      storage[itemId] = itemValue;
+      storage['addItemList'] += itemId + ', ';  
+      //nav的購物車圖示
+      if (starrylength == undefined) {
+          starrylength = 0;
+      }
+      cartCircle.attr("style", "visibility:visible"); 
+      //showCount        
+      var actual = starrylength + 1;
+
+      cartCount.text(actual);
+      // cartCircle.style.transform="scale(1.2)";
+     
+  }
+}
+window.addEventListener("load",init);
+
+
 //飄去購物車
 const pdItem = $(".card_content .pic img");
 const cart = $(".cart");
@@ -233,7 +295,8 @@ pdBtns.click(function(e) {
   const cartL = cartO.left;
   const cartT = cartO.top - window.scrollY;
 
-  // 加一 element 在隨便一 parent，但 position 要設為 fixed
+  // 加一 ele在隨便一 parent
+  // position 設為 fixed
   const itemAnima = `<div 
         class="itemAnima"
         style="
@@ -246,7 +309,7 @@ pdBtns.click(function(e) {
             height:10px;
             border-radius:50%;
             z-index:999;
-            background-color:brown";
+            background-color:#d53e23";
          >`;
   $("nav").append(itemAnima);
 
@@ -259,36 +322,11 @@ pdBtns.click(function(e) {
     });
   }, 100);
   setTimeout(function() {
-    $(".itemAnima").remove();
-    alert("已成功加入購物車");
-  }, 1100);
+    $(".itemAnima").remove();}, 1100);
 });
 
 
-///設定session
-// var storage=sessionStorage;
-// function init(){
-//   if(storage["addItemToCart"]==null){
-//     storage["addItemToCart"]="";
-//   }
-
-// var list=document.querySelectorAll(".btn_submit_box");
-// console.log(list);
-// for (var i = 0; i < list.length; i++) {
-// list[i].addEventListener("click", function() {
-//   // var teddyInfo = document.querySelector('#'+this.id+' input').value;
-//   // var teddyInfo = document.querySelector(`#${this.id} input`).value;
-//   addItem(this.id); //key，value
-//   //   console.log(this.id);
-//   // 選到的那個東西的id
-// });
-
-// }
-// }
-// window.addEventListener("load",init);
-
-
-
+//篩選
 $(document).ready(function(){
   $('.all_filter').click(function(e){
     e.preventDefault();
@@ -309,5 +347,20 @@ $(document).ready(function(){
     $('.pd_card_content').css({display:"none"});
     $('.fork').css({display:"block"});
   });
-})
+  
+});
+
+//seemore
+$("#toggle_see_more").click(function(){
+  var seeMore=$("#toggle_see_more").text();
+  if(seeMore == "查看更多")
+  {
+    $("#toggle_see_more").text("查看更多")
+    $(".see_more").slideDown();
+  }else{
+    $("#toggle_see_more").text("收回查看")
+    $(".see_more").slideUp();
+  }
+});
+
 
