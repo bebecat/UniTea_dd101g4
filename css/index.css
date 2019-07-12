@@ -22,6 +22,36 @@
   font-family: "hanyi";
   src: url("../scss/font/HanyiSentyTang.ttf") format("truetype"); }
 
+h2 {
+  font-size: 20px;
+  color: #222;
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h3 {
+  font-size: 36px;
+  color: #4d3900;
+  font-family: "hanyi";
+  letter-spacing: 2px; }
+
+h4 {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h5 {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+p {
+  font-size: 16px;
+  color: #444;
+  font-family: "Noto Sans TC";
+  letter-spacing: 2px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -29,660 +59,1975 @@
   text-decoration: none;
   box-sizing: border-box; }
 
-.index_wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-  width: 100%;
-  background: url("/scss/img/GengImg/background-grid.png");
-  background-size: 100%;
-  overflow: hidden; }
-  .index_wrapper .container {
+@media screen and (min-width: 768px) {
+  .index_wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
     width: 100%;
-    max-width: 1200px;
-    height: 850px; }
-    .index_wrapper .container .content_txt {
+    overflow: hidden; }
+    .index_wrapper .container_allview {
       display: flex;
-      justify-content: center;
-      width: 100%;
-      position: relative; }
-      .index_wrapper .container .content_txt .box_txt {
-        display: flex;
-        justify-content: center;
-        width: 400px; }
-        .index_wrapper .container .content_txt .box_txt .item_txt {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%; }
-          .index_wrapper .container .content_txt .box_txt .item_txt .txt {
-            width: 100%;
-            margin: 5px;
-            z-index: 2; }
-            .index_wrapper .container .content_txt .box_txt .item_txt .txt img {
-              width: 100%; }
-          .index_wrapper .container .content_txt .box_txt .item_txt .txt_picB {
-            transform-origin: top left;
-            transition: 2s ease-out;
-            animation: txtMove 5s linear infinite alternate; }
-
-@keyframes txtMove {
-  0% {
-    transform: rotate(0deg); }
-  2% {
-    transform: rotate(7deg); }
-  4% {
-    transform: rotate(3deg); }
-  8% {
-    transform: rotate(7deg); }
-  100% {
-    transform: rotate(7deg); } }
-      .index_wrapper .container .content_txt .cloudMove {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: .8; }
-        .index_wrapper .container .content_txt .cloudMove .cloudA {
-          position: absolute;
-          top: 0;
-          right: 0px;
-          animation: cloudRunA 60s infinite alternate ease-out; }
-
-@keyframes cloudRunA {
-  0% {
-    transform: translate(600px); }
-  100% {
-    transform: translate(-1600px); } }
-        .index_wrapper .container .content_txt .cloudMove .cloudB {
-          position: absolute;
-          top: 0;
-          left: 0;
-          animation: cloudRunB 60s infinite alternate ease-out; }
-
-@keyframes cloudRunB {
-  0% {
-    transform: translate(-600px); }
-  100% {
-    transform: translate(1600px); } }
-    .index_wrapper .container .content_object {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      position: relative; }
-      .index_wrapper .container .content_object .box_object {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        position: absolute;
-        top: -150px; }
-        .index_wrapper .container .content_object .box_object .item_object {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%; }
-          .index_wrapper .container .content_object .box_object .item_object .object {
-            width: 200px; }
-            .index_wrapper .container .content_object .box_object .item_object .object img {
-              width: 100%; }
-          .index_wrapper .container .content_object .box_object .item_object .object_tweezers {
-            width: 25%;
-            z-index: 1; }
-      .index_wrapper .container .content_object .box_picnic {
-        width: 700px; }
-        .index_wrapper .container .content_object .box_picnic .item_picnic {
-          display: flex;
-          justify-content: center;
-          width: 100%; }
-          .index_wrapper .container .content_object .box_picnic .item_picnic .picnic {
-            width: 100%; }
-            .index_wrapper .container .content_object .box_picnic .item_picnic .picnic img {
-              width: 100%; }
-    .index_wrapper .container .content_wood {
-      display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      flex-flow: column nowrap;
+      flex-flow: row wrap;
+      width: 100%;
+      max-width: 1994px;
+      padding: 100px 0 0 0;
       position: relative;
-      width: 100%; }
-      .index_wrapper .container .content_wood .box_wood {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 33%;
-        position: relative;
-        z-index: 2; }
-        .index_wrapper .container .content_wood .box_wood img {
-          width: 100%; }
-        .index_wrapper .container .content_wood .box_wood .item_h3 {
-          width: 70%;
-          position: absolute;
-          font-weight: 400;
-          font-size: 25px;
-          color: #502311; }
-      .index_wrapper .container .content_wood .box_makeboxes {
+      background: url(../scss/img/GengImg/BG/BG-11.png);
+      background-size: cover;
+      background-position: center; }
+      .index_wrapper .container_allview .content_main {
+        width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 100%;
-        padding: 10px 0 10px 0;
-        z-index: 2; }
-        .index_wrapper .container .content_wood .box_makeboxes .item_boxes, .index_wrapper .container .content_wood .box_makeboxes .item_exterior {
+        flex-flow: column nowrap;
+        height: 100vh;
+        position: relative; }
+        .index_wrapper .container_allview .content_main .content_txt {
           display: flex;
           justify-content: center;
-          align-items: center;
-          width: 500px;
-          height: 500px; }
-        .index_wrapper .container .content_wood .box_makeboxes .item_boxes {
-          border-radius: 50%;
-          position: relative;
-          background: url("/scss/img/GengImg/Screen02/Screen02tree.png") no-repeat;
-          background-size: 85%;
-          background-position: center; }
-          .index_wrapper .container .content_wood .box_makeboxes .item_boxes .boxes {
+          width: 100%;
+          position: absolute;
+          top: -10%;
+          margin-top: 8%; }
+          .index_wrapper .container_allview .content_main .content_txt .box_txt {
             display: flex;
             justify-content: center;
-            align-items: center;
-            width: 250px;
-            height: 250px; }
-            .index_wrapper .container .content_wood .box_makeboxes .item_boxes .boxes img {
-              width: 100%; }
-          .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped {
-            display: flex;
-            justify-content: center;
-            align-items: center; }
-            .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE {
+            width: 30%;
+            margin: 10px; }
+            .index_wrapper .container_allview .content_main .content_txt .box_txt .item_txt {
               display: flex;
               justify-content: center;
               align-items: center;
-              position: absolute;
-              width: 60px;
-              height: 60px;
-              border-radius: 50%;
-              border: 2px dashed #4173B8;
-              background-color: #A7CFEE;
-              text-align: center; }
-              .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE p {
-                color: #222;
-                font-size: 23px; }
-              .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtA, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtB, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtC, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtD, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtE, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtA, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtB, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtC, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtD, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtE, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtA, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtB, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtC, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtD, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtE, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtA, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtB, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtC, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtD, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtE, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtA, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtB, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtC, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtD, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtE {
+              width: 100%;
+              z-index: 7; }
+              .index_wrapper .container_allview .content_main .content_txt .box_txt .item_txt .txt {
                 width: 100%;
-                position: absolute;
-                right: -80px; }
-                .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtA p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtB p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtC p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtD p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtE p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtA p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtB p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtC p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtD p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtE p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtA p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtB p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtC p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtD p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtE p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtA p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtB p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtC p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtD p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtE p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtA p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtB p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtC p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtD p, .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtE p {
-                  font-size: 100%;
+                margin: 5px;
+                z-index: 7; }
+                .index_wrapper .container_allview .content_main .content_txt .box_txt .item_txt .txt img {
                   width: 100%; }
-            .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepA {
-              top: 50px;
-              right: 50px; }
-            .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepB {
-              top: 130px;
-              right: 0px; }
-            .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepC {
-              top: 220px;
-              right: -20px; }
-            .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepD {
-              top: 310px;
-              right: 0px; }
-            .index_wrapper .container .content_wood .box_makeboxes .item_boxes .shaped .stepE {
-              top: 390px;
-              right: 50px; }
-        .index_wrapper .container .content_wood .box_makeboxes .item_exterior {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 500px;
-          height: 500px; }
-          .index_wrapper .container .content_wood .box_makeboxes .item_exterior .exterior_card {
+              .index_wrapper .container_allview .content_main .content_txt .box_txt .item_txt .txt_picB {
+                transform-origin: top left;
+                transition: 2s ease-out;
+                animation: txtMove 5s linear infinite alternate; }
+  @keyframes txtMove {
+    0% {
+      transform: rotate(0deg); }
+    2% {
+      transform: rotate(7deg); }
+    4% {
+      transform: rotate(3deg); }
+    8% {
+      transform: rotate(7deg); }
+    100% {
+      transform: rotate(7deg); } }
+          .index_wrapper .container_allview .content_main .content_txt .cloudMove {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 400px;
-            height: 450px;
-            position: relative; }
-            .index_wrapper .container .content_wood .box_makeboxes .item_exterior .exterior_card img {
-              width: 100%; }
-            .index_wrapper .container .content_wood .box_makeboxes .item_exterior .exterior_card .exterior_boxes {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-flow: row wrap;
-              width: 350px;
-              height: 350px;
+            opacity: .8; }
+            .index_wrapper .container_allview .content_main .content_txt .cloudMove .cloudA {
               position: absolute;
               top: 0;
-              margin: 60px auto; }
-              .index_wrapper .container .content_wood .box_makeboxes .item_exterior .exterior_card .exterior_boxes .exterior_changebox {
+              right: 0px;
+              animation: cloudRunA 60s infinite alternate ease-out; }
+  @keyframes cloudRunA {
+    0% {
+      transform: translate(600px); }
+    100% {
+      transform: translate(-1600px); } }
+            .index_wrapper .container_allview .content_main .content_txt .cloudMove .cloudB {
+              position: absolute;
+              top: 0;
+              left: 0;
+              animation: cloudRunB 60s infinite alternate ease-out; }
+  @keyframes cloudRunB {
+    0% {
+      transform: translate(-600px); }
+    100% {
+      transform: translate(1600px); } }
+        .index_wrapper .container_allview .content_main .content_object {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin-top: 20%;
+          z-index: 2; }
+          .index_wrapper .container_allview .content_main .content_object .box_picnic {
+            width: 45%; }
+            .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic {
+              display: flex;
+              justify-content: center;
+              width: 100%; }
+              .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .mobile_picnic {
+                display: none; }
+              .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic {
                 display: flex;
                 justify-content: center;
-                width: 45%;
-                padding: 10px; }
-                .index_wrapper .container .content_wood .box_makeboxes .item_exterior .exterior_card .exterior_boxes .exterior_changebox img {
+                width: 100%;
+                position: relative; }
+                .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic img {
+                  width: 100%; }
+                .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_object {
+                  display: flex;
+                  justify-content: center;
                   width: 100%;
-                  padding: 15px;
-                  cursor: pointer; }
-      .index_wrapper .container .content_wood .box_btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 5px 0 5px 0; }
-        .index_wrapper .container .content_wood .box_btn .item_gomakebtn {
-          width: 120px;
-          height: 60px;
-          border-radius: 45px;
-          background-color: #aaa;
-          cursor: pointer;
-          z-index: 2; }
-          .index_wrapper .container .content_wood .box_btn .item_gomakebtn .btn_gomake {
+                  position: absolute;
+                  top: -18%; }
+                  .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_object .item_object {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_object .item_object .object {
+                      width: 25%; }
+                      .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_object .item_object .object img {
+                        width: 100%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_object .item_object .object_tweezers {
+                      width: 35%; }
+                      .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_object .item_object .object_tweezers img {
+                        width: 100%; }
+                .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%; }
+                  .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_sandwich, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_apple, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_knife, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_vase, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_cross, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_jamA, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_jamB, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_tomato, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_tota, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_kettle, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_jaba, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_cake, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_donut {
+                      width: 10%;
+                      position: absolute; }
+                      .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_sandwich img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_apple img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_knife img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_vase img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_cross img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_jamA img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_jamB img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_tomato img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_tota img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_kettle img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_jaba img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_cake img, .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_donut img {
+                        width: 100%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_sandwich {
+                      top: -50%;
+                      left: 0%; }
+  @keyframes sandwichShake {
+    0% {
+      transform: rotate(-10deg); }
+    100% {
+      transform: rotate(15deg); } }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_apple {
+                      top: 0;
+                      left: -30%;
+                      animation: sandwichShake 3s linear infinite alternate; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_knife {
+                      top: -50%;
+                      right: -25%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_vase {
+                      top: -30%;
+                      right: -10%;
+                      animation: sandwichShake 3s linear infinite alternate; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_cross {
+                      bottom: 20%;
+                      right: -20%;
+                      animation: sandwichShake 3s linear infinite alternate; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_jamA {
+                      bottom: 30%;
+                      left: -10%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_jamB {
+                      right: 0; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_tomato {
+                      left: 20%;
+                      bottom: 30%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_tota {
+                      left: 25%;
+                      bottom: 50%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_kettle {
+                      width: 15%;
+                      right: 28%;
+                      top: 30%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_jaba {
+                      width: 15%;
+                      bottom: 20%;
+                      right: 35%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_cake {
+                      width: 20%;
+                      right: 45%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic .box_smobject .item_smobject .smobject_donut {
+                      width: 15%;
+                      bottom: 25%;
+                      left: 40%; }
+        .index_wrapper .container_allview .content_main .content_bgpic {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          position: absolute;
+          bottom: -1%;
+          left: 0; }
+          .index_wrapper .container_allview .content_main .content_bgpic .box_bgpic {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 120px;
-            height: 55px;
-            border-radius: 45px;
-            background-color: #F7E9C3;
-            transition: .5s; }
-            .index_wrapper .container .content_wood .box_btn .item_gomakebtn .btn_gomake:hover {
-              background-color: #F777; }
-              .index_wrapper .container .content_wood .box_btn .item_gomakebtn .btn_gomake:hover p {
-                color: #F7E9C3; }
-            .index_wrapper .container .content_wood .box_btn .item_gomakebtn .btn_gomake p {
-              color: #502311; }
-      .index_wrapper .container .content_wood .birdsMove {
-        width: 100%; }
-        .index_wrapper .container .content_wood .birdsMove .birdsA, .index_wrapper .container .content_wood .birdsMove .birdsB {
-          width: 150px;
-          height: 150px; }
-          .index_wrapper .container .content_wood .birdsMove .birdsA img, .index_wrapper .container .content_wood .birdsMove .birdsB img {
+            position: relative;
             width: 100%; }
-        .index_wrapper .container .content_wood .birdsMove .birdsA {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          animation: birdsRunA 55s linear infinite; }
-
-@keyframes birdsRunA {
-  0% {
-    transform: translate(1900px); }
-  50% {
-    transform: translateY(-300px); }
-  100% {
-    transform: translate(-1900px); } }
-        .index_wrapper .container .content_wood .birdsMove .birdsB {
-          position: absolute;
-          top: 0;
-          right: 0;
-          animation: birdsRunB 55s linear infinite; }
-
-@keyframes birdsRunB {
-  0% {
-    transform: translate(1900px); }
-  50% {
-    transform: translateY(500px); }
-  100% {
-    transform: translate(-1900px); } }
-    .index_wrapper .container .content_vote {
+            .index_wrapper .container_allview .content_main .content_bgpic .box_bgpic .item_bgpic {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              position: absolute;
+              top: -10%;
+              left: 0; }
+              .index_wrapper .container_allview .content_main .content_bgpic .box_bgpic .item_bgpic img {
+                width: 101%; }
+            .index_wrapper .container_allview .content_main .content_bgpic .box_bgpic .cA {
+              animation: cA 3s linear infinite alternate; }
+  @keyframes cA {
+    0% {
+      transform: translateY(0px) scale(1.1); }
+    100% {
+      transform: translateY(5px) scale(1.2); } }
+            .index_wrapper .container_allview .content_main .content_bgpic .box_bgpic .cB {
+              animation: cB 2.5s linear infinite alternate; }
+  @keyframes cB {
+    0% {
+      transform: translateY(0px) scale(1); }
+    100% {
+      transform: translateY(5px) scale(1.1); } }
+            .index_wrapper .container_allview .content_main .content_bgpic .box_bgpic .cC {
+              animation: cC 3.5s linear infinite alternate; }
+  @keyframes cC {
+    0% {
+      transform: translateY(0px) scale(1); }
+    100% {
+      transform: translateY(10px) scale(1.1); } }
+            .index_wrapper .container_allview .content_main .content_bgpic .box_bgpic .gA {
+              width: 100%;
+              z-index: 1; }
+              .index_wrapper .container_allview .content_main .content_bgpic .box_bgpic .gA img {
+                width: 100%; }
+    .index_wrapper .container_inBackground {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-flow: column nowrap;
-      position: relative;
-      width: 100%; }
-      .index_wrapper .container .content_vote .box_vote {
+      width: 100%;
+      max-width: 1994px;
+      overflow: hidden; }
+      .index_wrapper .container_inBackground .container_boxes {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        flex-flow: column nowrap;
         width: 100%;
-        height: 500px; }
-        .index_wrapper .container .content_vote .box_vote .item_vote {
+        background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
+        background-size: cover;
+        background-position: center; }
+        .index_wrapper .container_inBackground .container_boxes .content_wood {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-flow: column nowrap;
+          position: relative;
+          max-width: 1200px;
+          width: 100%; }
+          .index_wrapper .container_inBackground .container_boxes .content_wood .box_wood {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 33%;
+            position: relative;
+            z-index: 2; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_wood img {
+              width: 100%; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_wood .item_h3 {
+              width: 70%;
+              position: absolute;
+              font-weight: 400;
+              font-size: 25px;
+              color: #502311; }
+          .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            padding: 10px 0 10px 0;
+            z-index: 2; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_exterior {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 500px;
+              height: 500px; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes {
+              border-radius: 50%;
+              position: relative;
+              background: url("../scss/img/GengImg/Screen02/Screen02tree.png") no-repeat;
+              background-size: 85%;
+              background-position: center; }
+              .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .boxes {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .boxes img {
+                  width: 100%; }
+              .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped {
+                display: flex;
+                justify-content: center;
+                align-items: center; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: absolute;
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  border: 2px dashed #4173B8;
+                  background-color: #A7CFEE;
+                  text-align: center; }
+                  .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE p {
+                    color: #222;
+                    font-size: 23px; }
+                  .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtA, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtB, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtC, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtD, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtE, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtA, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtB, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtC, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtD, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtE, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtA, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtB, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtC, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtD, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtE, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtA, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtB, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtC, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtD, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtE, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtA, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtB, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtC, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtD, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtE {
+                    width: 100%;
+                    position: absolute;
+                    right: -80px; }
+                    .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtA p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtB p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtC p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtD p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA .step_txtE p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtA p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtB p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtC p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtD p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB .step_txtE p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtA p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtB p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtC p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtD p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC .step_txtE p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtA p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtB p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtC p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtD p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD .step_txtE p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtA p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtB p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtC p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtD p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE .step_txtE p {
+                      font-size: 100%;
+                      width: 100%; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA {
+                  top: 50px;
+                  right: 50px; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB {
+                  top: 130px;
+                  right: 0px; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC {
+                  top: 220px;
+                  right: -20px; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD {
+                  top: 310px;
+                  right: 0px; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE {
+                  top: 390px;
+                  right: 50px; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_exterior {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 500px;
+              height: 500px; }
+              .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_exterior .exterior_card {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 400px;
+                height: 450px;
+                position: relative; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_exterior .exterior_card img {
+                  width: 100%; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_exterior .exterior_card .exterior_boxes {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-flow: row wrap;
+                  width: 350px;
+                  height: 350px;
+                  position: absolute;
+                  top: 0;
+                  margin: 60px auto; }
+                  .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_exterior .exterior_card .exterior_boxes .exterior_changebox {
+                    display: flex;
+                    justify-content: center;
+                    width: 45%;
+                    padding: 10px; }
+                    .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_exterior .exterior_card .exterior_boxes .exterior_changebox img {
+                      width: 100%;
+                      padding: 15px;
+                      cursor: pointer; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_mobileexterior {
+              display: none; }
+          .index_wrapper .container_inBackground .container_boxes .content_wood .box_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 5px 0 5px 0;
+            margin: 0 0 5% 0; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_btn .item_gomakebtn {
+              width: 120px;
+              height: 60px;
+              border-radius: 45px;
+              background-color: #aaa;
+              cursor: pointer;
+              z-index: 2; }
+              .index_wrapper .container_inBackground .container_boxes .content_wood .box_btn .item_gomakebtn .btn_gomake {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 120px;
+                height: 55px;
+                border-radius: 45px;
+                background-color: #F7E9C3;
+                transition: .5s; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_btn .item_gomakebtn .btn_gomake:hover {
+                  background-color: #F777; }
+                  .index_wrapper .container_inBackground .container_boxes .content_wood .box_btn .item_gomakebtn .btn_gomake:hover p {
+                    color: #F7E9C3; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_btn .item_gomakebtn .btn_gomake p {
+                  color: #502311; }
+          .index_wrapper .container_inBackground .container_boxes .content_wood .birdsMove {
+            width: 100%; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .birdsMove .birdsA, .index_wrapper .container_inBackground .container_boxes .content_wood .birdsMove .birdsB {
+              width: 150px;
+              height: 150px; }
+              .index_wrapper .container_inBackground .container_boxes .content_wood .birdsMove .birdsA img, .index_wrapper .container_inBackground .container_boxes .content_wood .birdsMove .birdsB img {
+                width: 100%; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .birdsMove .birdsA {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              animation: birdsRunA 55s linear infinite; }
+  @keyframes birdsRunA {
+    0% {
+      transform: translate(1900px); }
+    50% {
+      transform: translateY(-300px); }
+    100% {
+      transform: translate(-1900px); } }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .birdsMove .birdsB {
+              position: absolute;
+              top: 0;
+              right: 0;
+              animation: birdsRunB 55s linear infinite; }
+  @keyframes birdsRunB {
+    0% {
+      transform: translate(1900px); }
+    50% {
+      transform: translateY(500px); }
+    100% {
+      transform: translate(-1900px); } }
+      .index_wrapper .container_inBackground .container_vote {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: column nowrap;
+        width: 100%;
+        background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
+        background-size: cover;
+        background-position: center; }
+        .index_wrapper .container_inBackground .container_vote .content_wood {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-flow: column nowrap;
+          position: relative;
+          max-width: 1200px;
+          width: 100%; }
+          .index_wrapper .container_inBackground .container_vote .content_wood .box_wood {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 33%;
+            position: relative;
+            z-index: 2; }
+            .index_wrapper .container_inBackground .container_vote .content_wood .box_wood img {
+              width: 100%; }
+            .index_wrapper .container_inBackground .container_vote .content_wood .box_wood .item_h3 {
+              width: 70%;
+              position: absolute;
+              font-weight: 400;
+              font-size: 25px;
+              color: #502311; }
+        .index_wrapper .container_inBackground .container_vote .content_vote {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-flow: column nowrap;
+          position: relative;
+          max-width: 1200px;
+          width: 100%; }
+          .index_wrapper .container_inBackground .container_vote .content_vote .box_vote {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 500px; }
+            .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote {
+              display: flex;
+              justify-content: space-around;
+              align-items: flex-end;
+              width: 100%;
+              height: 100%; }
+              .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote .vote_pic {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column nowrap;
+                border: 3px dashed #F7E9C3;
+                background-color: #EDD8C9;
+                border-radius: 50%;
+                width: 250px;
+                height: 250px;
+                z-index: 2; }
+                .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote .vote_pic .vote_img {
+                  width: 45%;
+                  transition: 2s;
+                  animation: voteBoxesShake 5s linear infinite alternate; }
+                  .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote .vote_pic .vote_img img {
+                    width: 100%; }
+  @keyframes voteBoxesShake {
+    0% {
+      transform: rotate(0deg); }
+    25% {
+      transform: rotate(-11deg); }
+    50% {
+      transform: rotate(11deg); }
+    75% {
+      transform: rotate(-11deg); }
+    100% {
+      transform: rotate(0deg); } }
+                .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote .vote_pic .vote_txt {
+                  width: 100%;
+                  margin: 10px;
+                  padding: 5px 10px 5px 10px; }
+                  .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote .vote_pic .vote_txt .ranking {
+                    color: #91502A;
+                    font-size: 20px; }
+                  .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote .vote_pic .vote_txt .math {
+                    display: flex;
+                    justify-content: center;
+                    color: #91502A;
+                    margin: 5px; }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote .vote_pic .vote_txt .math p {
+                      padding: 3px; }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote .vote_pic .vote_txt .math .heart {
+                      width: 25px;
+                      padding: 3px; }
+                      .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote .vote_pic .vote_txt .math .heart img {
+                        width: 100%; }
+            .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .crown {
+              align-items: center; }
+              .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .crown .no1 {
+                display: flex;
+                justify-content: center;
+                position: relative; }
+                .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .crown .no1 .crown_pic {
+                  position: absolute;
+                  top: -42px;
+                  width: 60px;
+                  height: 60px; }
+                  .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .crown .no1 .crown_pic img {
+                    width: 100%; }
+          .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; }
+            .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%; }
+              .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                position: relative; }
+                .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land img {
+                  width: 100%; }
+                .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%;
+                  position: absolute;
+                  top: 0; }
+                  .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04A {
+                    position: absolute;
+                    top: 1%;
+                    left: 40%;
+                    width: 2%;
+                    transform-origin: bottom;
+                    animation: e04A 3s linear infinite alternate; }
+  @keyframes e04A {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(2deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04A img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04A .votepic_treeA {
+                      position: absolute;
+                      top: -20%;
+                      left: -50%;
+                      width: 250%;
+                      animation: votetreeA 3s linear infinite alternate; }
+  @keyframes votetreeA {
+    0% {
+      transform: translateX(0px); }
+    100% {
+      transform: translateX(5px); } }
+                      .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04A .votepic_treeA img {
+                        width: 100%; }
+                  .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04B {
+                    position: absolute;
+                    top: 1%;
+                    width: 2%;
+                    transform-origin: bottom;
+                    animation: e04B 3s linear infinite alternate; }
+  @keyframes e04B {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(-2deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04B img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04B .votepic_treeB {
+                      position: absolute;
+                      top: -20%;
+                      left: -50%;
+                      width: 250%;
+                      animation: votetreeB 3s linear infinite alternate; }
+  @keyframes votetreeB {
+    0% {
+      transform: translateX(0px); }
+    100% {
+      transform: translateX(-5px); } }
+                      .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04B .votepic_treeB img {
+                        width: 100%; }
+                  .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04C {
+                    position: absolute;
+                    top: 1%;
+                    left: 55%;
+                    width: 2%;
+                    transform-origin: bottom;
+                    animation: e04C 3s linear infinite alternate; }
+  @keyframes e04C {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(2deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04C img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04C .votepic_treeC {
+                      position: absolute;
+                      top: -20%;
+                      left: -50%;
+                      width: 250%;
+                      animation: votetreeC 2s linear infinite alternate; }
+  @keyframes votetreeC {
+    0% {
+      transform: translateX(0px); }
+    100% {
+      transform: translateX(3px); } }
+                      .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04C .votepic_treeC img {
+                        width: 100%; }
+                  .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04D {
+                    position: absolute;
+                    top: 1%;
+                    left: 60%;
+                    width: 2%;
+                    transform-origin: bottom;
+                    animation: e04D 4s linear infinite alternate; }
+  @keyframes e04D {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(3deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04D img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04D .votepic_treeD {
+                      position: absolute;
+                      top: -20%;
+                      left: -50%;
+                      width: 250%;
+                      animation: votetreeD 4s linear infinite alternate; }
+  @keyframes votetreeD {
+    0% {
+      transform: translateX(0px); }
+    100% {
+      transform: translateX(-5px); } }
+                      .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04D .votepic_treeD img {
+                        width: 100%; }
+                  .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gAbig {
+                    position: absolute;
+                    top: 5%;
+                    left: 30%;
+                    width: 7%;
+                    animation: gAbig 2s linear infinite alternate; }
+  @keyframes gAbig {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(5deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gAbig img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gAbig .votepic_gAsm {
+                      position: absolute;
+                      top: 30%;
+                      left: 20%;
+                      width: 70%;
+                      animation: gAsm 2s linear infinite alternate; }
+  @keyframes gAsm {
+    0% {
+      transform: rotate(5deg); }
+    100% {
+      transform: rotate(0deg); } }
+                      .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gAbig .votepic_gAsm img {
+                        width: 100%; }
+                  .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gBbig {
+                    position: absolute;
+                    top: 2%;
+                    left: 70%;
+                    width: 7%;
+                    animation: gBbig 2s linear infinite alternate; }
+  @keyframes gBbig {
+    0% {
+      transform: rotate(5deg); }
+    100% {
+      transform: rotate(10deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gBbig img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gBbig .votepic_gBsm {
+                      position: absolute;
+                      top: 30%;
+                      left: 20%;
+                      width: 70%;
+                      animation: gAsm 2s linear infinite alternate; }
+  @keyframes gBsm {
+    0% {
+      transform: rotate(10deg); }
+    100% {
+      transform: rotate(5deg); } }
+                      .index_wrapper .container_inBackground .container_vote .content_vote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gBbig .votepic_gBsm img {
+                        width: 100%; }
+          .index_wrapper .container_inBackground .container_vote .content_vote .box_votebtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 5px 0 5px 0;
+            margin: 0 0 5% 0; }
+            .index_wrapper .container_inBackground .container_vote .content_vote .box_votebtn .item_govotebtn {
+              width: 120px;
+              height: 60px;
+              border-radius: 45px;
+              background-color: #aaa;
+              cursor: pointer;
+              z-index: 2; }
+              .index_wrapper .container_inBackground .container_vote .content_vote .box_votebtn .item_govotebtn .btn_govote {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 120px;
+                height: 55px;
+                border-radius: 45px;
+                background-color: #F7E9C3;
+                transition: .5s; }
+                .index_wrapper .container_inBackground .container_vote .content_vote .box_votebtn .item_govotebtn .btn_govote:hover {
+                  background-color: #F777; }
+                  .index_wrapper .container_inBackground .container_vote .content_vote .box_votebtn .item_govotebtn .btn_govote:hover p {
+                    color: #F7E9C3; }
+                .index_wrapper .container_inBackground .container_vote .content_vote .box_votebtn .item_govotebtn .btn_govote p {
+                  color: #502311; }
+          .index_wrapper .container_inBackground .container_vote .content_vote .leafMove {
+            width: 100%; }
+            .index_wrapper .container_inBackground .container_vote .content_vote .leafMove .leafA, .index_wrapper .container_inBackground .container_vote .content_vote .leafMove .leafB {
+              width: 150px;
+              position: absolute; }
+              .index_wrapper .container_inBackground .container_vote .content_vote .leafMove .leafA img, .index_wrapper .container_inBackground .container_vote .content_vote .leafMove .leafB img {
+                width: 100%; }
+            .index_wrapper .container_inBackground .container_vote .content_vote .leafMove .leafA {
+              bottom: 0;
+              left: 0;
+              animation: leafRunA 25s linear infinite; }
+  @keyframes leafRunA {
+    0% {
+      transform: translate(-1900px); }
+    40% {
+      transform: translateY(-500px) rotate(360deg); }
+    100% {
+      transform: translate(1900px); } }
+            .index_wrapper .container_inBackground .container_vote .content_vote .leafMove .leafB {
+              top: 0;
+              left: 0;
+              animation: leafRunB 29s linear infinite; }
+  @keyframes leafRunB {
+    0% {
+      transform: translate(-1900px); }
+    40% {
+      transform: translateY(500px) rotate(360deg); }
+    100% {
+      transform: translate(1900px); } }
+        .index_wrapper .container_inBackground .container_vote .content_mobilevote {
+          display: none; }
+      .index_wrapper .container_inBackground .container_store {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: column nowrap;
+        width: 100%;
+        background: url(../scss/img/GengImg/background-grid.png);
+        background-size: cover;
+        background-position: center;
+        position: relative; }
+        .index_wrapper .container_inBackground .container_store .content_wood {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-flow: column nowrap;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          max-width: 1200px; }
+          .index_wrapper .container_inBackground .container_store .content_wood .box_wood {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 33%;
+            position: relative;
+            z-index: 2; }
+            .index_wrapper .container_inBackground .container_store .content_wood .box_wood img {
+              width: 100%; }
+            .index_wrapper .container_inBackground .container_store .content_wood .box_wood .item_h3 {
+              width: 70%;
+              position: absolute;
+              font-weight: 400;
+              font-size: 25px;
+              color: #502311; }
+        .index_wrapper .container_inBackground .container_store .content_storebg {
+          display: flex;
+          justify-content: center;
+          flex-flow: row;
+          width: 100%;
+          position: relative;
+          overflow: hidden; }
+          .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            position: relative;
+            margin: 10%; }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-flow: column nowrap;
+              max-width: 1200px;
+              width: 100%; }
+              .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                padding: 20px; }
+                .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts .item_hotproducts {
+                  width: 25%; }
+                  .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative; }
+                    .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_img {
+                      width: 50%;
+                      position: absolute; }
+                      .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_img img {
+                        width: 100%; }
+                    .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_board {
+                      position: absolute;
+                      bottom: -20px;
+                      width: 55%; }
+                      .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_board img {
+                        width: 100%; }
+                      .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_board .hotproducts_txt {
+                        width: 100%;
+                        position: absolute;
+                        bottom: 20px; }
+                        .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_board .hotproducts_txt h3 {
+                          color: #502311;
+                          font-size: 28px; }
+              .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproductsgrass {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                padding: 20px 0 0 0; }
+                .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproductsgrass .item_hotproductsgrassA {
+                  width: 20%;
+                  animation: grassShake 6s infinite; }
+                  .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproductsgrass .item_hotproductsgrassA img {
+                    width: 100%; }
+  @keyframes grassShake {
+    0% {
+      transform: translate(0px); }
+    2% {
+      transform: translate(2px); }
+    4% {
+      transform: translate(-4px); }
+    8% {
+      transform: translate(4px); }
+    100% {
+      transform: translate(0px); } }
+                .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproductsgrass .item_hotproductsbtn {
+                  width: 120px;
+                  height: 60px;
+                  border-radius: 45px;
+                  background-color: #aaa;
+                  cursor: pointer;
+                  z-index: 2; }
+                  .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 120px;
+                    height: 55px;
+                    border-radius: 45px;
+                    background-color: #F7E9C3;
+                    transition: .5s; }
+                    .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts:hover {
+                      background-color: #F777; }
+                      .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts:hover p {
+                        color: #F7E9C3; }
+                    .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts p {
+                      color: #502311; }
+                .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproductsgrass .item_hotproductsgrassB {
+                  width: 20%;
+                  animation: grassShake 6s infinite; }
+                  .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproductsgrass .item_hotproductsgrassB img {
+                    width: 100%; }
+          .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB {
+            width: 20%;
+            position: absolute;
+            animation: topGrassShake 3s linear infinite alternate;
+            transform-origin: top; }
+  @keyframes topGrassShake {
+    0% {
+      transform: translateY(0px); }
+    100% {
+      transform: translateY(-10px); } }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB img {
+              width: 100%; }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassA1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassA2, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassB1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassB2, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassA1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassA2, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassB1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassB2 {
+              width: 70%;
+              position: absolute;
+              animation: leftsmGrassShake 3s linear infinite alternate;
+              transform-origin: top left; }
+  @keyframes leftsmGrassShake {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(5deg); } }
+              .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassA1 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassA2 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassB1 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassB2 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassA1 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassA2 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassB1 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassB2 img {
+                width: 100%; }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassA1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassA2, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassB1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassB2, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassA1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassA2, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassB1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassB2 {
+              width: 90%;
+              position: absolute;
+              animation: leftbigGrassShake 3s linear infinite alternate;
+              transform-origin: top left; }
+  @keyframes leftbigGrassShake {
+    0% {
+      transform: rotate(5deg); }
+    100% {
+      transform: rotate(0deg); } }
+              .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassA1 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassA2 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassB1 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassB2 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassA1 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassA2 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassB1 img, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassB2 img {
+                width: 100%; }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassA1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassA1 {
+              top: 50%;
+              left: -20%; }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassA2, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassA2 {
+              top: 220%;
+              left: -35%; }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassA1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassA1 {
+              top: 130%;
+              left: -30%; }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassA2, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassA2 {
+              top: 300%;
+              left: -35%; }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassB1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassB1 {
+              top: 50%;
+              right: -20%; }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storesmgrassB2, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storesmgrassB2 {
+              top: 220%;
+              right: -35%; }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassB1, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassB1 {
+              top: 130%;
+              right: -35%; }
+            .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA .storebiggrassB2, .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB .storebiggrassB2 {
+              top: 300%;
+              right: -30%; }
+          .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgA {
+            top: -1%;
+            left: 0; }
+          .index_wrapper .container_inBackground .container_store .content_storebg .box_storebgB {
+            top: 0;
+            right: 0; }
+        .index_wrapper .container_inBackground .container_store .content_mobilehotproducts, .index_wrapper .container_inBackground .container_store .owl-carousel {
+          display: none; }
+      .index_wrapper .container_inBackground .container_game {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: column nowrap;
+        width: 100%;
+        padding: 0 0 5% 0; }
+        .index_wrapper .container_inBackground .container_game .content_gamebg {
           display: flex;
           justify-content: space-around;
           align-items: center;
+          flex-flow: column nowrap;
+          position: relative;
           width: 100%;
-          height: 100%; }
-          .index_wrapper .container .content_vote .box_vote .item_vote .vote_pic {
+          height: 100vh; }
+          .index_wrapper .container_inBackground .container_game .content_gamebg img {
+            width: 100%; }
+          .index_wrapper .container_inBackground .container_game .content_gamebg .game_picA, .index_wrapper .container_inBackground .container_game .content_gamebg .game_picB {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0; }
+          .index_wrapper .container_inBackground .container_game .content_gamebg .content_wood {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-flow: column nowrap;
-            border: 3px dashed #F7E9C3;
-            background-color: #EDD8C9;
-            border-radius: 50%;
-            width: 250px;
-            height: 250px;
-            z-index: 2; }
-            .index_wrapper .container .content_vote .box_vote .item_vote .vote_pic .vote_img {
-              width: 45%;
-              transition: 2s;
-              animation: voteBoxesShake 5s linear infinite alternate; }
-              .index_wrapper .container .content_vote .box_vote .item_vote .vote_pic .vote_img img {
+            position: absolute;
+            top: 8%;
+            max-width: 1200px;
+            width: 100%; }
+            .index_wrapper .container_inBackground .container_game .content_gamebg .content_wood .box_wood {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 33%;
+              position: relative;
+              z-index: 2; }
+              .index_wrapper .container_inBackground .container_game .content_gamebg .content_wood .box_wood img {
                 width: 100%; }
-
-@keyframes voteBoxesShake {
-  0% {
-    transform: rotate(0deg); }
-  25% {
-    transform: rotate(-11deg); }
-  50% {
-    transform: rotate(11deg); }
-  75% {
-    transform: rotate(-11deg); }
-  100% {
-    transform: rotate(0deg); } }
-            .index_wrapper .container .content_vote .box_vote .item_vote .vote_pic .vote_txt {
-              width: 100%;
-              margin: 10px;
-              padding: 5px 10px 5px 10px; }
-              .index_wrapper .container .content_vote .box_vote .item_vote .vote_pic .vote_txt .ranking {
-                color: #91502A;
-                font-size: 20px; }
-              .index_wrapper .container .content_vote .box_vote .item_vote .vote_pic .vote_txt .math {
+              .index_wrapper .container_inBackground .container_game .content_gamebg .content_wood .box_wood .item_h3 {
+                width: 70%;
+                position: absolute;
+                font-weight: 400;
+                font-size: 25px;
+                color: #502311; }
+          .index_wrapper .container_inBackground .container_game .content_gamebg .content_game {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            max-width: 1200px;
+            width: 100%;
+            position: absolute;
+            top: 20%; }
+            .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game {
+              width: 100%; }
+              .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game {
                 display: flex;
                 justify-content: center;
-                color: #91502A;
-                margin: 5px; }
-                .index_wrapper .container .content_vote .box_vote .item_vote .vote_pic .vote_txt .math p {
-                  padding: 3px; }
-                .index_wrapper .container .content_vote .box_vote .item_vote .vote_pic .vote_txt .math .heart {
-                  width: 25px;
-                  padding: 3px; }
-                  .index_wrapper .container .content_vote .box_vote .item_vote .vote_pic .vote_txt .math .heart img {
-                    width: 100%; }
-        .index_wrapper .container .content_vote .box_vote .crown {
-          align-items: flex-start;
-          background: url("/scss/img/GengImg/Screen02/Screen02tree.png") no-repeat;
-          background-size: 100%;
-          background-position: bottom; }
-          .index_wrapper .container .content_vote .box_vote .crown .no1 {
-            display: flex;
-            justify-content: center;
-            position: relative; }
-            .index_wrapper .container .content_vote .box_vote .crown .no1 .crown_pic {
-              position: absolute;
-              top: -42px;
-              width: 60px;
-              height: 60px; }
-              .index_wrapper .container .content_vote .box_vote .crown .no1 .crown_pic img {
+                align-items: center;
                 width: 100%; }
-      .index_wrapper .container .content_vote .box_votebtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 5px 0 5px 0; }
-        .index_wrapper .container .content_vote .box_votebtn .item_govotebtn {
-          width: 120px;
-          height: 60px;
-          border-radius: 45px;
-          background-color: #aaa;
-          cursor: pointer;
-          z-index: 2; }
-          .index_wrapper .container .content_vote .box_votebtn .item_govotebtn .btn_govote {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 120px;
-            height: 55px;
-            border-radius: 45px;
-            background-color: #F7E9C3;
-            transition: .5s; }
-            .index_wrapper .container .content_vote .box_votebtn .item_govotebtn .btn_govote:hover {
-              background-color: #F777; }
-              .index_wrapper .container .content_vote .box_votebtn .item_govotebtn .btn_govote:hover p {
-                color: #F7E9C3; }
-            .index_wrapper .container .content_vote .box_votebtn .item_govotebtn .btn_govote p {
-              color: #502311; }
-      .index_wrapper .container .content_vote .leafMove {
-        width: 100%; }
-        .index_wrapper .container .content_vote .leafMove .leafA, .index_wrapper .container .content_vote .leafMove .leafB {
-          width: 150px;
-          position: absolute; }
-          .index_wrapper .container .content_vote .leafMove .leafA img, .index_wrapper .container .content_vote .leafMove .leafB img {
-            width: 100%; }
-        .index_wrapper .container .content_vote .leafMove .leafA {
-          bottom: 0;
-          left: 0;
-          animation: leafRunA 25s linear infinite; }
+                .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game .vine_boxes {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 80%;
+                  position: relative;
+                  background: url("/scss/img/GengImg/Screen05/Screen05moutain.png") no-repeat;
+                  background-size: 50%;
+                  background-position: center; }
+                  .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game .vine_boxes .boxes_shake {
+                    width: 20%;
+                    transition: 2s;
+                    transform-origin: top;
+                    animation: boxesRun 6s linear infinite alternate; }
+                    .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game .vine_boxes .boxes_shake img {
+                      width: 100%; }
+  @keyframes boxesRun {
+    0% {
+      transform: rotate(30deg); }
+    100% {
+      transform: rotate(-30deg); } }
+                  .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game .vine_boxes .bee_shake {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; }
+                    .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game .vine_boxes .bee_shake .beeA, .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game .vine_boxes .bee_shake .beeB {
+                      width: 15%;
+                      position: absolute; }
+                      .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game .vine_boxes .bee_shake .beeA img, .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game .vine_boxes .bee_shake .beeB img {
+                        width: 100%; }
+                    .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game .vine_boxes .bee_shake .beeA {
+                      top: 25%;
+                      left: 0;
+                      animation: beeShakeA .9s linear infinite alternate; }
+  @keyframes beeShakeA {
+    0% {
+      transform: translateY(0px) translateX(0px); }
+    100% {
+      transform: translateY(5px) translateX(3px); } }
+                    .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game .vine_boxes .bee_shake .beeB {
+                      top: 50%;
+                      right: 0;
+                      animation: beeShakeB 1.2s linear infinite alternate; }
+  @keyframes beeShakeB {
+    0% {
+      transform: translateY(0px) translateX(0px); }
+    100% {
+      transform: translateY(5px) translateX(3px); } }
+            .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_gamebtn {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              padding: 5px 0 5px 0; }
+              .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_gamebtn .item_gamebtn {
+                width: 120px;
+                height: 60px;
+                border-radius: 45px;
+                background-color: #aaa;
+                cursor: pointer;
+                z-index: 2; }
+                .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_gamebtn .item_gamebtn .btn_gotoplay {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 120px;
+                  height: 55px;
+                  border-radius: 45px;
+                  background-color: #F7E9C3;
+                  transition: .5s; }
+                  .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_gamebtn .item_gamebtn .btn_gotoplay:hover {
+                    background-color: #F777; }
+                    .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_gamebtn .item_gamebtn .btn_gotoplay:hover p {
+                      color: #F7E9C3; }
+                  .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_gamebtn .item_gamebtn .btn_gotoplay p {
+                    color: #502311; } }
 
-@keyframes leafRunA {
-  0% {
-    transform: translate(-1900px); }
-  40% {
-    transform: translateY(-500px) rotate(360deg); }
-  100% {
-    transform: translate(1900px); } }
-        .index_wrapper .container .content_vote .leafMove .leafB {
-          top: 0;
-          left: 0;
-          animation: leafRunB 29s linear infinite; }
-
-@keyframes leafRunB {
-  0% {
-    transform: translate(-1900px); }
-  40% {
-    transform: translateY(500px) rotate(360deg); }
-  100% {
-    transform: translate(1900px); } }
-    .index_wrapper .container .content_hotproducts {
+@media screen and (max-width: 768px) {
+  html, body {
+    position: relative;
+    height: 100%; }
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0; }
+  .index_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+    overflow: hidden; }
+    .index_wrapper .container_allview {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: column nowrap;
-      width: 100%; }
-      .index_wrapper .container .content_hotproducts .box_hotproducts {
+      width: 100%;
+      position: relative;
+      background: url(../scss/img/GengImg/BG/BG_1.png) no-repeat;
+      background-size: cover;
+      background-position: center; }
+      .index_wrapper .container_allview .content_main {
+        width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 100%;
-        padding: 20px; }
-        .index_wrapper .container .content_hotproducts .box_hotproducts .item_hotproducts {
-          width: 25%; }
-          .index_wrapper .container .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative; }
-            .index_wrapper .container .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes img {
+        flex-flow: column nowrap;
+        height: 100vh;
+        position: relative; }
+        .index_wrapper .container_allview .content_main .content_txt {
+          width: 100%;
+          margin-top: 10%; }
+          .index_wrapper .container_allview .content_main .content_txt .box_txt {
+            width: 100%; }
+            .index_wrapper .container_allview .content_main .content_txt .box_txt .item_txt {
+              display: flex;
+              justify-content: center;
+              align-items: center;
               width: 100%; }
-            .index_wrapper .container .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_img {
-              width: 50%;
-              position: absolute; }
-              .index_wrapper .container .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_img img {
+              .index_wrapper .container_allview .content_main .content_txt .box_txt .item_txt img {
                 width: 100%; }
-            .index_wrapper .container .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_board {
-              position: absolute;
-              bottom: -20px;
-              width: 55%; }
-              .index_wrapper .container .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_board img {
-                width: 100%; }
-              .index_wrapper .container .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_board .hotproducts_txt {
-                width: 100%;
-                position: absolute;
-                bottom: 20px; }
-                .index_wrapper .container .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_board .hotproducts_txt h3 {
-                  color: #502311;
-                  font-size: 28px; }
-      .index_wrapper .container .content_hotproducts .box_hotproductsgrass {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        padding: 20px 0 0 0; }
-        .index_wrapper .container .content_hotproducts .box_hotproductsgrass .item_hotproductsgrassA {
-          width: 20%;
-          animation: grassShake 6s infinite; }
-          .index_wrapper .container .content_hotproducts .box_hotproductsgrass .item_hotproductsgrassA img {
-            width: 100%; }
-
-@keyframes grassShake {
-  0% {
-    transform: translate(0px); }
-  2% {
-    transform: translate(2px); }
-  4% {
-    transform: translate(-4px); }
-  8% {
-    transform: translate(4px); }
-  100% {
-    transform: translate(0px); } }
-        .index_wrapper .container .content_hotproducts .box_hotproductsgrass .item_hotproductsbtn {
-          width: 120px;
-          height: 60px;
-          border-radius: 45px;
-          background-color: #aaa;
-          cursor: pointer;
-          z-index: 2; }
-          .index_wrapper .container .content_hotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 120px;
-            height: 55px;
-            border-radius: 45px;
-            background-color: #F7E9C3;
-            transition: .5s; }
-            .index_wrapper .container .content_hotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts:hover {
-              background-color: #F777; }
-              .index_wrapper .container .content_hotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts:hover p {
-                color: #F7E9C3; }
-            .index_wrapper .container .content_hotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts p {
-              color: #502311; }
-        .index_wrapper .container .content_hotproducts .box_hotproductsgrass .item_hotproductsgrassB {
-          width: 20%;
-          animation: grassShake 6s infinite; }
-          .index_wrapper .container .content_hotproducts .box_hotproductsgrass .item_hotproductsgrassB img {
-            width: 100%; }
-    .index_wrapper .container .content_game {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: column nowrap;
-      width: 100%; }
-      .index_wrapper .container .content_game .box_game {
-        width: 100%; }
-        .index_wrapper .container .content_game .box_game .item_game {
+              .index_wrapper .container_allview .content_main .content_txt .box_txt .item_txt .txt_picB {
+                transform-origin: top left;
+                transition: 2s ease-out;
+                animation: txtMove 5s linear infinite alternate; }
+  @keyframes txtMove {
+    0% {
+      transform: rotate(0deg); }
+    2% {
+      transform: rotate(7deg); }
+    4% {
+      transform: rotate(3deg); }
+    8% {
+      transform: rotate(7deg); }
+    100% {
+      transform: rotate(7deg); } }
+          .index_wrapper .container_allview .content_main .content_txt .cloudMove {
+            display: none; }
+        .index_wrapper .container_allview .content_main .content_object {
           display: flex;
           justify-content: center;
           align-items: center;
           width: 100%; }
-          .index_wrapper .container .content_game .box_game .item_game .vine_boxes {
+          .index_wrapper .container_allview .content_main .content_object .box_picnic {
+            width: 100%; }
+            .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic {
+              width: 100%; }
+              .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .mobile_picnic {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                position: relative; }
+                .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .mobile_picnic img {
+                  width: 100%; }
+                .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .mobile_picnic .box_object {
+                  width: 40%;
+                  position: absolute;
+                  top: -50%; }
+                  .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .mobile_picnic .box_object .item_object {
+                    width: 100%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .mobile_picnic .box_object .item_object .object_grassA {
+                      display: none; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .mobile_picnic .box_object .item_object .object_tweezers {
+                      width: 100%; }
+                      .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .mobile_picnic .box_object .item_object .object_tweezers img {
+                        width: 100%; }
+                    .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .mobile_picnic .box_object .item_object .object_grassB {
+                      display: none; }
+                .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .mobile_picnic .box_smobject {
+                  display: none; }
+              .index_wrapper .container_allview .content_main .content_object .box_picnic .item_picnic .picnic {
+                display: none; }
+        .index_wrapper .container_allview .content_main .content_bgpic {
+          display: none; }
+    .index_wrapper .container_inBackground {
+      width: 100%; }
+      .index_wrapper .container_inBackground .container_boxes {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0 0 10% 0;
+        background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
+        background-size: cover;
+        background-position: center; }
+        .index_wrapper .container_inBackground .container_boxes .content_wood {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-flow: column nowrap;
+          width: 100%; }
+          .index_wrapper .container_inBackground .container_boxes .content_wood .box_wood {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 80%;
-            position: relative;
-            background: url("/scss/img/GengImg/Screen05/Screen05moutain.png") no-repeat;
-            background-size: 50%;
-            background-position: center; }
-            .index_wrapper .container .content_game .box_game .item_game .vine_boxes .boxes_shake {
-              width: 20%;
-              transition: 2s;
-              transform-origin: top;
-              animation: boxesRun 6s linear infinite alternate; }
-              .index_wrapper .container .content_game .box_game .item_game .vine_boxes .boxes_shake img {
-                width: 100%; }
-
-@keyframes boxesRun {
-  0% {
-    transform: rotate(30deg); }
-  100% {
-    transform: rotate(-30deg); } }
-            .index_wrapper .container .content_game .box_game .item_game .vine_boxes .bee_shake {
+            width: 60%; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_wood img {
+              width: 100%; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_wood .item_h3 {
+              width: 100%;
+              position: absolute;
+              font-weight: 400;
+              font-size: 100%;
+              color: #502311; }
+          .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            width: 100%; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_exterior {
               display: flex;
               justify-content: center;
-              align-items: center; }
-              .index_wrapper .container .content_game .box_game .item_game .vine_boxes .bee_shake .beeA, .index_wrapper .container .content_game .box_game .item_game .vine_boxes .bee_shake .beeB {
-                width: 15%;
-                position: absolute; }
-                .index_wrapper .container .content_game .box_game .item_game .vine_boxes .bee_shake .beeA img, .index_wrapper .container .content_game .box_game .item_game .vine_boxes .bee_shake .beeB img {
+              align-items: center;
+              width: 100%;
+              margin: 10%; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-flow: column nowrap;
+              background: url("../scss/img/GengImg/Screen02/Screen02tree.png") no-repeat;
+              background-size: 85%;
+              background-position: center;
+              width: 100%; }
+              .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .boxes {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                height: 250px;
+                padding: 0 0 15px 0; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .boxes img {
                   width: 100%; }
-              .index_wrapper .container .content_game .box_game .item_game .vine_boxes .bee_shake .beeA {
-                top: 25%;
-                left: 0;
-                animation: beeShakeA .9s linear infinite alternate; }
-
-@keyframes beeShakeA {
-  0% {
-    transform: translateY(0px) translateX(0px); }
-  100% {
-    transform: translateY(5px) translateX(3px); } }
-              .index_wrapper .container .content_game .box_game .item_game .vine_boxes .bee_shake .beeB {
-                top: 50%;
-                right: 0;
-                animation: beeShakeB 1.2s linear infinite alternate; }
-
-@keyframes beeShakeB {
-  0% {
-    transform: translateY(0px) translateX(0px); }
-  100% {
-    transform: translateY(5px) translateX(3px); } }
-      .index_wrapper .container .content_game .box_gamebtn {
+              .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: row wrap;
+                width: 100%;
+                padding: 5px 10px 5px 10px; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 20%;
+                  border-radius: 5px;
+                  border: 1px dashed #4173B8;
+                  background-color: #A7CFEE;
+                  text-align: center; }
+                  .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepA p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepB p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepC p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepD p, .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_boxes .shaped .stepE p {
+                    font-size: 110%; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_exterior {
+              display: none; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_mobileexterior {
+              width: 100%; }
+              .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_mobileexterior .mobileexterior_card {
+                width: 100%; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_mobileexterior .mobileexterior_card .mobileexterior_boxes {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%; }
+                  .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_mobileexterior .mobileexterior_card .mobileexterior_boxes .moblieexterior_changebox {
+                    width: 100%;
+                    padding: 10px; }
+                    .index_wrapper .container_inBackground .container_boxes .content_wood .box_makeboxes .item_mobileexterior .mobileexterior_card .mobileexterior_boxes .moblieexterior_changebox img {
+                      width: 100%; }
+          .index_wrapper .container_inBackground .container_boxes .content_wood .box_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 10px 0 10px 0; }
+            .index_wrapper .container_inBackground .container_boxes .content_wood .box_btn .item_gomakebtn {
+              width: 120px;
+              height: 60px;
+              border-radius: 45px;
+              background-color: #aaa;
+              cursor: pointer;
+              z-index: 2; }
+              .index_wrapper .container_inBackground .container_boxes .content_wood .box_btn .item_gomakebtn .btn_gomake {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 120px;
+                height: 55px;
+                border-radius: 45px;
+                background-color: #F7E9C3;
+                transition: .5s; }
+                .index_wrapper .container_inBackground .container_boxes .content_wood .box_btn .item_gomakebtn .btn_gomake p {
+                  color: #502311; }
+          .index_wrapper .container_inBackground .container_boxes .content_wood .birdsMove {
+            display: none; }
+      .index_wrapper .container_inBackground .container_vote {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-flow: column nowrap;
         width: 100%;
-        padding: 5px 0 5px 0; }
-        .index_wrapper .container .content_game .box_gamebtn .item_gamebtn {
-          width: 120px;
-          height: 60px;
-          border-radius: 45px;
-          background-color: #aaa;
-          cursor: pointer;
-          z-index: 2; }
-          .index_wrapper .container .content_game .box_gamebtn .item_gamebtn .btn_gotoplay {
+        padding: 0 0 10% 0;
+        background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
+        background-size: cover;
+        background-position: center; }
+        .index_wrapper .container_inBackground .container_vote .content_wood {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-flow: column nowrap;
+          width: 100%; }
+          .index_wrapper .container_inBackground .container_vote .content_wood .box_wood {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 120px;
-            height: 55px;
-            border-radius: 45px;
-            background-color: #F7E9C3;
-            transition: .5s; }
-            .index_wrapper .container .content_game .box_gamebtn .item_gamebtn .btn_gotoplay:hover {
-              background-color: #F777; }
-              .index_wrapper .container .content_game .box_gamebtn .item_gamebtn .btn_gotoplay:hover p {
-                color: #F7E9C3; }
-            .index_wrapper .container .content_game .box_gamebtn .item_gamebtn .btn_gotoplay p {
+            width: 60%; }
+            .index_wrapper .container_inBackground .container_vote .content_wood .box_wood img {
+              width: 100%; }
+            .index_wrapper .container_inBackground .container_vote .content_wood .box_wood .item_h3 {
+              width: 100%;
+              position: absolute;
+              font-weight: 400;
+              font-size: 100%;
               color: #502311; }
-
-.machine {
-  cursor: pointer;
-  width: 15%;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 8; }
-  .machine .machine_check {
-    width: 100%;
-    position: relative; }
-    .machine .machine_check img {
-      width: 100%;
-      height: 100%; }
-    .machine .machine_check .machine_dialog {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      position: absolute;
-      top: -40%;
-      animation: dialogMove 2s linear infinite alternate; }
-
-@keyframes dialogMove {
-  0% {
-    transform: translateY(0px); }
-  100% {
-    transform: translateY(10px); } }
-      .machine .machine_check .machine_dialog img {
-        width: 100%; }
-      .machine .machine_check .machine_dialog .machine_txt {
-        width: 100%;
-        position: absolute; }
-        .machine .machine_check .machine_dialog .machine_txt p {
-          font-size: 120%;
+        .index_wrapper .container_inBackground .container_vote .content_vote {
+          display: none; }
+          .index_wrapper .container_inBackground .container_vote .content_vote .leafMove {
+            display: none; }
+        .index_wrapper .container_inBackground .container_vote .content_mobilevote {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-flow: column nowrap;
+          position: relative;
           width: 100%; }
+          .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            margin: 10% 0 10% 0;
+            width: 100%; }
+            .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              width: 100%;
+              padding: 0 5% 0 5%; }
+              .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: row wrap;
+                z-index: 2;
+                width: 80%;
+                padding: 5% 10% 5% 10%;
+                position: relative; }
+                .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic img {
+                  width: 100%; }
+                .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic .mobilevote_img {
+                  position: absolute;
+                  top: 10%;
+                  transition: 2s;
+                  animation: voteBoxesShake 5s linear infinite alternate;
+                  padding: 5% 0 5% 0;
+                  width: 40%; }
+  @keyframes voteBoxesShake {
+    0% {
+      transform: rotate(0deg); }
+    25% {
+      transform: rotate(-11deg); }
+    50% {
+      transform: rotate(11deg); }
+    75% {
+      transform: rotate(-11deg); }
+    100% {
+      transform: rotate(0deg); } }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic .mobilevote_img img {
+                    width: 100%; }
+                .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic .mobilevote_txt {
+                  text-align: center;
+                  position: absolute;
+                  bottom: 10%;
+                  right: -3%;
+                  width: 100%; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic .mobilevote_txt .mobilevote_ranking {
+                    color: #91502A;
+                    font-size: 20px; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic .mobilevote_txt .mobilemath {
+                    display: flex;
+                    justify-content: center;
+                    color: #91502A;
+                    margin: 5px; }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic .mobilevote_txt .mobilemath p {
+                      padding: 3px; }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic .mobilevote_txt .mobilemath .mobileheart {
+                      width: 25px;
+                      padding: 3px; }
+                      .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic .mobilevote_txt .mobilemath .mobileheart img {
+                        width: 100%; }
+              .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: row wrap;
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                padding: 5% 5% 5% 5%; }
+                .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA img, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB img {
+                  width: 100%; }
+                .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_imgA, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_imgB, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_imgA, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_imgB {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: absolute;
+                  top: 0;
+                  width: 50%;
+                  padding: 5% 0 5% 0;
+                  transition: 2s;
+                  animation: voteBoxesShake 5s linear infinite alternate; }
+  @keyframes voteBoxesShake {
+    0% {
+      transform: rotate(0deg); }
+    25% {
+      transform: rotate(-11deg); }
+    50% {
+      transform: rotate(11deg); }
+    75% {
+      transform: rotate(-11deg); }
+    100% {
+      transform: rotate(0deg); } }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_imgA img, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_imgB img, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_imgA img, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_imgB img {
+                    width: 100%; }
+                .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_txt, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_txt {
+                  position: absolute;
+                  bottom: 0;
+                  right: -6%;
+                  width: 100%;
+                  margin: 10px;
+                  padding: 5px 10px 5px 10px; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_txt .mobilevote_ranking, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_txt .mobilevote_ranking {
+                    color: #91502A;
+                    font-size: 20px; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_txt .mobilemath, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_txt .mobilemath {
+                    display: flex;
+                    justify-content: center;
+                    color: #91502A;
+                    margin: 5px; }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_txt .mobilemath p, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_txt .mobilemath p {
+                      padding: 3px; }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_txt .mobilemath .mobileheart, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_txt .mobilemath .mobileheart {
+                      width: 25px;
+                      padding: 3px; }
+                      .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_txt .mobilemath .mobileheart img, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_txt .mobilemath .mobileheart img {
+                        width: 100%; }
+            .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .crown {
+              align-items: center; }
+              .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .crown .no1 {
+                display: flex;
+                justify-content: center;
+                position: relative; }
+                .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .crown .no1 .crown_pic {
+                  position: absolute;
+                  top: -5%;
+                  width: 15%; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .crown .no1 .crown_pic img {
+                    width: 100%; }
+          .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; }
+            .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%; }
+              .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                position: relative; }
+                .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land img {
+                  width: 100%; }
+                .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%;
+                  position: absolute;
+                  top: 0; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04A {
+                    position: absolute;
+                    top: 1%;
+                    left: 40%;
+                    width: 2%;
+                    transform-origin: bottom;
+                    animation: e04A 3s linear infinite alternate; }
+  @keyframes e04A {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(2deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04A img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04A .votepic_treeA {
+                      position: absolute;
+                      top: -20%;
+                      left: -50%;
+                      width: 250%;
+                      animation: votetreeA 3s linear infinite alternate; }
+  @keyframes votetreeA {
+    0% {
+      transform: translateX(0px); }
+    100% {
+      transform: translateX(5px); } }
+                      .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04A .votepic_treeA img {
+                        width: 100%; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04B {
+                    position: absolute;
+                    top: 1%;
+                    width: 2%;
+                    transform-origin: bottom;
+                    animation: e04B 3s linear infinite alternate; }
+  @keyframes e04B {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(-2deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04B img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04B .votepic_treeB {
+                      position: absolute;
+                      top: -20%;
+                      left: -50%;
+                      width: 250%;
+                      animation: votetreeB 3s linear infinite alternate; }
+  @keyframes votetreeB {
+    0% {
+      transform: translateX(0px); }
+    100% {
+      transform: translateX(-5px); } }
+                      .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04B .votepic_treeB img {
+                        width: 100%; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04C {
+                    position: absolute;
+                    top: 1%;
+                    left: 55%;
+                    width: 2%;
+                    transform-origin: bottom;
+                    animation: e04C 3s linear infinite alternate; }
+  @keyframes e04C {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(2deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04C img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04C .votepic_treeC {
+                      position: absolute;
+                      top: -20%;
+                      left: -50%;
+                      width: 250%;
+                      animation: votetreeC 2s linear infinite alternate; }
+  @keyframes votetreeC {
+    0% {
+      transform: translateX(0px); }
+    100% {
+      transform: translateX(3px); } }
+                      .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04C .votepic_treeC img {
+                        width: 100%; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04D {
+                    position: absolute;
+                    top: 1%;
+                    left: 60%;
+                    width: 2%;
+                    transform-origin: bottom;
+                    animation: e04D 4s linear infinite alternate; }
+  @keyframes e04D {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(3deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04D img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04D .votepic_treeD {
+                      position: absolute;
+                      top: -20%;
+                      left: -50%;
+                      width: 250%;
+                      animation: votetreeD 4s linear infinite alternate; }
+  @keyframes votetreeD {
+    0% {
+      transform: translateX(0px); }
+    100% {
+      transform: translateX(-5px); } }
+                      .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_e04D .votepic_treeD img {
+                        width: 100%; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gAbig {
+                    position: absolute;
+                    top: 5%;
+                    left: 30%;
+                    width: 7%;
+                    animation: gAbig 2s linear infinite alternate; }
+  @keyframes gAbig {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(5deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gAbig img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gAbig .votepic_gAsm {
+                      position: absolute;
+                      top: 30%;
+                      left: 20%;
+                      width: 70%;
+                      animation: gAsm 2s linear infinite alternate; }
+  @keyframes gAsm {
+    0% {
+      transform: rotate(5deg); }
+    100% {
+      transform: rotate(0deg); } }
+                      .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gAbig .votepic_gAsm img {
+                        width: 100%; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gBbig {
+                    position: absolute;
+                    top: 2%;
+                    left: 70%;
+                    width: 7%;
+                    animation: gBbig 2s linear infinite alternate; }
+  @keyframes gBbig {
+    0% {
+      transform: rotate(5deg); }
+    100% {
+      transform: rotate(10deg); } }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gBbig img {
+                      width: 100%; }
+                    .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gBbig .votepic_gBsm {
+                      position: absolute;
+                      top: 30%;
+                      left: 20%;
+                      width: 70%;
+                      animation: gAsm 2s linear infinite alternate; }
+  @keyframes gBsm {
+    0% {
+      transform: rotate(10deg); }
+    100% {
+      transform: rotate(5deg); } }
+                      .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votepic .item_votepic .votepic_land .votepic_landtree .votepic_gBbig .votepic_gBsm img {
+                        width: 100%; }
+          .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votebtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 5px 0 5px 0; }
+            .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votebtn .item_govotebtn {
+              width: 120px;
+              height: 60px;
+              border-radius: 45px;
+              background-color: #aaa;
+              cursor: pointer;
+              z-index: 2; }
+              .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votebtn .item_govotebtn .btn_govote {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 120px;
+                height: 55px;
+                border-radius: 45px;
+                background-color: #F7E9C3;
+                transition: .5s; }
+                .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votebtn .item_govotebtn .btn_govote:hover {
+                  background-color: #F777; }
+                  .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votebtn .item_govotebtn .btn_govote:hover p {
+                    color: #F7E9C3; }
+                .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_votebtn .item_govotebtn .btn_govote p {
+                  color: #502311; }
+      .index_wrapper .container_inBackground .container_store {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        width: 100%;
+        padding: 0 0 10% 0;
+        background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
+        background-size: cover;
+        background-position: center;
+        position: relative; }
+        .index_wrapper .container_inBackground .container_store .content_wood {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-flow: column nowrap;
+          width: 100%; }
+          .index_wrapper .container_inBackground .container_store .content_wood .box_wood {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%; }
+            .index_wrapper .container_inBackground .container_store .content_wood .box_wood img {
+              width: 100%; }
+            .index_wrapper .container_inBackground .container_store .content_wood .box_wood .item_h3 {
+              width: 100%;
+              position: absolute;
+              font-weight: 400;
+              font-size: 100%;
+              color: #502311; }
+        .index_wrapper .container_inBackground .container_store .content_mobilehotproducts {
+          width: 100%; }
+          .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_mobilehotproducts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 5% 0 5% 0; }
+            .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_mobilehotproducts .item_mobilehotproducts {
+              position: relative;
+              width: 100%; }
+              .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_mobilehotproducts .item_mobilehotproducts .mobilehotproducts_boxes {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%; }
+                .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_mobilehotproducts .item_mobilehotproducts .mobilehotproducts_boxes img {
+                  width: 100%; }
+                .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_mobilehotproducts .item_mobilehotproducts .mobilehotproducts_boxes .mobilehotproducts_img {
+                  width: 80%;
+                  position: absolute; }
+                  .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_mobilehotproducts .item_mobilehotproducts .mobilehotproducts_boxes .mobilehotproducts_img img {
+                    width: 100%; }
+                .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_mobilehotproducts .item_mobilehotproducts .mobilehotproducts_boxes .mobilehotproducts_board {
+                  position: absolute;
+                  bottom: -20px;
+                  width: 55%; }
+                  .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_mobilehotproducts .item_mobilehotproducts .mobilehotproducts_boxes .mobilehotproducts_board img {
+                    width: 100%; }
+                  .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_mobilehotproducts .item_mobilehotproducts .mobilehotproducts_boxes .mobilehotproducts_board .mobilehotproducts_txt {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 20px; }
+                    .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_mobilehotproducts .item_mobilehotproducts .mobilehotproducts_boxes .mobilehotproducts_board .mobilehotproducts_txt h3 {
+                      color: #502311;
+                      font-size: 110%; }
+          .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_hotproductsgrass {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0 0 0; }
+            .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_hotproductsgrass .item_hotproductsgrassA {
+              width: 20%;
+              animation: grassShake 6s infinite; }
+              .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_hotproductsgrass .item_hotproductsgrassA img {
+                width: 100%; }
+  @keyframes grassShake {
+    0% {
+      transform: translate(0px); }
+    2% {
+      transform: translate(2px); }
+    4% {
+      transform: translate(-4px); }
+    8% {
+      transform: translate(4px); }
+    100% {
+      transform: translate(0px); } }
+            .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_hotproductsgrass .item_hotproductsbtn {
+              width: 120px;
+              height: 60px;
+              border-radius: 45px;
+              background-color: #aaa;
+              cursor: pointer;
+              z-index: 2; }
+              .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 120px;
+                height: 55px;
+                border-radius: 45px;
+                background-color: #F7E9C3;
+                transition: .5s; }
+                .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts:hover {
+                  background-color: #F777; }
+                  .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts:hover p {
+                    color: #F7E9C3; }
+                .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_hotproductsgrass .item_hotproductsbtn .btn_hotproducts p {
+                  color: #502311; }
+            .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_hotproductsgrass .item_hotproductsgrassB {
+              width: 20%;
+              animation: grassShake 6s infinite; }
+              .index_wrapper .container_inBackground .container_store .content_mobilehotproducts .box_hotproductsgrass .item_hotproductsgrassB img {
+                width: 100%; }
+        .index_wrapper .container_inBackground .container_store .content_storebg {
+          display: none; }
+      .index_wrapper .container_inBackground .container_game {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: column nowrap;
+        width: 100%;
+        background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
+        background-size: cover;
+        background-position: center; }
+        .index_wrapper .container_inBackground .container_game .content_wood {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-flow: column nowrap;
+          position: relative;
+          width: 100%; }
+          .index_wrapper .container_inBackground .container_game .content_wood .box_wood {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            position: relative;
+            z-index: 2; }
+            .index_wrapper .container_inBackground .container_game .content_wood .box_wood img {
+              width: 100%; }
+            .index_wrapper .container_inBackground .container_game .content_wood .box_wood .item_h3 {
+              width: 70%;
+              position: absolute;
+              font-weight: 400;
+              font-size: 100%;
+              color: #502311; }
+        .index_wrapper .container_inBackground .container_game .game_picA {
+          display: none; }
+        .index_wrapper .container_inBackground .container_game .content_game {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-flow: column nowrap;
+          width: 100%; }
+          .index_wrapper .container_inBackground .container_game .content_game .box_game {
+            width: 100%; }
+            .index_wrapper .container_inBackground .container_game .content_game .box_game .item_game {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%; }
+              .index_wrapper .container_inBackground .container_game .content_game .box_game .item_game .vine_boxes {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                position: relative;
+                background: url("/scss/img/GengImg/Screen05/Screen05moutain.png") no-repeat;
+                background-size: 50%;
+                background-position: center; }
+                .index_wrapper .container_inBackground .container_game .content_game .box_game .item_game .vine_boxes .boxes_shake {
+                  width: 33%;
+                  transition: 2s;
+                  transform-origin: top;
+                  animation: boxesRun 6s linear infinite alternate; }
+                  .index_wrapper .container_inBackground .container_game .content_game .box_game .item_game .vine_boxes .boxes_shake img {
+                    width: 100%; }
+  @keyframes boxesRun {
+    0% {
+      transform: rotate(30deg); }
+    100% {
+      transform: rotate(-30deg); } }
+                .index_wrapper .container_inBackground .container_game .content_game .box_game .item_game .vine_boxes .bee_shake {
+                  display: none; }
+          .index_wrapper .container_inBackground .container_game .content_game .box_gamebtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 5px 0 5px 0; }
+            .index_wrapper .container_inBackground .container_game .content_game .box_gamebtn .item_gamebtn {
+              width: 120px;
+              height: 60px;
+              border-radius: 45px;
+              background-color: #aaa;
+              cursor: pointer;
+              z-index: 2; }
+              .index_wrapper .container_inBackground .container_game .content_game .box_gamebtn .item_gamebtn .btn_gotoplay {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 120px;
+                height: 55px;
+                border-radius: 45px;
+                background-color: #F7E9C3;
+                transition: .5s; }
+                .index_wrapper .container_inBackground .container_game .content_game .box_gamebtn .item_gamebtn .btn_gotoplay:hover {
+                  background-color: #F777; }
+                  .index_wrapper .container_inBackground .container_game .content_game .box_gamebtn .item_gamebtn .btn_gotoplay:hover p {
+                    color: #F7E9C3; }
+                .index_wrapper .container_inBackground .container_game .content_game .box_gamebtn .item_gamebtn .btn_gotoplay p {
+                  color: #502311; }
+  .machine_wrapper {
+    display: none; } }

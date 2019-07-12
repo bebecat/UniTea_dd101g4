@@ -1,3 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  // outline: 1px solid red;
+  input,
+  button,
+  select,
+  textarea {
+    outline: none;
+  }
+}
 .machine {
   cursor: pointer;
   width: 10%;
@@ -184,6 +197,7 @@
     display: none;
   }
 }
+
 .chatbot_wrapper {
   display: flex;
   z-index: 999;

@@ -22,21 +22,15 @@
   font-family: "hanyi";
   src: url("../scss/font/HanyiSentyTang.ttf") format("truetype"); }
 
-h1 {
-  font-size: 12px;
-  color: black;
-  font-family: "font_title";
-  letter-spacing: 2px; }
-
 h2 {
-  font-size: 24px;
-  color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  color: #222;
   font-family: "font_title";
   letter-spacing: 2px; }
 
 h3 {
   font-size: 36px;
-  color: rgba(0, 0, 0, 0.6);
+  color: #4d3900;
   font-family: "hanyi";
   letter-spacing: 2px; }
 
@@ -54,8 +48,8 @@ h5 {
 
 p {
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.3);
-  font-family: "font_p";
+  color: #444;
+  font-family: "Noto Sans TC";
   letter-spacing: 2px; }
 
 h1 {

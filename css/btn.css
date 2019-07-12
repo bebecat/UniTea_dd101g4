@@ -1,0 +1,28 @@
+.box_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px 0 5px 0; }
+  .box_btn .item_gomakebtn {
+    width: 120px;
+    height: 60px;
+    border-radius: 45px;
+    background-color: #aaa;
+    cursor: pointer;
+    z-index: 2; }
+    .box_btn .item_gomakebtn .btn_gomake {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 55px;
+      border-radius: 45px;
+      background-color: #F7E9C3;
+      transition: .5s; }
+      .box_btn .item_gomakebtn .btn_gomake:hover {
+        background-color: #F777; }
+        .box_btn .item_gomakebtn .btn_gomake:hover p {
+          color: #F7E9C3; }
+      .box_btn .item_gomakebtn .btn_gomake p {
+        color: #502311; }
