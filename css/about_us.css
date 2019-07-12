@@ -67,15 +67,11 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-decoration: none; }
+  text-decoration: none;
+  outline: 1px solid rgba(33, 33, 33, 0.5); }
 
 .clear_fix {
   clear: both; }
-
-.header_fulsec {
-  width: 0;
-  height: 130px;
-  height: 130px; }
 
 .fp_aboutus_wrapper {
   width: 100vw;
@@ -255,6 +251,7 @@ p {
     background-size: contain;
     background-image: url("../scss/img/mch_img/gengimg/housechat.png");
     right: -300px;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     bottom: 0;
     width: 300px;
@@ -393,7 +390,7 @@ p {
           width: 70%;
           height: 20%;
           margin: auto;
-          padding: 30vh 0 0;
+          padding: 35vh 0 0;
           box-sizing: border-box;
           position: relative; }
           .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .cloud .cloud_item {
@@ -401,19 +398,19 @@ p {
             height: 50px;
             position: relative; }
           .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .cloud #go_left_cloud {
-            animation: cloudmoveleft 13s 0 infinite linear alternate;
+            animation: cloudmoveleft 13s 0s infinite linear alternate;
             top: 10%;
             left: 25%; }
-          .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .cloud #go_right_cloud {
-            animation: cloudmoveright 11s 0 infinite linear alternate;
-            top: 25%;
-            left: 45%; }
 
 @keyframes cloudmoveleft {
   from {
     transform: translateX(0); }
   to {
     transform: translateX(50%); } }
+          .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .cloud #go_right_cloud {
+            animation: cloudmoveright 11s 0s infinite linear alternate;
+            top: 25%;
+            left: 45%; }
 
 @keyframes cloudmoveright {
   from {
@@ -425,7 +422,7 @@ p {
           height: 25%;
           max-height: 960px;
           margin: auto;
-          padding: 50px 0 0;
+          padding: 100px 0 0;
           box-sizing: border-box;
           position: relative; }
           .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree .tree_item {
@@ -434,12 +431,11 @@ p {
             position: relative; }
           .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree #swag_right_tree {
             transform-origin: 55px 150px;
-            animation: treeswagright 8s 0 infinite linear alternate;
+            animation: treeswagright 8s 0s linear infinite alternate;
             top: 30px;
             left: 0; }
           .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree #swag_left_tree {
-            transform-origin: 55px 150px;
-            animation: treeswagleft 8s 0 infinite linear alternate;
+            animation: treeswagleft 8s 0s linear infinite alternate;
             top: 50px;
             left: 30px; }
 
@@ -454,6 +450,26 @@ p {
     transform: rotate(-3deg); }
   to {
     transform: rotate(-16deg); } }
+      @media screen and (max-width: 767px) {
+        .fp_aboutus_wrapper .bg_settin .glass_bg .glass {
+          width: 100vw;
+          height: 50%;
+          position: absolute;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          margin: auto; }
+        .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree {
+          width: 100%;
+          height: 50%; }
+          .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree .tree_item {
+            position: absolute; }
+          .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree #swag_right_tree {
+            top: 60%;
+            left: 0; }
+          .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree #swag_left_tree {
+            top: 60%;
+            right: 0; } }
     .fp_aboutus_wrapper .bg_settin .paper_bg {
       width: 100vw;
       height: 100vh;
@@ -472,9 +488,11 @@ p {
       bottom: 0;
       margin: auto; }
     .fp_aboutus_wrapper .begin_animation .move_left_tree {
+      transition: left 1s ease 0s;
       left: 0;
       animation: movetreeleft 2s 0s 1 linear; }
     .fp_aboutus_wrapper .begin_animation .move_right_tree {
+      transition: right 1s ease 0s;
       right: 0;
       animation: movetreeright 2s 0s 1 linear; }
 
@@ -493,12 +511,20 @@ p {
     transform: translateX(-40px) scale(1.2); }
   100% {
     transform: translateX(0) scale(1); } }
+  @media screen and (max-width: 767px) {
+    .fp_aboutus_wrapper .begin_animation {
+      overflow: hidden; }
+      .fp_aboutus_wrapper .begin_animation .move_left_tree {
+        left: -100%; }
+      .fp_aboutus_wrapper .begin_animation .move_right_tree {
+        right: -100%; } }
   .fp_aboutus_wrapper .idea_introduction {
     width: 100vw;
     height: 100%;
     max-height: 960px;
+    padding: 30px 0 0;
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 0;
     right: 0;
     margin: auto;
@@ -510,10 +536,9 @@ p {
       margin: auto; }
       .fp_aboutus_wrapper .idea_introduction .container .txt {
         width: 70%;
-        padding: 70px 0 0;
         margin: auto; }
         .fp_aboutus_wrapper .idea_introduction .container .txt .load_show {
-          animation: loadtitle 2s 0 1 ease-in alternate; }
+          animation: loadtitle 2s 0s ease-in alternate; }
 
 @keyframes loadtitle {
   0% {
@@ -546,7 +571,7 @@ p {
             right: 0;
             margin: auto;
             transform-orgin: 40px 15px;
-            animation: littlebirdswagleft 3s 0 infinite ease-in alternate,loadtitl 3s 0 1 ease-in alternate;
+            animation: littlebirdswagleft 3s 0s ease-in infinite alternate,loadtitl 3s 0s 1 ease-in alternate;
             position: absolute;
             top: 0; }
 
@@ -556,7 +581,7 @@ p {
   to {
     transform: translateX(177%) translateY(55%) rotate(10deg); } }
         .fp_aboutus_wrapper .idea_introduction .container .txt .idea_txtin {
-          letter-space: 2px;
+          letter-spacing: 2px;
           line-height: 25px;
           text-align: center; }
           .fp_aboutus_wrapper .idea_introduction .container .txt .idea_txtin .txt_bg {
@@ -575,11 +600,34 @@ p {
             width: 203px;
             height: 197px;
             margin: auto;
-            animation: boom 1.5s 0 ease infinite both; }
+            animation: boom 1.5s 0s ease infinite both; }
+      @media screen and (max-width: 767px) {
+        .fp_aboutus_wrapper .idea_introduction .container .txt {
+          width: 100%; }
+          .fp_aboutus_wrapper .idea_introduction .container .txt h2 {
+            width: 100%;
+            margin: 0 auto 5px; }
+          .fp_aboutus_wrapper .idea_introduction .container .txt .idea_txtin {
+            letter-spacing: 1px;
+            line-height: 20px; }
+            .fp_aboutus_wrapper .idea_introduction .container .txt .idea_txtin .txt_bg {
+              padding: 15px 0 20px; }
+              .fp_aboutus_wrapper .idea_introduction .container .txt .idea_txtin .txt_bg p {
+                padding: 2px 5px; }
+              .fp_aboutus_wrapper .idea_introduction .container .txt .idea_txtin .txt_bg .first_txt_sec {
+                width: 85%; }
+              .fp_aboutus_wrapper .idea_introduction .container .txt .idea_txtin .txt_bg .second_txt_sec {
+                width: 79%; }
+              .fp_aboutus_wrapper .idea_introduction .container .txt .idea_txtin .txt_bg .third_txt_sec {
+                width: 83%; }
+            .fp_aboutus_wrapper .idea_introduction .container .txt .idea_txtin .basket_settin {
+              width: 150px;
+              height: 146px; } }
   .fp_aboutus_wrapper .webstory_introduction {
     width: 100%;
     height: 100vh;
     max-height: 960px;
+    padding: 100px 0 0;
     position: relative;
     z-index: 1;
     overflow: hidden; }
@@ -594,11 +642,11 @@ p {
         position: absolute;
         right: 0;
         left: 0;
-        top: 650px;
+        top: 600px;
         margin: auto;
         width: 20px;
         height: 30px;
-        transform: translateX(-300%);
+        transform: translateX(-200%);
         cursor: pointer;
         z-index: 2;
         background-color: #faa; }
@@ -608,11 +656,11 @@ p {
         position: absolute;
         right: 0;
         left: 0;
-        top: 650px;
+        top: 600px;
         margin: auto;
         width: 20px;
         height: 30px;
-        transform: translateX(300%);
+        transform: translateX(200%);
         cursor: pointer;
         z-index: 2;
         background-color: #fa0; }
@@ -641,7 +689,7 @@ p {
           top: -50px;
           right: 45px;
           transform-origin: 50px 135px;
-          animation: bullonflow 2.5s 0s infinite ease alternate; }
+          animation: bullonflow 2.5s 0s ease infinite alternate; }
         .fp_aboutus_wrapper .webstory_introduction .container h2 #squirrel_withbullon_setin {
           width: 100px;
           height: 100px;
@@ -650,7 +698,7 @@ p {
           bottom: -52px;
           right: 0px;
           transform-origin: -1px 15px;
-          animation: squirrelwithbullonflow 2.5s 0s infinite ease alternate; }
+          animation: squirrelwithbullonflow 2.5s 0s ease infinite alternate; }
 
 @keyframes bullonflow {
   from {
@@ -666,9 +714,9 @@ p {
       .fp_aboutus_wrapper .webstory_introduction .container #roulette {
         width: 100%;
         height: 100%;
-        transform-origin: 50% 100%;
+        transform-origin: 50% 120%;
         transform: rotate(0deg);
-        transition: transform 1.5s 0 ease;
+        transition: transform 1.5s ease 0s;
         position: relative; }
         .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize {
           width: 100%;
@@ -676,9 +724,9 @@ p {
           padding: 200px 0 0;
           position: absolute;
           box-sizing: border-box;
-          transform-origin: 50% 200%;
+          transform-origin: 50% 190%;
           transform: rotate(0deg);
-          transition: transform 1.5s 0 ease; }
+          transition: transform 1.5s ease 0s; }
           .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .txt {
             width: 500px;
             margin: auto;
@@ -686,8 +734,8 @@ p {
             text-align: center; }
             .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .txt p {
               width: 100%;
-              paddind: 5px;
-              letter-space: 2px;
+              padding: 5px;
+              letter-spacing: 2px;
               line-height: 25px; }
           .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list {
             width: 470px;
@@ -697,7 +745,7 @@ p {
             left: 0;
             right: 0;
             margin: auto;
-            transition: transform 3s 0 ease; }
+            transition: transform 3s ease 0s; }
             .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list .step_line {
               display: block;
               width: 320px;
@@ -746,16 +794,16 @@ p {
             bottom: 50px;
             left: 0;
             right: 0;
-            animation: boom 1.5s 0 ease infinite both; }
+            animation: boom 1.5s 0s ease infinite both; }
         .fp_aboutus_wrapper .webstory_introduction .container #roulette .second_step_customize {
           width: 100%;
           height: 500px;
-          padding: 200px 0 0;
+          padding: 150px 0 0;
           position: absolute;
           box-sizing: border-box;
-          transform-origin: 50% 200%;
-          transform: rotate(-270deg);
-          transition: transform 1.5s 0 ease; }
+          transform-origin: 50% 195%;
+          transform: rotate(-270deg) translateX(-100px);
+          transition: transform 1.5s ease 0s; }
           .fp_aboutus_wrapper .webstory_introduction .container #roulette .second_step_customize .context {
             width: 470px;
             padding: 10px 0 0;
@@ -775,7 +823,7 @@ p {
                 width: 44px;
                 height: 35px;
                 vertical-align: middle;
-                animation: zoom 1.2s 0 ease infinite both; }
+                animation: zoom 1.2s 0s ease infinite both; }
 
 @keyframes zoom {
   0% {
@@ -800,12 +848,12 @@ p {
         .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize {
           width: 100%;
           height: 500px;
-          padding: 200px 0 0;
+          padding: 150px 0 0;
           position: absolute;
           box-sizing: border-box;
-          transform-origin: 50% 200%;
-          transform: rotate(-180deg);
-          transition: transform 1.5s 0 ease; }
+          transform-origin: 50% 195%;
+          transform: rotate(-180deg) translateX(10px) translateY(80px);
+          transition: transform 1.5s ease 0s; }
           .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context {
             width: 670px;
             height: 300px;
@@ -820,7 +868,7 @@ p {
             .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context .customize_basket {
               width: 200px;
               height: 194px;
-              animation: step3forkflow 3s 0 infinite linear alternate; }
+              animation: step3forkflow 3s 0s infinite linear alternate; }
             .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context .third_step_basket {
               display: inline-block;
               vertical-align: middle; }
@@ -834,15 +882,15 @@ p {
               .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .chopping_board {
                 width: 256px;
                 height: 256px;
-                animation: step3choppingboardflow 3s 0 infinite linear alternate; }
+                animation: step3choppingboardflow 3s 0s infinite linear alternate; }
               .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .fork_settin {
                 width: 160px;
                 height: 160px;
                 position: absolute;
                 top: -20px;
                 right: 50px;
-                transform-origin: 160px 0;
-                animation: step3forkflow 3s 0 infinite linear alternate; }
+                transform-origin: 160px 0px;
+                animation: step3forkflow 3s 0s infinite linear alternate; }
               .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .spoon_settin {
                 width: 160px;
                 height: 160px;
@@ -872,12 +920,12 @@ p {
         .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity {
           width: 100%;
           height: 500px;
-          padding: 200px 0 0;
+          padding: 150px 0 0;
           position: absolute;
           box-sizing: border-box;
-          transform-origin: 50% 200%;
-          transform: rotate(-90deg);
-          transition: transform 1.5s 0 ease; }
+          transform-origin: 50% 195%;
+          transform: rotate(-90deg) translateX(20px);
+          transition: transform 1.5s ease 0s; }
           .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin {
             width: 670px;
             height: 300px;
@@ -925,28 +973,28 @@ p {
                   top: -10px;
                   left: 20px;
                   transform-origin: 100px 150px;
-                  animation: breadaflow 4s 0 infinite linear alternate; }
+                  animation: breadaflow 4s 0s infinite linear alternate; }
                 .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .food .bread_b {
                   width: 120px;
                   height: 108px;
                   top: 0px;
                   left: -20px;
                   transform-origin: 160px 150px;
-                  animation: breadbflow 3s 0 infinite linear alternate; }
+                  animation: breadbflow 3s 0s infinite linear alternate; }
                 .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .food .bread_c {
                   width: 150px;
                   height: 60px;
                   top: 35px;
                   left: -50px;
                   transform-origin: 220px 155px;
-                  animation: breadcflow 4s 0 infinite linear alternate; }
+                  animation: breadcflow 4s 0s infinite linear alternate; }
                 .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .food .fruit_settin {
                   width: 150px;
                   height: 136px;
                   top: 30px;
                   left: 40px;
                   position: absolute;
-                  animation: fruitflow 4s 0 infinite linear alternate; }
+                  animation: fruitflow 4s 0s infinite linear alternate; }
 
 @keyframes breadaflow {
   from {
@@ -978,7 +1026,8 @@ p {
                 position: absolute;
                 left: 0;
                 right: 0;
-                margin: auto; }
+                margin: auto;
+                transform: translateX(12px) translateY(12px) rotate(-7deg); }
               .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin {
                 top: 50px;
                 right: 0;
@@ -986,7 +1035,7 @@ p {
                 .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .chopping_board {
                   width: 256px;
                   height: 256px;
-                  animation: step3choppingboardflow 3s 0 infinite linear alternate; }
+                  animation: step3choppingboardflow 3s 0s infinite linear alternate; }
                 .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food {
                   width: 270px;
                   bottom: 0;
@@ -995,12 +1044,12 @@ p {
                     display: inline-block;
                     width: 80px;
                     height: 68px;
-                    animation: cookiesaflow 3s 0 infinite linear alternate; }
+                    animation: cookiesaflow 3s 0s infinite linear alternate; }
                   .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food .cookies_b {
                     display: inline-block;
                     width: 80px;
                     height: 68px;
-                    animation: cookiesbflow 3s 0 infinite linear alternate; }
+                    animation: cookiesbflow 3s 0s infinite linear alternate; }
 
 @keyframes cookiesaflow {
   from {
@@ -1019,16 +1068,16 @@ p {
                   position: absolute;
                   top: -30px;
                   right: -30px;
-                  transform-orgin: 160px 0;
-                  animation: step3forkflow 3s 0 infinite linear alternate; }
+                  transform-origin: 160px 0;
+                  animation: step3forkflow 3s 0s infinite linear alternate; }
                 .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .spoon_settin {
                   width: 160px;
                   height: 160px;
                   position: absolute;
                   top: 10px;
                   right: -70px;
-                  transform-orgin: 0px 160px;
-                  animation: step3spoonflow 3s 0 infinite linear alternate; }
+                  transform-origin: 0px 160px;
+                  animation: step3spoonflow 3s 0s infinite linear alternate; }
 
 @keyframes step3forkflow {
   from {
@@ -1047,6 +1096,211 @@ p {
     transform: skew(0deg) scale(1); }
   to {
     transform: skew(5deg) scale(1.06); } }
+  @media screen and (max-width: 767px) {
+    .fp_aboutus_wrapper .webstory_introduction {
+      height: max-content;
+      max-height: max-content;
+      overflow: none; }
+      .fp_aboutus_wrapper .webstory_introduction .container {
+        height: max-content; }
+        .fp_aboutus_wrapper .webstory_introduction .container #turnleft {
+          display: none;
+          visibility: hidden; }
+        .fp_aboutus_wrapper .webstory_introduction .container #turnright {
+          display: none;
+          visibility: hidden; }
+        .fp_aboutus_wrapper .webstory_introduction .container h2 {
+          width: 100%;
+          margin: 0 auto; }
+        .fp_aboutus_wrapper .webstory_introduction .container #roulette {
+          width: 100%;
+          height: max-content; }
+          .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize {
+            width: 100%;
+            height: max-content;
+            max-height: max-content;
+            box-sizing: border-box;
+            position: relative; }
+            .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .txt {
+              width: 370px;
+              padding: 0 5px;
+              box-sizing: border-box; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .txt p {
+                width: 100%;
+                padding: 5px 0 0;
+                letter-spacing: 1px;
+                line-height: 20px; }
+            .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list {
+              width: 270px;
+              bottom: 50px; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list .step_line {
+                width: 250px; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list .step_item {
+                width: 30px;
+                height: 30px; }
+                .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list .step_item .step_bg {
+                  width: 30px;
+                  height: 30px; }
+                .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list .step_item .step_num {
+                  width: 30px;
+                  height: 30px;
+                  line-height: 30px;
+                  font-size: 20px;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list .step_1 {
+                right: 0; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list .step_2 {
+                right: 0; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list .step_3 {
+                right: 0; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list .step_4 {
+                right: 0; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .step_list .step_5 {
+                right: 0; }
+            .fp_aboutus_wrapper .webstory_introduction .container #roulette .first_step_customize .basket_settin {
+              width: 150px;
+              height: 146px;
+              position: relative; }
+          .fp_aboutus_wrapper .webstory_introduction .container #roulette .second_step_customize {
+            width: 100%;
+            height: max-content;
+            max-height: max-content;
+            padding: 100px 0 0;
+            position: relative;
+            transform: rotate(0deg); }
+            .fp_aboutus_wrapper .webstory_introduction .container #roulette .second_step_customize .context {
+              width: 370px;
+              padding: 10px 5px 0;
+              position: relative;
+              box-sizing: border-box; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .second_step_customize .context .txt {
+                width: 100%;
+                margin: auto;
+                transform: translateY(-40px); }
+          .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize {
+            width: 100%;
+            height: max-content;
+            max-height: max-content;
+            padding: 100px 0 0;
+            position: relative;
+            box-sizing: border-box;
+            transform: rotate(0deg); }
+            .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context {
+              width: 370px;
+              height: 300px; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context .txt {
+                width: 100%;
+                max-width: 370px;
+                padding: 0 5px 0;
+                box-sizing: border-box; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context .customize_basket {
+                width: 150px;
+                height: 146px; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin {
+                width: 200px;
+                height: 200px; }
+                .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .chopping_board {
+                  width: 200px;
+                  height: 200px; }
+                .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .fork_settin {
+                  width: 120px;
+                  height: 120px; }
+                .fp_aboutus_wrapper .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .spoon_settin {
+                  width: 120px;
+                  height: 120px; }
+          .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity {
+            height: max-content;
+            max-height: max-content;
+            padding: 100px 0 0;
+            position: relative;
+            box-sizing: border-box;
+            transform: rotate(0deg); }
+            .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin {
+              width: 100%;
+              height: 300px;
+              padding: 20px 0 0;
+              position: relative; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicbg_settin {
+                width: 80%;
+                height: 200px;
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                transform: translateX(-2px); }
+                .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicbg_settin .mat_settin {
+                  width: 100%;
+                  height: 100%; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .txt {
+                width: 100%;
+                position: absolute;
+                top: -130px; }
+              .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin {
+                width: 90%;
+                height: 262px;
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                transform: translateX(-15px); }
+                .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .food {
+                  width: 200px;
+                  height: 194px;
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  margin: auto; }
+                .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .basket_settin .customize_basket {
+                  width: 200px;
+                  height: 194px; }
+                .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .basket_settin .goto_activity_step_basket_front {
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  margin: auto; }
+                .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin {
+                  top: 50px;
+                  right: 0;
+                  position: absolute; }
+                  .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .chopping_board {
+                    width: 256px;
+                    height: 256px;
+                    animation: step3choppingboardflow 3s 0s infinite linear alternate; }
+                  .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food {
+                    width: 270px;
+                    bottom: 0;
+                    position: absolute; }
+                    .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food .cookies_a {
+                      display: inline-block;
+                      width: 80px;
+                      height: 68px;
+                      animation: cookiesaflow 3s 0s infinite linear alternate; }
+                    .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food .cookies_b {
+                      display: inline-block;
+                      width: 80px;
+                      height: 68px;
+                      animation: cookiesbflow 3s 0s infinite linear alternate; }
+                  .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .fork_settin {
+                    width: 160px;
+                    height: 160px;
+                    position: absolute;
+                    top: -30px;
+                    right: -30px;
+                    transform-origin: 160px 0;
+                    animation: step3forkflow 3s 0s infinite linear alternate; }
+                  .fp_aboutus_wrapper .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .spoon_settin {
+                    width: 160px;
+                    height: 160px;
+                    position: absolute;
+                    top: 10px;
+                    right: -70px;
+                    transform-origin: 0px 160px;
+                    animation: step3spoonflow 3s 0s infinite linear alternate; } }
   .fp_aboutus_wrapper .teamstory__introduction {
     width: 100vw;
     height: 100vh;
@@ -1065,11 +1319,11 @@ p {
         position: absolute;
         bottom: 0; }
       .fp_aboutus_wrapper .teamstory__introduction .teamstorybg_settin .turn1 {
-        animation: mountainmove1 150s 0 1 linear both; }
+        animation: mountainmove1 150s 0s 1 linear both; }
       .fp_aboutus_wrapper .teamstory__introduction .teamstorybg_settin .turn2 {
-        animation: mountainmove2 300s 0 infinite linear both; }
+        animation: mountainmove2 300s 0s linear infinite both; }
       .fp_aboutus_wrapper .teamstory__introduction .teamstorybg_settin .turn3 {
-        animation: mountainmove2 300s 200s infinite linear both; }
+        animation: mountainmove2 300s 200s linear infinite both; }
 
 @keyframes mountainmove1 {
   0% {
@@ -1097,7 +1351,7 @@ p {
       overflow: hidden; }
       .fp_aboutus_wrapper .teamstory__introduction .container #left {
         position: absolute;
-        left: 50px;
+        left: 200px;
         width: 20px;
         height: 30px;
         transform: translateY(1200%);
@@ -1108,7 +1362,7 @@ p {
         background-color: #aaa; }
       .fp_aboutus_wrapper .teamstory__introduction .container #right {
         position: absolute;
-        right: 50px;
+        right: 200px;
         width: 20px;
         height: 30px;
         transform: translateY(1200%);
@@ -1140,7 +1394,7 @@ p {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
-        transition: transform 2s 0 ease; }
+        transition: transform 2s ease 0s; }
         .fp_aboutus_wrapper .teamstory__introduction .container .context .member {
           width: 33.333333%;
           height: 500px;
@@ -1175,6 +1429,42 @@ p {
               right: 0;
               margin: auto;
               z-index: -1; }
+  @media screen and (max-width: 767px) {
+    .fp_aboutus_wrapper .teamstory__introduction {
+      width: 100vw;
+      height: max-content;
+      max-height: max-content;
+      padding: 0 0 20px;
+      position: relative;
+      overflow: none; }
+      .fp_aboutus_wrapper .teamstory__introduction .teamstorybg_settin {
+        display: none; }
+      .fp_aboutus_wrapper .teamstory__introduction .container {
+        width: 100%;
+        max-width: 1200px;
+        height: max-content;
+        padding: 40px 0;
+        position: relative;
+        overflow: none;
+        box-sizing: content-box; }
+        .fp_aboutus_wrapper .teamstory__introduction .container #left {
+          display: none; }
+        .fp_aboutus_wrapper .teamstory__introduction .container #right {
+          display: none; }
+        .fp_aboutus_wrapper .teamstory__introduction .container h2 {
+          width: 100%; }
+        .fp_aboutus_wrapper .teamstory__introduction .container .context {
+          position: relative;
+          width: 100%;
+          height: max-content;
+          padding: 40px 0 0;
+          display: flex;
+          flex-flow: column nowrap; }
+          .fp_aboutus_wrapper .teamstory__introduction .container .context .member {
+            width: 100%;
+            height: 500px;
+            margin: auto;
+            padding: 15px 0 0; } }
   .fp_aboutus_wrapper footer {
     width: 100vw;
     position: absolute;
@@ -1201,3 +1491,30 @@ p {
       right: 0;
       margin: auto;
       padding: 0 0 15px; }
+  @media screen and (max-width: 767px) {
+    .fp_aboutus_wrapper footer {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      text-align: center; }
+      .fp_aboutus_wrapper footer .footer_bg_settin {
+        position: relative; }
+        .fp_aboutus_wrapper footer .footer_bg_settin .footer_bg_glass {
+          width: 50%;
+          position: absolute;
+          bottom: 0; }
+        .fp_aboutus_wrapper footer .footer_bg_settin .glass1 {
+          left: 0; }
+        .fp_aboutus_wrapper footer .footer_bg_settin .glass2 {
+          right: 0; }
+      .fp_aboutus_wrapper footer .txt {
+        width: 300px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 0 0 15px; } }

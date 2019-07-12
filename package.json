@@ -17,11 +17,13 @@
   },
   "homepage": "https://github.com/bebecat/UniTea_dd101g4#readme",
   "dependencies": {
+    "autoprefixer": "^9.6.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.12.0"
   }

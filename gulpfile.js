@@ -4,14 +4,23 @@ const {
     dest,
     series,
     parallel,
-    watch
+    watch,
+    task,
 } = require('gulp');
-
 
 const style = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const browsersync = require('browser-sync').create();
 
+// const autoprefixer = require('gulp-autoprefixer'); 
+// function autoprefixer(){
+//     return  src('./css/*.css')
+//         .pipe(autoprefixer({
+//             browsers: ['last 2 versions'],
+//             cascade: false
+//         }))
+//         .pipe(dest('./css/*.css'))
+// }
 
 // sass
 function sass() {
