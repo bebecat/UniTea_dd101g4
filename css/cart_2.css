@@ -81,7 +81,7 @@ textarea {
   max-width: 1200px; }
 
 .cart_bottom {
-  width: 30px;
+  width: 10%;
   position: relative;
   margin-left: auto;
   text-align: right;
@@ -196,12 +196,13 @@ textarea {
         padding: 1% 2%;
         font-size: 14px;
         box-sizing: border-box;
-        text-align: center; }
+        text-align: right; }
         @media all and (max-width: 767px) {
           .prods_content .total ul li {
             width: 50%; } }
     .prods_content .total ul:last-child li {
-      font-size: 24px; }
+      border-top: 2px solid salmon;
+      font-size: 20px; }
       @media all and (max-width: 767px) {
         .prods_content .total ul:last-child li {
           font-size: 18px; } }
@@ -280,6 +281,7 @@ textarea {
   vertical-align: middle;
   width: 80%;
   padding: 20px;
+  box-shadow: 2px 2px 2px rgba(51, 51, 102, 0.6), 4px 4px 6px rgba(51, 51, 102, 0.3), 6px 6px 12px rgba(51, 51, 102, 0.3);
   box-sizing: border-box;
   background-color: #ddd;
   border-radius: 2%; }
@@ -321,7 +323,7 @@ textarea {
   transform: translateY(3px); }
 
 .cart_bottom .next {
-  width: 30px;
+  width: 100%;
   background-color: #86a745; }
   @media all and (max-width: 767px) {
     .cart_bottom .next {
