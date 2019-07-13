@@ -63,6 +63,14 @@ body{
         border-radius: 30px;
         position: relative;
 
+        select, #searchName{
+            font-size: 16px;
+            border-radius: 10px;
+            color: #737374;
+            padding: 4px;
+            border: 1px solid #ddd;
+        }
+
         .step{
             margin: 10px 0 0 0;
             width: 100px;
