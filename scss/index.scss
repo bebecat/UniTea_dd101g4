@@ -367,6 +367,7 @@
                         width:100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 70%;
                         position: absolute;
                         font-weight: 400;
@@ -400,8 +401,7 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            width: 250px;
-                            height: 250px;
+                            width: 50%;
                             img{
                                 width: 100%;
                             }
@@ -616,6 +616,7 @@
                         width:100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 70%;
                         position: absolute;
                         font-weight: 400;
@@ -690,6 +691,7 @@
                                 margin: 10px;
                                 padding: 5px 10px 5px 10px;
                                 .ranking{
+                                    text-align: center;
                                     color: #91502A;
                                     font-size: 20px;
                                 }
@@ -1048,6 +1050,7 @@
                         width:100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 70%;
                         position: absolute;
                         font-weight: 400;
@@ -1113,6 +1116,7 @@
                                             width: 100%;
                                         }
                                         .hotproducts_txt{
+                                            text-align: center;
                                             width: 100%;
                                             position: absolute;
                                             bottom: 20px;
@@ -1288,6 +1292,11 @@
             flex-flow: column nowrap;
             width: 100%;
             padding: 0 0 5% 0;
+            background-image: 
+            url('/scss/img/GengImg/BG/05-3bg.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             .content_gamebg{
                 display: flex;
                 justify-content: space-around;
@@ -1298,12 +1307,6 @@
                 height: 100vh;
                 img{
                     width: 100%;
-                }
-                .game_picA, .game_picB{
-                    width: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
                 }
                 // margin: 0 0 10% 0;
                 .content_wood{
@@ -1327,6 +1330,7 @@
                             width:100%;
                         }
                         .item_h3{
+                            text-align: center;
                             width: 70%;
                             position: absolute;
                             font-weight: 400;
@@ -1358,8 +1362,10 @@
                                 align-items: center;
                                 width: 80%;
                                 position: relative;
-                                background: url('/scss/img/GengImg/Screen05/Screen05moutain.png') no-repeat;
-                                background-size: 50%;
+                                background-image: 
+                                url('/scss/img/GengImg/Screen05/Screen05moutain.png');
+                                background-repeat: no-repeat;
+                                background-size: 60%;
                                 background-position: center;
                                 .boxes_shake{
                                     width: 20%;
@@ -1465,6 +1471,19 @@
 
 //mobile
 @media screen and (max-width:768px){
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+    }
+
     // index Mobile
 .index_wrapper{
     display: flex;
@@ -1612,6 +1631,7 @@
                         width: 100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 100%;
                         position: absolute;
                         font-weight: 400;
@@ -1645,7 +1665,8 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            width: 70%;
+                            width: 40%;
+                            height: 250px;
                             padding: 0 0 15px 0;
                             img{
                                 width: 100%;
@@ -1756,6 +1777,7 @@
                         width: 100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 100%;
                         position: absolute;
                         font-weight: 400;
@@ -1839,6 +1861,8 @@
                                 right: -3%;
                                 width: 100%;
                                 .mobilevote_ranking{
+                                    display: flex;
+                                    justify-content: center;
                                     color: #91502A;
                                     font-size: 20px;
                                 }
@@ -1911,6 +1935,8 @@
                                 margin: 10px;
                                 padding: 5px 10px 5px 10px;
                                 .mobilevote_ranking{
+                                    display: flex;
+                                    justify-content: center;
                                     color: #91502A;
                                     font-size: 20px;
                                 }
@@ -2213,6 +2239,7 @@
                         width: 100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 100%;
                         position: absolute;
                         font-weight: 400;
@@ -2221,13 +2248,8 @@
                     }
                 }
             }
-            // mobile display:none;
-            .content_storebg{
-                display: none;
-            }
             .content_mobilehotproducts{
                 width: 100%;
-                padding: 5% 0 5% 0;
                 .box_mobilehotproducts{
                     display: flex;
                     justify-content: center;
@@ -2341,6 +2363,10 @@
                     }
                 }
             }
+            // mobile display:none;
+            .content_storebg{
+                display: none;
+            }
         }
         .container_game{
             display: flex;
@@ -2348,7 +2374,7 @@
             align-items: center;
             flex-flow: column nowrap;
             width: 100%;
-            margin: 0 0 10% 0;
+            // margin: 0 0 10% 0;
             background: url(../scss/img/GengImg/BG/index0707picnic-0202.png);
             background-size: cover;
             background-position: center;
@@ -2371,10 +2397,11 @@
                         width:100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 70%;
                         position: absolute;
                         font-weight: 400;
-                        font-size: 25px;
+                        font-size: 100%;
                         color: #502311;
                     }
                 }
