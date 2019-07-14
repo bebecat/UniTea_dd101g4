@@ -331,9 +331,10 @@ var btns = document.getElementsByClassName("btn_submit_box");
 // console.log("123");
 for (var i = 0; i < btns.length; i++) {
   btns[i].onclick = function(e) {
-    //找qty
-
-    var qty = e.target.previousElementSibling.querySelector(".qty");
+    //找產品資訊
+    var qty = parseInt(
+      e.target.previousElementSibling.querySelector(".qty").innerText
+    );
     var addbtn = e.target.querySelector(".add_to_cart").value;
     var pic = addbtn.split("|")[3];
     var name = addbtn.split("|")[2];
@@ -343,31 +344,33 @@ for (var i = 0; i < btns.length; i++) {
     console.log(name);
     console.log(pdno);
     console.log(price);
-
+    //找到後放入session
     let xhr = new XMLHttpRequest();
-    var cartCount = document.getElementById("cart_count");
-    var cartCircle = document.getElementById("cart_circle");
     xhr.onreadystatechange = function() {
-      console.log("33333");
+      var cartCount = document.getElementById("cart_count");
+      var cartCircle = document.getElementById("cart_circle");
+      // console.log("33333");
       if (xhr.readyState == 4) {
-        console.log("44444");
+        // console.log("44444");
         if (xhr.status == 200) {
-          console.log("5555");
+          // console.log("5555");
           console.log(xhr.responseText);
           res = JSON.parse(xhr.responseText);
           console.log(res);
-          if (res.num != 0) {
-            cartCircle.setAttribute("style", "visibility:visible");
-            cartCount.innerText = res.num;
-          }
+          // if (res.num != 0) {
+          //   cartCircle.setAttribute("style", "visibility:visible");
+          //   cartCount.innerText = res.num;
+          //   if (res.exist == "y") {
+          //     alert("商品已在購物車");
+          //   }
+          // }
         } else {
           alert(xhr.status);
         }
       }
-
-      let url = `cart_update.php?pno=${pdno}&num=${qty}&name=${name}&price=${price}&pic=${pic}`;
-      xhr.open("get", url, true);
-      xhr.send(null);
     };
+    let url = `cart_update.php?pno=${pdno}&num=${qty}&name=${name}&price=${price}&pic=${pic}`;
+    xhr.open("get", url, true);
+    xhr.send(null);
   };
 }
