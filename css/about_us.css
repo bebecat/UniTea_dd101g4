@@ -97,8 +97,7 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-decoration: none;
-  outline: 1px solid rgba(33, 33, 33, 0.5); }
+  text-decoration: none; }
 
 .clear_fix {
   clear: both; }
@@ -601,7 +600,7 @@ p {
             right: 0;
             margin: auto;
             transform-orgin: 40px 15px;
-            animation: littlebirdswagleft 3s 0s ease-in infinite alternate,loadtitl 3s 0s 1 ease-in alternate;
+            animation: littlebirdswagleft 3s 0s ease-in infinite alternate,loadtitle 3s 0s 1 ease-in alternate;
             position: absolute;
             top: 0; }
 
@@ -1431,7 +1430,8 @@ p {
           margin: auto;
           padding: 15px 0 0;
           text-align: center;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+          position: relative; }
           .fp_aboutus_wrapper .teamstory__introduction .container .context .member .portrait {
             display: block;
             width: 200px;
@@ -1449,16 +1449,11 @@ p {
             height: 100px;
             line-height: 80px;
             margin: auto;
-            position: relative; }
-            .fp_aboutus_wrapper .teamstory__introduction .container .context .member .to_personweb .person_web_button {
-              width: 174px;
-              height: 97px;
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              margin: auto;
-              z-index: -1; }
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto; }
   @media screen and (max-width: 767px) {
     .fp_aboutus_wrapper .teamstory__introduction {
       width: 100vw;

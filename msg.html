@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>野餐趣 | 美籃票選</title>
+    <link rel="shortcut icon" href="scss/img/h_f_img/rwd-logo.png">
+    <link rel="stylesheet" href="css/msg.css">
+    <link rel="stylesheet" href="css/h_f_becca.css">
+    <link rel="stylesheet" href="css/machine.css">
+    <script src="dis/jquery-3.4.0.min.js"></script>
+    <script src="dis/TweenMax.min.js"></script>
+    <script src="dis/ScrollMagic.min.js"></script>
+    <script src="dis/debug.addIndicators.min.js"></script>
+    <script src="dis/animation.gsap.min.js"></script>
+    <script src="js/h_f_becca.js"></script>
+</head>
+<body>
+    <div class="contest_wrapper">
+        <nav class="navbar_container">
+            <input type="checkbox" id="menuBg" />
+            <div class="header_cloud">
+                <div class="cloudF"></div>
+                <div class="cloudB"></div>
+                <div class="cloudR"></div>
+            </div>
+            <div class="hb_box">
+                <a href="index.html"><div class="logo"></div></a>
+                <label class="hb" for="menuBg">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                </label>
+            </div>
+            <div class="nav_wrapper">
+                <ul class="nav_content">
+                    <a href="customizedP.html">
+                        <li class="cus">客製野餐籃</li>
+                    </a>
+                    <a href="contest.html">
+                        <li>美籃票選</li>
+                    </a>
+                    <a href="pdList.html">
+                        <li class="here">野餐周邊</li>
+                    </a>
+                    <a href="index.html">
+                        <li class="logo">
+                            <h1>趣野餐</h1>
+                        </li>
+                    </a>
+                    <a href="activity.html">
+                        <li>野餐活動</li>
+                    </a>
+                    <a href="aboutus.html">
+                        <li>籃子故事</li>
+                    </a>
+                    <a href="game.html">
+                        <li>賺折扣券</li>
+                    </a>
+                </ul>
+
+                <ul class="icon">
+                    <li class="hi">董董,你好</li>
+                    <a href="member.html">
+                        <li class="member">
+                            <img id="member_icon" src="./scss/img/h_f_img/member.png" alt="member" /></li>
+                    </a>
+                    <a href="cart.html">
+                        <li class="cart">
+                            <img id="cart_icon" src="./scss/img/h_f_img/cart.png" alt="cart" /></li>
+                    </a>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </nav>
+
+        <div id="comment_window">
+            <div class="box">
+                <div class="pic">
+                    <img src="scss/img/contest/basket.png" alt="product">
+                </div>
+                <div class="txt">
+                    <p>我只帶一瓶酒</p>
+                    <div class="inner_txt">
+                        <div class="price">價格:<span>200</span><span>元</span></div>
+                        <img class="heart" src="scss/img/contest/heart.png" alt="heart">
+                        <span>123票</span>
+                    </div>
+                </div>
+            </div>
+            <div id="comment_wrap" class="comment_wrap">
+                <div id="comment_box" class="comment_box">
+                    <div id="mem" class="mem">
+                        <div class="pic">
+                            <img id="mem_pic" src="scss/img/twitter.png" alt="member">
+                        </div>
+                        <span id="mem_name" class="name">
+                            小歐妖精
+                        </span>
+                    </div>
+                    <div class="comment">
+                        <input id="comment" type="text" placeholder="請輸入留言">
+                        <button type="button" id="send">送出</button>
+                    </div>
+                </div>
+                <div class="comment_leave" style="display: none">
+                    <div class="mem">
+                        <div class="pic">
+                            <img id="msg_pic" src="scss/img/twitter.png" alt="member">
+                        </div>
+                        <span id="msg_name" class="name">
+                            小歐妖精
+                        </span>
+                    </div>
+                    <div class="msg">
+                        <p id="msg"></p>
+                        <button>檢舉</button>
+                    </div>
+                </div>
+                <!-- <div class="comment_leave">
+                    <div class="mem">
+                        <div class="pic">
+                            <img id="msg_pic" src="scss/img/twitter.png" alt="member">
+                        </div>
+                        <span id="msg_name" class="name">
+                            小歐妖精
+                        </span>
+                    </div>
+                    <div class="msg">
+                        <p id="msg"></p>
+                        <button>檢舉</button>
+                    </div>
+                </div>
+                <div class="comment_leave">
+                    <div class="mem">
+                        <div class="pic">
+                            <img id="msg_pic" src="scss/img/twitter.png" alt="member">
+                        </div>
+                        <span id="msg_name" class="name">
+                            小歐妖精
+                        </span>
+                    </div>
+                    <div class="msg">
+                        <p id="msg"></p>
+                        <button>檢舉</button>
+                    </div>
+                </div> -->
+            </div>
+            <footer class="footer_wrapper">
+                <ul>
+                    <li>電話:02-2665-1234</li>
+                    <li>Email:picnic@picnic.com</li>
+                    <li>地址:新北市板橋區-野餐路4號</li>
+                </ul>
+                <div class="copy">Copyright©2019</div>
+            </footer>
+        </div>
+
+        <script>
+            /*送出*/
+            var mem_pic = document.getElementById("mem_pic");
+            var mem_name = document.getElementById("mem_name");
+            var comment = document.getElementById("comment");
+            var send = document.getElementById("send");
+            var template = document.querySelector(".comment_leave");
+            var comment_box = document.getElementById("comment_box");
+            /*接收*/
+            var msg_pic = document.getElementById("msg_pic");
+            var msg_name = document.getElementById("msg_name");
+            var msg = document.getElementById("msg");
+            var wrap = document.getElementById("comment_wrap");
+            /*按下*/
+            var templates = document.getElementsByClassName("comment_leave");
+
+
+
+            window.addEventListener("load", function () {
+                send.onclick = function () {
+                    msg.innerHTML = comment.value;
+                    new_msg = template.cloneNode(true);
+                    // new_msg.style.transition = "all 1s";
+                    new_msg.style.display = "";
+                    // new_msg.style.visibility = "visible";
+                    wrap.insertBefore(new_msg, comment_box.nextSibling);
+                    comment.value = "";
+
+                    // console.log( wrap.scrollTop );
+                }
+            })
+
+        </script>
+</body>
+
+</html>
