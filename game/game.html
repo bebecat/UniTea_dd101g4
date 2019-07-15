@@ -618,7 +618,10 @@
     },
     setGameFailed: function (f) {
       $('#score').text(score)
-      if (f >= 3) overShowOver()
+      if (f >= 3){
+          overShowOver()
+          setPoint() // f 小於等 3 時, 執行 setPoint 
+      }
     }
   }
 
@@ -698,6 +701,29 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
   })();
+</script>
+<script>
+    // Ajax setPoint
+    function setPoint(){
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function (){
+            if(xhr.status == 200 ){
+                //modify here
+                console.log(`wow`);
+            }else{
+                alert(xhr.status);
+            }
+        }
+
+        // option link code
+        var url = 'php/setPoint.php?memId=1';
+        xhr.open('get', url, true);
+        // xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+
+        // setInfo
+        // var date_info = `memId=1`;
+        xhr.send( null );
+    }
 </script>
 </body>
 </html>
