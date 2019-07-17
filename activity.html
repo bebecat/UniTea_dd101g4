@@ -175,7 +175,7 @@
 		                    <div class="box_btn">
 		                        <div class="item_gomakebtn">
 		                            <div class="btn_gomake">
-		                                <a href="#show_infor"><p>查看詳情</p></a>
+		                                <a href="#show_infor"><button class="show_acinfor" v-on:click="show_me_infor(51001)">查看詳情</button></a>
 		                            </div>
 		                        </div>
 		                    </div>
@@ -188,7 +188,7 @@
 		                    <div class="box_btn">
 		                        <div class="item_gomakebtn">
 		                            <div class="btn_gomake">
-		                                <a href="#show_infor"><p>查看詳情</p></a>
+		                                <a href="#show_infor"><button class="show_acinfor" v-on:click="show_me_infor(51002)">查看詳情</button></a>
 		                            </div>
 		                        </div>
 		                    </div>
@@ -201,7 +201,7 @@
 		                    <div class="box_btn">
 		                        <div class="item_gomakebtn">
 		                            <div class="btn_gomake">
-		                                <a href="#show_infor"><p>查看詳情</p></a>
+		                                <a href="#show_infor"><button class="show_acinfor" v-on:click="show_me_infor(51003)">查看詳情</button></a>
 		                            </div>
 		                        </div>
 		                    </div>
@@ -214,7 +214,7 @@
 		                    <div class="box_btn">
 		                        <div class="item_gomakebtn">
 		                            <div class="btn_gomake">
-		                                <a href="#show_infor"><p>查看詳情</p></a>
+		                                <a href="#show_infor"><button class="show_acinfor" v-on:click="show_me_infor(51004)">查看詳情</button></a>
 		                            </div>
 		                        </div>
 		                    </div>
@@ -262,12 +262,23 @@
 <script src="js/acVue.js"></script>
 <script>
 	//透過vue架設ajax抓取活動資訊並即時顯示在頁面>>如何透過vue架設ajax
-	//註冊ac_container的查看詳情按鈕>>vue註冊:click
+	//註冊ac_container class="show_acinfor"的查看詳情按鈕>>vue註冊:click
 	//ac_infor_settein會即時顯示json解讀資訊並且迴圈陳列在show_infor
-	var data = {};
+	//var data = {};
 	var vm = new Vue({
 		el:'#activity_information',
-		data:data,
+		//data: {data},
+		methods:{
+			show_me_infor: function(acNo){
+				axios({
+			      methods: 'get',
+			      url: 'acphp/activity_infor.php'
+			   })
+			   .then((resp) => {
+			      self.teachers = resp.data;
+			   }); 
+			},
+		},
 		mounted(){
 			axios
 				.get()
@@ -279,7 +290,7 @@
 		//created : function(){}
 	});
 
-	//報名活動>>首先檢查
+	//報名活動
 	
 </script>
 </body>

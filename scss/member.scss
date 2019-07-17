@@ -77,7 +77,7 @@ body {
   background-color: #f4e6c1;
   box-shadow: 2px 2px 2px grey;
   border-radius: 15px;
-  width: 25%;
+  width: 75%;
   padding: 20px;
   position: relative;
   top: 10%;
@@ -99,7 +99,7 @@ body {
   text-align: center;
 }
 
-#aaa {
+#upFile {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,24 +110,40 @@ body {
 
 .member_icon {
   display: inline-block;
-  padding: 15px;
   vertical-align: center;
   //   outline: 1px solid red;
 }
 
 .member_account {
   vertical-align: middle;
-  text-align: center;
-  //   margin-left: 2%;
-  //   padding: 10px 0px;
+  display: flex;
   line-height: 2.5;
   margin: 0 auto;
   //   outline: 1px solid red;
 }
 
+.member_form {
+  text-align: center;
+  padding: 0px;
+}
+
+.member_form {
+  width: 33%;
+}
+
 .member_inaccount {
-  width: 100%;
-  margin: 0 auto;
+  width: 50%;
+  margin: auto;
+  text-align: left;
+  table {
+    margin: 0 auto;
+  }
+}
+
+.member_inaccount2 {
+  width: 50%;
+  margin: auto;
+  text-align: auto;
   table {
     margin: 0 auto;
   }
@@ -175,8 +191,8 @@ body {
 }
 
 .search_button p:hover {
-  color: deepskyblue;
-  background-color: #aaa;
+  color: #522411;
+  background-color: #f8df7e;
   cursor: pointer;
 }
 
@@ -197,9 +213,6 @@ body {
   padding: 10px 5px;
   background-color: #f8df7e;
   box-sizing: border-box;
-}
-.customized_box span {
-  text-align: center;
 }
 
 .list_box,
@@ -304,6 +317,42 @@ body {
     display: flex;
     justify-content: space-around;
   }
+
+  .member_account {
+    flex-flow: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .member_inaccount {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    table {
+      margin: 0 auto;
+      td {
+        width: 100%;
+      }
+    }
+  }
+
+  .member_inaccount2 {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+
+    table {
+      margin: 0 auto;
+      td {
+        width: 100%;
+      }
+    }
+  }
+
+  .member_form {
+    width: 100%;
+  }
+
   .member_inaccount p {
     text-align: left;
   }
@@ -319,6 +368,42 @@ body {
     margin: 15px;
     width: 85%;
     .customized_box {
+      .item {
+        flex-flow: row nowrap;
+        width: 100%;
+        .title {
+          width: 50%;
+        }
+        .pic {
+          width: 50%;
+        }
+      }
+    }
+    .list_box {
+      .item {
+        flex-flow: row nowrap;
+        width: 100%;
+        .title {
+          width: 50%;
+        }
+        .pic {
+          width: 50%;
+        }
+      }
+    }
+    .compete_box {
+      .item {
+        flex-flow: row nowrap;
+        width: 100%;
+        .title {
+          width: 50%;
+        }
+        .pic {
+          width: 50%;
+        }
+      }
+    }
+    .activity_box {
       .item {
         flex-flow: row nowrap;
         width: 100%;

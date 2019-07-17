@@ -2,6 +2,7 @@
 //報名活動
 //ob_start();
 //session_start();
+$_SESSION["memId"] = '90001';//模擬登入
 if(isset($_SESSION["memId"]) === false){
 	header("location:login.html");//傳到登入畫面
 }else{

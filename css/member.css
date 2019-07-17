@@ -110,7 +110,7 @@ body {
   background-color: #f4e6c1;
   box-shadow: 2px 2px 2px grey;
   border-radius: 15px;
-  width: 25%;
+  width: 75%;
   padding: 20px;
   position: relative;
   top: 10%;
@@ -129,7 +129,7 @@ body {
   padding: 10px 0px;
   text-align: center; }
 
-#aaa {
+#upFile {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,19 +139,33 @@ body {
 
 .member_icon {
   display: inline-block;
-  padding: 15px;
   vertical-align: center; }
 
 .member_account {
   vertical-align: middle;
-  text-align: center;
+  display: flex;
   line-height: 2.5;
   margin: 0 auto; }
 
+.member_form {
+  text-align: center;
+  padding: 0px; }
+
+.member_form {
+  width: 33%; }
+
 .member_inaccount {
-  width: 100%;
-  margin: 0 auto; }
+  width: 50%;
+  margin: auto;
+  text-align: left; }
   .member_inaccount table {
+    margin: 0 auto; }
+
+.member_inaccount2 {
+  width: 50%;
+  margin: auto;
+  text-align: auto; }
+  .member_inaccount2 table {
     margin: 0 auto; }
 
 .member_point {
@@ -189,8 +203,8 @@ body {
   justify-content: space-around; }
 
 .search_button p:hover {
-  color: deepskyblue;
-  background-color: #aaa;
+  color: #522411;
+  background-color: #f8df7e;
   cursor: pointer; }
 
 .search_button p {
@@ -208,9 +222,6 @@ body {
   padding: 10px 5px;
   background-color: #f8df7e;
   box-sizing: border-box; }
-
-.customized_box span {
-  text-align: center; }
 
 .list_box,
 .customized_box,
@@ -305,6 +316,28 @@ body {
     width: 85%;
     display: flex;
     justify-content: space-around; }
+  .member_account {
+    flex-flow: column;
+    text-align: center;
+    align-items: center; }
+  .member_inaccount {
+    width: 90%;
+    margin: auto;
+    text-align: center; }
+    .member_inaccount table {
+      margin: 0 auto; }
+      .member_inaccount table td {
+        width: 100%; }
+  .member_inaccount2 {
+    width: 90%;
+    margin: auto;
+    text-align: left; }
+    .member_inaccount2 table {
+      margin: 0 auto; }
+      .member_inaccount2 table td {
+        width: 100%; }
+  .member_form {
+    width: 100%; }
   .member_inaccount p {
     text-align: left; }
   .search_button p {
@@ -322,6 +355,27 @@ body {
       .search_list .customized_box .item .title {
         width: 50%; }
       .search_list .customized_box .item .pic {
+        width: 50%; }
+    .search_list .list_box .item {
+      flex-flow: row nowrap;
+      width: 100%; }
+      .search_list .list_box .item .title {
+        width: 50%; }
+      .search_list .list_box .item .pic {
+        width: 50%; }
+    .search_list .compete_box .item {
+      flex-flow: row nowrap;
+      width: 100%; }
+      .search_list .compete_box .item .title {
+        width: 50%; }
+      .search_list .compete_box .item .pic {
+        width: 50%; }
+    .search_list .activity_box .item {
+      flex-flow: row nowrap;
+      width: 100%; }
+      .search_list .activity_box .item .title {
+        width: 50%; }
+      .search_list .activity_box .item .pic {
         width: 50%; }
   .member_area {
     width: 100%;
