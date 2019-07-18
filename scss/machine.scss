@@ -9,6 +9,9 @@
   select,
   textarea {
     outline: none;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
   }
 }
 .machine {
@@ -250,6 +253,43 @@
     .chatBot_content_txt {
       font-size: 16px;
     }
+    .QA_item{
+      .q_w{
+        width: 100%;
+        .question{
+          text-align: right;
+          background-color: burlywood;
+          margin-left: auto;
+          border-radius: 10px 10px 0px 10px;
+          color: white;
+          position: relative;
+          padding: 4px 6px;
+          font-size: 12px;
+          display: inline-block;
+        }
+      }
+      .a_w{
+        width: 100%;
+        .answer{
+          background-color: rgb(252, 239, 165);
+          border-radius: 10px 10px 10px 0px;
+          color: #502311;
+          padding: 4px 6px;
+          display: inline-block;
+          margin: 3px 0;
+          position: relative;
+          font-size: 12px;
+          // width: 60%;
+          ::before {
+            content: "♥ ";
+            // border: 2px solid #502311;
+          }
+        }
+      }
+      .clear{
+        clear: both;
+      }
+    }
   }
 
   .chatBot-text-Wrap {
@@ -289,7 +329,7 @@
     flex-flow: row wrap;
     justify-content: space-around;
   }
-  .chatBot_keyword li {
+  .chatBot_keyword input {
     background-color: #edeed0;
     padding: 3px 6px;
     font-size: 12px;
@@ -335,3 +375,4 @@
 .clearFix {
   clear: both;
 }
+

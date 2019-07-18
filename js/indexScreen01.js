@@ -21,7 +21,7 @@ function parallax(e){
     // smobjectMoveB.style.transform = 'translate(' + (x + 2) + 'px,' + (y + 2) + 'px)';
     // smobjectMoveC.style.transform = 'translate(' + (x + 2) + 'px,' + (y + 2) + 'px)';
     // smobjectMoveD.style.transform = 'translate(' + (x + 2 ) + 'px,' + (y + 2 ) + 'px)';
-    console.log(tweezersMove, parallaxMove);
+    // console.log(tweezersMove, parallaxMove);
     
 }
 

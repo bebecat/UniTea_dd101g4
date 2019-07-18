@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    if(isset($_SESSION["memId"])!=true){
+        $_SESSION["memId"] = null;
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -450,25 +457,29 @@
 
 
         @font-face {
-            font-family: 'wenxue';
-            src: url('./assets/wenxue.eot');
-            src: url('./assets/wenxue.eot'),
-            url('./assets/wenxue.woff'),
-            url('./assets/wenxue.ttf'),
-            url('./assets/wenxue.svg');
+            font-family: "wenxue";
+            src: url("./assets/wenxue.eot");
+            src: url("./assets/wenxue.eot"),
+            url("./assets/wenxue.woff"),
+            url("./assets/wenxue.ttf"),
+            url("./assets/wenxue.svg");
         }
 
         .font-wenxue {
-            font-family: 'wenxue';
+            font-family: "wenxue";
         }
     </style>
 </head>
 <body>
-
+    <span id="memId_hide" style="display:none">
+        <?php
+            echo $_SESSION["memId"]
+        ?>
+    </span>
 <canvas id="canvas" class="hide"></canvas>
 
 <div class="content">
-    <a href="../index.html" class="Xicon"><img src="./assets/Xicon.png" alt=""></a>
+    <a href="../indexF.php" class="Xicon"><img src="./assets/Xicon.png" alt=""></a>
     <div class="loading">
         <div class="main"><img
                 src="./assets/main-loading.gif">
@@ -514,7 +525,7 @@
                                     <!-- <img
                                             src="./assets/main-modal-invite-b.png"
                                             class="over-button-b js-invite"> -->
-                                    <a href="../index.html">
+                                    <a href="../indexF.php">
                                         <img src="./assets/main-modal-backindex-b.png" class="over-button-b js-invite">
                                     </a>
                                 </div>
@@ -537,7 +548,7 @@
             <img src="./assets/light.png" alt="">
         </div>
         <div class="cptype">
-            <img src="./assets/cp50.png" alt="">
+            <img src="./assets/cp100.png" alt="">
         </div>
         <div class="gametxt">
             <p>
@@ -559,18 +570,18 @@
   if (gameHeight / gameWidth < ratio) {
     gameWidth = Math.ceil(gameHeight / ratio)
   }
-  $('.content').css({ "height": gameHeight + "px", "width": gameWidth + "px" })
-  $('.js-modal-content').css({ "width": gameWidth + "px" })
-  $('.wxShare').hide()
+  $(".content").css({ "height": gameHeight + "px", "width": gameWidth + "px" })
+  $(".js-modal-content").css({ "width": gameWidth + "px" })
+  $(".wxShare").hide()
   // loading animation
   function hideLoading() {
     if (domReady && canvasReady) {
-      $('#canvas').show()
+      $("#canvas").show()
       loadFinish = true
       setTimeout(function () {
-        $('.loading').hide()
-        $('.landing').show()
-        $('.wxShare').hide()
+        $(".loading").hide()
+        $(".landing").show()
+        $(".wxShare").hide()
       }, 1000)
     }
   }
@@ -581,7 +592,7 @@
     var failed = status.failed
     if (failed > 0 && !loadError) {
       loadError = true
-      alert('載入失敗 請重新進入遊戲')
+      alert("載入失敗 請重新進入遊戲")
       return
     }
     var percent = parseInt((success / total) * 100);
@@ -590,25 +601,25 @@
       hideLoading()
     }
     percent = percent > 98 ? 98 : percent
-    percent = percent + '%'
-    $('.loading .title').text(percent);
-    $('.loading .percent').css({
-      'width': percent
+    percent = percent + "%"
+    $(".loading .title").text(percent);
+    $(".loading .percent").css({
+      "width": percent
     })
   }
 
   function overShowOver() {
-    $('#modal').show()
-    $('#over-modal').show()
-    $('#over-zero').show()
-    $('.wxShare').show()
+    $("#modal").show()
+    $("#over-modal").show()
+    $("#over-zero").show()
+    $(".wxShare").show()
   }
 
   // game customization options
   const option = {
     width: gameWidth,
     height: gameHeight,
-    canvasId: 'canvas',
+    canvasId: "canvas",
     soundOn: true,
     setGameScore: function (s) {
       score = s
@@ -617,7 +628,7 @@
       successCount = s
     },
     setGameFailed: function (f) {
-      $('#score').text(score)
+      $("#score").text(score)
       if (f >= 3){
           overShowOver()
           setPoint() // f 小於等 3 時, 執行 setPoint 
@@ -645,42 +656,42 @@
   }
 
   function indexHide() {
-    $('.landing .action-1').addClass('slideTop')
-    $('.landing .action-2').addClass('slideBottom')
+    $(".landing .action-1").addClass("slideTop")
+    $(".landing .action-2").addClass("slideBottom")
     setTimeout(function () {
-      $('.landing').hide()
+      $(".landing").hide()
     }, 950)
   }
 
   // click event
-  $('#start').on('click', function () {
+  $("#start").on("click", function () {
     if (gameStart) return
     gameStart = true
     indexHide()
     setTimeout(game.start, 400)
   })
 
-  $('.js-reload').on('click', function () {
-    window.location.href = window.location.href + '?s=' + (+new Date())
+  $(".js-reload").on("click", function () {
+    window.location.href = window.location.href + "?s=" + (+new Date())
   })
 
-//   $('.js-invite').on('click', function () {
-//     $('.wxShare').show()
+//   $(".js-invite").on("click", function () {
+//     $(".wxShare").show()
 //   })
 
-  $('.wxShare').on('click', function () {
-    $('.wxShare').hide()
+  $(".wxShare").on("click", function () {
+    $(".wxShare").hide()
   })
 
   // listener
-  window.addEventListener('load', function () {
+  window.addEventListener("load", function () {
     domReady = true
     hideLoading()
   }, false);
 </script>
-<script>
+<!-- <script>
   (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
+    i["GoogleAnalyticsObject"] = r;
     i[r] = i[r] || function () {
         (i[r].q = i[r].q || []).push(arguments)
       }, i[r].l = 1 * new Date();
@@ -689,10 +700,10 @@
     a.async = 1;
     a.src = g;
     m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
 
-  ga('create', 'UA-46444752-20', 'auto');
-  ga('send', 'pageview');
+  ga("create", "UA-46444752-20", "auto");
+  ga("send", "pageview");
 
   var _hmt = _hmt || [];
   (function () {
@@ -701,28 +712,35 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
   })();
-</script>
+</script> -->
 <script>
     // Ajax setPoint
     function setPoint(){
-        var xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest()  ;
+        var memId_hide = document.getElementById('memId_hide');
         xhr.onload = function (){
             if(xhr.status == 200 ){
                 //modify here
-                console.log(`wow`);
+                console.log(xhr.responseText);
+                console.log(url);
+                if(memId_hide.vaule == ''){
+                    
+                }
             }else{
                 alert(xhr.status);
             }
         }
 
+
+
         // option link code
-        var url = 'php/setPoint.php?memId=1';
-        xhr.open('get', url, true);
-        // xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+        url = "setPoint.php?memId=" + memId_hide.innerText;
+        xhr.open("get", url, true);
+        // xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
 
         // setInfo
         // var date_info = `memId=1`;
-        xhr.send( null );
+        xhr.send(null);
     }
 </script>
 </body>
