@@ -1,31 +1,43 @@
-var current = 0;
-var curotate = 0;
-var curIndex = 0;
+
+var transnum = 0;//scrollin()
+var current = 0;//webstoryMove()
+var curotate = 0;//teaMove()
+
 function $id(id){
 	return document.getElementById(id);
 };
-function scroll(e){
-    e = e || window.event;
-    var t = 0;
-    if (e.wheelDelta) {
-        t = e.wheelDelta;
-        if (t > 0 && curIndex > 0) {
-            movePrev();
-        } else if (t < 0 && curIndex < sumCount - 1) {
-            moveNext();
-        }
-    } else if (e.detail) {
-        t = e.detail;
-        if (t < 0 && curIndex > 0) {
-            movePrev();
-        } else if (t > 0 && curIndex < sumCount - 1) {
-            moveNext();
-        }
-    }
+
+function scrollin(){
+	//離頂部滑動超過50px會跳到下一屏(22%)，
+	// if(window.resize && $id("container").style.height < 400){}//屏幕大小為手機時不啟用
+	var scrollTop = document.documentElement.scrollTop || window.pageYOfset ;
+		console.log("scrollTop:"+scrollTop);
+	if(scrollTop < 120 && scrollTop > 60){
+		document.getElementsByClassName("move_left_tree")[0].style.left = "-100%";
+		document.getElementsByClassName("move_right_tree")[0].style.right = "-100%";
+		document.getElementsByClassName("move_left_tree")[0].style.webkitAnimationPlayState = "paused";
+		document.getElementsByClassName("move_right_tree")[0].style.webkitAnimationPlayState = "paused";
+		transnum = 22 ;
+		$id("container").style.transform = `translateY(-${transnum}%)`;
+	}else if(scrollTop < 800 && scrollTop > 760){
+		document.getElementsByClassName("move_left_tree")[0].style.left = "0";
+		document.getElementsByClassName("move_right_tree")[0].style.right = "0";
+		transnum = 0;
+		$id("container").style.transform = "translateY(-"+transnum+"%)";
+	}else if(scrollTop < 860 && scrollTop > 800){
+		transnum = 40;
+		$id("container").style.transform = `translateY(-${transnum}%)`;
+	}
+	else if (scrollTop < 1578 && scrollTop > 1447){	
+		transnum = 22 ;
+		$id("container").style.transform = `translateY(-${transnum}%)`;
+	}else{
+		$id("container").style.transform = "translateY(-"+transnum+"%)";
+	}
+
+	//向下滾動--
 };
-function movePrev(){};
-function moveNext(){};
-function webstorymove(){
+function webstoryMove(){
 	$id("roulette").style.transform = "rotate("+curotate+"deg)";
 	$id("turnright").onclick = function(){
 		curotate += 90;
@@ -36,7 +48,7 @@ function webstorymove(){
 		$id("roulette").style.transform = "rotate("+curotate+"deg)";
 	};
 }
-function teamove(){
+function teaMove(){
 	$id("mebmove").style.transform = "translateX("+current+")";
 	$id("right").onclick = function(){
 		current -= 16.666666;
@@ -57,8 +69,13 @@ function teamove(){
 	};
 };
 function doFirst(){
-	// scroll();
-	webstorymove();
-	setInterval(teamove,500);
+	$id("container").style.transform = "translateY("+transnum+"%)";
+    window.addEventListener('scroll', scrollin, false);
+	setInterval(scrollin,1000);
+    webstoryMove();
+	setInterval(teaMove,500);
+	document.getElementsByClassName("move_left_tree")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("move_right_tree")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("load_show")[0].style.webkitAnimationPlayState = "running";
 };
 window.addEventListener("load",doFirst,false);
