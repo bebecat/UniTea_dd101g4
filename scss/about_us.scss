@@ -28,15 +28,16 @@
 	padding : 0;
 	list-style : none;
 	text-decoration:none;
-	outline : 1px solid rgba(33,33,33,.5);
+	//outline : 1px solid rgba(33,33,33,.5);
 };
 .clear_fix{
 	clear:both;
 };
 .fp_aboutus_wrapper{
 	width:100vw;
+	height:100vh;
 	position:relative;
-	//overflow:hidden;
+	overflow:hidden;
 	@keyframes boom{
 		0%{transform:rotate(0) scale(1);}
 		30%{transform:rotate(0) scale(1);}
@@ -511,7 +512,10 @@
 		width:100%;
 		height:300vh;
 		max-content:2880px;
-		position:relative;
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
 		transition:transform 1s 0s linear;
 		.section{
 			width:100vw;
@@ -1312,6 +1316,7 @@
 	@media screen and (max-width: 767px) {
 		#container{
 			height:max-content;
+			position:relative;
 			.begin_animation{
 				overflow:hidden;
 				.move_left_tree{
@@ -1360,48 +1365,33 @@
 								}
 							}
 							.step_list{
-								width:270px;
-								bottom:50px;
+								width:100%;
+								padding:10px 0 0;
+								bottom:100px;
 								.step_line{
-									width:250px;
+									width:80%;
+								}	
+								.step_bow{
+									display:block;
+									width:80px;
+									height:80px;
+									position:absolute;
+									bottom:10px;
+									animation:boom 1.5s 0s ease infinite both;
 								}
-								.step_item{
-									width:30px;
-									height:30px;
-									.step_bg{
-										width:30px;
-										height:30px;
-									}
-									.step_num{
-										width:30px;
-										height:30px;
-										line-height:30px;
-										font-size:20px;
-										top:0;
-										left:0;
-										right:0;
-										bottom:0;
-									}
+								.leftside{
+									left:10px;
+									z-index:1;
 								}
-								.step_1{
-									right:0;
-								}
-								.step_2{
-									right:0;
-								}
-								.step_3{
-									right:0;
-								}
-								.step_4{
-									right:0;
-								}
-								.step_5{
-									right:0;
+								.rightside{
+									right:10px;
+									z-index:1;
 								}
 							}
 							.basket_settin{
 								width:150px;
-								height:146px;							position:relative;
+								height:146px;
+								position:relative;
 							}
 						}
 						.second_step_customize{
@@ -1469,111 +1459,33 @@
 							position:relative;
 							box-sizing:border-box;
 							transform:rotate(0deg);
-						.activity_settin{
-							width:100%;
-							height:300px;
-							padding:20px 0 0;
-							position:relative;
-							.picnicbg_settin{
-								width:80%;
-								height:200px;
-								position:absolute;
-								bottom:0px;
-								left:0;
-								right:0;
-								margin:auto;
-								transform:translateX(-2px);
-								.mat_settin{
-									width:100%;
-									height:100%;
-								}
-							}
-							.txt{
+							.activity_settin{
 								width:100%;
-								position:absolute;
-								top:-130px;
-							}
-							.picnicfood_settin{
-								width:90%;
-								height:262px;
-								position:absolute;
-								bottom:0px;
-								left:0;
-								right:0;
-								margin:auto;
-								transform:translateX(-15px);
-								.food{
-									width:200px;
-									height:194px;
-									position:absolute;
-									left:0;
-									right:0;
-									margin:auto;
-								}
-								.basket_settin{
-									.customize_basket{
-										width:200px;
-										height:194px;
-									}
-									.goto_activity_step_basket_front{
-										position:absolute;
-										left:0;
-										right:0;
-										margin:auto;
+								height:300px;
+								padding:20px 0 0;
+								position:relative;
+								.picnicbg_settin{
+									width:80%;
+									height:200px;
+									transform:translateX(-2px);
+									.mat_settin{
+										width:100%;
+										height:100%;
 									}
 								}
-								.tableware_settin{
-									top:50px;
-									right:0;
-									position:absolute;
-									.chopping_board{
-										width:256px;
-										height:256px;
-										animation:step3choppingboardflow 3s 0s infinite linear alternate;
-									}
-									.food{
-										width:270px;
-										bottom:0;
-										position:absolute;
-										.cookies_a{
-											display:inline-block;
-											width:80px;
-											height:68px;
-											animation:cookiesaflow 3s 0s infinite linear alternate;
-										}
-										.cookies_b{
-											display:inline-block;
-											width:80px;
-											height:68px;
-											animation:cookiesbflow 3s 0s infinite linear alternate;
-										}
-									}
-									.fork_settin{
-										width:160px;
-										height:160px;
-										position:absolute;
-										top:-30px;
-										right:-30px;
-										transform-origin: 160px 0;
-										animation:step3forkflow 3s 0s infinite linear alternate;
-									}
-									.spoon_settin{
-										width:160px;
-										height:160px;
-										position:absolute;
-										top:10px;
-										right:-70px;
-										transform-origin: 0px 160px;
-										animation:step3spoonflow 3s 0s infinite linear alternate;
-									}
+								.txt{
+									top:-130px;
+								}
+								.picnicfood_settin{
+									width:90%;
+									transform:translateX(-15px);
 								}
 							}
-						}
 						}
 					}
 				}
 			}
-			.teamstory__introduction{
+			.teamstory_introduction{
 				width:100vw;
 				height:max-content;
 				max-height:max-content;
@@ -1599,6 +1511,7 @@
 					}
 					h2{
 						width:100%;
+
 					}
 					.context{
 					position:relative;
@@ -1648,5 +1561,11 @@
 	}
 	@media screen and (max-width: 767px){
 		footer{position:absolute;}
+	}
+}
+@media screen and (max-width: 767px){
+	.fp_aboutus_wrapper{
+		height:max-content;
+		overflow:none;
 	}
 }

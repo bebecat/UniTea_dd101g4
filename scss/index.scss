@@ -8,9 +8,8 @@
     box-sizing: border-box;
     // outline: 1px solid #f00;
 }
-h3{
-    text-align:center;
-}
+
+
 // web
 @media screen and (min-width:768px){
 // Type 
@@ -368,6 +367,7 @@ h3{
                         width:100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 70%;
                         position: absolute;
                         font-weight: 400;
@@ -616,6 +616,7 @@ h3{
                         width:100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 70%;
                         position: absolute;
                         font-weight: 400;
@@ -690,6 +691,7 @@ h3{
                                 margin: 10px;
                                 padding: 5px 10px 5px 10px;
                                 .ranking{
+                                    text-align: center;
                                     color: #91502A;
                                     font-size: 20px;
                                 }
@@ -1048,6 +1050,7 @@ h3{
                         width:100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 70%;
                         position: absolute;
                         font-weight: 400;
@@ -1113,6 +1116,7 @@ h3{
                                             width: 100%;
                                         }
                                         .hotproducts_txt{
+                                            text-align: center;
                                             width: 100%;
                                             position: absolute;
                                             bottom: 20px;
@@ -1288,6 +1292,11 @@ h3{
             flex-flow: column nowrap;
             width: 100%;
             padding: 0 0 5% 0;
+            background-image: 
+            url('/scss/img/GengImg/BG/05-3bg.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             .content_gamebg{
                 display: flex;
                 justify-content: space-around;
@@ -1298,12 +1307,6 @@ h3{
                 height: 100vh;
                 img{
                     width: 100%;
-                }
-                .game_picA, .game_picB{
-                    width: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
                 }
                 // margin: 0 0 10% 0;
                 .content_wood{
@@ -1327,6 +1330,7 @@ h3{
                             width:100%;
                         }
                         .item_h3{
+                            text-align: center;
                             width: 70%;
                             position: absolute;
                             font-weight: 400;
@@ -1358,8 +1362,10 @@ h3{
                                 align-items: center;
                                 width: 80%;
                                 position: relative;
-                                background: url('/scss/img/GengImg/Screen05/Screen05moutain.png') no-repeat;
-                                background-size: 50%;
+                                background-image: 
+                                url('/scss/img/GengImg/Screen05/Screen05moutain.png');
+                                background-repeat: no-repeat;
+                                background-size: 60%;
                                 background-position: center;
                                 .boxes_shake{
                                     width: 20%;
@@ -1625,6 +1631,7 @@ h3{
                         width: 100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 100%;
                         position: absolute;
                         font-weight: 400;
@@ -1770,6 +1777,7 @@ h3{
                         width: 100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 100%;
                         position: absolute;
                         font-weight: 400;
@@ -1853,6 +1861,8 @@ h3{
                                 right: -3%;
                                 width: 100%;
                                 .mobilevote_ranking{
+                                    display: flex;
+                                    justify-content: center;
                                     color: #91502A;
                                     font-size: 20px;
                                 }
@@ -1925,6 +1935,8 @@ h3{
                                 margin: 10px;
                                 padding: 5px 10px 5px 10px;
                                 .mobilevote_ranking{
+                                    display: flex;
+                                    justify-content: center;
                                     color: #91502A;
                                     font-size: 20px;
                                 }
@@ -2227,6 +2239,7 @@ h3{
                         width: 100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 100%;
                         position: absolute;
                         font-weight: 400;
@@ -2384,6 +2397,7 @@ h3{
                         width:100%;
                     }
                     .item_h3{
+                        text-align: center;
                         width: 70%;
                         position: absolute;
                         font-weight: 400;

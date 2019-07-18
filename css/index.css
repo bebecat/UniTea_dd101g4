@@ -59,9 +59,6 @@ p {
   text-decoration: none;
   box-sizing: border-box; }
 
-h3 {
-  text-align: center; }
-
 @media screen and (min-width: 768px) {
   .index_wrapper {
     display: flex;
@@ -343,6 +340,7 @@ h3 {
             .index_wrapper .container_inBackground .container_boxes .content_wood .box_wood img {
               width: 100%; }
             .index_wrapper .container_inBackground .container_boxes .content_wood .box_wood .item_h3 {
+              text-align: center;
               width: 70%;
               position: absolute;
               font-weight: 400;
@@ -537,6 +535,7 @@ h3 {
             .index_wrapper .container_inBackground .container_vote .content_wood .box_wood img {
               width: 100%; }
             .index_wrapper .container_inBackground .container_vote .content_wood .box_wood .item_h3 {
+              text-align: center;
               width: 70%;
               position: absolute;
               font-weight: 400;
@@ -595,6 +594,7 @@ h3 {
                   margin: 10px;
                   padding: 5px 10px 5px 10px; }
                   .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote .vote_pic .vote_txt .ranking {
+                    text-align: center;
                     color: #91502A;
                     font-size: 20px; }
                   .index_wrapper .container_inBackground .container_vote .content_vote .box_vote .item_vote .vote_pic .vote_txt .math {
@@ -895,6 +895,7 @@ h3 {
             .index_wrapper .container_inBackground .container_store .content_wood .box_wood img {
               width: 100%; }
             .index_wrapper .container_inBackground .container_store .content_wood .box_wood .item_h3 {
+              text-align: center;
               width: 70%;
               position: absolute;
               font-weight: 400;
@@ -950,6 +951,7 @@ h3 {
                       .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_board img {
                         width: 100%; }
                       .index_wrapper .container_inBackground .container_store .content_storebg .box_storebg .content_hotproducts .box_hotproducts .item_hotproducts .hotproducts_boxes .hotproducts_board .hotproducts_txt {
+                        text-align: center;
                         width: 100%;
                         position: absolute;
                         bottom: 20px; }
@@ -1079,7 +1081,11 @@ h3 {
         align-items: center;
         flex-flow: column nowrap;
         width: 100%;
-        padding: 0 0 5% 0; }
+        padding: 0 0 5% 0;
+        background-image: url("/scss/img/GengImg/BG/05-3bg.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
         .index_wrapper .container_inBackground .container_game .content_gamebg {
           display: flex;
           justify-content: space-around;
@@ -1090,11 +1096,6 @@ h3 {
           height: 100vh; }
           .index_wrapper .container_inBackground .container_game .content_gamebg img {
             width: 100%; }
-          .index_wrapper .container_inBackground .container_game .content_gamebg .game_picA, .index_wrapper .container_inBackground .container_game .content_gamebg .game_picB {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0; }
           .index_wrapper .container_inBackground .container_game .content_gamebg .content_wood {
             display: flex;
             justify-content: center;
@@ -1114,6 +1115,7 @@ h3 {
               .index_wrapper .container_inBackground .container_game .content_gamebg .content_wood .box_wood img {
                 width: 100%; }
               .index_wrapper .container_inBackground .container_game .content_gamebg .content_wood .box_wood .item_h3 {
+                text-align: center;
                 width: 70%;
                 position: absolute;
                 font-weight: 400;
@@ -1141,8 +1143,9 @@ h3 {
                   align-items: center;
                   width: 80%;
                   position: relative;
-                  background: url("/scss/img/GengImg/Screen05/Screen05moutain.png") no-repeat;
-                  background-size: 50%;
+                  background-image: url("/scss/img/GengImg/Screen05/Screen05moutain.png");
+                  background-repeat: no-repeat;
+                  background-size: 60%;
                   background-position: center; }
                   .index_wrapper .container_inBackground .container_game .content_gamebg .content_game .box_game .item_game .vine_boxes .boxes_shake {
                     width: 20%;
@@ -1335,6 +1338,7 @@ h3 {
             .index_wrapper .container_inBackground .container_boxes .content_wood .box_wood img {
               width: 100%; }
             .index_wrapper .container_inBackground .container_boxes .content_wood .box_wood .item_h3 {
+              text-align: center;
               width: 100%;
               position: absolute;
               font-weight: 400;
@@ -1454,6 +1458,7 @@ h3 {
             .index_wrapper .container_inBackground .container_vote .content_wood .box_wood img {
               width: 100%; }
             .index_wrapper .container_inBackground .container_vote .content_wood .box_wood .item_h3 {
+              text-align: center;
               width: 100%;
               position: absolute;
               font-weight: 400;
@@ -1521,6 +1526,8 @@ h3 {
                   right: -3%;
                   width: 100%; }
                   .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic .mobilevote_txt .mobilevote_ranking {
+                    display: flex;
+                    justify-content: center;
                     color: #91502A;
                     font-size: 20px; }
                   .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_pic .mobilevote_txt .mobilemath {
@@ -1577,6 +1584,8 @@ h3 {
                   margin: 10px;
                   padding: 5px 10px 5px 10px; }
                   .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_txt .mobilevote_ranking, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_txt .mobilevote_ranking {
+                    display: flex;
+                    justify-content: center;
                     color: #91502A;
                     font-size: 20px; }
                   .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picA .mobilevote_txt .mobilemath, .index_wrapper .container_inBackground .container_vote .content_mobilevote .box_mobilevote .item_mobilevote .mobilevote_picB .mobilevote_txt .mobilemath {
@@ -1840,6 +1849,7 @@ h3 {
             .index_wrapper .container_inBackground .container_store .content_wood .box_wood img {
               width: 100%; }
             .index_wrapper .container_inBackground .container_store .content_wood .box_wood .item_h3 {
+              text-align: center;
               width: 100%;
               position: absolute;
               font-weight: 400;
@@ -1961,6 +1971,7 @@ h3 {
             .index_wrapper .container_inBackground .container_game .content_wood .box_wood img {
               width: 100%; }
             .index_wrapper .container_inBackground .container_game .content_wood .box_wood .item_h3 {
+              text-align: center;
               width: 70%;
               position: absolute;
               font-weight: 400;

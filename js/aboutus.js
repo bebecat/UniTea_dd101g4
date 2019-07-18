@@ -1,41 +1,48 @@
 
-var transnum = 0;//scrollin()
+var curIndex = 0;//scrollin(e)
 var current = 0;//webstoryMove()
 var curotate = 0;//teaMove()
 
 function $id(id){
 	return document.getElementById(id);
 };
-
-function scrollin(){
-	//離頂部滑動超過50px會跳到下一屏(22%)，
-	// if(window.resize && $id("container").style.height < 400){}//屏幕大小為手機時不啟用
-	var scrollTop = document.documentElement.scrollTop || window.pageYOfset ;
-		console.log("scrollTop:"+scrollTop);
-	if(scrollTop < 120 && scrollTop > 60){
-		document.getElementsByClassName("move_left_tree")[0].style.left = "-100%";
-		document.getElementsByClassName("move_right_tree")[0].style.right = "-100%";
-		document.getElementsByClassName("move_left_tree")[0].style.webkitAnimationPlayState = "paused";
-		document.getElementsByClassName("move_right_tree")[0].style.webkitAnimationPlayState = "paused";
-		transnum = 22 ;
-		$id("container").style.transform = `translateY(-${transnum}%)`;
-	}else if(scrollTop < 800 && scrollTop > 760){
-		document.getElementsByClassName("move_left_tree")[0].style.left = "0";
-		document.getElementsByClassName("move_right_tree")[0].style.right = "0";
-		transnum = 0;
-		$id("container").style.transform = "translateY(-"+transnum+"%)";
-	}else if(scrollTop < 860 && scrollTop > 800){
-		transnum = 40;
-		$id("container").style.transform = `translateY(-${transnum}%)`;
+function scrollin(e){
+	//window.getComputedStyle.property
+	//屏幕大小為手機時不啟用
+	if(window.innerHeight > 768 ){
+		// console.log("e.deltaY:"+e.deltaY);
+		if(e.deltaY > 10 && curIndex == 0){
+			document.getElementsByClassName("move_left_tree")[0].style.left = "-100%";
+			document.getElementsByClassName("move_right_tree")[0].style.right = "-100%";
+			document.getElementsByClassName("move_left_tree")[0].style.webkitAnimationPlayState = "paused";
+			document.getElementsByClassName("move_right_tree")[0].style.webkitAnimationPlayState = "paused";
+			curIndex ++;
+			curNum = parseInt(-34*curIndex);
+			$id("container").style.transform = `translateY(${curNum}%)`;
+			// console.log("curNum:"+curNum);
+			// console.log("curIndex:"+curIndex);
+		}else if(e.deltaY > 10 && curIndex == 1){
+			curIndex ++;
+			curNum = parseInt(-32*curIndex);
+			$id("container").style.transform = `translateY(${curNum}%)`;
+			// console.log("curNum:"+curNum);
+			// console.log("curIndex:"+curIndex);
+		}else if(e.deltaY < -12 && curIndex == 1){
+			document.getElementsByClassName("move_left_tree")[0].style.left = "0";
+			document.getElementsByClassName("move_right_tree")[0].style.right = "0";
+			curIndex --;
+			curNum = parseInt(-32*curIndex);
+			$id("container").style.transform = `translateY(${curNum}%)`;
+			// console.log("curNum:"+curNum);
+			// console.log("curIndex:"+curIndex);
+		}else if(e.deltaY < -12 && curIndex == 2){
+			curIndex --;
+			curNum = parseInt(-33*curIndex);
+			$id("container").style.transform = `translateY(${curNum}%)`;
+			// console.log("curNum:"+curNum);
+			// console.log("curIndex:"+curIndex);
+		}
 	}
-	else if (scrollTop < 1578 && scrollTop > 1447){	
-		transnum = 22 ;
-		$id("container").style.transform = `translateY(-${transnum}%)`;
-	}else{
-		$id("container").style.transform = "translateY(-"+transnum+"%)";
-	}
-
-	//向下滾動--
 };
 function webstoryMove(){
 	$id("roulette").style.transform = "rotate("+curotate+"deg)";
@@ -48,7 +55,7 @@ function webstoryMove(){
 		$id("roulette").style.transform = "rotate("+curotate+"deg)";
 	};
 }
-function teaMove(){
+function teamMove(){
 	$id("mebmove").style.transform = "translateX("+current+")";
 	$id("right").onclick = function(){
 		current -= 16.666666;
@@ -69,11 +76,9 @@ function teaMove(){
 	};
 };
 function doFirst(){
-	$id("container").style.transform = "translateY("+transnum+"%)";
-    window.addEventListener('scroll', scrollin, false);
-	setInterval(scrollin,1000);
-    webstoryMove();
-	setInterval(teaMove,500);
+  window.addEventListener('wheel', scrollin, false);
+  webstoryMove();
+	setInterval(teamMove,500);
 	document.getElementsByClassName("move_left_tree")[0].style.webkitAnimationPlayState = "running";
 	document.getElementsByClassName("move_right_tree")[0].style.webkitAnimationPlayState = "running";
 	document.getElementsByClassName("load_show")[0].style.webkitAnimationPlayState = "running";

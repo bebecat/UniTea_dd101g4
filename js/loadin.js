@@ -1,0 +1,19 @@
+window.onload = function(){
+	document.getElementsByClassName("turn_left")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("turn_right")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("squel_tail")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("squel_rhand")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("squel_lhand")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("squel_rear")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("squel_lear")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("throw_left")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("throw_right")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("pinecone1_img")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("pinecone2_img")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("pinecone3_img")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("pinecone4_img")[0].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("pinecone1_img")[1].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("pinecone2_img")[1].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("pinecone3_img")[1].style.webkitAnimationPlayState = "running";
+	document.getElementsByClassName("pinecone4_img")[1].style.webkitAnimationPlayState = "running";
+};

@@ -120,7 +120,6 @@ html {
   width: 100%;
   height: max-content;
   position: relative;
-  scroll-behavior: smooth;
   overflow: hidden; }
   .fp_activity_wrapper .bg_settin {
     width: 100vw;
