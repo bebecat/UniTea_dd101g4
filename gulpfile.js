@@ -33,7 +33,7 @@ function browserSync(done) {
     browsersync.init({
         server: {
             baseDir: "./",
-            index: "loadin.html"
+            index: "index.html"
         },
         port: 3000
     });
