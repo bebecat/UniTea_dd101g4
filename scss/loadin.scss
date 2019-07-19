@@ -1,0 +1,306 @@
+@font-face {
+  font-family: hanyi;
+  src: url(../scss/font/HanyiSentyTang.ttf);
+};
+@import "basic/var1.scss";
+@mixin title_modules($list...) {
+  @each $title, $fontSize, $color, $fontFamily in $list {
+    #{$title} {
+      font-size: $fontSize;
+      color: $color;
+      font-family: $fontFamily;
+      letter-spacing:2px;
+      @content;
+    }
+  }
+};
+@include title-modules(
+   h2 72px rgba(0,0,0,.8) 'hanyi',
+);
+//font_title
+*{
+	margin : 0;
+	padding : 0;
+	list-style : none;
+	text-decoration:none;
+	//outline : 1px solid rgba(33,33,33,.5);
+};
+.clear_fix{
+	clear:both;
+};
+.fp_loadin_wrapper{
+  width:100vw;
+  height:100vh;
+  .bg_settin{
+    width:100%;
+    height:100%;
+    .loadin_bg{
+      width:100%;
+      height:100%;
+      .loadin_bg_img{
+        display:block;
+        width:100%;
+        height:100%;
+        opacity:0.8;
+      }
+    }
+    .paper_bg{
+      width:100vw;
+      height:100vh;
+      position:fixed;
+      z-index:1;
+      .paper_bg_img{
+        display:block;
+        width:100%;
+        height:100%;
+      }
+    }
+  }
+  .img_settin{
+    width:218px;
+    height:219px;
+    margin:auto;
+    position:absolute;
+    top:40%;
+    right:0;
+    left:0;
+    margin:auto;
+    .squel_settin{
+      width:100%;
+      height:100%;
+      position:relative;
+      .loadin_squel_img{
+        position:absolute;
+        width:218px;
+        height:219px;
+      }
+      .squel_tail{
+        width:132px;
+        height:211px;
+        right:0;
+        transform-origin:-2px 80%;
+        animation:move_tail 2s 0s infinite alternate ease paused;
+      }
+      .squel_rhand{
+        width:42px;
+        height:58px;
+        top:95px;
+        right:38%;
+        transform-origin: 0 100%;
+        animation:move_rhandandear 1.5s 0s infinite  alternate ease paused;
+      }
+      .squel_lhand{
+        width:36px;
+        height:45px;
+        top:85px;
+        left:0;
+        transform-origin:100% 100%;
+        animation:move_lhandandear 1.5s 0s infinite  alternate ease paused;
+      }
+      .squel_rear{
+        width:30px;
+        height:26px;
+        top:43px;
+        right:47%;
+        transform-origin:15% 80%;
+        animation:move_rhandandear 2s 0s infinite  alternate ease paused;
+      }
+      .squel_lear{
+        width:25px;
+        height:26px;
+        top:37px;
+        left:27px;
+        transform-origin:85% 80%;
+        animation:move_lhandandear 2s 0s infinite  alternate ease paused;
+
+      }
+      .squel_body{
+        width:108px;
+        height:191px;
+        left:5px;
+        bottom:0;
+      }
+      @keyframes move_tail{
+        from{transform:rotate(0);}
+        to{transform:rotate(8deg);}
+      }
+      @keyframes move_rhandandear{
+        from{transform:rotate(10deg);}
+        to{transform:otate(0);}
+      }
+      @keyframes move_lhandandear{
+        from{transform:rotate(-10deg);}
+        to{transform:otate(0);}
+      }
+    }
+    .pinecone_settin{
+      width:60px;
+      height:100%;
+      position:absolute;
+      .pinecone_img_settin{
+        position:absolute;
+        top:30px;
+        transform:scale(0.2);
+      }
+    }
+    .throw_left{
+      top:0;
+      left:-30px;
+      transform-origin:100% 100%;
+      animation:throw_pine_left 1.5s 0s 1  ease paused;
+      .pinecone1_img{
+        width:57px;
+        height:64px;
+        animation:move_pine1_1 1.5s 0s 1 ease paused;
+      }
+      .pinecone2_img{
+        width:51px;
+        height:80px;
+        animation:move_pine2_1 1.5s 0s 1 ease paused both;
+      }
+      .pinecone3_img{
+        width:55px;
+        height:58px;
+        animation:move_pine3_1 1.5s 0s 1 ease paused both;
+      }
+      .pinecone4_img{
+        width:39px;
+        height:80px;
+        animation:move_pine4_1 1.5s 0s 1 ease paused both;
+      }
+      @keyframes move_pine1_1{
+        0%{transform:scale(0.6) rotate(0deg) translateX(0) translateY(0);}
+        80%{transform:scale(0.8) rotate(-5deg) translateX(-80%) translateY(80%);}
+        100%{transform:scale(0) rotate(-10deg) translateX(-200%) translateY(100%);}
+      }
+      @keyframes move_pine2_1{
+        0%{transform:scale(0.6) rotate(0deg) translateX(0);}
+        80%{transform:scale(0.8) rotate(-20deg) translateX(-80%);}
+        100%{transform:scale(0) rotate(-30deg) translateX(-300%);}
+      }
+      @keyframes move_pine3_1{
+        0%{transform:scale(0.6) rotate(0deg) translateX(0) translateY(0);}
+        80%{transform:scale(0.8) rotate(-50deg) translateX(-80%) translateY(80%);}
+        100%{transform:scale(0) rotate(-70deg) translateX(-100%) translateY(150%);}
+      }
+      @keyframes move_pine4_1{
+        0%{transform:scale(0.6) rotate(0deg) translateX(0);}
+        80%{transform:scale(0.8) rotate(-70deg) translateX(-80%);}
+        100%{transform:scale(0) rotate(-90deg) translateX(-100%);}
+      }
+    }
+    .throw_right{
+      bottom:-10px;
+      right:50px;
+      transform-origin:100% 100%;
+      animation:throw_pine_right 1.5s 0s 1  ease paused;
+      .pinecone1_img{
+        width:57px;
+        height:64px;
+        animation:move_pine1_2 1.5s 0s 1 ease paused;
+      }
+      .pinecone2_img{
+        width:51px;
+        height:80px;
+        animation:move_pine2_2 1.5s 0s 1 ease paused ;
+      }
+      .pinecone3_img{
+        width:55px;
+        height:58px;
+        animation:move_pine3_2 1.5s 0s 1 ease paused ;
+      }
+      .pinecone4_img{
+        width:39px;
+        height:80px;
+        animation:move_pine4_2 1.5s 0s 1 ease paused ;
+      }
+      @keyframes move_pine1_2{
+        0%{transform:scale(0.6) rotate(0deg) translateX(0) translateY(0);}
+        80%{transform:scale(0.8) rotate(5deg) translateX(80%) translateY(80%);}
+        100%{transform:scale(0) rotate(10deg) translateX(200%) translateY(100%);}
+      }
+      @keyframes move_pine2_2{
+        0%{transform:scale(0.6) rotate(0deg) translateX(0);}
+        80%{transform:scale(0.8) rotate(20deg) translateX(80%);}
+        100%{transform:scale(0) rotate(30deg) translateX(300%);}
+      }
+      @keyframes move_pine3_2{
+        0%{transform:scale(0.6) rotate(0deg) translateX(0) translateY(0);}
+        80%{transform:scale(0.8) rotate(50deg) translateX(80%) translateY(80%);}
+        100%{transform:scale(0) rotate(70deg) translateX(100%) translateY(150%);}
+      }
+      @keyframes move_pine4_2{
+        0%{transform:scale(0.6) rotate(0deg) translateX(0);}
+        80%{transform:scale(0.8) rotate(70deg) translateX(80%);}
+        100%{transform:scale(0) rotate(90deg) translateX(100%);}
+      }
+    }
+    @keyframes throw_pine_left{
+      0%{transform:scale(0.6) rotate(0deg);}
+      100%{transform:rotate(-130deg) translateY(50%);}
+    }
+    @keyframes throw_pine_right{
+      0%{transform:rotate(0deg) translateY(0);}
+      100%{transform:rotate(130deg) translateY(50%);}
+    }
+  }
+  .contact_settin{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    padding: 5% 0 0 ;
+    box-sizing:border-box;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:center;
+    align-item:center;
+    .item_settin{
+      width:50%;
+      height:90%;
+      position:relative;
+      display:flex;
+      flex-flow:column nowrap;
+      justify-content:center;
+      align-item:center;
+      .pine_cone_img{
+        display:block;
+        width:534px;
+        height:647px;
+        margin:auto;
+      }
+      h2{
+        position:absolute;
+        top:50%;
+        right:0;
+        left:0;
+        margin:auto;
+        width:45%;
+        height:100px;
+        line-height:100px;
+        text-align:center;
+      }
+      &:hover{
+        .pine_cone_img {transform:rotate(-10deg);}
+        h2{font-size:120px;}
+      }
+    }
+    .turn_left{
+      animation:throwin_left 1.5s 0s 1 ease paused;
+    }
+    .turn_right{
+      animation:throwin_right 1.5s 0s 1 ease paused;
+    }
+    @keyframes throwin_left{
+      from{transform:scale(0.2) rotate(180deg);}
+      to{transform:scale(1) rotate(360deg);}
+    }
+    @keyframes throwin_right{
+      from{transform:scale(0.2) rotate(180deg);}
+      to{transform:scale(1) rotate(0);}
+    }
+  }
+}

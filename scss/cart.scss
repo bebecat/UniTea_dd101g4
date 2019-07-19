@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  //   outline: 1px red solid;
+}
+
+@import "basic/var1.scss";
+@import "mixins/mixin1.scss";
+//增加//增加//增加//增加//增加
+input,
+button {
+  outline: none;
+  border: none;
+}
+//增加//增加//增加//增加//增加
+.cart_container {
+  width: 100%;
+  padding-top: 150px;
+  // background-image: url(../scss/img/cart/white-paper-texture-with-flecks.jpg);
+  background-size: 100%;
+  background-repeat: repeat;
+  margin: auto;
+  max-width: 1200px;
+} //增加//增加//增加//增加//增加
+.cart_bottom {
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  //   background-image: url(../scss/img/cart/cart_bottom_art.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  .footer_wrapper {
+    bottom: 0%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+/*整體*/
+.cart_container {
+  width: 100%;
+}
+.cart_container .wrap {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+}
+/*左半邊結構*/
+.prods_content {
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  .prods_buy {
+    width: 100%;
+  }
+  .inform {
+    width: 50%;
+  }
+  .total {
+    width: 50%;
+  }
+}
+//增加//增加//增加//增加//增加
+/*右半邊結構*/
+.mem_detail {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .steps {
+    width: 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    padding: 10px;
+    figcaption {
+      border: 3px solid burlywood;
+      border-radius: 10px;
+      background-color: whitesmoke;
+      width: 100%;
+      margin: 5px 0;
+      img {
+        width: 60%;
+      }
+    }
+  }
+}
+.mem_info {
+  vertical-align: middle;
+  width: 80%;
+  label {
+    margin: 5px;
+  }
+  .same_buyer {
+    margin: 10px;
+  }
+  li,
+  .picnic_coin {
+    padding: 10px;
+  }
+  span {
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .step3_txt {
+    width: 100%;
+    text-align: center;
+  }
+}
+.cart_bottom {
+  button {
+    padding: 10px 5px;
+    border-radius: 40%;
+    box-shadow: 1px 6px 1px burlywood;
+    font-size: 20px;
+    color: snow;
+    transform: translateY(0);
+  }
+  button:hover {
+    box-shadow: 1px 1px 1px burlywood;
+    transform: translateY(3px);
+  }
+  .next {
+    width: 20%;
+    background-color: #86a745;
+  }
+  .conform {
+    width: 20%;
+    background-color: rgba(172, 89, 41, 0.9);
+  }
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: hanyi;
   src: url(../scss/font/HanyiSentyTang.ttf); }
@@ -26,6 +27,39 @@
   font-family: "hanyi";
   src: url("../scss/font/HanyiSentyTang.ttf") format("truetype"); }
 
+<<<<<<< HEAD
+=======
+h2 {
+  font-size: 20px;
+  color: #222;
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h3 {
+  font-size: 36px;
+  color: #4d3900;
+  font-family: "hanyi";
+  letter-spacing: 2px; }
+
+h4 {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h5 {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+p {
+  font-size: 16px;
+  color: #444;
+  font-family: "Noto Sans TC";
+  letter-spacing: 2px; }
+
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
 h1 {
   font-size: 12px;
   color: black;
@@ -33,6 +67,7 @@ h1 {
   letter-spacing: 2px; }
 
 h2 {
+<<<<<<< HEAD
   font-size: 24px;
   color: rgba(0, 0, 0, 0.8);
   font-family: "font_title";
@@ -40,6 +75,15 @@ h2 {
 
 h3 {
   font-size: 36px;
+=======
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "hanyi";
+  letter-spacing: 2px; }
+
+h3 {
+  font-size: 24px;
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
   color: rgba(0, 0, 0, 0.6);
   font-family: "hanyi";
   letter-spacing: 2px; }
@@ -71,6 +115,7 @@ p {
 .clear_fix {
   clear: both; }
 
+<<<<<<< HEAD
 .header_fulsec {
   width: 0;
   height: 130px;
@@ -81,343 +126,295 @@ p {
   position: relative; }
   .fp_aboutus_wrapper header .navbar_container {
     width: 100%;
+=======
+.fp_aboutus_wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; }
+
+@keyframes boom {
+  0% {
+    transform: rotate(0) scale(1); }
+  30% {
+    transform: rotate(0) scale(1); }
+  40% {
+    transform: rotate(10deg) scale(1.1); }
+  50% {
+    transform: rotate(-10deg) scale(1.1); }
+  60% {
+    transform: rotate(10deg) scale(1.1); }
+  70% {
+    transform: rotate(-10deg) scale(1.1); }
+  80% {
+    transform: rotate(0) scale(1); }
+  100% {
+    transform: rotate(0) scale(1); } }
+  .fp_aboutus_wrapper .machine_settin .machine {
+    cursor: pointer;
+    width: 10%;
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
     position: fixed;
-    z-index: 999; }
-    .fp_aboutus_wrapper header .navbar_container #menuBg {
-      display: none; }
-    .fp_aboutus_wrapper header .navbar_container .header_cloud {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      height: 150px;
-      position: absolute;
-      overflow: hidden; }
-      .fp_aboutus_wrapper header .navbar_container .header_cloud .cloudF {
-        width: 3500px;
-        height: 3450px;
-        border-radius: 50%;
-        background-image: linear-gradient(to top, whitesmoke 0%, #ffdead 100%);
-        position: absolute;
-        left: -600px;
-        top: -3350px;
-        animation: cloudF 25s infinite linear; }
-
-@keyframes cloudF {
-  form {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-      .fp_aboutus_wrapper header .navbar_container .header_cloud .cloudF::before {
-        content: "";
-        width: 3500px;
-        height: 3450px;
-        border-radius: 50%;
-        background-image: linear-gradient(to top, 100%);
-        position: absolute;
-        left: -50px;
-        top: 0;
-        animation: cloudF 27s infinite linear; }
-      .fp_aboutus_wrapper header .navbar_container .header_cloud .cloudB {
-        width: 3500px;
-        height: 3450px;
-        border-radius: 50%;
-        background-image: linear-gradient(to top, #e6cfe6 0%, #ffdead 100%);
-        position: absolute;
-        left: -1350px;
-        top: -3350px;
-        animation: cloudB 25s infinite linear; }
-
-@keyframes cloudB {
-  form {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-      .fp_aboutus_wrapper header .navbar_container .header_cloud .cloudB::before {
-        content: "";
-        width: 3500px;
-        height: 3450px;
-        border-radius: 50%;
-        background-image: linear-gradient(to top, #ffdead 0%, #ffe4e1 100%);
-        position: absolute;
-        right: -20px;
-        top: 0;
-        animation: cloudB 27s infinite linear; }
-      .fp_aboutus_wrapper header .navbar_container .header_cloud .cloudR {
-        width: 3500px;
-        height: 3350px;
-        border-radius: 50%;
-        background-image: linear-gradient(to top, whitesmoke 0%, #ffdead 100%);
-        position: absolute;
-        left: 0px;
-        top: -3350px;
-        animation: cloudR 25s infinite linear; }
-
-@keyframes cloudR {
-  form {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-      .fp_aboutus_wrapper header .navbar_container .header_cloud .cloudR::before {
-        content: "";
-        width: 3500px;
-        height: 3450px;
-        border-radius: 50%;
-        background-image: linear-gradient(to top, #ffdead 0%, #ffe4e1 100%);
-        position: absolute;
-        left: 0;
-        top: 0;
-        animation: cloudR 27s infinite linear; }
-      @media screen and (max-width: 767px) {
-        .fp_aboutus_wrapper header .navbar_container .header_cloud .header_cloud .cloudB {
-          top: -3400px; } }
-  @media screen and (min-width: 768px) {
-    .fp_aboutus_wrapper header .navbar_container.hide {
-      transform: translateX(100%);
-      transition: 0.2s; } }
-  .fp_aboutus_wrapper header .nav_wrapper {
-    transform: translateX(0%);
-    width: 100%;
-    max-width: 1200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    margin: auto; }
-    .fp_aboutus_wrapper header .nav_wrapper .nav_content {
-      width: 90%;
-      margin-left: auto;
-      font-family: hanyi; }
-      .fp_aboutus_wrapper header .nav_wrapper .nav_content li {
-        width: 10%;
-        float: left;
-        margin: 1%;
-        line-height: 3.5;
-        color: #4d3900;
-        font-size: 19px;
-        text-align: center;
-        transform: scale(1) translateY(0px); }
-      .fp_aboutus_wrapper header .nav_wrapper .nav_content li:hover {
-        translate: 0.2s;
-        transform: scale(1) translateY(0px);
-        color: #de8384; }
-      .fp_aboutus_wrapper header .nav_wrapper .nav_content li:last-child:hover {
-        transform: scale(1.3) translateY(10px); }
-      .fp_aboutus_wrapper header .nav_wrapper .nav_content .here {
-        color: #de8384; }
-      .fp_aboutus_wrapper header .nav_wrapper .nav_content .cus {
-        width: 12.5%; }
-      .fp_aboutus_wrapper header .nav_wrapper .nav_content .logo {
-        background-image: url(../scss/h_f_img/rwd-logo.png);
-        text-indent: 101%;
-        width: 60px;
-        height: 70px;
-        white-space: nowrap;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        overflow: hidden;
-        background-position: center; }
-      .fp_aboutus_wrapper header .nav_wrapper .nav_content .icon {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end; }
-      .fp_aboutus_wrapper header .nav_wrapper .nav_content .icon img {
-        width: 100%; }
-      .fp_aboutus_wrapper header .nav_wrapper .nav_content .icon .member, .fp_aboutus_wrapper header .nav_wrapper .nav_content .icon .cart {
-        margin: 5px;
-        padding: 0 5px; }
-  @media screen and (min-width: 768px) {
-    .fp_aboutus_wrapper header .hb {
-      display: none; } }
-  .fp_aboutus_wrapper header .hb {
-    box-shadow: 4px -1px 0px #996b1f;
-    border-radius: 5%;
-    width: 40px;
-    height: 30px;
-    right: 5%;
-    top: 3%;
-    position: absolute;
-    z-index: 100;
-    background-color: #cd853f;
-    border: 1px solid #996b1f; }
-    .fp_aboutus_wrapper header .hb .bar {
-      border-bottom: 3px solid #f0e68c;
-      height: 2px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      transition: 0.2s; }
-    .fp_aboutus_wrapper header .hb .bar2 {
-      border-bottom: 3px solid #f0e68c;
-      height: 2px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      transition: 0.2s;
-      transform: rotate(0deg); }
-    .fp_aboutus_wrapper header .hb .bar2::before {
-      content: "";
-      border-bottom: 3px solid #f0e68c;
-      height: 20px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      transition: 0.2s;
-      transform: rotate(0deg); }
-    .fp_aboutus_wrapper header .hb .bar2::after {
-      content: "";
-      border-bottom: 3px solid #cd853f;
-      height: 20px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 10px;
-      margin: auto;
-      transition: 0.2s;
-      transform: rotate(0deg); }
-    .fp_aboutus_wrapper header .hb .bar3::before {
-      content: "";
-      border-bottom: 5px solid #cd853f;
-      height: 23px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      transition: 0.2s;
-      transform: rotate(0deg); }
-    .fp_aboutus_wrapper header .hb .bar3::after {
-      content: "";
-      border-bottom: 5px solid #cd853f;
-      box-shadow: 2px 1px 0px #4d3900;
-      height: 26px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 10px;
-      margin: auto;
-      transition: 0.2s;
-      transform: rotate(0deg);
-      opacity: 0; }
-    .fp_aboutus_wrapper header .hb .bar3 {
-      bottom: 12px;
-      transform: rotate(0deg); }
-  .fp_aboutus_wrapper header #menuBg:checked ~ .hb_box .bar1 {
-    bottom: 5px; }
-  .fp_aboutus_wrapper header #menuBg:checked ~ .hb_box .bar2::before {
-    top: -20px; }
-  .fp_aboutus_wrapper header #menuBg:checked ~ .hb_box .bar1::after {
-    bottom: 20px; }
-  .fp_aboutus_wrapper header #menuBg:checked ~ .hb_box .bar3::before {
-    transform: rotate(90deg);
-    width: 10px;
-    bottom: 28px;
-    right: 2px;
-    border-bottom: 5px solid #4d3900; }
-  .fp_aboutus_wrapper header #menuBg:checked ~ .hb_box .bar3::after {
-    transform: rotate(-90deg);
-    width: 9px;
-    top: -15px;
-    right: 0px;
-    opacity: 1;
-    border-bottom: 5px solid #4d3900; }
-  .fp_aboutus_wrapper header #menuBg:checked ~ .hb_box .bar {
-    border-bottom: 2px solid whitesmoke;
-    z-index: 100; }
-  @media screen and (max-width: 767px) {
-    .fp_aboutus_wrapper header .navbar_container {
-      height: 100%; }
-    .fp_aboutus_wrapper header .nav_wrapper {
-      transform: translateX(101%);
-      background-image: url(../scss/h_f_img/hb_bg2.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      border: 2px solid #aaaaaa;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 99%;
-      margin: auto;
-      height: 100vh;
-      transition: 0.8s;
+    right: 3%;
+    display: block;
+    z-index: 8; }
+    .fp_aboutus_wrapper .machine_settin .machine .machine_check {
       display: flex;
       justify-content: center;
-      align-items: center; }
-    .fp_aboutus_wrapper header .icon {
-      justify-content: space-around;
-      display: flex;
-      width: 30%;
-      align-items: center; }
-    .fp_aboutus_wrapper header .nav_content {
-      margin: auto; }
-      .fp_aboutus_wrapper header .nav_content li {
-        font-size: 30px;
-        line-height: 2;
-        display: block;
-        text-align: center;
-        display: flex;
-        clear: both;
-        flex-flow: column nowrap;
-        width: 100%; }
-      .fp_aboutus_wrapper header .nav_content .cus {
-        width: 100%; }
-      .fp_aboutus_wrapper header .nav_content .icon {
-        display: flex;
-        width: 100%;
-        flex-flow: row nowrap;
-        justify-content: center; }
-        .fp_aboutus_wrapper header .nav_content .icon .member img {
+      align-items: center;
+      flex-flow: column nowrap;
+      width: 100%; }
+      .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body {
+        width: 60%;
+        position: relative;
+        z-index: 8; }
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body img {
           width: 100%; }
-      .fp_aboutus_wrapper header .nav_content .icon .member,
-      .fp_aboutus_wrapper header .nav_content .icon .cart {
-        margin-right: 0;
-        width: 40px;
-        padding: 15px 10px 0; }
-      .fp_aboutus_wrapper header .nav_content .logo {
-        display: none; }
-      .fp_aboutus_wrapper header .nav_content .logo {
-        z-index: 0;
-        position: absolute;
-        background-image: url(../scss/h_f_img/rwd-logo.png);
-        text-indent: 101%;
-        width: 50px;
-        height: 60px;
-        white-space: nowrap;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        overflow: hidden;
-        background-position: center;
-        right: 50%;
-        left: 50%;
-        top: 6%;
-        transform: translate(-50%, -50%); }
-    .fp_aboutus_wrapper header #menuBg:checked ~ .navbar_container {
-      transform: translateX(0%); } }
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_handR,
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_handL,
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_earsR,
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_earsL,
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_tail {
+          width: 100%;
+          position: absolute;
+          z-index: -5; }
+          .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_handR img,
+          .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_handL img,
+          .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_earsR img,
+          .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_earsL img,
+          .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_tail img {
+            width: 100%; }
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_handR {
+          width: 35%;
+          top: 35%;
+          right: -25%;
+          z-index: -1;
+          transform-origin: left;
+          transform: rotate(80deg);
+          animation: handShakeR 3s linear infinite alternate; }
 
-@media screen and (max-width: 767px) and (max-width: 767px) {
-  .fp_aboutus_wrapper header #menuBg:checked ~ .navbar_content {
-    transform: translateY(0); }
-  .fp_aboutus_wrapper header .nav_content ul {
-    transform: translateY(-200%);
-    transition: 1s cubic-bezier(0.94, 1.51, 0.83, 0.99) 0.3s; } }
+@keyframes handShakeR {
+  0% {
+    transform: rotate(80deg); }
+  100% {
+    transform: rotate(75deg); } }
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_handL {
+          width: 35%;
+          top: 35%;
+          left: 0;
+          z-index: -1;
+          transform-origin: right;
+          animation: handShakeL 1s linear infinite alternate; }
+
+@keyframes handShakeL {
+  0% {
+    transform: rotateY(-20deg); }
+  100% {
+    transform: rotate(-15deg); } }
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_earsL {
+          width: 20%;
+          top: 5%;
+          left: 25%;
+          z-index: -1;
+          transform-origin: bottom right;
+          animation: earsShakeL 5s linear infinite; }
+
+@keyframes earsShakeL {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(0deg); }
+  8% {
+    transform: rotate(3deg); }
+  100% {
+    transform: rotate(0deg); } }
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_earsR {
+          width: 20%;
+          top: 8%;
+          right: 8%;
+          z-index: -1;
+          transform-origin: bottom right;
+          animation: earsShakeR 5s linear infinite; }
+
+@keyframes earsShakeR {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(-7deg); }
+  4% {
+    transform: rotate(0deg); }
+  8% {
+    transform: rotate(-5deg); }
+  100% {
+    transform: rotate(0deg); } }
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_body .machine_tail {
+          top: 0;
+          right: -60%;
+          transform-origin: bottom;
+          animation: tailShake 5s linear infinite; }
+
+@keyframes tailShake {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(10deg); }
+  100% {
+    transform: rotate(0deg); } }
+      .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_dialog {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: -40%;
+        animation: dialogMove 2s linear infinite alternate; }
+
+@keyframes dialogMove {
+  0% {
+    transform: translateY(0px); }
+  100% {
+    transform: translateY(10px); } }
+        .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_dialog .machine_txt {
+          width: 100%;
+          position: absolute;
+          top: -30px;
+          font-family: hanyi; }
+          .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_dialog .machine_txt p {
+            font-size: 120%;
+            width: 100%;
+            text-align: center;
+            background-image: url(../scss/img/mch_img/GengImg/dialog.png);
+            background-size: 100% 100%;
+            padding: 10px;
+            line-height: 2;
+            font-size: 16px;
+            color: #502311; }
+          .fp_aboutus_wrapper .machine_settin .machine .machine_check .machine_dialog .machine_txt span {
+            color: #de8384;
+            font-size: 16px; }
   @media screen and (max-width: 767px) {
-    .fp_aboutus_wrapper header #menuBg:checked ~ .nav_wrapper {
-      transform: translateX(0%); } }
+    .fp_aboutus_wrapper .machine_settin .machine_txt span {
+      display: none; } }
+  .fp_aboutus_wrapper .machine_settin .chatbot_wrapper {
+    display: flex;
+    z-index: 999;
+    flex-flow: column nowrap;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    background-size: contain;
+    background-image: url("../scss/img/mch_img/gengimg/housechat.png");
+    right: -300px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    bottom: 0;
+    width: 300px;
+    height: 400px; }
+    .fp_aboutus_wrapper .machine_settin .chatbot_wrapper img {
+      width: 120%; }
+    .fp_aboutus_wrapper .machine_settin .chatbot_wrapper .cancel {
+      background-color: #fddd95;
+      width: 30px;
+      position: absolute;
+      line-height: 1.5;
+      border-radius: 5px;
+      text-align: center;
+      color: #7f461c;
+      font-weight: bold;
+      top: 13%;
+      opacity: 0;
+      font-size: 20px;
+      cursor: pointer; }
+    .fp_aboutus_wrapper .machine_settin .chatbot_wrapper .chatBot_container {
+      position: absolute;
+      background-color: #f4f2ee;
+      top: 22%;
+      height: 30%;
+      width: 90%;
+      margin: 0 5% 5%;
+      height: 165px;
+      border-radius: 5%;
+      padding: 5%;
+      overflow: auto;
+      box-sizing: border-box; }
+      .fp_aboutus_wrapper .machine_settin .chatbot_wrapper .chatBot_container .chatBot_content_txt {
+        font-size: 16px; }
+    .fp_aboutus_wrapper .machine_settin .chatbot_wrapper .chatBot-text-Wrap {
+      position: absolute;
+      bottom: 12%;
+      transform: translateY(-20%);
+      display: flex;
+      width: 90%;
+      height: 60px;
+      margin: 5%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around; }
+      .fp_aboutus_wrapper .machine_settin .chatbot_wrapper .chatBot-text-Wrap .chatBot-text {
+        width: 70%;
+        padding: 3%;
+        border-radius: 5px;
+        border: none; }
+      .fp_aboutus_wrapper .machine_settin .chatbot_wrapper .chatBot-text-Wrap .btn_send {
+        width: 20%;
+        background-color: #edcba5;
+        border-radius: 5px;
+        padding: 3%;
+        border: none; }
+      .fp_aboutus_wrapper .machine_settin .chatbot_wrapper .chatBot-text-Wrap input:focus {
+        outline: none; }
+    .fp_aboutus_wrapper .machine_settin .chatbot_wrapper .chatBot_keyword {
+      position: absolute;
+      bottom: 8%;
+      width: 90%;
+      margin: 5%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around; }
+    .fp_aboutus_wrapper .machine_settin .chatbot_wrapper .chatBot_keyword li {
+      background-color: #edeed0;
+      padding: 3px 6px;
+      font-size: 12px;
+      border-radius: 5px;
+      box-sizing: border-box;
+      cursor: pointer; }
+  .fp_aboutus_wrapper .machine_settin #chabot_conversation_box .robot_text {
+    background-color: #fcefa5;
+    border-radius: 10px 10px 10px 0px;
+    color: #502311;
+    padding: 4px 6px;
+    display: inline-block;
+    margin: 3px 0;
+    position: relative;
+    font-size: 12px; }
+    .fp_aboutus_wrapper .machine_settin #chabot_conversation_box .robot_text ::before {
+      content: "♥ "; }
+  .fp_aboutus_wrapper .machine_settin #chabot_conversation_box .user_txt {
+    text-align: right;
+    background-color: burlywood;
+    margin-left: auto;
+    border-radius: 10px 10px 0px 10px;
+    color: white;
+    position: relative;
+    padding: 4px 6px;
+    font-size: 12px;
+    display: inline-block; }
+  .fp_aboutus_wrapper .machine_settin .flex {
+    display: flex;
+    justify-content: flex-end; }
+  .fp_aboutus_wrapper .machine_settin .chatBot_container {
+    position: relative; }
+  .fp_aboutus_wrapper .machine_settin .clearFix {
+    clear: both; }
   .fp_aboutus_wrapper .bg_settin {
+<<<<<<< HEAD
     width: 100vw;
     height: 100vh;
+=======
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
     position: fixed;
     top: 0;
     bottom: 0;
@@ -453,7 +450,11 @@ p {
           width: 70%;
           height: 20%;
           margin: auto;
+<<<<<<< HEAD
           padding: 30vh 0 0;
+=======
+          padding: 35vh 0 0;
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
           box-sizing: border-box;
           position: relative; }
           .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .cloud .cloud_item {
@@ -461,19 +462,19 @@ p {
             height: 50px;
             position: relative; }
           .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .cloud #go_left_cloud {
-            animation: cloudmoveleft 13s 0 infinite linear alternate;
+            animation: cloudmoveleft 13s 0s infinite linear alternate;
             top: 10%;
             left: 25%; }
-          .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .cloud #go_right_cloud {
-            animation: cloudmoveright 11s 0 infinite linear alternate;
-            top: 25%;
-            left: 45%; }
 
 @keyframes cloudmoveleft {
   from {
     transform: translateX(0); }
   to {
     transform: translateX(50%); } }
+          .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .cloud #go_right_cloud {
+            animation: cloudmoveright 11s 0s infinite linear alternate;
+            top: 25%;
+            left: 45%; }
 
 @keyframes cloudmoveright {
   from {
@@ -485,7 +486,11 @@ p {
           height: 25%;
           max-height: 960px;
           margin: auto;
+<<<<<<< HEAD
           padding: 50px 0 0;
+=======
+          padding: 100px 0 0;
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
           box-sizing: border-box;
           position: relative; }
           .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree .tree_item {
@@ -494,12 +499,20 @@ p {
             position: relative; }
           .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree #swag_right_tree {
             transform-origin: 55px 150px;
+<<<<<<< HEAD
             animation: treeswagright 8s 0 infinite linear alternate;
             top: 30px;
             left: 0; }
           .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree #swag_left_tree {
             transform-origin: 55px 150px;
             animation: treeswagleft 8s 0 infinite linear alternate;
+=======
+            animation: treeswagright 8s 0s linear infinite alternate;
+            top: 30px;
+            left: 0; }
+          .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree #swag_left_tree {
+            animation: treeswagleft 8s 0s linear infinite alternate;
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
             top: 50px;
             left: 30px; }
 
@@ -514,10 +527,31 @@ p {
     transform: rotate(-3deg); }
   to {
     transform: rotate(-16deg); } }
+      @media screen and (max-width: 767px) {
+        .fp_aboutus_wrapper .bg_settin .glass_bg .glass {
+          width: 100vw;
+          height: 50%;
+          position: absolute;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          margin: auto; }
+        .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree {
+          width: 100%;
+          height: 50%; }
+          .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree .tree_item {
+            position: absolute; }
+          .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree #swag_right_tree {
+            top: 60%;
+            left: 0; }
+          .fp_aboutus_wrapper .bg_settin .glass_bg .animation_item .tree #swag_left_tree {
+            top: 60%;
+            right: 0; } }
     .fp_aboutus_wrapper .bg_settin .paper_bg {
       width: 100vw;
       height: 100vh;
       background-image: url("../scss/img/auimg/paperBG.png"); }
+<<<<<<< HEAD
   .fp_aboutus_wrapper .begin_animation {
     width: 100vw;
     height: 100vh;
@@ -537,6 +571,39 @@ p {
     .fp_aboutus_wrapper .begin_animation .move_right_tree {
       right: 0;
       animation: movetreeright 2s 0s 1 linear; }
+=======
+  .fp_aboutus_wrapper #container {
+    width: 100%;
+    height: 300vh;
+    max-content: 2880px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 1s 0s linear; }
+    .fp_aboutus_wrapper #container .section {
+      width: 100vw;
+      height: 100vh;
+      max-height: 960px; }
+    .fp_aboutus_wrapper #container .begin_animation {
+      position: relative;
+      margin: auto; }
+      .fp_aboutus_wrapper #container .begin_animation .tree {
+        width: 85%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto; }
+      .fp_aboutus_wrapper #container .begin_animation .move_left_tree {
+        transition: left 1s ease 0s;
+        left: 0;
+        animation: movetreeleft 2s 0s 1 linear paused; }
+      .fp_aboutus_wrapper #container .begin_animation .move_right_tree {
+        transition: right 1s ease 0s;
+        right: 0;
+        animation: movetreeright 2s 0s 1 linear paused; }
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
 
 @keyframes movetreeleft {
   0% {
@@ -553,6 +620,7 @@ p {
     transform: translateX(-40px) scale(1.2); }
   100% {
     transform: translateX(0) scale(1); } }
+<<<<<<< HEAD
   .fp_aboutus_wrapper .idea_introduction {
     width: 100vw;
     height: 100%;
@@ -574,6 +642,27 @@ p {
         margin: auto; }
         .fp_aboutus_wrapper .idea_introduction .container .txt .load_show {
           animation: loadtitle 2s 0 1 ease-in alternate; }
+=======
+    .fp_aboutus_wrapper #container .idea_introduction {
+      padding: 30px 0 0;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 1;
+      overflow: hidden;
+      box-sizing: border-box; }
+      .fp_aboutus_wrapper #container .idea_introduction .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto; }
+        .fp_aboutus_wrapper #container .idea_introduction .container .txt {
+          width: 70%;
+          margin: auto; }
+          .fp_aboutus_wrapper #container .idea_introduction .container .txt .load_show {
+            animation: loadtitle 2s 0s ease-in alternate paused; }
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
 
 @keyframes loadtitle {
   0% {
@@ -582,6 +671,7 @@ p {
     transform: scale(2); }
   100% {
     transform: scale(1); } }
+<<<<<<< HEAD
         .fp_aboutus_wrapper .idea_introduction .container .txt h2 {
           width: 500px;
           height: 89px;
@@ -592,12 +682,142 @@ p {
           .fp_aboutus_wrapper .idea_introduction .container .txt h2 .title_bg {
             width: 71.8%;
             height: 100%;
+=======
+          .fp_aboutus_wrapper #container .idea_introduction .container .txt h2 {
+            width: 500px;
+            height: 89px;
+            line-height: 89px;
+            margin: 5px auto 20px;
+            position: relative;
+            text-align: center; }
+            .fp_aboutus_wrapper #container .idea_introduction .container .txt h2 .title_bg {
+              width: 71.8%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              z-index: -1; }
+            .fp_aboutus_wrapper #container .idea_introduction .container .txt h2 #littlebird {
+              width: 35px;
+              height: 12.5px;
+              top: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              transform-orgin: 40px 15px;
+              animation: littlebirdswagleft 3s 0s ease-in infinite alternate,loadtitle 3s 0s 1 ease-in alternate;
+              position: absolute;
+              top: 0; }
+
+@keyframes littlebirdswagleft {
+  from {
+    transform: translateX(177%) translateY(45%) rotate(-2deg); }
+  to {
+    transform: translateX(177%) translateY(55%) rotate(10deg); } }
+          .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin {
+            letter-spacing: 2px;
+            line-height: 25px;
+            text-align: center; }
+            .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .txt_bg {
+              padding: 15px 0 20px; }
+              .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .txt_bg p {
+                padding: 5px 7px;
+                margin: auto; }
+              .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .txt_bg .first_txt_sec {
+                width: 85%; }
+              .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .txt_bg .second_txt_sec {
+                width: 75%; }
+              .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .txt_bg .third_txt_sec {
+                width: 80%; }
+            .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .basket_settin {
+              display: block;
+              width: 203px;
+              height: 197px;
+              margin: auto;
+              animation: boom 1.5s 0s ease infinite both; }
+        @media screen and (max-width: 767px) {
+          .fp_aboutus_wrapper #container .idea_introduction .container .txt {
+            width: 100%; }
+            .fp_aboutus_wrapper #container .idea_introduction .container .txt h2 {
+              width: 100%;
+              margin: 0 auto 5px; }
+            .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin {
+              letter-spacing: 1px;
+              line-height: 20px; }
+              .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .txt_bg {
+                padding: 15px 0 20px; }
+                .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .txt_bg p {
+                  padding: 2px 5px; }
+                .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .txt_bg .first_txt_sec {
+                  width: 85%; }
+                .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .txt_bg .second_txt_sec {
+                  width: 79%; }
+                .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .txt_bg .third_txt_sec {
+                  width: 83%; }
+              .fp_aboutus_wrapper #container .idea_introduction .container .txt .idea_txtin .basket_settin {
+                width: 150px;
+                height: 146px; } }
+    .fp_aboutus_wrapper #container .webstory_introduction {
+      padding: 100px 0 0;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      box-sizing: border-box; }
+      .fp_aboutus_wrapper #container .webstory_introduction .container {
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        height: 100%;
+        margin: auto;
+        position: relative; }
+        .fp_aboutus_wrapper #container .webstory_introduction .container #turnleft {
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: 600px;
+          margin: auto;
+          width: 20px;
+          height: 30px;
+          transform: translateX(-200%);
+          cursor: pointer;
+          z-index: 2;
+          background-color: #faa; }
+        .fp_aboutus_wrapper #container .webstory_introduction .container #turnleft:active {
+          background-color: #aaa; }
+        .fp_aboutus_wrapper #container .webstory_introduction .container #turnright {
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: 600px;
+          margin: auto;
+          width: 20px;
+          height: 30px;
+          transform: translateX(200%);
+          cursor: pointer;
+          z-index: 2;
+          background-color: #fa0; }
+        .fp_aboutus_wrapper #container .webstory_introduction .container #turnright:active {
+          background-color: #aaa; }
+        .fp_aboutus_wrapper #container .webstory_introduction .container h2 {
+          width: 500px;
+          height: 89px;
+          line-height: 89px;
+          margin: 55px auto 20px;
+          text-align: center;
+          position: relative; }
+          .fp_aboutus_wrapper #container .webstory_introduction .container h2 .title_bg {
+            width: 359px;
+            height: 89px;
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             margin: auto;
             z-index: -1; }
+<<<<<<< HEAD
           .fp_aboutus_wrapper .idea_introduction .container .txt h2 #littlebird {
             width: 35px;
             height: 12.5px;
@@ -677,6 +897,25 @@ p {
           right: 0px;
           transform-origin: -1px 15px;
           animation: squirrelwithbullonflow 2.5s 0s infinite ease alternate; }
+=======
+          .fp_aboutus_wrapper #container .webstory_introduction .container h2 #bullon_setin {
+            width: 100px;
+            height: 127px;
+            position: absolute;
+            top: -50px;
+            right: 45px;
+            transform-origin: 50px 135px;
+            animation: bullonflow 2.5s 0s ease infinite alternate; }
+          .fp_aboutus_wrapper #container .webstory_introduction .container h2 #squirrel_withbullon_setin {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: -82px;
+            bottom: -52px;
+            right: 0px;
+            transform-origin: -1px 15px;
+            animation: squirrelwithbullonflow 2.5s 0s ease infinite alternate; }
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
 
 @keyframes bullonflow {
   from {
@@ -689,6 +928,7 @@ p {
     transform: translateX(-2px) translateY(0) rotate(2deg); }
   to {
     transform: translateX(2px) translateY(3px) rotate(-2deg); } }
+<<<<<<< HEAD
       .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize {
         width: 100%;
         height: 500px;
@@ -725,25 +965,124 @@ p {
               font-family: font_title;
               text-align: center;
               color: rgba(0, 0, 0, 0.5);
+=======
+        .fp_aboutus_wrapper #container .webstory_introduction .container #roulette {
+          width: 100%;
+          height: 100%;
+          transform-origin: 50% 130%;
+          transform: rotate(0deg);
+          transition: transform 1.5s ease 0s;
+          position: relative; }
+          .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize {
+            width: 100%;
+            height: 500px;
+            padding: 200px 0 0;
+            position: absolute;
+            box-sizing: border-box;
+            transform-origin: 50% 190%;
+            transform: rotate(0deg);
+            transition: transform 1.5s ease 0s; }
+            .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .txt {
+              width: 500px;
+              margin: auto;
+              transform: translateY(-150%);
+              text-align: center; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .txt p {
+                width: 100%;
+                padding: 5px;
+                letter-spacing: 2px;
+                line-height: 25px; }
+            .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .step_list {
+              width: 470px;
+              padding: 10px 0 0;
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
               position: absolute;
-              top: 0;
+              bottom: 130px;
               left: 0;
               right: 0;
-              bottom: 0; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_1 {
+              margin: auto;
+              transition: transform 3s ease 0s; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .step_list .step_line {
+                display: block;
+                width: 320px;
+                margin: auto; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .step_list .step_bow {
+                display: block;
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                bottom: 10px;
+                animation: boom 1.5s 0s ease infinite both; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .step_list .leftside {
+                left: 50px; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .step_list .rightside {
+                right: 50px; }
+            .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .basket_settin {
+              display: block;
+              width: 203px;
+              height: 197px;
+              margin: auto;
+              position: absolute;
+              bottom: 50px;
+              left: 0;
+              right: 0;
+              animation: boom 1.5s 0s ease infinite both; }
+          .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .second_step_customize {
+            width: 100%;
+            height: 500px;
+            padding: 150px 0 0;
             position: absolute;
-            right: 0; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_2 {
+            box-sizing: border-box;
+            transform-origin: 50% 195%;
+            transform: rotate(-270deg) translateX(-70px) translateY(10px);
+            transition: transform 1.5s ease 0s; }
+            .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .second_step_customize .context {
+              width: 470px;
+              padding: 10px 0 0;
+              position: relative;
+              margin: auto;
+              text-align: center; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .second_step_customize .context .txt {
+                width: 500px;
+                margin: auto;
+                transform: translateY(-40px); }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .second_step_customize .context .customize_basket {
+                width: 200px;
+                height: 194px; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .second_step_customize .context .like_information {
+                text-align: center; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .second_step_customize .context .like_information .like_img {
+                  width: 44px;
+                  height: 35px;
+                  vertical-align: middle;
+                  animation: zoom 1.2s 0s ease infinite both; }
+
+@keyframes zoom {
+  0% {
+    transform: scale(1); }
+  25% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1.1); }
+  35% {
+    transform: scale(1); }
+  40% {
+    transform: scale(1.1); }
+  48% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .second_step_customize .context .like_information .like_num {
+                  display: inline-block;
+                  width: 70px;
+                  height: 35px;
+                  line-height: 35px; }
+          .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize {
+            width: 100%;
+            height: 500px;
+            padding: 150px 0 0;
             position: absolute;
-            right: 0; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_3 {
-            position: absolute;
-            right: 0; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_4 {
-            position: absolute;
-            right: 0; }
-          .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .step_list .step_5 {
-            position: absolute;
+<<<<<<< HEAD
             right: 0; }
         .fp_aboutus_wrapper .webstory_introduction .container .first_step_customize .basket_settin {
           display: block;
@@ -829,6 +1168,57 @@ p {
               right: -20px;
               transform-origin: 0px 160px;
               animation: step3spoonflow 3s 0 infinite linear alternate; }
+=======
+            box-sizing: border-box;
+            transform-origin: 50% 195%;
+            transform: rotate(-180deg) translateX(10px) translateY(80px);
+            transition: transform 1.5s ease 0s; }
+            .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context {
+              width: 670px;
+              height: 300px;
+              padding: 10px 0 0;
+              position: relative;
+              margin: auto;
+              text-align: center; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .txt {
+                width: 100%;
+                max-width: 500px;
+                margin: auto; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .customize_basket {
+                width: 200px;
+                height: 194px;
+                animation: step3forkflow 3s 0s infinite linear alternate; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .third_step_basket {
+                display: inline-block;
+                vertical-align: middle; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin {
+                display: inline-block;
+                width: 256px;
+                height: 256px;
+                text-align: center;
+                vertical-align: middle;
+                position: relative; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .chopping_board {
+                  width: 256px;
+                  height: 256px;
+                  animation: step3choppingboardflow 3s 0s infinite linear alternate; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .fork_settin {
+                  width: 160px;
+                  height: 160px;
+                  position: absolute;
+                  top: -20px;
+                  right: 50px;
+                  transform-origin: 160px 0px;
+                  animation: step3forkflow 3s 0s infinite linear alternate; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .spoon_settin {
+                  width: 160px;
+                  height: 160px;
+                  position: absolute;
+                  top: 10px;
+                  right: -20px;
+                  transform-origin: 0px 160px;
+                  animation: step3spoonflow 3s 0 infinite linear alternate; }
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
 
 @keyframes step3forkflow {
   from {
@@ -847,6 +1237,7 @@ p {
     transform: skew(0deg) scale(1); }
   to {
     transform: skew(5deg) scale(1.06); } }
+<<<<<<< HEAD
       .fp_aboutus_wrapper .webstory_introduction .container .goto_activity {
         width: 100%;
         height: 500px;
@@ -863,59 +1254,86 @@ p {
           .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicbg_settin {
             width: 500px;
             height: 262px;
+=======
+          .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity {
+            width: 100%;
+            height: 500px;
+            padding: 150px 0 0;
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
             position: absolute;
-            bottom: 0px;
-            left: 0;
-            right: 0;
-            margin: auto; }
-            .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicbg_settin .mat_settin {
-              width: 500px;
-              height: 262px; }
-          .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin {
-            width: 500px;
-            height: 262px;
-            position: absolute;
-            bottom: 0px;
-            left: 0;
-            right: 0;
-            margin: auto; }
-            .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food {
-              width: 200px;
-              height: 194px;
-              position: absolute;
-              left: 0;
-              right: 0;
-              margin: auto; }
-              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food .breads_settin {
-                position: absolute; }
-              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food .bread_a {
-                width: 100px;
-                height: 132px;
-                top: -10px;
-                left: 20px;
-                transform-origin: 100px 150px;
-                animation: breadaflow 4s 0 infinite linear alternate; }
-              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food .bread_b {
-                width: 120px;
-                height: 108px;
-                top: 0px;
-                left: -20px;
-                transform-origin: 160px 150px;
-                animation: breadbflow 3s 0 infinite linear alternate; }
-              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food .bread_c {
-                width: 150px;
-                height: 60px;
-                top: 35px;
-                left: -50px;
-                transform-origin: 220px 155px;
-                animation: breadcflow 4s 0 infinite linear alternate; }
-              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .food .fruit_settin {
-                width: 150px;
-                height: 136px;
-                top: 30px;
-                left: 40px;
+            box-sizing: border-box;
+            transform-origin: 50% 195%;
+            transform: rotate(-90deg) translateX(20px);
+            transition: transform 1.5s ease 0s; }
+            .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin {
+              width: 670px;
+              height: 300px;
+              padding: 20px 0 0;
+              position: relative;
+              margin: auto;
+              text-align: center; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicbg_settin {
+                width: 500px;
+                height: 262px;
                 position: absolute;
-                animation: fruitflow 4s 0 infinite linear alternate; }
+                bottom: 0px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                transform: translateX(30px); }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicbg_settin .mat_settin {
+                  width: 500px;
+                  height: 262px; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .txt {
+                width: 100%;
+                position: absolute;
+                top: -80px; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin {
+                width: 500px;
+                height: 262px;
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                transform: translateX(-20px); }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .food {
+                  width: 200px;
+                  height: 194px;
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  margin: auto; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .food .breads_settin {
+                    position: absolute; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .food .bread_a {
+                    width: 100px;
+                    height: 132px;
+                    top: -10px;
+                    left: 20px;
+                    transform-origin: 100px 150px;
+                    animation: breadaflow 4s 0s infinite linear alternate; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .food .bread_b {
+                    width: 120px;
+                    height: 108px;
+                    top: 0px;
+                    left: -20px;
+                    transform-origin: 160px 150px;
+                    animation: breadbflow 3s 0s infinite linear alternate; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .food .bread_c {
+                    width: 150px;
+                    height: 60px;
+                    top: 35px;
+                    left: -50px;
+                    transform-origin: 220px 155px;
+                    animation: breadcflow 4s 0s infinite linear alternate; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .food .fruit_settin {
+                    width: 150px;
+                    height: 136px;
+                    top: 30px;
+                    left: 40px;
+                    position: absolute;
+                    animation: fruitflow 4s 0s infinite linear alternate; }
 
 @keyframes breadaflow {
   from {
@@ -940,36 +1358,53 @@ p {
     transform: rotate(5deg); }
   from {
     transform: rotate(-5deg); } }
-            .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .basket_settin .customize_basket {
-              width: 200px;
-              height: 194px; }
-            .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .basket_settin .goto_activity_step_basket_front {
-              position: absolute;
-              left: 0;
-              right: 0;
-              margin: auto; }
-            .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin {
-              top: 50px;
-              right: 0;
-              position: absolute; }
-              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .chopping_board {
-                width: 256px;
-                height: 256px;
-                animation: step3choppingboardflow 3s 0 infinite linear alternate; }
-              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food {
-                width: 270px;
-                bottom: 0;
-                position: absolute; }
-                .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food .cookies_a {
-                  display: inline-block;
-                  width: 80px;
-                  height: 68px;
-                  animation: cookiesaflow 3s 0 infinite linear alternate; }
-                .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food .cookies_b {
-                  display: inline-block;
-                  width: 80px;
-                  height: 68px;
-                  animation: cookiesbflow 3s 0 infinite linear alternate; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .basket_settin .basket_back {
+                  width: 190px;
+                  height: 112px;
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  margin: auto;
+                  z-index: -1;
+                  transform: translateY(-8px); }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .basket_settin .basket_front {
+                  width: 200px;
+                  height: 130px;
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  margin: auto;
+                  transform: translateY(77.5px) rotate(-4deg); }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .basket_settin .basket_front_handle {
+                  width: 35px;
+                  height: 100px;
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  margin: auto;
+                  transform: translateX(62px) translateY(-4px) rotate(-4deg); }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin {
+                  top: 50px;
+                  right: 0;
+                  position: absolute; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .chopping_board {
+                    width: 256px;
+                    height: 256px;
+                    animation: step3choppingboardflow 3s 0s infinite linear alternate; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food {
+                    width: 270px;
+                    bottom: 0;
+                    position: absolute; }
+                    .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food .cookies_a {
+                      display: inline-block;
+                      width: 80px;
+                      height: 68px;
+                      animation: cookiesaflow 3s 0s infinite linear alternate; }
+                    .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .food .cookies_b {
+                      display: inline-block;
+                      width: 80px;
+                      height: 68px;
+                      animation: cookiesbflow 3s 0s infinite linear alternate; }
 
 @keyframes cookiesaflow {
   from {
@@ -982,22 +1417,22 @@ p {
     transform: translateY(15px) skew(-2deg) scale(1); }
   to {
     transform: translateY(15px) skew(4deg) scale(1.06); } }
-              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .fork_settin {
-                width: 160px;
-                height: 160px;
-                position: absolute;
-                top: -30px;
-                right: -30px;
-                transform-orgin: 160px 0;
-                animation: step3forkflow 3s 0 infinite linear alternate; }
-              .fp_aboutus_wrapper .webstory_introduction .container .goto_activity .activity_settin .picnicfood_settin .tableware_settin .spoon_settin {
-                width: 160px;
-                height: 160px;
-                position: absolute;
-                top: 10px;
-                right: -70px;
-                transform-orgin: 0px 160px;
-                animation: step3spoonflow 3s 0 infinite linear alternate; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .fork_settin {
+                    width: 160px;
+                    height: 160px;
+                    position: absolute;
+                    top: -30px;
+                    right: -30px;
+                    transform-origin: 160px 0;
+                    animation: step3forkflow 3s 0s infinite linear alternate; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin .tableware_settin .spoon_settin {
+                    width: 160px;
+                    height: 160px;
+                    position: absolute;
+                    top: 10px;
+                    right: -70px;
+                    transform-origin: 0px 160px;
+                    animation: step3spoonflow 3s 0s infinite linear alternate; }
 
 @keyframes step3forkflow {
   from {
@@ -1016,6 +1451,7 @@ p {
     transform: skew(0deg) scale(1); }
   to {
     transform: skew(5deg) scale(1.06); } }
+<<<<<<< HEAD
   .fp_aboutus_wrapper .teamstory__introduction {
     width: 100vw;
     height: 100vh;
@@ -1039,6 +1475,30 @@ p {
         animation: mountainmove2 300s 0 infinite linear both; }
       .fp_aboutus_wrapper .teamstory__introduction .teamstorybg_settin .turn3 {
         animation: mountainmove2 300s 200s infinite linear both; }
+=======
+    .fp_aboutus_wrapper #container .teamstory_introduction {
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box; }
+      .fp_aboutus_wrapper #container .teamstory_introduction .teamstorybg_settin {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 50px;
+        overflow: hidden;
+        z-index: -1; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .teamstorybg_settin .mountain_settin {
+          width: 200vw;
+          height: 362px;
+          position: absolute;
+          bottom: 0; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .teamstorybg_settin .turn1 {
+          animation: mountainmove1 150s 0s 1 linear both; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .teamstorybg_settin .turn2 {
+          animation: mountainmove2 300s 0s linear infinite both; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .teamstorybg_settin .turn3 {
+          animation: mountainmove2 300s 200s linear infinite both; }
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
 
 @keyframes mountainmove1 {
   0% {
@@ -1051,6 +1511,7 @@ p {
     transform: translateX(100vw); }
   100% {
     transform: translateX(-210vw); } }
+<<<<<<< HEAD
     .fp_aboutus_wrapper .teamstory__introduction .container {
       width: 100%;
       max-width: 1200px;
@@ -1105,25 +1566,281 @@ p {
             width: 300px;
             height: 100px;
             line-height: 80px;
+=======
+      .fp_aboutus_wrapper #container .teamstory_introduction .container {
+        width: 100%;
+        max-width: 1200px;
+        height: 724px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        overflow: hidden; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .container #left {
+          position: absolute;
+          left: 200px;
+          width: 20px;
+          height: 30px;
+          transform: translateY(1200%);
+          cursor: pointer;
+          z-index: 2;
+          background-color: #fa0; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .container #left:active {
+          background-color: #aaa; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .container #right {
+          position: absolute;
+          right: 200px;
+          width: 20px;
+          height: 30px;
+          transform: translateY(1200%);
+          cursor: pointer;
+          z-index: 2;
+          background-color: #fa0; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .container #right:active {
+          background-color: #aaa; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .container h2 {
+          width: 500px;
+          height: 89px;
+          line-height: 89px;
+          margin: auto;
+          position: relative;
+          text-align: center; }
+          .fp_aboutus_wrapper #container .teamstory_introduction .container h2 .title_bg {
+            width: 359px;
+            height: 89px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
             margin: auto;
+            z-index: -1; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .container .context {
+          position: absolute;
+          width: 600%;
+          padding: 40px 0 0;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          transition: transform 2s ease 0s; }
+          .fp_aboutus_wrapper #container .teamstory_introduction .container .context .member {
+            width: 33.333333%;
+            height: 500px;
+            margin: auto;
+            padding: 15px 0 0;
+            text-align: center;
+            box-sizing: border-box;
             position: relative; }
-            .fp_aboutus_wrapper .teamstory__introduction .container .context .member .to_personweb .person_web_button {
-              width: 174px;
-              height: 97px;
+            .fp_aboutus_wrapper #container .teamstory_introduction .container .context .member .portrait {
+              display: block;
+              width: 200px;
+              height: 200px;
+              margin: auto; }
+            .fp_aboutus_wrapper #container .teamstory_introduction .container .context .member .txt {
+              width: 100%;
+              max-width: 400px;
+              margin: auto;
+              padding: 15px 0; }
+              .fp_aboutus_wrapper #container .teamstory_introduction .container .context .member .txt p {
+                padding: 10px 15px 0; }
+            .fp_aboutus_wrapper #container .teamstory_introduction .container .context .member .to_personweb {
+              width: 300px;
+              height: 100px;
+              line-height: 80px;
+              margin: auto;
               position: absolute;
-              top: 0;
+              bottom: 0;
               left: 0;
               right: 0;
+              margin: auto; }
+  @media screen and (max-width: 767px) {
+    .fp_aboutus_wrapper #container {
+      height: max-content;
+      position: relative; }
+      .fp_aboutus_wrapper #container .begin_animation {
+        overflow: hidden; }
+        .fp_aboutus_wrapper #container .begin_animation .move_left_tree {
+          left: -100%; }
+        .fp_aboutus_wrapper #container .begin_animation .move_right_tree {
+          right: -100%; }
+      .fp_aboutus_wrapper #container .webstory_introduction {
+        height: max-content;
+        max-height: max-content;
+        overflow: none; }
+        .fp_aboutus_wrapper #container .webstory_introduction .container {
+          height: max-content; }
+          .fp_aboutus_wrapper #container .webstory_introduction .container #turnleft {
+            display: none;
+            visibility: hidden; }
+          .fp_aboutus_wrapper #container .webstory_introduction .container #turnright {
+            display: none;
+            visibility: hidden; }
+          .fp_aboutus_wrapper #container .webstory_introduction .container h2 {
+            width: 100%;
+            margin: 0 auto; }
+          .fp_aboutus_wrapper #container .webstory_introduction .container #roulette {
+            width: 100%;
+            height: max-content; }
+            .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize {
+              width: 100%;
+              height: max-content;
+              max-height: max-content;
+              box-sizing: border-box;
+              position: relative; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .txt {
+                width: 370px;
+                padding: 0 5px;
+                box-sizing: border-box; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .txt p {
+                  width: 100%;
+                  padding: 5px 0 0;
+                  letter-spacing: 1px;
+                  line-height: 20px; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .step_list {
+                width: 100%;
+                padding: 10px 0 0;
+                bottom: 100px; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .step_list .step_line {
+                  width: 80%; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .step_list .step_bow {
+                  display: block;
+                  width: 80px;
+                  height: 80px;
+                  position: absolute;
+                  bottom: 10px;
+                  animation: boom 1.5s 0s ease infinite both; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .step_list .leftside {
+                  left: 10px;
+                  z-index: 1; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .step_list .rightside {
+                  right: 10px;
+                  z-index: 1; }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .first_step_customize .basket_settin {
+                width: 150px;
+                height: 146px;
+                position: relative; }
+            .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .second_step_customize {
+              width: 100%;
+              height: max-content;
+              max-height: max-content;
+              padding: 100px 0 0;
+              position: relative;
+              transform: rotate(0deg); }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .second_step_customize .context {
+                width: 370px;
+                padding: 10px 5px 0;
+                position: relative;
+                box-sizing: border-box; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .second_step_customize .context .txt {
+                  width: 100%;
+                  margin: auto;
+                  transform: translateY(-40px); }
+            .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize {
+              width: 100%;
+              height: max-content;
+              max-height: max-content;
+              padding: 100px 0 0;
+              position: relative;
+              box-sizing: border-box;
+              transform: rotate(0deg); }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context {
+                width: 370px;
+                height: 300px; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .txt {
+                  width: 100%;
+                  max-width: 370px;
+                  padding: 0 5px 0;
+                  box-sizing: border-box; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .customize_basket {
+                  width: 150px;
+                  height: 146px; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin {
+                  width: 200px;
+                  height: 200px; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .chopping_board {
+                    width: 200px;
+                    height: 200px; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .fork_settin {
+                    width: 120px;
+                    height: 120px; }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .third_step_customize .context .tableware_settin .spoon_settin {
+                    width: 120px;
+                    height: 120px; }
+            .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity {
+              height: max-content;
+              max-height: max-content;
+              padding: 100px 0 0;
+              position: relative;
+              box-sizing: border-box;
+              transform: rotate(0deg); }
+              .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin {
+                width: 100%;
+                height: 300px;
+                padding: 20px 0 0;
+                position: relative; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicbg_settin {
+                  width: 80%;
+                  height: 200px;
+                  transform: translateX(-2px); }
+                  .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicbg_settin .mat_settin {
+                    width: 100%;
+                    height: 100%; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .txt {
+                  top: -130px; }
+                .fp_aboutus_wrapper #container .webstory_introduction .container #roulette .goto_activity .activity_settin .picnicfood_settin {
+                  width: 90%;
+                  transform: translateX(-15px); }
+      .fp_aboutus_wrapper #container .teamstory_introduction {
+        width: 100vw;
+        height: max-content;
+        max-height: max-content;
+        padding: 0 0 20px;
+        position: relative;
+        overflow: none; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .teamstorybg_settin {
+          display: none; }
+        .fp_aboutus_wrapper #container .teamstory_introduction .container {
+          width: 100%;
+          max-width: 1200px;
+          height: max-content;
+          padding: 40px 0;
+          position: relative;
+          overflow: none;
+          box-sizing: content-box; }
+          .fp_aboutus_wrapper #container .teamstory_introduction .container #left {
+            display: none; }
+          .fp_aboutus_wrapper #container .teamstory_introduction .container #right {
+            display: none; }
+          .fp_aboutus_wrapper #container .teamstory_introduction .container h2 {
+            width: 100%; }
+          .fp_aboutus_wrapper #container .teamstory_introduction .container .context {
+            position: relative;
+            width: 100%;
+            height: max-content;
+            padding: 40px 0 0;
+            display: flex;
+            flex-flow: column nowrap; }
+            .fp_aboutus_wrapper #container .teamstory_introduction .container .context .member {
+              width: 100%;
+              height: 500px;
               margin: auto;
-              z-index: -1; }
+              padding: 15px 0 0; } }
   .fp_aboutus_wrapper footer {
     width: 100vw;
+<<<<<<< HEAD
     position: absolute;
+=======
+    position: fixed;
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 1;
     text-align: center; }
+<<<<<<< HEAD
     .fp_aboutus_wrapper footer .footer_bg_settin {
       position: relative; }
       .fp_aboutus_wrapper footer .footer_bg_settin .footer_bg_glass {
@@ -1140,5 +1857,30 @@ p {
       bottom: 0;
       left: 0;
       right: 0;
+=======
+    .fp_aboutus_wrapper footer ul {
+      width: 100%;
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
       margin: auto;
-      padding: 0 0 15px; }
+      padding-top: 40px;
+      background-image: url(../scss/img/h_f_img/footer.png);
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #4d3900;
+      font-family: hanyi;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .fp_aboutus_wrapper footer .copy {
+      background-color: #e69966;
+      font-size: 12px;
+      color: #666;
+      padding: 0; }
+  @media screen and (max-width: 767px) {
+    .fp_aboutus_wrapper footer {
+      position: absolute; } }
+
+@media screen and (max-width: 767px) {
+  .fp_aboutus_wrapper {
+    height: max-content;
+    overflow: none; } }

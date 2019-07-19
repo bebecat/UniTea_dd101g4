@@ -2,11 +2,15 @@
   "name": "unitea_dd101g4",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "index.js",
   "dependencies": {
     "gulp": "^4.0.2"
   },
   "devDependencies": {},
+=======
+  "main": "gulpfile.js",
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +23,20 @@
   "bugs": {
     "url": "https://github.com/bebecat/UniTea_dd101g4/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/bebecat/UniTea_dd101g4#readme"
+=======
+  "homepage": "https://github.com/bebecat/UniTea_dd101g4#readme",
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
+  }
+>>>>>>> 738e3ad883c8f5b53b17434b76619a4b78f6981a
 }

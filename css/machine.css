@@ -1,0 +1,276 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+  * input,
+  * button,
+  * select,
+  * textarea {
+    outline: none; }
+
+.machine {
+  cursor: pointer;
+  width: 10%;
+  position: fixed;
+  bottom: 0;
+  right: 3%;
+  display: block;
+  z-index: 8; }
+  .machine .machine_check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%; }
+    .machine .machine_check .machine_body {
+      width: 60%;
+      position: relative;
+      z-index: 8; }
+      .machine .machine_check .machine_body img {
+        width: 100%; }
+      .machine .machine_check .machine_body .machine_handR,
+      .machine .machine_check .machine_body .machine_handL,
+      .machine .machine_check .machine_body .machine_earsR,
+      .machine .machine_check .machine_body .machine_earsL,
+      .machine .machine_check .machine_body .machine_tail {
+        width: 100%;
+        position: absolute;
+        z-index: -5; }
+        .machine .machine_check .machine_body .machine_handR img,
+        .machine .machine_check .machine_body .machine_handL img,
+        .machine .machine_check .machine_body .machine_earsR img,
+        .machine .machine_check .machine_body .machine_earsL img,
+        .machine .machine_check .machine_body .machine_tail img {
+          width: 100%; }
+      .machine .machine_check .machine_body .machine_handR {
+        width: 35%;
+        top: 35%;
+        right: -25%;
+        z-index: -1;
+        transform-origin: left;
+        transform: rotate(80deg);
+        animation: handShakeR 3s linear infinite alternate; }
+
+@keyframes handShakeR {
+  0% {
+    transform: rotate(80deg); }
+  100% {
+    transform: rotate(75deg); } }
+      .machine .machine_check .machine_body .machine_handL {
+        width: 35%;
+        top: 35%;
+        left: 0;
+        z-index: -1;
+        transform-origin: right;
+        animation: handShakeL 1s linear infinite alternate; }
+
+@keyframes handShakeL {
+  0% {
+    transform: rotateY(-20deg); }
+  100% {
+    transform: rotate(-15deg); } }
+      .machine .machine_check .machine_body .machine_earsL {
+        width: 20%;
+        top: 5%;
+        left: 25%;
+        z-index: -1;
+        transform-origin: bottom right;
+        animation: earsShakeL 5s linear infinite; }
+
+@keyframes earsShakeL {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(0deg); }
+  8% {
+    transform: rotate(3deg); }
+  100% {
+    transform: rotate(0deg); } }
+      .machine .machine_check .machine_body .machine_earsR {
+        width: 20%;
+        top: 8%;
+        right: 8%;
+        z-index: -1;
+        transform-origin: bottom right;
+        animation: earsShakeR 5s linear infinite; }
+
+@keyframes earsShakeR {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(-7deg); }
+  4% {
+    transform: rotate(0deg); }
+  8% {
+    transform: rotate(-5deg); }
+  100% {
+    transform: rotate(0deg); } }
+      .machine .machine_check .machine_body .machine_tail {
+        top: 0;
+        right: -60%;
+        transform-origin: bottom;
+        animation: tailShake 5s linear infinite; }
+
+@keyframes tailShake {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(10deg); }
+  100% {
+    transform: rotate(0deg); } }
+    .machine .machine_check .machine_dialog {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: -40%;
+      animation: dialogMove 2s linear infinite alternate; }
+
+@keyframes dialogMove {
+  0% {
+    transform: translateY(0px); }
+  100% {
+    transform: translateY(10px); } }
+      .machine .machine_check .machine_dialog .machine_txt {
+        width: 100%;
+        position: absolute;
+        top: -30px;
+        font-family: hanyi; }
+        .machine .machine_check .machine_dialog .machine_txt p {
+          font-size: 120%;
+          width: 100%;
+          text-align: center;
+          background-image: url(../scss/img/mch_img/GengImg/dialog.png);
+          background-size: 100% 100%;
+          padding: 10px;
+          line-height: 2;
+          font-size: 16px;
+          color: #502311; }
+        .machine .machine_check .machine_dialog .machine_txt span {
+          color: #de8384;
+          font-size: 16px; }
+
+@media screen and (max-width: 767px) {
+  .machine_txt span {
+    display: none; } }
+
+.chatbot_wrapper {
+  display: flex;
+  z-index: 999;
+  flex-flow: column nowrap;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  background-size: contain;
+  background-image: url("../scss/img/mch_img/GengImg/houseChat.png");
+  right: -300px;
+  transition: 0.5s;
+  bottom: 0;
+  width: 300px;
+  height: 400px; }
+  .chatbot_wrapper img {
+    width: 120%; }
+  .chatbot_wrapper .cancel {
+    background-color: #fddd95;
+    width: 30px;
+    position: absolute;
+    line-height: 1.5;
+    border-radius: 5px;
+    text-align: center;
+    color: #7f461c;
+    font-weight: bold;
+    top: 13%;
+    opacity: 0;
+    font-size: 20px;
+    cursor: pointer; }
+  .chatbot_wrapper .chatBot_container {
+    position: absolute;
+    background-color: #f4f2ee;
+    top: 22%;
+    height: 30%;
+    width: 90%;
+    margin: 0 5% 5%;
+    height: 165px;
+    border-radius: 5%;
+    padding: 5%;
+    overflow: auto;
+    box-sizing: border-box; }
+    .chatbot_wrapper .chatBot_container .chatBot_content_txt {
+      font-size: 16px; }
+  .chatbot_wrapper .chatBot-text-Wrap {
+    position: absolute;
+    bottom: 12%;
+    transform: translateY(-20%);
+    display: flex;
+    width: 90%;
+    height: 60px;
+    margin: 5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    .chatbot_wrapper .chatBot-text-Wrap .chatBot-text {
+      width: 70%;
+      padding: 3%;
+      border-radius: 5px;
+      border: none; }
+    .chatbot_wrapper .chatBot-text-Wrap .btn_send {
+      width: 20%;
+      background-color: #edcba5;
+      border-radius: 5px;
+      padding: 3%;
+      border: none; }
+    .chatbot_wrapper .chatBot-text-Wrap input:focus {
+      outline: none; }
+  .chatbot_wrapper .chatBot_keyword {
+    position: absolute;
+    bottom: 8%;
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+  .chatbot_wrapper .chatBot_keyword li {
+    background-color: #edeed0;
+    padding: 3px 6px;
+    font-size: 12px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer; }
+
+#chabot_conversation_box .robot_text {
+  background-color: #fcefa5;
+  border-radius: 10px 10px 10px 0px;
+  color: #502311;
+  padding: 4px 6px;
+  display: inline-block;
+  margin: 3px 0;
+  position: relative;
+  font-size: 12px; }
+  #chabot_conversation_box .robot_text ::before {
+    content: "♥ "; }
+
+#chabot_conversation_box .user_txt {
+  text-align: right;
+  background-color: burlywood;
+  margin-left: auto;
+  border-radius: 10px 10px 0px 10px;
+  color: white;
+  position: relative;
+  padding: 4px 6px;
+  font-size: 12px;
+  display: inline-block; }
+
+.flex {
+  display: flex;
+  justify-content: flex-end; }
+
+.chatBot_container {
+  position: relative; }
+
+.clearFix {
+  clear: both; }

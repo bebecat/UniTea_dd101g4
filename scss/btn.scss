@@ -1,0 +1,34 @@
+.box_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0 5px 0;
+    .item_gomakebtn{
+        width: 120px;
+        height: 60px;
+        border-radius: 45px;
+        background-color: #aaa;
+        cursor: pointer;
+        z-index: 2;
+        .btn_gomake{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 55px;
+            border-radius: 45px;
+            background-color: #F7E9C3;
+            transition: .5s;
+            &:hover{
+                background-color: #F777;
+                p{
+                    color: #F7E9C3;
+                }
+            }
+            p{
+                color: #502311;
+            }
+        }
+    }
+}
