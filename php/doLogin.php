@@ -22,8 +22,12 @@ if (isset($_REQUEST["account"]) && isset($_REQUEST["psw"])) {
             //取回一筆資料
             $memRow = $member->fetch(PDO::FETCH_ASSOC);
             if ($memRow["password"] == $psw) {
+
                 $_SESSION["memId"] = $memRow["memId"];
                 $_SESSION["memName"] = $memRow["memName"];
+                $_SESSION["memPhoto"] = $memRow["memPhoto"];
+                $_SESSION["address"] = $memRow["address"];
+
                 $response["success"] = "1";
                 $response["mesg"] = "" . $memRow["memName"];
             } else {
@@ -40,6 +44,6 @@ if (isset($_REQUEST["account"]) && isset($_REQUEST["psw"])) {
     }
 } else {
     $response["success"] = "0";
-    $response["mesg"] = "未登入";
+    $response["mesg"] = "請輸入帳號密碼";
 }
 echo json_encode($response);

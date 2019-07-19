@@ -6,4 +6,3 @@ if (isset($_SESSION["memId"])) {
 } else {
     echo "notLogin";
 }
-?>

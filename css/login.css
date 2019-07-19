@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: adobe-fan-heiti-std;
+  outline: 1px solid 0; }
+
+@font-face {
+  font-family: adobe-fan-heiti-std;
+  src: url(/fonts/AdobeHeitiStd-Regular.otf); }
+
+.light_box {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  background-color: #444444;
+  position: relative; }
+  .light_box .login_container {
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+    max-height: 408px;
+    background: url(/scss/img/login/login_bg.png) no-repeat;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    display: block; }
+    .light_box .login_container .top_img {
+      width: 100px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: -60px;
+      margin: auto;
+      z-index: 999; }
+      .light_box .login_container .top_img img {
+        width: 100%; }
+    .light_box .login_container .login_content_box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      border-radius: 10px;
+      overflow: hidden;
+      position: absolute; }
+    .light_box .login_container .login_table,
+    .light_box .login_container .register_table {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+      height: 408px; }
+      .light_box .login_container .login_table h1,
+      .light_box .login_container .register_table h1 {
+        display: none; }
+      .light_box .login_container .login_table p,
+      .light_box .login_container .register_table p {
+        display: block;
+        font-size: 24px;
+        padding: 20px 0px 15px;
+        color: #522411; }
+      .light_box .login_container .login_table .login_logo,
+      .light_box .login_container .register_table .login_logo {
+        width: 100%;
+        height: 40px;
+        display: block; }
+        .light_box .login_container .login_table .login_logo img,
+        .light_box .login_container .register_table .login_logo img {
+          height: 100%; }
+      .light_box .login_container .login_table input,
+      .light_box .login_container .register_table input {
+        width: 180px;
+        border-radius: 5px;
+        border: 1px solid #522411;
+        height: 30px;
+        box-sizing: border-box; }
+      .light_box .login_container .login_table label,
+      .light_box .login_container .register_table label {
+        cursor: pointer;
+        display: block; }
+      .light_box .login_container .login_table .register_btn,
+      .light_box .login_container .login_table .login_btn,
+      .light_box .login_container .register_table .register_btn,
+      .light_box .login_container .register_table .login_btn {
+        background-color: #522411;
+        color: white;
+        border: none; }
+      .light_box .login_container .login_table .to_register_btn,
+      .light_box .login_container .login_table .to_login_btn,
+      .light_box .login_container .register_table .to_register_btn,
+      .light_box .login_container .register_table .to_login_btn {
+        cursor: pointer;
+        user-select: none;
+        font-size: 16px;
+        color: #522411;
+        padding-bottom: 2px;
+        border-bottom: 2px solid #522411; }
+    .light_box .login_container .login_box_img {
+      width: 275px;
+      height: 408px;
+      position: absolute;
+      transition: 0.5s;
+      transform: translateX(137.5px); }
+      .light_box .login_container .login_box_img img {
+        width: 100%; }
+    .light_box .login_container #check_register_psw {
+      width: 150px; }
+
+#login_img_control {
+  display: none; }
+
+#login_img_control:checked ~ .login_container .login_box_img {
+  transform: translateX(-137.5px);
+  transition: 0.5s; }

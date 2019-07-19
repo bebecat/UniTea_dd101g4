@@ -1,8 +1,5 @@
 <?php 
     session_start();
-    if(isset($_SESSION["memId"])!=true){
-        $_SESSION["memId"] = null;
-    }
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +14,7 @@
     <link rel="SHORTCUT ICON" href="./scss/h_f_img/rwd-logo.png"/>
     <link rel="stylesheet" href="js/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="js/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="WOW-master/css/animate.css">
     <title>趣野餐｜ 野餐周邊</title>
 </head>
 <body>
@@ -58,7 +56,12 @@
                 </ul>
       
               <ul class="icon">
-                <li class="hi"><?php echo $_SESSION["memName"] ?></li>
+                <?php if(!isset($_SESSION["memId"])): ?>
+                    <li class="hi"><a href="login.php">登入</a></li>
+                <?php else: ?>
+                    <li class="hi"><?php echo $_SESSION["memName"] ?></li>
+                    <li class="hi"><a href="doLogout.php">登出</a></li>
+                <?php endif; ?>
                 <a href="login.php">
                     <li class="member">
                     <img
@@ -86,7 +89,7 @@
             <div class="content_main">
                 <div class="content_txt">
                     <div class="box_txt">
-                        <div id="itemtxt" class="item_txt">
+                        <div id="itemtxt" class="item_txt wow bounce">
                             <div class="txt txt_picA">
                                 <img src="scss/img/GengImg/Screen01/Screen01title-1.png" alt="">
                             </div>
@@ -197,7 +200,7 @@
         <div class="container_inBackground">
             <section class="container_boxes">
                 <div class="content_wood">
-                    <div class="box_wood">
+                    <div class="box_wood wow heartBeat">
                         <img src="scss/img/GengImg/titleboard.png" alt="">
                         <div class="item_h3">
                             <h3>客製籃子外型</h3>
@@ -205,35 +208,35 @@
                     </div>
                     <div class="box_makeboxes">
                         <div class="item_boxes">
-                            <div class="boxes">
+                            <div class="boxes wow tada">
                                 <img id="pic" src="scss/img/GengImg/Screen02/Screen02basket_1.png" alt="">
                             </div>
                             <div class="shaped">
-                                <div class="stepA">
+                                <div class="stepA wow zoomIn">
                                     <p>1</p>
                                     <div class="step_txtA">
                                         <p>選擇</p>
                                     </div>
                                 </div>
-                                <div class="stepB">
+                                <div class="stepB wow zoomIn" data-wow-delay="0.2s">
                                     <p>2</p>
                                     <div class="step_txtB">
                                         <p>配色</p>
                                     </div>
                                 </div>
-                                <div class="stepC">
+                                <div class="stepC wow zoomIn" data-wow-delay="0.3s">
                                     <p>3</p>
                                     <div class="step_txtC">
                                         <p>裝飾</p>
                                     </div>
                                 </div>
-                                <div class="stepD">
+                                <div class="stepD wow zoomIn" data-wow-delay="0.4s">
                                     <p>4</p>
                                     <div class="step_txtD">
                                         <p>取名字</p>
                                     </div>
                                 </div>
-                                <div class="stepE">
+                                <div class="stepE wow zoomIn" data-wow-delay="0.5s">
                                     <p>5</p>
                                     <div class="step_txtE">
                                         <p>加價購</p>
@@ -242,19 +245,19 @@
                             </div>
                         </div>
                         <div class="item_exterior">
-                            <div class="exterior_card">
+                            <div class="exterior_card wow fadeIn">
                                 <img src="scss/img/GengImg/Screen02/Screen02-2board.png" alt="">
                                 <div class="exterior_boxes">
-                                    <div class="exterior_changebox">
+                                    <div class="exterior_changebox wow fadeInUp">
                                         <img src="scss/img/GengImg/Screen02/Screen02-1basket.png" alt="">
                                     </div>
-                                    <div class="exterior_changebox">
+                                    <div class="exterior_changebox wow fadeInUp">
                                         <img src="scss/img/GengImg/Screen02/Screen02-2basket.png" alt="">
                                     </div>
-                                    <div class="exterior_changebox">
+                                    <div class="exterior_changebox wow fadeInUp">
                                         <img src="scss/img/GengImg/Screen02/Screen02-3basket.png" alt="">
                                     </div>
-                                    <div class="exterior_changebox">
+                                    <div class="exterior_changebox wow fadeInUp">
                                         <img src="scss/img/GengImg/Screen02/Screen02-4basket.png" alt="">
                                     </div>
                                 </div>
@@ -263,16 +266,16 @@
                         <div class="item_mobileexterior">
                             <div class="mobileexterior_card">
                                 <div class="mobileexterior_boxes">
-                                    <div class="moblieexterior_changebox">
+                                    <div class="moblieexterior_changebox wow fadeInUp">
                                         <img src="scss/img/GengImg/Screen02/Screen02-1basket.png" alt="">
                                     </div>
-                                    <div class="moblieexterior_changebox">
+                                    <div class="moblieexterior_changebox wow fadeInUp">
                                         <img src="scss/img/GengImg/Screen02/Screen02-2basket.png" alt="">
                                     </div>
-                                    <div class="moblieexterior_changebox">
+                                    <div class="moblieexterior_changebox wow fadeInUp">
                                         <img src="scss/img/GengImg/Screen02/Screen02-3basket.png" alt="">
                                     </div>
-                                    <div class="moblieexterior_changebox">
+                                    <div class="moblieexterior_changebox wow fadeInUp">
                                         <img src="scss/img/GengImg/Screen02/Screen02-4basket.png" alt="">
                                     </div>
                                 </div>
@@ -297,7 +300,7 @@
                 </div>
             </section>
             <section class="container_vote">
-                <div class="content_wood">
+                <div class="content_wood wow heartBeat">
                     <div class="box_wood">
                         <img src="scss/img/GengImg/titleboard.png" alt="">
                         <div class="item_h3">
@@ -307,7 +310,7 @@
                 </div>
                 <div class="content_vote">
                     <div class="box_vote">
-                        <div class="item_vote">
+                        <div class="item_vote wow rubberBand" data-wow-delay="0.7s">
                             <div class="vote_pic">
                                 <div class="vote_img">
                                     <img src="scss/img/GengImg/Screen03/Screen03-2basket.png" alt="">
@@ -325,7 +328,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="crown item_vote">
+                        <div class="crown item_vote wow rubberBand" data-wow-delay="0.7s">
                             <div class="no1 vote_pic">
                                 <div class="vote_img">
                                     <img src="scss/img/GengImg/Screen03/Screen03-1basket.png" alt="">
@@ -346,7 +349,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item_vote">
+                        <div class="item_vote wow rubberBand" data-wow-delay="0.7s">
                             <div class="vote_pic">
                                 <div class="vote_img">
                                     <img src="scss/img/GengImg/Screen03/Screen03-3basket.png" alt="">
@@ -366,7 +369,7 @@
                         </div>
                     </div>
                     <div class="box_votepic">
-                        <div class="item_votepic">
+                        <div class="item_votepic wow fadeInUp">
                             <div class="votepic_land">
                                 <img src="scss/img/GengImg/Screen03/Screen03land.png" alt="">
                                 <div class="votepic_landtree">
@@ -542,7 +545,7 @@
                 </div>
             </section>
             <section class="container_store">
-                <div class="content_wood">
+                <div class="content_wood wow heartBeat">
                     <div class="box_wood">
                         <img src="scss/img/GengImg/titleboard.png" alt="">
                         <div class="item_h3">
@@ -569,7 +572,7 @@
                     <div class="box_storebg">
                         <div class="content_hotproducts">
                             <div class="box_hotproducts">
-                                <div class="item_hotproducts">
+                                <div class="item_hotproducts wow jello">
                                     <div class="hotproducts_boxes">
                                         <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
                                         <div class="hotproducts_img">
@@ -583,7 +586,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item_hotproducts">
+                                <div class="item_hotproducts wow jello">
                                     <div class="hotproducts_boxes">
                                         <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
                                         <div class="hotproducts_img">
@@ -597,7 +600,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item_hotproducts">
+                                <div class="item_hotproducts wow jello">
                                     <div class="hotproducts_boxes">
                                         <img src="scss/img/GengImg/Screen04/Screen04board.png" alt="">
                                         <div class="hotproducts_img">
@@ -705,7 +708,7 @@
             </section>
             <section class="container_game">
                 <div class="content_gamebg">
-                    <div class="content_wood">
+                    <div class="content_wood wow heartBeat">
                         <div class="box_wood">
                             <img src="scss/img/GengImg/titleboard.png" alt="">
                             <div class="item_h3">
@@ -841,6 +844,7 @@
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/dist/owl.carousel.min.js"></script>
+    <script src="wow-master/dist/wow.js"></script>
     <script src="js/indexScreen01.js"></script>
     <script src="js/h_f_becca.js"></script>
     <script src="js/indexScreen02.js"></script>
@@ -857,6 +861,9 @@
                 }
             }
         });
+    </script>
+    <script>
+    var wow = new WOW().init();
     </script>
 </body>
 </html>
