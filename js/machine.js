@@ -124,7 +124,14 @@ $(document).ready(function () {
 //     $("#robot_conversation-block").animate({ scrollTop: scrollHeight }, 200); //控制scroll bar的位置 並加一點動畫效果
 //   });
 // });
+function $id(id) {
+  return document.getElementById(id);
+}
 
+function scrollTop() {
+  $scrollHeight = $("#toptop").height(); //scroll的高度
+  $("#robot_conversation-block").animate({ scrollTop: $scrollHeight }, 200);
+}
 
 //Ajax Robot!
 function setRobotAns_A() {
@@ -141,7 +148,7 @@ function setRobotAns_A() {
       if(result.questionReply){
         //...................
         let message = document.getElementById('user_message');
-				let QA = document.getElementById("robot_conversation-block");
+				let QA = document.getElementById("toptop");
 				let QA_item = document.querySelector(".QA_item");
 				let newQA_item = QA_item.cloneNode(true);
 				newQA_item.style.display = "";
@@ -149,9 +156,10 @@ function setRobotAns_A() {
 				newQA_item.getElementsByTagName("span")[0].innerText = result.User_question;
         newQA_item.getElementsByTagName("span")[1].innerText = result.questionReply;
         message.value = ''
+        scrollTop()
 				//.....................	
       }else{
-        let QA = document.getElementById("robot_conversation-block");
+        let QA = document.getElementById("toptop");
 				let QA_item = document.querySelector(".QA_item");
         let message = document.getElementById('user_message');
         let newQA_item = QA_item.cloneNode(true);
@@ -163,7 +171,7 @@ function setRobotAns_A() {
           newQA_item.getElementsByTagName("span")[0].innerText=message.value;
           newQA_item.getElementsByTagName("span")[1].innerText=text;
           message.value = ''
-
+          scrollTop()
         }else{
           
           let text = "本鼠爺無法回答你的問題!!";
@@ -171,6 +179,7 @@ function setRobotAns_A() {
         QA.appendChild(newQA_item)
           newQA_item.getElementsByTagName("span")[1].innerText=text;
           message.value = ''
+          scrollTop()
         }
       }
     } else {
@@ -178,7 +187,7 @@ function setRobotAns_A() {
     }
   }
   // option link code
-  url = "php/RobotAns.php?type=text&user_message="+document.getElementById('user_message').value;
+  url = "php/GengPHP/RobotAns.php?type=text&user_message="+document.getElementById('user_message').value;
   xhr.open("get", url, true);
   // xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
   console.log(url)
@@ -202,7 +211,8 @@ function setRobotAns_B(e) {
 				newQA_item.style.display = "";
 				QA.appendChild(newQA_item);
 				newQA_item.getElementsByTagName("span")[0].innerText = result.User_question;
-				newQA_item.getElementsByTagName("span")[1].innerText = result.questionReply;
+        newQA_item.getElementsByTagName("span")[1].innerText = result.questionReply;
+        scrollTop()
 				//.....................	
       }else{
         alert('本鼠爺目前無法回答您的問題, 請洽詢專線3345678')
@@ -212,7 +222,7 @@ function setRobotAns_B(e) {
     }
   }
   // option link code
-  url = "php/RobotAns.php?type=tag&keyword="+ e.target.value;
+  url = "php/GengPHP/RobotAns.php?type=tag&keyword="+ e.target.value;
   xhr.open("get", url, true);
   // xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
   // setInfo
