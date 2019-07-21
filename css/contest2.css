@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0; }
@@ -216,13 +217,27 @@ p {
       margin-bottom: 15%; } }
   #month h3 {
     text-align: center;
-    padding: 5% 0; }
-  #month img:nth-child(1) {
-    width: 2%;
-    padding-right: 4%; }
-  #month img:nth-child(2) {
-    width: 2%;
-    padding-left: 4%; }
+    padding: 4% 0; }
+  #month .dropdown {
+    position: relative;
+    top: -35%;
+    width: 100%; }
+    #month .dropdown select {
+      background-color: transparent;
+      border: none;
+      border-radius: 20px;
+      width: 20%;
+      text-align: center;
+      text-align-last: center;
+      font-size: 36px;
+      font-family: hanyi; }
+      #month .dropdown select option {
+        font-size: 36px;
+        appearance: none;
+        -webkit-appearance: none; }
+      #month .dropdown select option:hover {
+        color: #fff;
+        background-color: #c7c8c8; }
 
 .content .wrap_box {
   width: 80%;
@@ -242,8 +257,7 @@ p {
       width: 25%; } }
   @media all and (max-width: 767px) {
     .content .box {
-      width: 20%;
-      display: none; } }
+      width: 20%; } }
   .content .box .pic {
     width: 100%; }
   .content .box .pic img {
@@ -260,7 +274,7 @@ p {
 .content .box:nth-child(2) {
   text-align: center;
   transform: translateY(-30px);
-  animation: move 5s linear infinite alternate; }
+  animation: move 3s linear infinite alternate; }
   @media all and (max-width: 767px) {
     .content .box:nth-child(2) {
       display: block;
@@ -271,13 +285,13 @@ p {
   0% {
     transform: translate(0, -30px); }
   100% {
-    transform: translate(0, -50px); } }
+    transform: translate(0, -10px); } }
 
 @keyframes moveSlow {
   0% {
-    transform: translate(0, -10px); }
+    transform: translate(0, -15px); }
   100% {
-    transform: translate(0, 10px); } }
+    transform: translate(0, 2px); } }
 
 .content .box::before {
   content: '';
@@ -527,33 +541,33 @@ p {
   @media all and (max-width: 767px) {
     .btn_wrap {
       width: 75%;
-      margin-top: -28%;
+      margin-top: -25%;
       padding-left: 5%; } }
   @media screen and (max-width: 670px) {
     .btn_wrap {
       width: 75%;
       padding-left: 5%;
-      margin-top: -32%; } }
+      margin-top: -30%; } }
   @media screen and (max-width: 600px) {
     .btn_wrap {
       width: 75%;
       padding-left: 5%;
-      margin-top: -35%; } }
+      margin-top: -32%; } }
   @media screen and (max-width: 550px) {
     .btn_wrap {
       width: 75%;
       padding-left: 5%;
-      margin-top: -38%; } }
+      margin-top: -35%; } }
   @media screen and (max-width: 500px) {
     .btn_wrap {
-      width: 80%;
+      width: 75%;
       padding-left: 0%;
-      margin-top: -43%; } }
+      margin-top: -36%; } }
   @media screen and (max-width: 450px) {
     .btn_wrap {
       width: 80%;
       padding-left: 0%;
-      margin-top: -50%; } }
+      margin-top: -47%; } }
 
 @keyframes rotate {
   0% {
@@ -565,7 +579,7 @@ p {
   .btn_wrap p {
     width: 100%;
     margin: auto; }
-  .btn_wrap .btn {
+  .btn_wrap #btn {
     width: 200%;
     background-image: url("../scss/img/contest/button.png");
     background-repeat: no-repeat;
@@ -574,7 +588,7 @@ p {
     background-position: 50% 50%;
     text-align: center;
     position: relative;
-    line-height: 1000%; }
+    line-height: 490%; }
 
 .flower_wrap {
   display: flex;
@@ -633,11 +647,12 @@ p {
 
 .filter {
   width: 100%;
+  max-width: 1200px;
   text-align: right;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 40px; }
-  .filter p {
+  margin: 0 auto 40px; }
+  .filter button {
     width: 5%;
     box-shadow: 2px 2px 0px #ecc593;
     border-radius: 50px;
@@ -647,23 +662,23 @@ p {
     margin-right: 3%;
     cursor: pointer; }
     @media all and (max-width: 767px) {
-      .filter p {
+      .filter button {
         width: 15%; } }
-  .filter p:first-child {
+  .filter button:first-child {
     margin-right: 1%; }
-  .filter p:hover {
+  .filter button:hover {
     background-color: #85d48c;
     box-shadow: 0px 0px 0px #e6a857;
     transform: translate(2px, 2px); }
 
 .votes_wrap {
   width: 100%;
-  max-width: 1200px;
   margin: auto;
   padding-top: 2%; }
 
 .votes_prods {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-flow: row wrap;
   margin: auto;
@@ -671,6 +686,7 @@ p {
   .votes_prods .box {
     width: 25%;
     margin: auto;
+    padding-bottom: 40px;
     text-align: center;
     box-sizing: border-box;
     transform: translate(0, 0); }
@@ -853,3 +869,82 @@ p {
 .pagination a {
   padding: 0 5px;
   text-decoration: none; }
+
+/*參賽*/
+#go_contest {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(66, 66, 66, 0.6);
+  overflow-y: scroll; }
+
+#your_work {
+  position: fixed;
+  width: 800px;
+  height: 500px;
+  top: 0;
+  right: 0;
+  bottom: 10%;
+  left: 0;
+  margin: auto;
+  background-image: url("../scss/img/contest/background_paper.png"); }
+
+#your_work li {
+  width: 100%;
+  border: 1px solid black;
+  line-height: 100px; }
+
+#your_work li:first-child {
+  line-height: 20px;
+  height: 20px;
+  text-align: right; }
+  #your_work li:first-child span {
+    padding-right: 1%;
+    cursor: pointer; }
+
+#your_work li div {
+  display: inline-block;
+  text-align: center;
+  width: 30%; }
+
+#your_work li:nth-child(2) {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 16px; }
+
+.contest_pic {
+  width: 100%;
+  vertical-align: middle; }
+  .contest_pic img {
+    width: 50%;
+    vertical-align: middle; }
+
+@keyframes heart {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1; }
+  20% {
+    transform: translate(-20px, -10px);
+    opacity: 0.8; }
+  40% {
+    transform: translate(0, -20px);
+    opacity: 0.6; }
+  60% {
+    transform: translate(20px, -30px);
+    opacity: 0.4; }
+  80% {
+    transform: translate(0, -40px);
+    opacity: 0.2; }
+  100% {
+    transform: translate(-20px, -50px);
+    opacity: 0; } }

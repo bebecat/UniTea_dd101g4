@@ -41,9 +41,9 @@ var secen_01 = new ScrollMagic.Scene({
     // duration: 400,//距離
     reverse:true, //動畫執行
     triggerHook: 0.7,//觸發參考點
-    offset: 300, //偏移量
+    // offset: 300, //偏移量
  }).setTween(tl)//tween 動畫
- .addIndicators() //觸發指標
+//  .addIndicators() //觸發指標
  .addTo(controller) //回到場景
 
  var secen_02 = new ScrollMagic.Scene({
@@ -51,9 +51,9 @@ var secen_01 = new ScrollMagic.Scene({
     // duration: 400,//距離
     reverse:true, //動畫執行
     triggerHook: 0.7,//觸發參考點
-        offset: 300, //偏移量
+        // offset: 300, //偏移量
  }).setTween(tr)//tween 動畫
- .addIndicators() //觸發指標
+//  .addIndicators() //觸發指標
  .addTo(controller) //回到場景
 
  var secen_03 = new ScrollMagic.Scene({
@@ -61,9 +61,9 @@ var secen_01 = new ScrollMagic.Scene({
     // duration: 400,//距離
     reverse:true, //動畫執行
     triggerHook: 0.7,//觸發參考點
-        offset: 300, //偏移量
+        // offset: 300, //偏移量
  }).setTween(ts)//tween 動畫
- .addIndicators() //觸發指標
+//  .addIndicators() //觸發指標
  .addTo(controller) //回到場景
 
 

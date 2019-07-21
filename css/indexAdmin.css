@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  line-height: 1.5; }
+
+body {
+  background-color: #dfd; }
+
+#menu {
+  width: 230px;
+  height: 100%;
+  box-shadow: 2px 2px 5px #aaa;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  position: fixed; }
+  #menu #logo {
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 26px; }
+    #menu #logo img {
+      width: 100%; }
+  #menu span {
+    color: rgba(236, 141, 17, 0.815);
+    font-size: 16px; }
+  #menu li {
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 36px 0; }
+    #menu li a {
+      color: #737374; }
+
+#container {
+  padding-top: 20px; }
+  #container img {
+    height: 150%;
+    width: unset; }
+  #container #content {
+    overflow-x: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-left: 260px;
+    margin-right: 30px;
+    border-radius: 30px;
+    position: relative; }
+    #container #content select, #container #content #searchName {
+      font-size: 16px;
+      border-radius: 10px;
+      color: #737374;
+      padding: 4px;
+      border: 1px solid #ddd; }
+    #container #content .step {
+      margin: 10px 0 0 0;
+      width: 100px;
+      height: 45px;
+      color: #eee;
+      background-color: rgba(236, 141, 17, 0.815);
+      border: 2px solid transparent;
+      border-radius: 10px;
+      padding: 0px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer; }
+    #container #content .searchBar {
+      position: absolute;
+      top: 70px;
+      right: 10px; }
+    #container #content #picnic {
+      margin: 20px 0 20px 0;
+      text-align: center; }
+      #container #content #picnic #subBtn {
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        color: #737374;
+        margin-top: 0;
+        cursor: pointer; }
+      #container #content #picnic tbody tr td {
+        overflow: hidden;
+        height: 40px;
+        vertical-align: middle;
+        padding: 4px; }
+    #container #content #pagination ul {
+      display: flex;
+      justify-content: center; }
+      #container #content #pagination ul li {
+        margin: 0 7.5px;
+        font-size: 20px; }
+        #container #content #pagination ul li #last {
+          border-radius: 8px 0 0 8px;
+          padding: 5px 10px;
+          background-color: rgba(236, 141, 17, 0.815); }
+        #container #content #pagination ul li #next {
+          border-radius: 0 8px 8px 0;
+          padding: 5px 10px;
+          background-color: rgba(236, 141, 17, 0.815); }
+        #container #content #pagination ul li .nowLoc {
+          padding: 5px 10px;
+          background-color: rgba(236, 141, 17, 0.815); }
+  #container footer {
+    margin-left: 260px;
+    padding: 5px 0;
+    text-align: center; }

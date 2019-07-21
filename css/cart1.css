@@ -1,0 +1,205 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+@font-face {
+  font-family: "font_p";
+  src: url("../scss/font/03SmartFont-P.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_title";
+  src: url("../scss/font/HanaMinA.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_nav";
+  src: url("../scss/font/font_1_kokumr_1.00_rls.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "font_2";
+  src: url("../scss/font/imagine YOKOHAMA.otf") format("truetype"); }
+
+@font-face {
+  font-family: "font_cart";
+  src: url("../scss/font/SoukouMincho.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "hanyi";
+  src: url("../scss/font/HanyiSentyTang.ttf") format("truetype"); }
+
+h1 {
+  font-size: 12px;
+  color: black;
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h2 {
+  font-size: 20px;
+  color: #2222;
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h3 {
+  font-size: 36px;
+  color: #4d3900;
+  font-family: "hanyi";
+  letter-spacing: 2px; }
+
+h4 {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+h5 {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+p {
+  font-size: 16px;
+  color: #444;
+  font-family: "font_title";
+  letter-spacing: 2px; }
+
+@media all and (max-width: 767px) {
+  h1 {
+    font-size: 12px;
+    color: black;
+    font-family: "font_title";
+    letter-spacing: 2px; }
+  h2 {
+    font-size: 18px;
+    color: #2222;
+    font-family: "font_title";
+    letter-spacing: 2px; }
+  h3 {
+    font-size: 24px;
+    color: #4d3900;
+    font-family: "hanyi";
+    letter-spacing: 2px; }
+  h4 {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.4);
+    font-family: "font_title";
+    letter-spacing: 2px; }
+  h5 {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.3);
+    font-family: "font_title";
+    letter-spacing: 2px; }
+  p {
+    font-size: 14px;
+    color: #444;
+    font-family: "font_p";
+    letter-spacing: 2px; } }
+
+input,
+button {
+  outline: none;
+  border: none; }
+
+.cart_container {
+  width: 100%;
+  padding-top: 150px;
+  background-size: 100%;
+  background-repeat: repeat;
+  margin: auto;
+  max-width: 1200px; }
+
+.cart_bottom {
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  background-size: 100%;
+  background-repeat: no-repeat; }
+  .cart_bottom .footer_wrapper {
+    bottom: 0%;
+    width: 100%;
+    position: absolute; }
+
+/*整體*/
+.cart_container {
+  width: 100%; }
+
+.cart_container .wrap {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap; }
+
+/*左半邊結構*/
+.prods_content {
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap; }
+  .prods_content .prods_buy {
+    width: 100%; }
+  .prods_content .inform {
+    width: 50%; }
+  .prods_content .total {
+    width: 50%; }
+
+/*右半邊結構*/
+.mem_detail {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .mem_detail .steps {
+    width: 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    padding: 10px; }
+    .mem_detail .steps figcaption {
+      border: 3px solid burlywood;
+      border-radius: 10px;
+      background-color: whitesmoke;
+      width: 100%;
+      margin: 5px 0; }
+      .mem_detail .steps figcaption img {
+        width: 60%; }
+
+.mem_info {
+  vertical-align: middle;
+  width: 80%; }
+  .mem_info label {
+    margin: 5px; }
+  .mem_info .same_buyer {
+    margin: 10px; }
+  .mem_info li,
+  .mem_info .picnic_coin {
+    padding: 10px; }
+  .mem_info span {
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box; }
+  .mem_info .step3_txt {
+    width: 100%;
+    text-align: center; }
+
+.cart_bottom button {
+  padding: 10px 5px;
+  border-radius: 40%;
+  box-shadow: 1px 6px 1px burlywood;
+  font-size: 20px;
+  color: snow;
+  transform: translateY(0); }
+
+.cart_bottom button:hover {
+  box-shadow: 1px 1px 1px burlywood;
+  transform: translateY(3px); }
+
+.cart_bottom .next {
+  width: 20%;
+  background-color: #86a745; }
+
+.cart_bottom .conform {
+  width: 20%;
+  background-color: rgba(172, 89, 41, 0.9); }
